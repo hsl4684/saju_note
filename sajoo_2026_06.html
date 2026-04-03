@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2026년 6월생 아이 사주 특징 | 현승리</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yang: #1e40af;
+      --yang-light: #dbeafe;
+      --yang-mid: #93c5fd;
+      --yin: #9d174d;
+      --yin-light: #fce7f3;
+      --yin-mid: #f9a8d4;
+      --fire: #dc2626;
+      --fire-light: #fee2e2;
+      --fire-mid: #fca5a5;
+      --wood: #15803d;
+      --wood-light: #dcfce7;
+      --gold: #d97706;
+      --gold-light: #fef3c7;
+      --green-light: #d1fae5;
+      --green: #065f46;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+      --gray-900: #111827;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #ffffff;
+      color: var(--gray-900);
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    .page { max-width: 720px; margin: 0 auto; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #fff7ed 0%, #fce7f3 50%, #dbeafe 100%);
+      border-radius: 20px;
+      padding: 40px 32px 32px;
+      margin: 32px 0 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "🔥"; font-size: 80px; opacity: 0.08;
+      position: absolute; top: -10px; right: -10px; line-height: 1;
+    }
+    .hero .badge {
+      display: inline-block; background: var(--fire); color: #fff;
+      font-size: 12px; font-weight: 700; padding: 4px 12px;
+      border-radius: 999px; letter-spacing: .05em; margin-bottom: 14px;
+    }
+    .hero h1 { font-size: 28px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; }
+    .hero h1 span { color: var(--fire); }
+    .hero .subtitle { font-size: 15px; color: var(--gray-500); }
+    .hero .tags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .hero .tags span {
+      background: #fff; border: 1.5px solid var(--gray-200);
+      border-radius: 999px; font-size: 13px; padding: 4px 14px;
+      font-weight: 600; color: var(--gray-700);
+    }
+
+    /* CALLOUT */
+    .callout {
+      display: flex; gap: 12px; align-items: flex-start;
+      border-radius: 12px; padding: 16px 18px; margin-bottom: 20px;
+      font-size: 14px; line-height: 1.7;
+    }
+    .callout .icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .callout.blue  { background: var(--yang-light); border-left: 4px solid var(--yang); }
+    .callout.pink  { background: var(--yin-light);  border-left: 4px solid var(--yin); }
+    .callout.fire  { background: var(--fire-light); border-left: 4px solid var(--fire); }
+    .callout.gold  { background: var(--gold-light); border-left: 4px solid var(--gold); }
+    .callout.green { background: var(--green-light); border-left: 4px solid var(--green); }
+    .callout strong { font-weight: 700; }
+
+    /* SECTION */
+    .section { margin-bottom: 32px; }
+    .section-title {
+      font-size: 18px; font-weight: 800; color: var(--gray-900);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+    }
+
+    /* CARD GRID */
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    @media (max-width: 480px) { .card-grid { grid-template-columns: 1fr; } }
+    .card { border-radius: 14px; padding: 18px 16px; border: 1.5px solid var(--gray-200); }
+    .card.blue { background: var(--yang-light); border-color: var(--yang-mid); }
+    .card.pink { background: var(--yin-light);  border-color: var(--yin-mid); }
+    .card.fire { background: var(--fire-light); border-color: var(--fire-mid); }
+    .card.gold { background: var(--gold-light); border-color: #fbbf24; }
+    .card .card-icon  { font-size: 26px; margin-bottom: 8px; }
+    .card .card-title { font-size: 14px; font-weight: 700; color: var(--gray-900); margin-bottom: 6px; }
+    .card .card-body  { font-size: 13px; color: var(--gray-700); line-height: 1.6; }
+
+    /* KEYWORD */
+    .keyword-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .kw { display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; }
+    .kw.fire  { background: var(--fire-light);  color: var(--fire); }
+    .kw.blue  { background: var(--yang-light);  color: var(--yang); }
+    .kw.pink  { background: var(--yin-light);   color: var(--yin); }
+    .kw.gold  { background: var(--gold-light);  color: var(--gold); }
+    .kw.green { background: var(--green-light); color: var(--green); }
+
+    /* PILLARS */
+    .pillars-wrap {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 10px; margin-bottom: 16px;
+    }
+    @media (max-width: 480px) { .pillars-wrap { grid-template-columns: repeat(2, 1fr); } }
+
+    .pillar { border-radius: 14px; overflow: hidden; border: 1.5px solid var(--gray-200); text-align: center; background: #fff; }
+    .pillar .pillar-header { font-size: 12px; font-weight: 800; padding: 7px 4px; letter-spacing: .03em; }
+    .pillar.known   .pillar-header { background: var(--fire); color: #fff; }
+    .pillar.unknown .pillar-header { background: var(--gray-200); color: var(--gray-500); }
+
+    .pillar .pillar-gan { font-size: 26px; font-weight: 900; padding: 14px 4px 6px; line-height: 1.1; }
+    .pillar .pillar-gan .hanja { display: block; font-size: 10px; font-weight: 600; margin-top: 3px; }
+    .pillar.unknown .pillar-gan { color: var(--gray-300); }
+
+    /* 갑(甲) = 목(木) = 초록 */
+    .gan-wood       { color: var(--wood); }
+    .gan-wood .hanja{ color: var(--wood); }
+    /* 병(丙) = 화(火) = 붉은 */
+    .gan-fire       { color: var(--fire); }
+    .gan-fire .hanja{ color: var(--fire); }
+
+    .pillar-divider { height: 1px; background: var(--gray-100); margin: 0 12px; }
+
+    .pillar .pillar-ji { font-size: 26px; font-weight: 900; padding: 6px 4px 14px; line-height: 1.1; }
+    .pillar .pillar-ji .hanja { display: block; font-size: 10px; font-weight: 600; margin-top: 3px; }
+    .pillar.unknown .pillar-ji { color: var(--gray-300); }
+    /* 오(午) = 화(火) = 붉은 */
+    .ji-fire        { color: var(--fire); }
+    .ji-fire .hanja { color: var(--fire); }
+
+    .pillar .pillar-label { font-size: 11px; color: var(--gray-500); padding: 0 4px 10px; line-height: 1.5; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--fire-light), var(--gold-light));
+      border-radius: 16px; padding: 24px 22px; margin-bottom: 20px;
+      border: 1.5px solid #fca5a5;
+    }
+    .highlight-box .hb-title { font-size: 16px; font-weight: 800; margin-bottom: 12px; color: var(--fire); }
+    .highlight-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .highlight-box ul li { font-size: 14px; display: flex; gap: 8px; }
+    .highlight-box ul li::before { content: "🔥"; }
+
+    /* KAKAO */
+    .kakao-box {
+      background: linear-gradient(135deg, #fef9c3, #fef3c7);
+      border: 2px solid #fbbf24; border-radius: 16px; padding: 22px 20px; margin-bottom: 20px;
+    }
+    .kakao-box .kb-title { font-size: 16px; font-weight: 800; color: #92400e; margin-bottom: 10px; }
+    .kakao-box .kb-body  { font-size: 14px; color: var(--gray-700); line-height: 1.7; margin-bottom: 14px; }
+    .kakao-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #FAE100; color: #3C1E1E; font-size: 14px; font-weight: 800;
+      padding: 10px 20px; border-radius: 10px; text-decoration: none; transition: opacity .18s;
+    }
+    .kakao-btn:hover { opacity: 0.82; }
+    .kakao-code { margin-top: 12px; font-size: 13px; color: var(--gray-500); }
+    .kakao-code strong { color: #92400e; font-weight: 800; font-size: 15px; }
+
+    /* DIVIDER */
+    .divider { border: none; border-top: 1.5px solid var(--gray-100); margin: 28px 0; }
+
+    /* SOURCE CARDS */
+    .source-box {
+      background: var(--gray-50); border: 1.5px solid var(--gray-200);
+      border-radius: 20px; padding: 28px 24px; margin-top: 40px;
+    }
+    .source-box .src-title { font-size: 15px; font-weight: 800; color: var(--gray-700); margin-bottom: 6px; }
+    .source-box .src-desc  { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; line-height: 1.6; }
+
+    .src-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    @media (max-width: 480px) { .src-cards { grid-template-columns: 1fr; } }
+
+    .src-card {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; border-radius: 14px; border: 1.5px solid transparent;
+      text-decoration: none; transition: transform .18s, box-shadow .18s, border-color .18s;
+    }
+    .src-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.09); }
+
+    .src-card.c-yt  { background: #fff1f2; border-color: #fecaca; }
+    .src-card.c-yt:hover  { border-color: var(--fire); }
+    .src-card.c-ig  { background: var(--yin-light);  border-color: var(--yin-mid); }
+    .src-card.c-ig:hover  { border-color: var(--yin); }
+    .src-card.c-web { background: var(--yang-light); border-color: var(--yang-mid); }
+    .src-card.c-web:hover { border-color: var(--yang); }
+    .src-card.c-app { background: var(--green-light); border-color: #6ee7b7; }
+    .src-card.c-app:hover { border-color: var(--green); }
+    .src-card.c-gp  { background: #f0fdf4; border-color: #bbf7d0; }
+    .src-card.c-gp:hover  { border-color: #16a34a; }
+    .src-card.full  { grid-column: 1 / -1; }
+
+    .src-card .sc-icon {
+      font-size: 22px; width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px; background: rgba(255,255,255,.7); flex-shrink: 0;
+    }
+    .src-card .sc-label { font-size: 11px; font-weight: 700; color: var(--gray-500); letter-spacing: .04em; margin-bottom: 2px; }
+    .src-card .sc-name  { font-size: 13px; font-weight: 700; color: var(--gray-900); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* NOTICE */
+    .notice { font-size: 12px; color: var(--gray-500); text-align: center; margin-top: 20px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge">🔥 2026년 6월생 출생 사주</div>
+    <h1>이 달에 태어난 아이,<br/><span>불의 기운이 두 배</span>입니다</h1>
+    <p class="subtitle">병오년(丙午年) × 갑오월(甲午月) — 오오병존(午午竝存)</p>
+    <div class="tags">
+      <span>🌟 연예인 사주</span>
+      <span>💫 끼·재주</span>
+      <span>🌸 도화살</span>
+      <span>⚡ 강한 불의 기운</span>
+    </div>
+  </div>
+
+  <!-- 안심 멘트 -->
+  <div class="callout gold">
+    <span class="icon">💡</span>
+    <div>한자가 나와도 전혀 걱정 마세요! 사주를 처음 접하시는 분도 쉽게 읽을 수 있도록 <strong>모든 내용을 쉬운 말로 풀어드립니다.</strong> 그냥 편하게 읽어 내려오시면 돼요 😊</div>
+  </div>
+
+  <!-- ① 사주팔자 -->
+  <div class="section">
+    <div class="section-title">🀄 사주팔자 (四柱八字) — 이 달의 구조</div>
+    <div class="callout gold">
+      <span class="icon">💡</span>
+      <div>사주(四柱)는 <strong>시주·일주·월주·년주</strong>, 4개의 기둥으로 이루어져요. 각 기둥에 위(천간)·아래(지지) 두 글자씩, 총 8글자가 사람의 운명을 담아요. 한자 몰라도 괜찮아요, 아래에서 전부 쉽게 풀어드려요!</div>
+    </div>
+
+    <div class="pillars-wrap">
+      <!-- 시주 -->
+      <div class="pillar unknown">
+        <div class="pillar-header">시주 (時柱)</div>
+        <div class="pillar-gan">?</div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-ji">?</div>
+        <div class="pillar-label">태어난<br/>시간에 따라 결정</div>
+      </div>
+      <!-- 일주 -->
+      <div class="pillar unknown">
+        <div class="pillar-header">일주 (日柱)</div>
+        <div class="pillar-gan">?</div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-ji">?</div>
+        <div class="pillar-label">태어난<br/>날짜에 따라 결정</div>
+      </div>
+      <!-- 월주 갑오 : 갑=목(초록) / 오=화(붉은) -->
+      <div class="pillar known">
+        <div class="pillar-header">월주 (月柱)</div>
+        <div class="pillar-gan gan-wood">갑<span class="hanja">(甲) 목·木</span></div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-ji ji-fire">오<span class="hanja">(午) 화·火</span></div>
+        <div class="pillar-label">6월<br/>갑오월(甲午月)</div>
+      </div>
+      <!-- 년주 병오 : 병=화(붉은) / 오=화(붉은) -->
+      <div class="pillar known">
+        <div class="pillar-header">년주 (年柱)</div>
+        <div class="pillar-gan gan-fire">병<span class="hanja">(丙) 화·火</span></div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-ji ji-fire">오<span class="hanja">(午) 화·火</span></div>
+        <div class="pillar-label">2026년<br/>병오년(丙午年)</div>
+      </div>
+    </div>
+
+    <div class="callout fire">
+      <span class="icon">🔥</span>
+      <div>
+        월주와 년주에 <strong>오(午)가 두 개 겹쳐</strong> 있는 게 보이시죠? 이게 바로 <strong>오오병존(午午竝存)</strong>이에요.<br/>
+        불의 기운이 두 배로 강해지는 구조입니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- ② 출생택일 -->
+  <div class="section">
+    <div class="section-title">📅 출생택일 — 시주·일주를 맞추는 것</div>
+    <div class="callout blue">
+      <span class="icon">⏱️</span>
+      <div>
+        위 사주팔자에서 <strong>시주(時柱)와 일주(日柱)는 아직 ?</strong>로 표시되어 있죠.<br/>
+        이 두 기둥은 <strong>태어나는 날짜와 시간</strong>에 따라 결정됩니다.<br/><br/>
+        바로 이 부분을 좋은 기운에 맞게 조율하는 것이 <strong>출생택일(出生擇日)</strong>의 핵심이에요.<br/>
+        날짜와 시간을 잘 맞추면 아이의 사주가 훨씬 더 안정되고 강해질 수 있어요.
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ 핵심 특징 -->
+  <div class="section">
+    <div class="section-title">✨ 이 달에 태어난 아이의 핵심 특징</div>
+    <div class="card-grid">
+      <div class="card fire">
+        <div class="card-icon">🎭</div>
+        <div class="card-title">타고난 끼와 재주</div>
+        <div class="card-body">노래·춤·연기 등 예술적 감각이 뛰어나고, 무대 위에 있는 게 자연스러운 체질이에요.</div>
+      </div>
+      <div class="card gold">
+        <div class="card-icon">⭐</div>
+        <div class="card-title">주목받는 외모</div>
+        <div class="card-body">불의 기운이 강한 사주는 눈에 띄는 외모를 타고나는 경우가 많아요.</div>
+      </div>
+      <div class="card pink">
+        <div class="card-icon">🌸</div>
+        <div class="card-title">도화살 (桃花殺)</div>
+        <div class="card-body">이성에게 특히 인기가 많고, 자연스럽게 사랑받는 매력을 지닌 구조예요.</div>
+      </div>
+      <div class="card blue">
+        <div class="card-icon">☀️</div>
+        <div class="card-title">밝은 성격</div>
+        <div class="card-body">주변을 환하게 밝히는 성격으로, 어딜 가도 분위기 메이커가 되는 타입이에요.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ 오오병존 -->
+  <div class="section">
+    <div class="section-title">🔥 오오병존이 뭔가요?</div>
+    <div class="callout fire">
+      <span class="icon">🔥</span>
+      <div>
+        <strong>오(午)는 사주에서 가장 뜨거운 불의 기운이에요.</strong><br/>
+        2026년(병오년)이라는 해 자체가 이미 오(午)를 품고 있는데, 6월(갑오월)까지 또 오(午)가 들어오면서 강력한 불이 두 개 겹치게 됩니다.<br/><br/>
+        이렇게 같은 글자가 두 개 나란히 있을 때 "병존(竝存)"이라고 해요. 에너지가 두 배로 강해진다는 의미예요.
+      </div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-title">오오병존 사주를 가진 사람들의 공통점</div>
+      <ul>
+        <li>직업적으로 <strong>인기를 먹고 사는 경우</strong>가 많아요 (연예인, 강사, 크리에이터 등)</li>
+        <li><strong>끼와 재주</strong>가 넘쳐서 뭘 해도 눈에 띄는 스타일이에요</li>
+        <li>사람들이 자연스럽게 <strong>주변에 모여드는</strong> 매력이 있어요</li>
+        <li><strong>화려하고 밝은 에너지</strong>로 분위기를 주도하는 타입이에요</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ⑤ 건강·재물 밸런스 -->
+  <div class="section">
+    <div class="section-title">⚖️ 건강 &amp; 재물 밸런스</div>
+    <div class="callout green">
+      <span class="icon">✅</span>
+      <div>
+        6월은 건강과 재물 기준으로 <strong>밸런스가 맞는 날짜들이 몰려 있는 달</strong>이에요.<br/>
+        기본적인 체력과 안정감이 받쳐주면서, 재물적인 여유까지 나타나기 쉬운 구조예요.<br/><br/>
+        단, <strong>생일과 생시(태어나는 시간)에 따라 달라질 수 있어요.</strong><br/>
+        어떤 날, 어떤 시간에 태어나느냐에 따라 이 균형이 훨씬 더 강해지기도 하고 방향이 바뀌기도 해요. 출생택일이 중요한 이유가 바로 여기 있답니다.
+      </div>
+    </div>
+    <div class="kakao-box">
+      <div class="kb-title">💬 출생택일 라이브 &amp; 더 많은 사주 정보</div>
+      <div class="kb-body">
+        현승리의 <strong>카카오톡 오픈채팅방</strong>에서<br/>
+        출생택일 관련 <strong>라이브를 가장 빠르게</strong> 확인할 수 있어요.<br/>
+        이 달 아이에 대한 <strong>더 많은 사주 정보</strong>도 이곳에서 공유됩니다!
+      </div>
+      <a class="kakao-btn" href="https://open.kakao.com/o/gBSetQ6h" target="_blank">💬 카카오 오픈채팅 입장하기</a>
+      <div class="kakao-code">참여코드 : <strong>4684</strong> 를 입력해 주세요 🙏</div>
+    </div>
+  </div>
+
+  <!-- ⑥ 키워드 -->
+  <div class="section">
+    <div class="section-title">🏷️ 이 달 아이 사주 키워드</div>
+    <div class="keyword-wrap">
+      <span class="kw fire">🔥 강한 불의 기운</span>
+      <span class="kw fire">오오병존</span>
+      <span class="kw gold">⭐ 연예인 사주</span>
+      <span class="kw gold">타고난 끼</span>
+      <span class="kw pink">🌸 도화살</span>
+      <span class="kw pink">이성 인기</span>
+      <span class="kw blue">☀️ 밝은 성격</span>
+      <span class="kw green">⚖️ 건강·재물 균형</span>
+      <span class="kw blue">인기 직종 적합</span>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- ⑦ 출처 -->
+  <div class="source-box">
+    <div class="src-title">📌 출처 및 더 알아보기</div>
+    <div class="src-desc">구독자 1.4만 작명 유튜버 <strong>현승리</strong>의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+    <div class="src-cards">
+      <!-- YouTube -->
+      <a class="src-card c-yt" href="https://www.youtube.com/@name_house" target="_blank">
+        <div class="sc-icon">
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="20" rx="4" fill="#FF0000"/>
+            <polygon points="11,5 11,15 20,10" fill="white"/>
+          </svg>
+        </div>
+        <div class="sc-info">
+          <div class="sc-label">YouTube</div>
+          <div class="sc-name">@name_house</div>
+        </div>
+      </a>
+      <!-- Instagram -->
+      <a class="src-card c-ig" href="https://www.instagram.com/free_hsl/" target="_blank">
+        <div class="sc-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="ig1" cx="30%" cy="107%" r="130%">
+                <stop offset="0%" stop-color="#fdf497"/>
+                <stop offset="5%" stop-color="#fdf497"/>
+                <stop offset="45%" stop-color="#fd5949"/>
+                <stop offset="60%" stop-color="#d6249f"/>
+                <stop offset="90%" stop-color="#285AEB"/>
+              </radialGradient>
+            </defs>
+            <rect width="26" height="26" rx="6" fill="url(#ig1)"/>
+            <rect x="5" y="5" width="16" height="16" rx="4.5" stroke="white" stroke-width="1.8" fill="none"/>
+            <circle cx="13" cy="13" r="4" stroke="white" stroke-width="1.8" fill="none"/>
+            <circle cx="19.2" cy="6.8" r="1.1" fill="white"/>
+          </svg>
+        </div>
+        <div class="sc-info">
+          <div class="sc-label">Instagram</div>
+          <div class="sc-name">@free_hsl</div>
+        </div>
+      </a>
+      <!-- 홈페이지 -->
+      <a class="src-card c-web" href="https://www.hslee.co.kr" target="_blank">
+        <div class="sc-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="26" height="26" rx="6" fill="#1e40af"/>
+            <circle cx="13" cy="13" r="7" stroke="white" stroke-width="1.6" fill="none"/>
+            <ellipse cx="13" cy="13" rx="3.2" ry="7" stroke="white" stroke-width="1.2" fill="none"/>
+            <line x1="6" y1="13" x2="20" y2="13" stroke="white" stroke-width="1.4"/>
+            <line x1="7.5" y1="9" x2="18.5" y2="9" stroke="white" stroke-width="1.1"/>
+            <line x1="7.5" y1="17" x2="18.5" y2="17" stroke="white" stroke-width="1.1"/>
+          </svg>
+        </div>
+        <div class="sc-info">
+          <div class="sc-label">공식 홈페이지</div>
+          <div class="sc-name">hslee.co.kr</div>
+        </div>
+      </a>
+      <!-- App Store -->
+      <a class="src-card c-app" href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">
+        <div class="sc-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="26" height="26" rx="6" fill="#0D96F6"/>
+            <path d="M13 5.5 C13 5.5 10.2 8.5 10.2 10.5 C10.2 12 11.5 13 13 13 C14.5 13 15.8 12 15.8 10.5 C15.8 8.5 13 5.5 13 5.5Z" fill="white"/>
+            <path d="M8 13.5 C6.2 13.5 5 14.8 5 16.5 C5 18.8 6.8 20.5 9 20.5 C10.2 20.5 11.2 20 12 19.2 L14 19.2 C14.8 20 15.8 20.5 17 20.5 C19.2 20.5 21 18.8 21 16.5 C21 14.8 19.8 13.5 18 13.5 Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="sc-info">
+          <div class="sc-label">App Store</div>
+          <div class="sc-name">천을귀인 앱</div>
+        </div>
+      </a>
+      <!-- Google Play -->
+      <a class="src-card c-gp full" href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">
+        <div class="sc-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="26" height="26" rx="6" fill="#fff" stroke="#e5e7eb" stroke-width="1"/>
+            <polygon points="6,5 6,21 16,13" fill="#34A853"/>
+            <polygon points="6,5 16,13 20,10.5" fill="#FBBC05"/>
+            <polygon points="6,21 16,13 20,15.5" fill="#EA4335"/>
+            <polygon points="20,10.5 20,15.5 16,13" fill="#4285F4"/>
+          </svg>
+        </div>
+        <div class="sc-info">
+          <div class="sc-label">Google Play</div>
+          <div class="sc-name">천을귀인 앱 (안드로이드)</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <p class="notice">
+    본 자료는 사주 콘텐츠를 쉽게 이해할 수 있도록 정리한 참고 자료입니다.<br/>
+    © 현승리 | hslee.co.kr
+  </p>
+
+</div>
+</body>
+</html>
