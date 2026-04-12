@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 인기 이름 순위 100 | 현승리 작명</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue-light: #dbeafe;
+    --blue-mid: #93c5fd;
+    --blue-dark: #1e40af;
+    --blue-accent: #3b82f6;
+    --pink-light: #fce7f3;
+    --pink-mid: #f9a8d4;
+    --pink-dark: #9d174d;
+    --pink-accent: #ec4899;
+    --green-light: #dcfce7;
+    --green-dark: #166534;
+    --purple-light: #ede9fe;
+    --purple-dark: #5b21b6;
+    --pink2-light: #fce7f3;
+    --pink2-dark: #9d174d;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f8fafc;
+    color: var(--gray-800);
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #7c3aed 100%);
+    color: white;
+    padding: 48px 20px 40px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 100px;
+    padding: 5px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 {
+    font-size: clamp(26px, 6vw, 40px);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .hero h1 span {
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 15px;
+    opacity: 0.88;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  /* CALLOUT */
+  .callout {
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin: 24px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    line-height: 1.7;
+    font-size: 14.5px;
+  }
+  .callout.yellow {
+    background: var(--yellow-light);
+    border-left: 4px solid #f59e0b;
+    color: var(--yellow-dark);
+  }
+  .callout.blue {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue-accent);
+    color: var(--blue-dark);
+  }
+  .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .callout strong { font-weight: 700; }
+
+  /* LEGEND */
+  .legend-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  .legend-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--gray-800);
+  }
+  .legend-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 480px) {
+    .legend-grid { grid-template-columns: 1fr; }
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 64px;
+  }
+  .badge.danger { background: var(--purple-light); color: var(--purple-dark); }
+  .badge.warning { background: var(--pink2-light); color: var(--pink2-dark); }
+  .badge.safe { background: var(--green-light); color: var(--green-dark); }
+  .badge.rare { background: var(--blue-light); color: var(--blue-dark); }
+
+  .li-danger { background: #f5f3ff; }
+  .li-warning { background: #fdf2f8; }
+  .li-safe { background: #f0fdf4; }
+  .li-rare { background: #eff6ff; }
+
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin: 28px 0 16px;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid var(--gray-200);
+    background: white;
+    border-radius: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .tab-btn.active-male {
+    background: var(--blue-light);
+    border-color: var(--blue-accent);
+    color: var(--blue-dark);
+  }
+  .tab-btn.active-female {
+    background: var(--pink-light);
+    border-color: var(--pink-accent);
+    color: var(--pink-dark);
+  }
+
+  /* SEARCH */
+  .search-wrap {
+    position: relative;
+    margin-bottom: 16px;
+  }
+  .search-wrap input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+    background: white;
+  }
+  .search-wrap input:focus { border-color: var(--blue-accent); }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--gray-400);
+  }
+
+  /* BEST 3 */
+  .best3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .best3-card {
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .best3-card.male { background: linear-gradient(135deg, var(--blue-light), #bfdbfe); border: 1px solid var(--blue-mid); }
+  .best3-card.female { background: linear-gradient(135deg, var(--pink-light), #fbcfe8); border: 1px solid var(--pink-mid); }
+  .best3-medal { font-size: 22px; margin-bottom: 4px; }
+  .best3-name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 4px;
+  }
+  .best3-name.male { color: var(--blue-dark); }
+  .best3-name.female { color: var(--pink-dark); }
+  .best3-sub { font-size: 11px; color: var(--gray-600); }
+
+  /* TABLE PANEL */
+  .panel {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .panel-header {
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .panel-header.male { background: var(--blue-light); color: var(--blue-dark); }
+  .panel-header.female { background: var(--pink-light); color: var(--pink-dark); }
+  .result-count { font-size: 13px; font-weight: 500; opacity: 0.8; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--gray-50);
+    color: var(--gray-600);
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  thead th:first-child { width: 48px; text-align: center; }
+  thead th:nth-child(2) { width: 72px; }
+  thead th:last-child { width: 110px; }
+  tbody tr {
+    border-bottom: 1px solid var(--gray-100);
+    transition: background 0.1s;
+  }
+  tbody tr:hover { background: var(--gray-50); }
+  tbody tr:last-child { border-bottom: none; }
+  td {
+    padding: 11px 14px;
+    font-size: 14.5px;
+  }
+  td:first-child {
+    text-align: center;
+    font-weight: 700;
+    color: var(--gray-400);
+    font-size: 13px;
+  }
+  .rank-top { color: #f59e0b !important; }
+  td.name-cell {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  td.name-cell.male { color: var(--blue-dark); }
+  td.name-cell.female { color: var(--pink-dark); }
+
+  /* BAR */
+  .bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .bar-bg {
+    flex: 1;
+    height: 8px;
+    background: var(--gray-100);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    transition: width 0.3s ease;
+  }
+  .bar-fill.male { background: linear-gradient(90deg, var(--blue-mid), var(--blue-accent)); }
+  .bar-fill.female { background: linear-gradient(90deg, var(--pink-mid), var(--pink-accent)); }
+  .bar-pct {
+    font-size: 12.5px;
+    font-weight: 700;
+    min-width: 36px;
+    text-align: right;
+    color: var(--gray-600);
+  }
+
+  /* RARITY TIER */
+  .tier-wrap { display: flex; align-items: center; gap: 6px; }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--gray-800);
+    margin: 28px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: white;
+    border-top: 1px solid var(--gray-200);
+    padding: 32px 20px;
+    margin-top: 40px;
+  }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-600);
+    margin-bottom: 4px;
+  }
+  .footer-desc {
+    font-size: 13px;
+    color: var(--gray-400);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--gray-700);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.15s;
+  }
+  .footer-link:hover { background: var(--blue-light); color: var(--blue-dark); }
+
+  @media (max-width: 480px) {
+    .hero { padding: 36px 16px 32px; }
+    .best3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .best3-card { padding: 12px 8px; }
+    .best3-name { font-size: 18px; }
+    td { padding: 10px 10px; font-size: 13.5px; }
+    td.name-cell { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">✨ 2026 작명 트렌드</div>
+  <h1>요즘 <span>인기 이름</span> 순위<br>남 · 여 각 100개</h1>
+  <p>5,000건 작명 경험의 현승리가 분석한<br>흔함 정도까지 한눈에 확인하세요!</p>
+</div>
+
+<div class="container">
+
+  <!-- CALLOUT -->
+  <div class="callout yellow">
+    <span class="callout-icon">💡</span>
+    <div><strong>이 자료 활용법</strong> — 이름 선택 전에 <strong>개성 정도</strong>를 꼭 확인하세요! <br>단, 💜 <strong>대중적</strong>이라도 0.6%대 → 100명 중 약 1명 수준이에요. 반에 동명이인이 생길 확률은 낮으니 너무 걱정하지 않아도 돼요 😊</div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend-card">
+    <h3>🎨 색상 기준 (개성 정도)</h3>
+    <div class="legend-grid">
+      <div class="legend-item li-danger">
+        <span class="badge danger">💜 대중적</span>
+        <span>0.6% 이상 — 그래도 100명 중 약 1명! 걱정 마세요 😊</span>
+      </div>
+      <div class="legend-item li-warning">
+        <span class="badge warning">🩷 무난함</span>
+        <span>0.3~0.6% — 300명 중 약 1명</span>
+      </div>
+      <div class="legend-item li-safe">
+        <span class="badge safe">💚 개성 있음</span>
+        <span>0.15~0.3% — 600명 중 약 1명</span>
+      </div>
+      <div class="legend-item li-rare">
+        <span class="badge rare">💙 희귀</span>
+        <span>0.15% 미만 — 그보다 드문 이름</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active-male" id="tab-male" onclick="switchTab('male')">👦 남자 이름</button>
+    <button class="tab-btn" id="tab-female" onclick="switchTab('female')">👧 여자 이름</button>
+  </div>
+
+  <!-- BEST 3 (Male) -->
+  <div id="best3-male">
+    <div class="section-title">🏆 남자 이름 BEST 3</div>
+    <div class="best3">
+      <div class="best3-card male">
+        <div class="best3-medal">🥇</div>
+        <div class="best3-name male">도윤</div>
+        <div class="best3-sub">1위 · 0.96%</div>
+      </div>
+      <div class="best3-card male">
+        <div class="best3-medal">🥈</div>
+        <div class="best3-name male">이준</div>
+        <div class="best3-sub">2위 · 0.92%</div>
+      </div>
+      <div class="best3-card male">
+        <div class="best3-medal">🥉</div>
+        <div class="best3-name male">하준</div>
+        <div class="best3-sub">3위 · 0.88%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEST 3 (Female) -->
+  <div id="best3-female" class="hidden">
+    <div class="section-title">🏆 여자 이름 BEST 3</div>
+    <div class="best3">
+      <div class="best3-card female">
+        <div class="best3-medal">🥇</div>
+        <div class="best3-name female">서아</div>
+        <div class="best3-sub">1위 · 0.96%</div>
+      </div>
+      <div class="best3-card female">
+        <div class="best3-medal">🥈</div>
+        <div class="best3-name female">서윤</div>
+        <div class="best3-sub">2위 · 0.92%</div>
+      </div>
+      <div class="best3-card female">
+        <div class="best3-medal">🥉</div>
+        <div class="best3-name female">하린</div>
+        <div class="best3-sub">3위 · 0.88%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="이름 검색하기 (예: 도윤, 서아)" oninput="filterTable()">
+  </div>
+
+  <!-- TABLE (Male) -->
+  <div class="panel" id="panel-male">
+    <div class="panel-header male">
+      <span>👦 남자 이름 100위</span>
+      <span class="result-count" id="count-male">100개</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>이름</th>
+          <th>흔함 정도</th>
+          <th>비율</th>
+        </tr>
+      </thead>
+      <tbody id="tbody-male"></tbody>
+    </table>
+  </div>
+
+  <!-- TABLE (Female) -->
+  <div class="panel hidden" id="panel-female">
+    <div class="panel-header female">
+      <span>👧 여자 이름 100위</span>
+      <span class="result-count" id="count-female">100개</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>이름</th>
+          <th>흔함 정도</th>
+          <th>비율</th>
+        </tr>
+      </thead>
+      <tbody id="tbody-female"></tbody>
+    </table>
+  </div>
+
+  <div class="callout blue" style="margin-top:24px;">
+    <span class="callout-icon">📌</span>
+    <div><strong>작명가 현승리의 조언</strong> — 이름의 빈도도 물론 중요하지만, 사실 <strong>아이의 기운(사주)에 맞춰 짓는 것</strong>이 훨씬 더 중요해요. 아무리 예쁘고 희귀한 이름이라도 아이의 기운과 맞지 않으면 좋은 이름이 아닐 수 있거든요. <strong>빈도보다 아이의 기운에 100% 맞는 이름</strong>이 진짜 좋은 이름입니다 ✨</div>
+  </div>
+
+</div><!-- /container -->
+
+
+<!-- CTA -->
+<div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 60%, #7c3aed 100%); padding: 40px 20px; text-align: center; margin-top: 40px;">
+  <div style="max-width: 560px; margin: 0 auto;">
+    <div style="display:inline-block; background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 16px; font-size:13px; font-weight:700; color:white; margin-bottom:16px; letter-spacing:0.04em;">✨ 현승리 작명 서비스</div>
+    <h2 style="color:white; font-size:clamp(20px,5vw,28px); font-weight:900; line-height:1.35; margin-bottom:12px;">
+      이름 빈도보다 중요한 건<br><span style="background:linear-gradient(90deg,#fde68a,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">아이의 기운에 맞는 이름</span>이에요
+    </h2>
+    <p style="color:rgba(255,255,255,0.88); font-size:15px; line-height:1.75; margin-bottom:28px;">
+      5,000건 이상의 작명 경험을 가진 현승리가<br>아이의 사주를 분석해 딱 맞는 이름을 지어드려요.<br>먼저 <strong style="color:#fde68a;">무료 이름풀이</strong>로 시작해보세요!
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+      <a href="https://www.hslee.co.kr" target="_blank"
+         style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.5); color:white; font-family:'Noto Sans KR',sans-serif; font-size:15px; font-weight:700; padding:14px 32px; border-radius:12px; text-decoration:none;">
+        🎁 무료 이름풀이 받기
+      </a>
+      <a href="https://open.kakao.com/o/gBSetQ6h" target="_blank"
+         style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.5); color:white; font-family:'Noto Sans KR',sans-serif; font-size:15px; font-weight:700; padding:14px 32px; border-radius:12px; text-decoration:none;">
+        💬 무료 출생택일 받기
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-title">📌 출처</div>
+    <div class="footer-desc">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+    <div class="footer-links">
+      <a class="footer-link" href="https://www.youtube.com/@name_house" target="_blank">📺 유튜브 채널</a>
+      <a class="footer-link" href="https://www.instagram.com/free_hsl/" target="_blank">📸 인스타그램</a>
+      <a class="footer-link" href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a class="footer-link" href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const maleData = [{"Rank":1,"Name":"도윤","Estimated %":0.96},{"Rank":2,"Name":"이준","Estimated %":0.92},{"Rank":3,"Name":"하준","Estimated %":0.88},{"Rank":4,"Name":"시우","Estimated %":0.84},{"Rank":5,"Name":"도현","Estimated %":0.8},{"Rank":6,"Name":"태오","Estimated %":0.76},{"Rank":7,"Name":"이안","Estimated %":0.72},{"Rank":8,"Name":"서준","Estimated %":0.68},{"Rank":9,"Name":"선우","Estimated %":0.64},{"Rank":10,"Name":"은우","Estimated %":0.6},{"Rank":11,"Name":"수호","Estimated %":0.585},{"Rank":12,"Name":"도하","Estimated %":0.57},{"Rank":13,"Name":"이현","Estimated %":0.555},{"Rank":14,"Name":"지호","Estimated %":0.54},{"Rank":15,"Name":"우주","Estimated %":0.525},{"Rank":16,"Name":"은호","Estimated %":0.51},{"Rank":17,"Name":"유준","Estimated %":0.495},{"Rank":18,"Name":"윤우","Estimated %":0.48},{"Rank":19,"Name":"주원","Estimated %":0.465},{"Rank":20,"Name":"시윤","Estimated %":0.45},{"Rank":21,"Name":"연우","Estimated %":0.435},{"Rank":22,"Name":"우진","Estimated %":0.42},{"Rank":23,"Name":"이도","Estimated %":0.405},{"Rank":24,"Name":"지한","Estimated %":0.39},{"Rank":25,"Name":"예준","Estimated %":0.375},{"Rank":26,"Name":"하진","Estimated %":0.36},{"Rank":27,"Name":"도준","Estimated %":0.345},{"Rank":28,"Name":"이한","Estimated %":0.33},{"Rank":29,"Name":"지후","Estimated %":0.315},{"Rank":30,"Name":"준우","Estimated %":0.3},{"Rank":31,"Name":"건우","Estimated %":0.295},{"Rank":32,"Name":"민준","Estimated %":0.29},{"Rank":33,"Name":"재윤","Estimated %":0.285},{"Rank":34,"Name":"시현","Estimated %":0.28},{"Rank":35,"Name":"태민","Estimated %":0.275},{"Rank":36,"Name":"현우","Estimated %":0.27},{"Rank":37,"Name":"규민","Estimated %":0.265},{"Rank":38,"Name":"서우","Estimated %":0.26},{"Rank":39,"Name":"성준","Estimated %":0.255},{"Rank":40,"Name":"윤재","Estimated %":0.25},{"Rank":41,"Name":"지훈","Estimated %":0.245},{"Rank":42,"Name":"승우","Estimated %":0.24},{"Rank":43,"Name":"하율","Estimated %":0.235},{"Rank":44,"Name":"준혁","Estimated %":0.23},{"Rank":45,"Name":"도겸","Estimated %":0.225},{"Rank":46,"Name":"지완","Estimated %":0.22},{"Rank":47,"Name":"유찬","Estimated %":0.215},{"Rank":48,"Name":"시온","Estimated %":0.21},{"Rank":49,"Name":"태현","Estimated %":0.205},{"Rank":50,"Name":"이든","Estimated %":0.2},{"Rank":51,"Name":"로건","Estimated %":0.197},{"Rank":52,"Name":"준서","Estimated %":0.194},{"Rank":53,"Name":"하람","Estimated %":0.191},{"Rank":54,"Name":"민재","Estimated %":0.188},{"Rank":55,"Name":"시환","Estimated %":0.185},{"Rank":56,"Name":"재민","Estimated %":0.182},{"Rank":57,"Name":"윤호","Estimated %":0.179},{"Rank":58,"Name":"도겸","Estimated %":0.176},{"Rank":59,"Name":"하온","Estimated %":0.173},{"Rank":60,"Name":"서진","Estimated %":0.17},{"Rank":61,"Name":"이율","Estimated %":0.167},{"Rank":62,"Name":"시안","Estimated %":0.164},{"Rank":63,"Name":"태준","Estimated %":0.161},{"Rank":64,"Name":"지율","Estimated %":0.158},{"Rank":65,"Name":"건","Estimated %":0.155},{"Rank":66,"Name":"찬","Estimated %":0.152},{"Rank":67,"Name":"도건","Estimated %":0.149},{"Rank":68,"Name":"민규","Estimated %":0.146},{"Rank":69,"Name":"정우","Estimated %":0.143},{"Rank":70,"Name":"승현","Estimated %":0.14},{"Rank":71,"Name":"현준","Estimated %":0.139},{"Rank":72,"Name":"윤성","Estimated %":0.137},{"Rank":73,"Name":"태율","Estimated %":0.136},{"Rank":74,"Name":"시율","Estimated %":0.134},{"Rank":75,"Name":"하민","Estimated %":0.133},{"Rank":76,"Name":"준영","Estimated %":0.131},{"Rank":77,"Name":"이수","Estimated %":0.13},{"Rank":78,"Name":"도율","Estimated %":0.128},{"Rank":79,"Name":"찬우","Estimated %":0.127},{"Rank":80,"Name":"민호","Estimated %":0.125},{"Rank":81,"Name":"재현","Estimated %":0.124},{"Rank":82,"Name":"지성","Estimated %":0.122},{"Rank":83,"Name":"도형","Estimated %":0.121},{"Rank":84,"Name":"하성","Estimated %":0.119},{"Rank":85,"Name":"민성","Estimated %":0.118},{"Rank":86,"Name":"준성","Estimated %":0.116},{"Rank":87,"Name":"윤재","Estimated %":0.115},{"Rank":88,"Name":"시준","Estimated %":0.113},{"Rank":89,"Name":"태건","Estimated %":0.112},{"Rank":90,"Name":"이강","Estimated %":0.11},{"Rank":91,"Name":"도원","Estimated %":0.109},{"Rank":92,"Name":"하찬","Estimated %":0.107},{"Rank":93,"Name":"준석","Estimated %":0.106},{"Rank":94,"Name":"시호","Estimated %":0.104},{"Rank":95,"Name":"민석","Estimated %":0.103},{"Rank":96,"Name":"지환","Estimated %":0.101},{"Rank":97,"Name":"도영","Estimated %":0.1},{"Rank":98,"Name":"태영","Estimated %":0.098},{"Rank":99,"Name":"준기","Estimated %":0.097},{"Rank":100,"Name":"현성","Estimated %":0.095}];
+
+const femaleData = [{"Rank":1,"Name":"서아","Estimated %":0.96},{"Rank":2,"Name":"서윤","Estimated %":0.92},{"Rank":3,"Name":"하린","Estimated %":0.88},{"Rank":4,"Name":"이서","Estimated %":0.84},{"Rank":5,"Name":"하윤","Estimated %":0.8},{"Rank":6,"Name":"아린","Estimated %":0.76},{"Rank":7,"Name":"지안","Estimated %":0.72},{"Rank":8,"Name":"지유","Estimated %":0.68},{"Rank":9,"Name":"아윤","Estimated %":0.64},{"Rank":10,"Name":"시아","Estimated %":0.6},{"Rank":11,"Name":"윤서","Estimated %":0.585},{"Rank":12,"Name":"지아","Estimated %":0.57},{"Rank":13,"Name":"지우","Estimated %":0.555},{"Rank":14,"Name":"채이","Estimated %":0.54},{"Rank":15,"Name":"유나","Estimated %":0.525},{"Rank":16,"Name":"수아","Estimated %":0.51},{"Rank":17,"Name":"채아","Estimated %":0.495},{"Rank":18,"Name":"도아","Estimated %":0.48},{"Rank":19,"Name":"예린","Estimated %":0.465},{"Rank":20,"Name":"서하","Estimated %":0.45},{"Rank":21,"Name":"유하","Estimated %":0.435},{"Rank":22,"Name":"이솔","Estimated %":0.42},{"Rank":23,"Name":"이나","Estimated %":0.405},{"Rank":24,"Name":"윤슬","Estimated %":0.39},{"Rank":25,"Name":"유주","Estimated %":0.375},{"Rank":26,"Name":"재이","Estimated %":0.36},{"Rank":27,"Name":"소이","Estimated %":0.345},{"Rank":28,"Name":"서연","Estimated %":0.33},{"Rank":29,"Name":"나은","Estimated %":0.315},{"Rank":30,"Name":"채원","Estimated %":0.3},{"Rank":31,"Name":"하율","Estimated %":0.295},{"Rank":32,"Name":"민서","Estimated %":0.29},{"Rank":33,"Name":"예은","Estimated %":0.285},{"Rank":34,"Name":"다은","Estimated %":0.28},{"Rank":35,"Name":"가은","Estimated %":0.275},{"Rank":36,"Name":"지민","Estimated %":0.27},{"Rank":37,"Name":"시은","Estimated %":0.265},{"Rank":38,"Name":"아인","Estimated %":0.26},{"Rank":39,"Name":"유진","Estimated %":0.255},{"Rank":40,"Name":"소율","Estimated %":0.25},{"Rank":41,"Name":"예지","Estimated %":0.245},{"Rank":42,"Name":"채린","Estimated %":0.24},{"Rank":43,"Name":"하은","Estimated %":0.235},{"Rank":44,"Name":"서율","Estimated %":0.23},{"Rank":45,"Name":"유림","Estimated %":0.225},{"Rank":46,"Name":"아영","Estimated %":0.22},{"Rank":47,"Name":"지현","Estimated %":0.215},{"Rank":48,"Name":"수빈","Estimated %":0.21},{"Rank":49,"Name":"다인","Estimated %":0.205},{"Rank":50,"Name":"소연","Estimated %":0.2},{"Rank":51,"Name":"하연","Estimated %":0.197},{"Rank":52,"Name":"예서","Estimated %":0.194},{"Rank":53,"Name":"서진","Estimated %":0.191},{"Rank":54,"Name":"유빈","Estimated %":0.188},{"Rank":55,"Name":"지율","Estimated %":0.185},{"Rank":56,"Name":"채윤","Estimated %":0.182},{"Rank":57,"Name":"윤아","Estimated %":0.179},{"Rank":58,"Name":"서빈","Estimated %":0.176},{"Rank":59,"Name":"하정","Estimated %":0.173},{"Rank":60,"Name":"이린","Estimated %":0.17},{"Rank":61,"Name":"소윤","Estimated %":0.167},{"Rank":62,"Name":"유정","Estimated %":0.164},{"Rank":63,"Name":"채민","Estimated %":0.161},{"Rank":64,"Name":"지수","Estimated %":0.158},{"Rank":65,"Name":"예나","Estimated %":0.155},{"Rank":66,"Name":"서희","Estimated %":0.152},{"Rank":67,"Name":"하경","Estimated %":0.149},{"Rank":68,"Name":"유경","Estimated %":0.146},{"Rank":69,"Name":"지연","Estimated %":0.143},{"Rank":70,"Name":"민아","Estimated %":0.14},{"Rank":71,"Name":"수연","Estimated %":0.139},{"Rank":72,"Name":"아정","Estimated %":0.137},{"Rank":73,"Name":"유미","Estimated %":0.136},{"Rank":74,"Name":"채경","Estimated %":0.134},{"Rank":75,"Name":"지혜","Estimated %":0.133},{"Rank":76,"Name":"소희","Estimated %":0.131},{"Rank":77,"Name":"하영","Estimated %":0.13},{"Rank":78,"Name":"유라","Estimated %":0.128},{"Rank":79,"Name":"서경","Estimated %":0.127},{"Rank":80,"Name":"민지","Estimated %":0.125},{"Rank":81,"Name":"지은","Estimated %":0.124},{"Rank":82,"Name":"소영","Estimated %":0.122},{"Rank":83,"Name":"하나","Estimated %":0.121},{"Rank":84,"Name":"유선","Estimated %":0.119},{"Rank":85,"Name":"채희","Estimated %":0.118},{"Rank":86,"Name":"지영","Estimated %":0.116},{"Rank":87,"Name":"수진","Estimated %":0.115},{"Rank":88,"Name":"예슬","Estimated %":0.113},{"Rank":89,"Name":"다연","Estimated %":0.112},{"Rank":90,"Name":"유서","Estimated %":0.11},{"Rank":91,"Name":"서인","Estimated %":0.109},{"Rank":92,"Name":"지선","Estimated %":0.107},{"Rank":93,"Name":"하라","Estimated %":0.106},{"Rank":94,"Name":"유아","Estimated %":0.104},{"Rank":95,"Name":"민정","Estimated %":0.103},{"Rank":96,"Name":"채은","Estimated %":0.101},{"Rank":97,"Name":"지윤","Estimated %":0.1},{"Rank":98,"Name":"소라","Estimated %":0.098},{"Rank":99,"Name":"하진","Estimated %":0.097},{"Rank":100,"Name":"유빈","Estimated %":0.095}];
+
+let currentTab = 'male';
+
+function getTier(pct) {
+  if (pct >= 0.6) return { cls: 'danger', label: '💜 대중적' };
+  if (pct >= 0.3) return { cls: 'warning', label: '🩷 무난함' };
+  if (pct >= 0.15) return { cls: 'safe', label: '💚 개성 있음' };
+  return { cls: 'rare', label: '💙 희귀' };
+}
+
+function renderTable(data, tbodyId, gender, countId) {
+  const tbody = document.getElementById(tbodyId);
+  const q = document.getElementById('search-input').value.trim();
+  let count = 0;
+
+  const filtered = q ? data.filter(d => d.Name.includes(q)) : data;
+  count = filtered.length;
+  document.getElementById(countId).textContent = count + '개';
+
+  tbody.innerHTML = filtered.map(d => {
+    const pct = d['Estimated %'];
+    const tier = getTier(pct);
+    const rankCls = d.Rank <= 3 ? 'rank-top' : '';
+    const barPct = Math.round((pct / 0.96) * 100);
+    const rankEmoji = d.Rank === 1 ? '🥇' : d.Rank === 2 ? '🥈' : d.Rank === 3 ? '🥉' : d.Rank;
+    return `<tr>
+      <td class="${rankCls}">${rankEmoji}</td>
+      <td class="name-cell ${gender}">${d.Name}</td>
+      <td><div class="tier-wrap"><span class="badge ${tier.cls}">${tier.label}</span></div></td>
+      <td>
+        <div class="bar-wrap">
+          <div class="bar-bg"><div class="bar-fill ${gender}" style="width:${barPct}%"></div></div>
+          <span class="bar-pct">${pct.toFixed(2)}%</span>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function filterTable() {
+  renderTable(maleData, 'tbody-male', 'male', 'count-male');
+  renderTable(femaleData, 'tbody-female', 'female', 'count-female');
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  const tabMale = document.getElementById('tab-male');
+  const tabFemale = document.getElementById('tab-female');
+  const panelMale = document.getElementById('panel-male');
+  const panelFemale = document.getElementById('panel-female');
+  const best3Male = document.getElementById('best3-male');
+  const best3Female = document.getElementById('best3-female');
+
+  if (tab === 'male') {
+    tabMale.className = 'tab-btn active-male';
+    tabFemale.className = 'tab-btn';
+    panelMale.classList.remove('hidden');
+    panelFemale.classList.add('hidden');
+    best3Male.classList.remove('hidden');
+    best3Female.classList.add('hidden');
+  } else {
+    tabFemale.className = 'tab-btn active-female';
+    tabMale.className = 'tab-btn';
+    panelFemale.classList.remove('hidden');
+    panelMale.classList.add('hidden');
+    best3Female.classList.remove('hidden');
+    best3Male.classList.add('hidden');
+  }
+}
+
+// Init
+renderTable(maleData, 'tbody-male', 'male', 'count-male');
+renderTable(femaleData, 'tbody-female', 'female', 'count-female');
+</script>
+</body>
+</html>
