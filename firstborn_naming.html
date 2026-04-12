@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>첫째한테 좋은 한자 — 현승리 작명 노트</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yang-light: #dbeafe;
+    --yang-mid: #93c5fd;
+    --yang-dark: #1e40af;
+    --yin-light: #fce7f3;
+    --yin-mid: #f9a8d4;
+    --yin-dark: #9d174d;
+    --gold-light: #fef9c3;
+    --gold-dark: #92400e;
+    --green-light: #dcfce7;
+    --green-dark: #166534;
+    --gray-bg: #f8fafc;
+    --gray-border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-sub: #64748b;
+    --white: #ffffff;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f1f5f9;
+    color: var(--text-main);
+    line-height: 1.7;
+    padding: 0 0 60px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 60%, #60a5fa 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '長';
+    position: absolute;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 240px;
+    opacity: 0.07;
+    right: -20px;
+    top: -30px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 99px;
+    padding: 4px 16px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(24px, 6vw, 36px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .hero p {
+    font-size: 15px;
+    opacity: 0.88;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  /* ── Callout ── */
+  .callout {
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 24px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 14.5px;
+  }
+  .callout .icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .callout.blue { background: var(--yang-light); border-left: 4px solid var(--yang-dark); }
+  .callout.pink { background: var(--yin-light); border-left: 4px solid var(--yin-dark); }
+  .callout.gold { background: var(--gold-light); border-left: 4px solid #b45309; }
+  .callout.green { background: var(--green-light); border-left: 4px solid var(--green-dark); }
+  .callout strong { color: var(--yang-dark); }
+  .callout.pink strong { color: var(--yin-dark); }
+  .callout.gold strong { color: #92400e; }
+  .callout.green strong { color: var(--green-dark); }
+
+  /* ── Section header ── */
+  .section {
+    margin-top: 36px;
+  }
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--yang-dark);
+    flex-shrink: 0;
+  }
+
+  /* ── Main character cards ── */
+  .main-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .main-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1.5px solid var(--gray-border);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .main-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 22px 16px;
+  }
+  .hanja-big {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--yang-dark);
+    min-width: 60px;
+    text-align: center;
+  }
+  .main-card-info { flex: 1; }
+  .main-card-info .reading {
+    font-size: 13px;
+    color: var(--text-sub);
+    margin-bottom: 4px;
+  }
+  .main-card-info .meaning {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+  }
+  .main-card-info .keyword-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .kw-tag {
+    background: var(--yang-light);
+    color: var(--yang-dark);
+    border-radius: 99px;
+    padding: 2px 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .main-card-body {
+    background: var(--gray-bg);
+    padding: 14px 22px 16px;
+    font-size: 14px;
+    color: var(--text-main);
+    border-top: 1px solid var(--gray-border);
+    line-height: 1.75;
+  }
+  .main-card-body .quote {
+    font-style: italic;
+    color: var(--yang-dark);
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 14.5px;
+  }
+
+  /* ── Table ── */
+  .table-wrap {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1.5px solid var(--gray-border);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  thead th {
+    background: var(--yang-dark);
+    color: white;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  thead th:first-child { width: 70px; text-align: center; }
+  tbody tr { border-bottom: 1px solid var(--gray-border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: var(--gray-bg); }
+  tbody td { padding: 11px 14px; vertical-align: middle; }
+  tbody td:first-child {
+    text-align: center;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--yang-dark);
+  }
+  .td-reading { color: var(--text-sub); font-size: 13px; }
+  .td-meaning { font-weight: 600; }
+  .td-group span {
+    display: inline-block;
+    background: var(--yang-light);
+    color: var(--yang-dark);
+    border-radius: 6px;
+    padding: 1px 8px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* ── Warning card ── */
+  .warn-card {
+    background: var(--yin-light);
+    border: 1.5px solid var(--yin-mid);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin: 24px 0;
+    font-size: 14.5px;
+  }
+  .warn-card .warn-title {
+    font-weight: 700;
+    color: var(--yin-dark);
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── Divider ── */
+  hr { border: none; border-top: 1.5px solid var(--gray-border); margin: 28px 0; }
+
+  /* ── Footer / 출처 ── */
+  .source-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1.5px solid var(--gray-border);
+    padding: 24px 22px;
+    margin-top: 36px;
+  }
+  .source-section h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-sub);
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+  }
+  .source-desc {
+    font-size: 13.5px;
+    color: var(--text-sub);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .source-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .source-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    text-decoration: none;
+    color: var(--yang-dark);
+    background: var(--yang-light);
+    border-radius: 8px;
+    padding: 9px 14px;
+    transition: opacity .15s;
+  }
+  .source-link:hover { opacity: 0.75; }
+  .source-link .licon { font-size: 16px; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 40px 16px 32px; }
+    .main-card-header { gap: 14px; }
+    .hanja-big { font-size: 42px; }
+    thead th:nth-child(4),
+    tbody td:nth-child(4) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">📖 현승리 작명 노트</div>
+  <h1>첫째한테 좋은 한자<br>따로 있을까요?</h1>
+  <p>첫째에게만 쓸 수 있는 특별한 한자들이 있어요.<br>의미와 기운을 함께 담아 이름을 지어봐요.</p>
+</div>
+
+<div class="container">
+
+  <!-- 안심 멘트 -->
+  <div class="callout green" style="margin-top:28px;">
+    <span class="icon">😊</span>
+    <div><strong>한자 몰라도 괜찮아요!</strong><br>
+    모든 한자 옆에 읽는 법(음)을 함께 적어두었어요. 뜻만 이해해도 충분합니다.</div>
+  </div>
+
+  <!-- 핵심 3글자 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="dot"></span>
+      첫째에게 딱 맞는 핵심 한자 3가지
+    </div>
+
+    <div class="main-cards">
+
+      <!-- 승(承) -->
+      <div class="main-card">
+        <div class="main-card-header">
+          <div class="hanja-big">承</div>
+          <div class="main-card-info">
+            <div class="reading">이을 승 (承)</div>
+            <div class="meaning">이어받아 더 발전시킨다</div>
+            <div class="keyword-row">
+              <span class="kw-tag">책임감</span>
+              <span class="kw-tag">꾸준한 성장</span>
+              <span class="kw-tag">계승</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-card-body">
+          <div class="quote">"가진 걸 지키면서 더 발전시킨다"</div>
+          첫째에게 이 글자를 쓰면 <strong>책임감이 강해지고</strong> 꾸준히 성장한다는 뜻이 담겨요. 무언가를 이어받아 더 크게 키우는 기운이 있어, 집안의 흐름을 긍정적으로 이어가는 역할에 딱 맞는 글자예요.
+        </div>
+      </div>
+
+      <!-- 태(太/泰) -->
+      <div class="main-card">
+        <div class="main-card-header">
+          <div class="hanja-big" style="font-size:44px;">太·泰</div>
+          <div class="main-card-info">
+            <div class="reading">클 태 (太 / 泰)</div>
+            <div class="meaning">스케일이 크고, 사람을 모은다</div>
+            <div class="keyword-row">
+              <span class="kw-tag">리더십</span>
+              <span class="kw-tag">큰 그릇</span>
+              <span class="kw-tag">첫째 전용</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-card-body">
+          <div class="quote">"기운 자체가 커서 첫째한테만 쓸 수 있어요"</div>
+          <strong>스케일이 큰 사람</strong>이 된다는 뜻이에요. 자기 길을 확실하게 가고, 사람들을 끌어당기는 리더십 있는 글자예요. 기운이 너무 커서 <strong>첫째가 아닌 아이에게는 부담</strong>이 될 수 있어요.
+        </div>
+      </div>
+
+      <!-- 주(柱) -->
+      <div class="main-card">
+        <div class="main-card-header">
+          <div class="hanja-big">柱</div>
+          <div class="main-card-info">
+            <div class="reading">기둥 주 (柱)</div>
+            <div class="meaning">집안의 중심, 안정된 기반</div>
+            <div class="keyword-row">
+              <span class="kw-tag">안정감</span>
+              <span class="kw-tag">중심</span>
+              <span class="kw-tag">첫째 전용</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-card-body">
+          <div class="quote">"중심을 잡아주는 글자"</div>
+          집안의 기둥처럼 <strong>안정된 기반을 만들어주는 기운</strong>을 가졌어요. 나중에 커서도 주변에 안정감을 주는 사람이 됩니다. 둘째가 이 글자를 쓰면 서열이 흐트러질 수 있어, <strong>첫째에게만 써야 하는 글자</strong>예요.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 경고 박스 -->
+  <div class="warn-card">
+    <div class="warn-title">⚠️ 둘째·셋째는 쓰면 안 되는 글자들</div>
+    太(태), 泰(태), 柱(주)처럼 <strong>"큰 기운·중심"</strong>의 글자는 첫째 전용이에요.<br>
+    둘째 이하에게 쓰면 자녀들 사이의 서열이 흐트러지거나, 아이에게 맞지 않는 기운이 될 수 있어요.
+  </div>
+
+  <hr>
+
+  <!-- 전체 한자 표 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="dot"></span>
+      첫째 이름에 쓰면 좋은 한자 목록
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>한자</th>
+            <th>읽기 (음)</th>
+            <th>뜻</th>
+            <th>그룹</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>太</td>
+            <td class="td-reading">클 태</td>
+            <td class="td-meaning">크다, 위대하다</td>
+            <td class="td-group"><span>큰 기운</span></td>
+          </tr>
+          <tr>
+            <td>泰</td>
+            <td class="td-reading">클 태</td>
+            <td class="td-meaning">크고 평안하다</td>
+            <td class="td-group"><span>큰 기운</span></td>
+          </tr>
+          <tr>
+            <td>奕</td>
+            <td class="td-reading">클 혁</td>
+            <td class="td-meaning">크고 빛나다</td>
+            <td class="td-group"><span>큰 기운</span></td>
+          </tr>
+          <tr>
+            <td>允</td>
+            <td class="td-reading">맏 윤</td>
+            <td class="td-meaning">맏이, 진실하다</td>
+            <td class="td-group"><span>맏이</span></td>
+          </tr>
+          <tr>
+            <td>伯</td>
+            <td class="td-reading">맏 백</td>
+            <td class="td-meaning">맏이, 우두머리</td>
+            <td class="td-group"><span>맏이</span></td>
+          </tr>
+          <tr>
+            <td>昆</td>
+            <td class="td-reading">맏 곤</td>
+            <td class="td-meaning">맏이, 형</td>
+            <td class="td-group"><span>맏이</span></td>
+          </tr>
+          <tr>
+            <td>柱</td>
+            <td class="td-reading">기둥 주</td>
+            <td class="td-meaning">기둥, 중심</td>
+            <td class="td-group"><span>기둥·중심</span></td>
+          </tr>
+          <tr>
+            <td>桯</td>
+            <td class="td-reading">기둥 정</td>
+            <td class="td-meaning">기둥, 받침대</td>
+            <td class="td-group"><span>기둥·중심</span></td>
+          </tr>
+          <tr>
+            <td>楹</td>
+            <td class="td-reading">기둥 영</td>
+            <td class="td-meaning">기둥, 버팀목</td>
+            <td class="td-group"><span>기둥·중심</span></td>
+          </tr>
+          <tr>
+            <td>榲</td>
+            <td class="td-reading">기둥 온</td>
+            <td class="td-meaning">기둥, 지지대</td>
+            <td class="td-group"><span>기둥·중심</span></td>
+          </tr>
+          <tr>
+            <td>秀</td>
+            <td class="td-reading">빼어날 수</td>
+            <td class="td-meaning">빼어나다, 탁월하다</td>
+            <td class="td-group"><span>빼어남</span></td>
+          </tr>
+          <tr>
+            <td>挺</td>
+            <td class="td-reading">빼어날 정</td>
+            <td class="td-meaning">빼어나다, 곧다</td>
+            <td class="td-group"><span>빼어남</span></td>
+          </tr>
+          <tr>
+            <td>元</td>
+            <td class="td-reading">으뜸 원</td>
+            <td class="td-meaning">으뜸, 첫째</td>
+            <td class="td-group"><span>으뜸</span></td>
+          </tr>
+          <tr>
+            <td>氶</td>
+            <td class="td-reading">이을 승</td>
+            <td class="td-meaning">잇다, 계승하다</td>
+            <td class="td-group"><span>계승</span></td>
+          </tr>
+          <tr>
+            <td>承</td>
+            <td class="td-reading">이을 승</td>
+            <td class="td-meaning">이어받다, 받들다</td>
+            <td class="td-group"><span>계승</span></td>
+          </tr>
+          <tr>
+            <td>繗</td>
+            <td class="td-reading">이을 인</td>
+            <td class="td-meaning">잇다, 연결하다</td>
+            <td class="td-group"><span>계승</span></td>
+          </tr>
+          <tr>
+            <td>先</td>
+            <td class="td-reading">먼저 선</td>
+            <td class="td-meaning">먼저, 앞서다</td>
+            <td class="td-group"><span>선두</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 주의 callout — 모바일 가독성 개선 -->
+  <div style="background:#fef9c3; border-left:4px solid #b45309; border-radius:14px; padding:20px; margin-top:24px;">
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+      <span style="font-size:20px;">⚡</span>
+      <strong style="color:#92400e; font-size:15.5px;">중요! 좋은 한자라고 모두에게 맞는 건 아니에요.</strong>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="background:white; border-radius:10px; padding:13px 15px; font-size:14px; line-height:1.7; border:1px solid #fde68a;">
+        📐 <strong style="color:#92400e;">완벽한 이름 = 성명학 + 사주명리학</strong><br>
+        한자의 뜻·획수(성명학)와 아이의 생년월일시 기운(사주명리학)을 <strong>반드시 함께</strong> 봐야 해요.
+      </div>
+      <div style="background:white; border-radius:10px; padding:13px 15px; font-size:14px; line-height:1.7; border:1px solid #fde68a;">
+        ⚠️ <strong style="color:#92400e;">길한 한자도 사주와 안 맞으면 역효과</strong><br>
+        아무리 좋은 한자라도 아이의 사주 구조와 맞지 않으면 오히려 독이 될 수 있어요.
+      </div>
+      <div style="background:#92400e; border-radius:10px; padding:13px 15px; font-size:14px; line-height:1.7; color:white;">
+        ✅ <strong>한자는 재료, 사주가 설계도예요.</strong><br>
+        두 가지를 함께 고려해야 진짜 맞는 이름이 완성됩니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA — 무료 이름풀이 -->
+  <a href="https://www.hslee.co.kr" target="_blank" style="display:block; text-decoration:none; margin-top:16px;">
+    <div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); border-radius:14px; padding:22px 20px; box-shadow:0 4px 16px rgba(30,64,175,0.25);">
+      <div style="color:rgba(255,255,255,0.8); font-size:12px; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">🚫 이름풀이? 돈 내고 보지 마세요.</div>
+      <div style="color:white; font-size:18px; font-weight:700; line-height:1.45; margin-bottom:14px;">5,000건을 분석한 현승리가<br>직접 풀어주는 무료 이름풀이</div>
+      <div style="background:white; color:#1e40af; border-radius:99px; padding:12px 0; font-size:14px; font-weight:700; text-align:center; width:100%;">
+        지금 무료로 확인하기 →
+      </div>
+    </div>
+  </a>
+
+  <!-- CTA — 카카오 커뮤니티 -->
+  <a href="https://open.kakao.com/o/gBSetQ6h" target="_blank" style="display:block; text-decoration:none; margin-top:12px;">
+    <div style="background: linear-gradient(135deg, #f9a825 0%, #fdd835 100%); border-radius:14px; padding:22px 20px; box-shadow:0 4px 16px rgba(249,168,37,0.3);">
+      <div style="color:rgba(0,0,0,0.55); font-size:12px; font-weight:700; letter-spacing:0.08em; margin-bottom:8px;">💬 더 많은 사주·작명 정보가 궁금하다면</div>
+      <div style="color:#1a1a1a; font-size:17px; font-weight:700; line-height:1.45; margin-bottom:14px;">현승리 오픈 카카오 커뮤니티<br>지금 바로 참여하세요</div>
+      <div style="background:#3c1e00; color:#fdd835; border-radius:99px; padding:12px 0; font-size:14px; font-weight:700; text-align:center; width:100%;">
+        카카오 커뮤니티 입장하기 →
+      </div>
+    </div>
+  </a>
+
+  <hr>
+
+  <!-- 출처 섹션 -->
+  <div class="source-section">
+    <h3>📌 출처 및 참고</h3>
+    <p class="source-desc">
+      구독자 1.4만 작명 유튜버 <strong>현승리</strong>의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.
+    </p>
+    <div class="source-links">
+      <a class="source-link" href="https://www.youtube.com/@name_house" target="_blank">
+        <span class="licon">▶️</span> 유튜브 채널 — @name_house
+      </a>
+      <a class="source-link" href="https://www.instagram.com/free_hsl/" target="_blank">
+        <span class="licon">📸</span> 인스타그램 — @free_hsl
+      </a>
+      <a class="source-link" href="https://www.hslee.co.kr" target="_blank">
+        <span class="licon">🌐</span> 공식 홈페이지 — hslee.co.kr
+      </a>
+      <a class="source-link" href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">
+        <span class="licon">🍎</span> 앱스토어 — 천을귀인 (만세력)
+      </a>
+      <a class="source-link" href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">
+        <span class="licon">🤖</span> 구글플레이 — 천을귀인 (만세력)
+      </a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+</body>
+</html>
