@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제주 가족 여행 3박 4일</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky:#c8e6f5; --sea:#4a9eba; --deep:#1a4a5e;
+  --stone:#8a7968; --green:#5a8a6a; --accent:#e07b4a;
+  --white:#fdfaf6; --ink:#1e1a16;
+  --gold:#c9943a; --gold-bg:#fdf6e8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+/* ── HERO ── */
+.hero{position:relative;height:100vh;min-height:580px;background:linear-gradient(160deg,#0e3348 0%,#1a5f7a 40%,#4a9eba 70%,#c8e6f5 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;}
+.hero::before{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath fill='%23fdfaf6' d='M0,160L60,144C120,128,240,96,360,90.7C480,85,600,107,720,112C840,117,960,107,1080,96C1200,85,1320,75,1380,69.3L1440,64L1440,200L0,200Z'/%3E%3C/svg%3E") no-repeat bottom/cover;}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,0.06);animation:float linear infinite;}
+.bubble:nth-child(1){width:80px;height:80px;left:10%;animation-duration:14s;}
+.bubble:nth-child(2){width:50px;height:50px;left:30%;animation-duration:18s;animation-delay:3s;}
+.bubble:nth-child(3){width:120px;height:120px;left:65%;animation-duration:22s;animation-delay:1s;}
+.bubble:nth-child(4){width:40px;height:40px;left:80%;animation-duration:12s;animation-delay:5s;}
+.bubble:nth-child(5){width:90px;height:90px;left:50%;animation-duration:16s;animation-delay:2s;}
+@keyframes float{from{transform:translateY(110vh) scale(.8);opacity:0;}10%{opacity:1;}90%{opacity:1;}to{transform:translateY(-10vh) scale(1.1);opacity:0;}}
+.hero-tag{font-weight:300;font-size:.8rem;letter-spacing:.35em;color:rgba(200,230,245,.8);text-transform:uppercase;margin-bottom:1.2rem;animation:fadeUp 1s ease both;}
+.hero-title{font-family:'DM Serif Display','Noto Serif KR',serif;font-size:clamp(3rem,8vw,6.5rem);color:#fff;text-align:center;line-height:1;letter-spacing:-.02em;animation:fadeUp 1s ease .15s both;}
+.hero-title span{color:var(--sky);display:block;font-size:.55em;letter-spacing:.12em;font-family:'Noto Serif KR',serif;font-weight:300;margin-top:.3em;}
+.hero-meta{display:flex;gap:2rem;margin-top:2.5rem;animation:fadeUp 1s ease .3s both;flex-wrap:wrap;justify-content:center;}
+.hero-meta-item{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.75);font-size:.85rem;}
+.hero-meta-item .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SUMMARY BAR ── */
+.summary-bar{background:var(--deep);color:rgba(200,230,245,.85);display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;padding:1.2rem 2rem;font-size:.78rem;letter-spacing:.05em;}
+.summary-bar span{display:flex;align-items:center;gap:.4rem;}
+.summary-bar strong{color:#fff;}
+
+/* ── SECTION WRAPPER ── */
+.timeline-section{padding:72px 20px 100px;max-width:860px;margin:0 auto;}
+.section-label{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);margin-bottom:3rem;}
+
+/* ── DAY BLOCK ── */
+.day-block{display:grid;grid-template-columns:130px 1fr;gap:0 2.2rem;margin-bottom:5rem;opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
+.day-block.visible{opacity:1;transform:translateY(0);}
+.day-label-col{display:flex;flex-direction:column;align-items:flex-end;padding-top:6px;position:relative;}
+.day-label-col::after{content:'';position:absolute;right:-2.2rem;top:28px;bottom:-5rem;width:1px;background:linear-gradient(to bottom,var(--col,var(--sea)) 0%,rgba(74,158,186,.06) 100%);}
+.day-block:last-child .day-label-col::after{display:none;}
+.day-number{font-family:'DM Serif Display',serif;font-size:3.2rem;line-height:1;color:var(--deep);opacity:.12;}
+.day-en{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--col,var(--sea));font-weight:600;}
+.day-theme-badge{margin-top:10px;font-size:.68rem;background:var(--col,var(--sea));color:#fff;padding:3px 10px;border-radius:20px;white-space:nowrap;}
+.day-content-col{padding-top:4px;}
+.day-headline{font-family:'Noto Serif KR',serif;font-size:1.3rem;font-weight:700;color:var(--deep);margin-bottom:1.4rem;padding-bottom:.7rem;border-bottom:1.5px solid rgba(74,158,186,.15);}
+
+/* ── ROUTE CHAIN ── */
+.route-chain{display:flex;flex-direction:column;}
+.depart-node{display:flex;align-items:center;gap:1rem;margin-bottom:0;}
+.depart-pin{width:42px;height:42px;border-radius:50%;background:var(--deep);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;box-shadow:0 3px 10px rgba(26,74,94,.25);}
+.depart-label{font-family:'Noto Serif KR',serif;font-size:.95rem;font-weight:700;color:var(--deep);}
+.depart-sub{font-size:.72rem;color:var(--stone);margin-top:2px;}
+.move-arrow{display:flex;align-items:center;gap:.7rem;padding:6px 0 6px 20px;position:relative;}
+.move-arrow::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:1.5px;background:repeating-linear-gradient(to bottom,rgba(74,158,186,.35) 0,rgba(74,158,186,.35) 5px,transparent 5px,transparent 9px);}
+.move-pill{margin-left:1.5rem;display:inline-flex;align-items:center;gap:.4rem;background:rgba(74,158,186,.08);border:1px solid rgba(74,158,186,.2);border-radius:20px;padding:3px 11px;font-size:.7rem;color:var(--sea);font-weight:600;letter-spacing:.03em;white-space:nowrap;}
+
+/* ── SPOT CARD ── */
+.spot-card{display:grid;grid-template-columns:44px 1fr;gap:0 1rem;background:var(--white);border:1px solid rgba(138,121,104,.13);border-radius:16px;padding:1.1rem 1.3rem 1.1rem 1rem;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s;}
+.spot-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:16px 0 0 16px;background:var(--card-accent,var(--sea));}
+.spot-card:hover{box-shadow:0 8px 32px rgba(26,74,94,.1);transform:translateY(-2px);}
+.spot-icon-wrap{display:flex;flex-direction:column;align-items:center;padding-top:2px;gap:5px;}
+.spot-icon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:rgba(74,158,186,.1);flex-shrink:0;}
+.spot-time{font-size:.65rem;color:var(--stone);font-weight:600;letter-spacing:.04em;white-space:nowrap;}
+.spot-name{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:700;color:var(--deep);margin-bottom:.28rem;}
+.spot-desc{font-size:.79rem;color:var(--stone);line-height:1.75;}
+.spot-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:.5rem;}
+.tag{font-size:.63rem;padding:2px 8px;border-radius:20px;border:1px solid;letter-spacing:.03em;font-weight:500;}
+.tag-free{color:var(--green);border-color:var(--green);}
+.tag-tip{color:var(--accent);border-color:var(--accent);}
+.tag-walk{color:var(--sea);border-color:var(--sea);}
+.tag-kids{color:#c07080;border-color:#c07080;}
+
+/* ── TIP BOX ── */
+.tip-box{margin-top:1rem;background:rgba(224,123,74,.06);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:.7rem 1rem;font-size:.78rem;color:var(--stone);line-height:1.75;}
+.tip-box strong{color:var(--accent);}
+
+/* ── HOTEL SECTION ── */
+.hotel-section{margin-top:1.6rem;}
+.hotel-section-title{display:flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.9rem;}
+.hotel-section-title::before,.hotel-section-title::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(201,148,58,.3),transparent);}
+.hotel-section-title::before{background:linear-gradient(to left,rgba(201,148,58,.3),transparent);}
+
+.hotel-cards{display:flex;flex-direction:column;gap:.85rem;}
+
+.hotel-card{background:var(--gold-bg);border:1px solid rgba(201,148,58,.2);border-radius:14px;padding:1.1rem 1.2rem;position:relative;overflow:hidden;transition:box-shadow .3s,transform .25s;}
+.hotel-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);border-radius:14px 0 0 14px;}
+.hotel-card:hover{box-shadow:0 6px 24px rgba(201,148,58,.15);transform:translateY(-2px);}
+
+.hotel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem;flex-wrap:wrap;}
+.hotel-name{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:700;color:#7a4e10;margin-bottom:.2rem;}
+.hotel-loc{font-size:.72rem;color:var(--stone);}
+.hotel-badge-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-top:.5rem;}
+.hbadge{font-size:.62rem;padding:2px 8px;border-radius:20px;font-weight:600;white-space:nowrap;}
+.hb-cap{background:rgba(26,74,94,.1);color:var(--deep);}
+.hb-feat{background:rgba(201,148,58,.15);color:#8a5a10;}
+.hb-loc{background:rgba(90,138,106,.15);color:#3a6a4a;}
+
+.hotel-desc{font-size:.78rem;color:var(--stone);line-height:1.7;margin-top:.55rem;}
+.hotel-price{display:inline-block;margin-top:.6rem;font-size:.75rem;color:var(--gold);font-weight:700;background:rgba(201,148,58,.12);padding:3px 10px;border-radius:20px;}
+
+.hotel-note{margin-top:1rem;background:rgba(26,74,94,.05);border-radius:8px;padding:.7rem .9rem;font-size:.75rem;color:var(--stone);line-height:1.7;}
+.hotel-note strong{color:var(--deep);}
+
+/* ── FOOTER ── */
+footer{background:var(--deep);color:rgba(200,230,245,.6);text-align:center;padding:2.5rem 1rem;font-size:.75rem;letter-spacing:.1em;}
+footer strong{color:var(--sky);}
+
+@media(max-width:600px){
+  .day-block{grid-template-columns:80px 1fr;gap:0 1.3rem;}
+  .day-number{font-size:2.2rem;}
+  .summary-bar{gap:1.2rem;}
+  .hotel-top{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  <div class="bubble"></div><div class="bubble"></div>
+  <p class="hero-tag">Family Travel · Jeju Island</p>
+  <h1 class="hero-title">제주<span>가족 여행 3박 4일</span></h1>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="dot"></span>자연 &amp; 힐링 위주</div>
+    <div class="hero-meta-item"><span class="dot"></span>3가족 10인 동반</div>
+    <div class="hero-meta-item"><span class="dot"></span>독채 펜션 · 프라이빗</div>
+  </div>
+</section>
+
+<!-- SUMMARY BAR -->
+<div class="summary-bar">
+  <span>✈️ 출발 <strong>제주국제공항</strong></span>
+  <span>👨‍👩‍👧‍👦 <strong>10인</strong> 3가족</span>
+  <span>🏡 <strong>독채 펜션</strong> 위주</span>
+  <span>💰 1박 <strong>30~50만원</strong></span>
+  <span>🚗 전 구간 <strong>렌터카</strong></span>
+</div>
+
+<!-- TIMELINE -->
+<main class="timeline-section">
+  <p class="section-label">Day by Day Itinerary + 숙소 추천</p>
+
+  <!-- ═══════ DAY 1 ═══════ -->
+  <div class="day-block" style="--col:#4a9eba">
+    <div class="day-label-col">
+      <div class="day-number">01</div>
+      <div class="day-en">DAY ONE</div>
+      <div class="day-theme-badge">북쪽 도착</div>
+    </div>
+    <div class="day-content-col">
+      <div class="day-headline">제주 도착 · 북쪽 가볍게</div>
+      <div class="route-chain">
+        <div class="depart-node">
+          <div class="depart-pin">✈️</div>
+          <div><div class="depart-label">제주국제공항 도착</div><div class="depart-sub">렌터카 수령 후 출발</div></div>
+        </div>
+        <div class="move-arrow"><div class="move-pill">🚗 약 4km · 10분</div></div>
+        <div class="spot-card" style="--card-accent:#4a9eba">
+          <div class="spot-icon-wrap"><div class="spot-icon">🪨</div><div class="spot-time">14:00</div></div>
+          <div>
+            <div class="spot-name">용두암</div>
+            <div class="spot-desc">공항에서 가장 가까운 첫 명소. 용머리 모양 현무암 해안 산책로로 유모차도 접근 쉬워요.</div>
+            <div class="spot-tags"><span class="tag tag-free">무료입장</span><span class="tag tag-walk">산책 가능</span><span class="tag tag-kids">유모차 OK</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill">🚗 약 3km · 8분</div></div>
+        <div class="spot-card" style="--card-accent:#e07b4a">
+          <div class="spot-icon-wrap"><div class="spot-icon">🥢</div><div class="spot-time">17:00</div></div>
+          <div>
+            <div class="spot-name">동문재래시장</div>
+            <div class="spot-desc">저녁 식사 겸 시장 구경. 흑돼지 만두, 감귤 주스 등 아이들이 좋아하는 먹거리가 가득해요.</div>
+            <div class="spot-tags"><span class="tag tag-tip">저녁 추천</span><span class="tag tag-kids">아이 먹거리</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1박 숙소 -->
+      <div class="hotel-section">
+        <div class="hotel-section-title">🏡 1박 숙소 추천 · 제주시 북쪽</div>
+        <div class="hotel-cards">
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">통나무파크 독채 펜션</div>
+                <div class="hotel-loc">📍 제주시 애월읍 도치돌길 293</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">최대 10~15인</span>
+              <span class="hbadge hb-feat">바베큐 파티</span>
+              <span class="hbadge hb-feat">알파카·말 먹이주기 체험</span>
+              <span class="hbadge hb-loc">공항 30분</span>
+            </div>
+            <div class="hotel-desc">통나무 감성 독채로 넓은 마당에서 모닥불·바베큐를 즐길 수 있어요. 併설 도치돌목장에서 알파카·포니·양과 교감하는 체험이 아이들에게 특히 인기예요. 3가족 10인이 함께 쓰기에 충분한 규모입니다.</div>
+            <div class="hotel-price">예약: 야놀자 · 여기어때 검색 추천</div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">안심여관 독채 풀빌라</div>
+                <div class="hotel-loc">📍 제주시 애월읍 하가리 (연꽃마을)</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">안채+별채 분리 구조</span>
+              <span class="hbadge hb-feat">대형 야외 수영장</span>
+              <span class="hbadge hb-feat">히노끼탕</span>
+              <span class="hbadge hb-loc">공항 35분</span>
+            </div>
+            <div class="hotel-desc">안채+별채로 나뉘어 가족끼리 독립된 공간을 쓰면서 수영장·불멍은 함께 즐길 수 있는 구조예요. 사계절 이용 가능한 대형 수영장과 히노끼탕이 강점. 가족 10인 단독 사용 가능.</div>
+            <div class="hotel-price">예약: 에어비앤비 · 여기어때 검색 추천</div>
+          </div>
+
+        </div>
+        <div class="hotel-note">
+          <strong>💡 예약 팁</strong> · 10인 독채는 성수기에 빠르게 마감돼요. 여행 2~3개월 전 예약을 권장드려요. 야놀자·여기어때·에어비앤비에서 <strong>"제주 애월 10인 독채"</strong>로 검색하면 다양한 선택지를 비교할 수 있어요. 30~50만원 예산이면 애월 쪽 감성 독채 풀빌라급이 충분히 가능해요.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ DAY 2 ═══════ -->
+  <div class="day-block" style="--col:#2c6e8a">
+    <div class="day-label-col">
+      <div class="day-number">02</div>
+      <div class="day-en">DAY TWO</div>
+      <div class="day-theme-badge" style="background:#2c6e8a">동쪽 탐방</div>
+    </div>
+    <div class="day-content-col">
+      <div class="day-headline">동쪽 · 성산 일출봉 &amp; 섭지코지</div>
+      <div class="route-chain">
+        <div class="depart-node">
+          <div class="depart-pin" style="background:#2c6e8a">🏨</div>
+          <div><div class="depart-label">제주시 숙소 출발</div><div class="depart-sub">동쪽으로 이동 시작</div></div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#2c6e8a;border-color:rgba(44,110,138,.25);background:rgba(44,110,138,.07)">🚗 약 72km · 1시간 20분</div></div>
+        <div class="spot-card" style="--card-accent:#2c6e8a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(44,110,138,.1)">🌋</div><div class="spot-time">09:00</div></div>
+          <div>
+            <div class="spot-name">성산일출봉</div>
+            <div class="spot-desc">유네스코 세계자연유산. 유아·어르신은 입구 해안 산책로만 둘러봐도 충분해요. 매일 오후 2시 해녀 공연도 볼 수 있어요.</div>
+            <div class="spot-tags"><span class="tag tag-walk">해안 산책로</span><span class="tag tag-tip">해녀 공연 14:00</span><span class="tag tag-kids">유모차 OK (입구)</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#2c6e8a;border-color:rgba(44,110,138,.25);background:rgba(44,110,138,.07)">🚗 약 6km · 12분</div></div>
+        <div class="spot-card" style="--card-accent:#5a8a6a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(90,138,106,.1)">🌊</div><div class="spot-time">13:00</div></div>
+          <div>
+            <div class="spot-name">섭지코지</div>
+            <div class="spot-desc">완만한 해안 산책로라 유모차도 가능. 성산일출봉과 한라산이 한눈에 보이는 뷰 포인트가 많아요.</div>
+            <div class="spot-tags"><span class="tag tag-free">무료입장</span><span class="tag tag-walk">유모차 OK</span><span class="tag tag-tip">카페 추천</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2박 숙소 -->
+      <div class="hotel-section">
+        <div class="hotel-section-title">🏡 2박 숙소 추천 · 성산 동쪽 OR 서귀포 이동</div>
+        <div class="hotel-cards">
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">아이올레 키즈 풀빌라 (IOLLE Kids Pool Villa)</div>
+                <div class="hotel-loc">📍 서귀포시 성산읍 난산리 654</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">방 2개 · 욕실 2개</span>
+              <span class="hbadge hb-feat">24h 온수 야외 풀</span>
+              <span class="hbadge hb-feat">유아 놀이공간</span>
+              <span class="hbadge hb-feat">공주 드레스 구비</span>
+              <span class="hbadge hb-loc">성산일출봉 15분</span>
+            </div>
+            <div class="hotel-desc">성산 근처의 키즈 특화 풀빌라로 유아·어린이가 있는 3가족에게 최적이에요. 24시간 온수 야외 풀, 아이용 장난감·드레스 구비. 방 2개·욕실 2개로 10인이 쾌적하게 쓸 수 있어요. 이동 없이 3박 숙소로도 활용 가능해요.</div>
+            <div class="hotel-price">예약: 에어비앤비 · 야놀자 검색 추천</div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">산방산 뷰 독채 (최대 15인)</div>
+                <div class="hotel-loc">📍 서귀포시 안덕면 (산방산 인근)</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">최대 15인 독채</span>
+              <span class="hbadge hb-feat">침실 5개 · 욕실 3개</span>
+              <span class="hbadge hb-feat">노래방 기계</span>
+              <span class="hbadge hb-feat">야외 테라스 바베큐</span>
+              <span class="hbadge hb-loc">오설록·약천사 20분</span>
+            </div>
+            <div class="hotel-desc">10인이 넉넉하게 쓸 수 있는 2층 독채. 1층 침실 2개+멀티룸, 2층 침실 2개 구조로 각 가족이 독립 공간을 가질 수 있어요. 산방산 뷰 넓은 마당과 노래방 기계로 저녁 시간도 알차게 보낼 수 있어요. 3일차 서쪽 코스(오설록·약천사·협재)와 동선도 딱 맞아요.</div>
+            <div class="hotel-price">예약: 여기어때 · 야놀자 검색 추천</div>
+          </div>
+
+        </div>
+        <div class="hotel-note">
+          <strong>💡 동선 팁</strong> · 2박은 <strong>성산 인근</strong>에 머물면 당일 성산·섭지코지를 즐기기 좋아요. 단, 3일차 서쪽 코스(오설록·약천사·협재)까지 이동이 1시간 이상이에요. 반대로 <strong>서귀포/안덕 쪽</strong>에 2박부터 잡으면 3일차 동선이 훨씬 편해지니 가족끼리 상의해보세요!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ DAY 3 ═══════ -->
+  <div class="day-block" style="--col:#8a6a5a">
+    <div class="day-label-col">
+      <div class="day-number">03</div>
+      <div class="day-en">DAY THREE</div>
+      <div class="day-theme-badge" style="background:#8a6a5a">서쪽 풀코스</div>
+    </div>
+    <div class="day-content-col">
+      <div class="day-headline">서쪽 · 오설록 → 약천사 → 협재 → 한림공원</div>
+      <div class="route-chain">
+        <div class="depart-node">
+          <div class="depart-pin" style="background:#8a6a5a">🏨</div>
+          <div><div class="depart-label">숙소 출발</div><div class="depart-sub">서쪽 내륙으로 이동</div></div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#8a6a5a;border-color:rgba(138,106,90,.25);background:rgba(138,106,90,.07)">🚗 약 22km · 30분</div></div>
+        <div class="spot-card" style="--card-accent:#5a8a6a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(90,138,106,.1)">🍵</div><div class="spot-time">09:30</div></div>
+          <div>
+            <div class="spot-name">오설록 티뮤지엄</div>
+            <div class="spot-desc">녹차밭 산책과 말차 디저트 체험. 입장 무료. 어르신·유아 모두 편하게 거닐 수 있어요.</div>
+            <div class="spot-tags"><span class="tag tag-free">무료입장</span><span class="tag tag-kids">포토 스팟 多</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#8a6a5a;border-color:rgba(138,106,90,.25);background:rgba(138,106,90,.07)">🚗 약 20km · 25분</div></div>
+        <div class="spot-card" style="--card-accent:#8a6a5a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(138,106,90,.1)">🛕</div><div class="spot-time">11:00</div></div>
+          <div>
+            <div class="spot-name">약천사</div>
+            <div class="spot-desc">아시아 최대 규모 사찰. 웅장한 3층 법당과 8만 개 황금 불상이 압도적. 고요한 분위기로 온 가족이 경건한 시간을 보낼 수 있어요.</div>
+            <div class="spot-tags"><span class="tag tag-free">무료입장</span><span class="tag tag-tip">내부 촬영 금지</span><span class="tag tag-tip">신발 벗고 입장</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#8a6a5a;border-color:rgba(138,106,90,.25);background:rgba(138,106,90,.07)">🚗 약 30km · 40분</div></div>
+        <div class="spot-card" style="--card-accent:#4a9eba">
+          <div class="spot-icon-wrap"><div class="spot-icon">🏖️</div><div class="spot-time">13:30</div></div>
+          <div>
+            <div class="spot-name">협재해수욕장</div>
+            <div class="spot-desc">에메랄드빛 아름다운 바다. 수심이 얕아 아이 물놀이에 최적이에요.</div>
+            <div class="spot-tags"><span class="tag tag-kids">물놀이 최적</span><span class="tag tag-walk">에메랄드 바다</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#8a6a5a;border-color:rgba(138,106,90,.25);background:rgba(138,106,90,.07)">🚗 약 1km · 3분 (도보 가능)</div></div>
+        <div class="spot-card" style="--card-accent:#5a8a6a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(90,138,106,.1)">🌿</div><div class="spot-time">15:30</div></div>
+          <div>
+            <div class="spot-name">한림공원</div>
+            <div class="spot-desc">협재 바로 옆! 용암동굴·열대식물원·민속마을이 한 곳에. 유모차·어르신 모두 편하게 관람 가능해요.</div>
+            <div class="spot-tags"><span class="tag tag-walk">유모차 OK</span><span class="tag tag-kids">동굴 체험</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tip-box"><strong>💡 동선 팁</strong> · 오설록 → 약천사 → 협재·한림 순으로 <strong>남→북</strong> 자연스럽게 이동. 역주행 없는 최적 동선!</div>
+
+      <!-- 3박 숙소 -->
+      <div class="hotel-section">
+        <div class="hotel-section-title">🏡 3박 숙소 추천 · 서쪽 (협재·한림·애월)</div>
+        <div class="hotel-cards">
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">제주 미아 독채 풀빌라 (Jeju Mia Private Pool Villa)</div>
+                <div class="hotel-loc">📍 제주시 애월읍 유수암북길 98</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">독채 A+B 연결 사용</span>
+              <span class="hbadge hb-feat">야외 온수 풀 (대형)</span>
+              <span class="hbadge hb-feat">안마의자·스타일러</span>
+              <span class="hbadge hb-feat">호텔식 침구</span>
+              <span class="hbadge hb-loc">협재 차 5분</span>
+            </div>
+            <div class="hotel-desc">2023년 신축 독채 풀빌라로 A동+B동을 한 팀이 전세 사용 가능해요. 전 객실 호텔식 침구, 공기청정기, 안마의자 구비. 대형 온수 야외 풀이 인기. 협재·금능 해수욕장 차 5분 거리라 3일차 코스 마치고 바로 체크인하기 딱이에요.</div>
+            <div class="hotel-price">예약: 트립닷컴 · 에어비앤비 검색 추천</div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-top">
+              <div>
+                <div class="hotel-name">스테이핀다 독채 펜션</div>
+                <div class="hotel-loc">📍 제주시 한경면 (신창풍차해안 10분)</div>
+              </div>
+            </div>
+            <div class="hotel-badge-wrap">
+              <span class="hbadge hb-cap">복층 독채</span>
+              <span class="hbadge hb-feat">자쿠지 무료</span>
+              <span class="hbadge hb-feat">바베큐 파이어핏</span>
+              <span class="hbadge hb-loc">협재 20분</span>
+            </div>
+            <div class="hotel-desc">돌담 마당 감성 가득한 복층 독채. 자쿠지 무료 이용과 마당 파이어핏 바베큐가 인기예요. 협재·금능 해수욕장 20분 거리. 한경면의 조용한 시골 감성으로 어르신들이 특히 좋아할 스타일이에요.</div>
+            <div class="hotel-price">예약: 에어비앤비 검색 추천</div>
+          </div>
+
+        </div>
+        <div class="hotel-note">
+          <strong>💡 10인 독채 선택 요령</strong> · 방 개수와 욕실 수를 반드시 확인하세요. 3가족 10인이라면 <strong>침실 4개 이상 · 욕실 2개 이상</strong>이 편해요. 예약 시 "10인 가능 여부"를 호스트에게 직접 확인하는 게 안전해요.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ DAY 4 ═══════ -->
+  <div class="day-block" style="--col:#5a8a6a">
+    <div class="day-label-col">
+      <div class="day-number">04</div>
+      <div class="day-en">DAY FOUR</div>
+      <div class="day-theme-badge" style="background:#5a8a6a">중산간 힐링</div>
+    </div>
+    <div class="day-content-col">
+      <div class="day-headline">사려니숲길 · 귀가</div>
+      <div class="route-chain">
+        <div class="depart-node">
+          <div class="depart-pin" style="background:#5a8a6a">🏨</div>
+          <div><div class="depart-label">서쪽 숙소 출발</div><div class="depart-sub">중산간 방향으로 이동</div></div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#5a8a6a;border-color:rgba(90,138,106,.25);background:rgba(90,138,106,.07)">🚗 약 35~50km · 50분</div></div>
+        <div class="spot-card" style="--card-accent:#5a8a6a">
+          <div class="spot-icon-wrap"><div class="spot-icon" style="background:rgba(90,138,106,.1)">🌲</div><div class="spot-time">09:00</div></div>
+          <div>
+            <div class="spot-name">사려니숲길</div>
+            <div class="spot-desc">울창한 삼나무 숲길. 평탄한 데크길 완비로 유아·어르신 모두 무리 없이 걸을 수 있어요. 새소리·바람소리 속 진정한 힐링으로 여행 마무리.</div>
+            <div class="spot-tags"><span class="tag tag-free">무료입장</span><span class="tag tag-walk">데크길 완비</span><span class="tag tag-kids">유모차 OK</span></div>
+          </div>
+        </div>
+        <div class="move-arrow"><div class="move-pill" style="color:#5a8a6a;border-color:rgba(90,138,106,.25);background:rgba(90,138,106,.07)">🚗 약 17km · 30분</div></div>
+        <div class="depart-node">
+          <div class="depart-pin" style="background:var(--accent)">✈️</div>
+          <div><div class="depart-label">제주국제공항 도착</div><div class="depart-sub">렌터카 반납 후 귀가</div></div>
+        </div>
+      </div>
+      <div class="tip-box" style="margin-top:1.2rem"><strong>🎉 완료!</strong> · 사려니숲 산책 후 공항까지 약 30분. 3박 4일 제주 가족 여행 완료!</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>🌊 <strong>제주 가족 여행</strong> · 3박 4일 자연 힐링 코스</p>
+  <p style="margin-top:.5rem;font-size:.68rem;">유아 · 어린이 · 어른 · 어르신 3가족 10인을 위한 독채 펜션 + 동선 최적화 플랜</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*80); });
+},{threshold:.08});
+document.querySelectorAll('.day-block').forEach(b=>obs.observe(b));
+</script>
+</body>
+</html>
