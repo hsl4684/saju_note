@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지장간이란? | 사주의 성분표를 읽어야 하는 이유</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+  --blue-light: #dbeafe;
+  --blue-dark: #1e40af;
+  --blue-mid: #3b82f6;
+  --wood-light: #dcfce7;
+  --wood-dark: #166534;
+  --wood-mid: #22c55e;
+  --earth-light: #fef9c3;
+  --earth-dark: #713f12;
+  --earth-mid: #eab308;
+  --metal-light: #f1f5f9;
+  --metal-dark: #334155;
+  --metal-mid: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --sub: #64748b;
+  --radius: 14px;
+  /* 만세력 오행 정통 색 */
+  --mok: #16a34a;   /* 목 — 초록 */
+  --hwa: #dc2626;   /* 화 — 빨강 */
+  --to:  #ca8a04;   /* 토 — 황금 */
+  --geum:#64748b;   /* 금 — 회백 */
+  --su:  #1e3a8a;   /* 수 — 검남 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+  color: white;
+  padding: 48px 20px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  top: -70px; right: -50px;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(18px, 4.5vw, 28px);
+  font-weight: 900;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.hero h1 em { color: #93c5fd; font-style: normal; }
+.hero p { font-size: 12px; opacity: 0.6; max-width: 440px; margin: 0 auto; }
+
+/* ── LAYOUT ── */
+.container { max-width: 720px; margin: 0 auto; padding: 28px 14px 56px; }
+.section { margin-bottom: 40px; }
+
+.section-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(16px, 4vw, 18px);
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.section-title .badge {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.divider {
+  text-align: center;
+  font-size: 18px;
+  color: #cbd5e1;
+  margin: 0 0 28px;
+  letter-spacing: 8px;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.callout.blue   { background: var(--blue-light); border-left: 4px solid var(--blue-mid); }
+.callout.yellow { background: #fffbeb; border-left: 4px solid #f59e0b; }
+.callout.red    { background: #fff1f2; border-left: 4px solid #f43f5e; }
+.callout.green  { background: var(--wood-light); border-left: 4px solid var(--wood-mid); }
+.callout.gray   { background: #f8fafc; border-left: 4px solid #94a3b8; }
+.callout.dark   { background: #1e293b; border-left: 4px solid var(--blue-mid); color: white; }
+
+/* ── HOOK ── */
+.hook {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 2px solid #fbbf24;
+  border-radius: 16px;
+  padding: 22px 18px;
+  margin-bottom: 20px;
+}
+.hook .hook-label {
+  display: inline-block;
+  background: #f59e0b;
+  color: white;
+  border-radius: 20px;
+  padding: 3px 13px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+.hook .big {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: 700;
+  color: #92400e;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* ── 딸기 일러스트 ── */
+.juice-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 4px 0 8px;
+  flex-wrap: wrap;
+}
+.juice-bottle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.juice-bottle .bottle-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #92400e;
+  text-align: center;
+}
+.arrow-right {
+  font-size: 24px;
+  color: #d97706;
+  flex-shrink: 0;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.ingredient-list {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #fde68a;
+  padding: 12px 14px;
+  min-width: 170px;
+  flex-shrink: 0;
+}
+.ingredient-list .il-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #92400e;
+  margin-bottom: 9px;
+  border-bottom: 1px solid #fde68a;
+  padding-bottom: 6px;
+}
+.il-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+.il-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.il-name { flex: 1; color: #44403c; }
+.il-pct { font-weight: 700; font-size: 11px; }
+.il-bar-wrap { width: 60px; height: 6px; background: #f1f5f9; border-radius: 99px; overflow: hidden; }
+.il-bar { height: 100%; border-radius: 99px; }
+
+/* ── 지지/지장간 2칸 ── */
+.def-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.def-box {
+  border-radius: 12px;
+  padding: 14px 14px;
+}
+.def-box .d-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 7px;
+}
+.def-box p { font-size: 13px; line-height: 1.72; }
+
+/* ── 오행 그룹 ── */
+.ohaeng-group { margin-bottom: 20px; }
+.og-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+.og-title { font-family: 'Noto Serif KR', serif; font-size: 14px; font-weight: 700; color: white; }
+.og-sub   { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 1px; }
+.og-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 12px;
+}
+
+/* ── 지지 카드 ── */
+.jc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 11px;
+  transition: transform 0.15s;
+}
+.jc:hover { transform: translateY(-2px); box-shadow: 0 3px 10px rgba(0,0,0,0.07); }
+.jc-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9; }
+.jc-char {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 17px; font-weight: 700;
+  flex-shrink: 0;
+}
+.jc-name .kor { font-weight: 700; font-size: 13px; }
+.jc-name .sub { font-size: 10px; color: var(--sub); }
+.jc-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; font-size: 11px; }
+.jc-lbl { width: 20px; font-weight: 700; font-size: 10px; flex-shrink: 0; }
+.bar-w { flex: 1; height: 7px; background: #f1f5f9; border-radius: 99px; overflow: hidden; }
+.bar-f { height: 100%; border-radius: 99px; }
+.bar-pct { width: 30px; text-align: right; font-size: 10px; color: var(--sub); font-weight: 600; flex-shrink: 0; }
+
+.bw  { background: var(--wood-mid); }
+.bf  { background: #f97316; }
+.be  { background: var(--earth-mid); }
+.bm  { background: #94a3b8; }
+.bwa { background: var(--blue-mid); }
+
+/* 오행 카드 배경 */
+.ch-mok  { background: #dcfce7; color: #166534; }
+.ch-hwa  { background: #fee2e2; color: #991b1b; }
+.ch-to   { background: #fef9c3; color: #713f12; }
+.ch-geum { background: #f1f5f9; color: #334155; }
+.ch-su   { background: #dbeafe; color: #1e40af; }
+
+/* ── 사주 팔자 표 ── */
+.saju-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.saju-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 280px;
+}
+.saju-table th {
+  padding: 8px 6px;
+  font-size: 11px;
+  color: var(--sub);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+}
+.saju-table th.me { color: var(--blue-dark); border-bottom-color: var(--blue-mid); }
+.saju-char-box {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px; font-weight: 700;
+  margin: 8px auto 4px;
+}
+.saju-table td .sub-label { font-size: 10px; color: var(--sub); line-height: 1.5; }
+
+/* 만세력 색 팔레트 */
+.pal-mok  { background: #dcfce7; color: #166534; }
+.pal-hwa  { background: #fee2e2; color: #991b1b; }
+.pal-to   { background: #fef9c3; color: #713f12; }
+.pal-geum { background: #f1f5f9; color: #334155; }
+.pal-su   { background: #1e293b; color: #e2e8f0; }
+
+/* ── 비교 그리드 ── */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+.cbox { border-radius: 12px; padding: 14px 13px; font-size: 13px; line-height: 1.75; }
+.cbox .c-lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 7px; }
+.cbox.good { background: #f0fdf4; border: 1px solid #86efac; }
+.cbox.good .c-lbl { color: #166534; }
+.cbox.bad  { background: #fff1f2; border: 1px solid #fda4af; }
+.cbox.bad  .c-lbl { color: #9f1239; }
+
+/* ── 채팅 ── */
+.chat-wrap { background: #dde5ed; border-radius: var(--radius); padding: 18px 14px; }
+.chat-date { text-align: center; font-size: 10px; color: #7a8fa0; margin-bottom: 14px; background: rgba(255,255,255,0.5); border-radius: 10px; padding: 4px 0; }
+.chat-row { display: flex; margin-bottom: 13px; gap: 7px; align-items: flex-end; }
+.chat-row.right { flex-direction: row-reverse; }
+.chat-avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; background: #c7d2dc; }
+.chat-name { font-size: 10px; color: #5a6b78; margin-bottom: 3px; padding-left: 2px; }
+.chat-bubble { max-width: 76%; border-radius: 16px; padding: 9px 13px; font-size: 13px; line-height: 1.65; box-shadow: 0 1px 3px rgba(0,0,0,0.07); }
+.chat-row.left  .chat-bubble { background: white; border-bottom-left-radius: 4px; }
+.chat-row.right .chat-bubble { background: #ffe066; border-bottom-right-radius: 4px; }
+.bubble-expert  { background: #d4eaff !important; border-bottom-right-radius: 4px !important; }
+.bubble-thought { background: #efefef !important; border: 1px dashed #b0b8c1 !important; font-style: italic; color: #555 !important; box-shadow: none !important; }
+.chat-time { font-size: 10px; color: #8a9aaa; flex-shrink: 0; }
+.case-label { font-size: 12px; font-weight: 700; color: var(--sub); letter-spacing: 0.5px; margin-bottom: 8px; }
+
+/* ── 체크리스트 ── */
+.checklist { list-style: none; }
+.checklist li { padding: 11px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start; gap: 11px; font-size: 14px; line-height: 1.72; }
+.checklist li:last-child { border-bottom: none; }
+
+/* ── 출처 ── */
+.source-card { background: #1e293b; border-radius: 16px; padding: 22px 18px; color: white; }
+.source-title { font-family: 'Noto Serif KR', serif; font-size: 14px; font-weight: 700; margin-bottom: 4px; opacity: 0.9; }
+.source-desc  { font-size: 12px; opacity: 0.5; margin-bottom: 16px; }
+.source-links { display: flex; flex-wrap: wrap; gap: 7px; }
+.source-link { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 6px 12px; color: white; text-decoration: none; font-size: 12px; font-weight: 500; transition: background 0.15s; }
+.source-link:hover { background: rgba(255,255,255,0.16); }
+
+/* ── 모바일 ── */
+@media (max-width: 520px) {
+  .def-grid    { grid-template-columns: 1fr; }
+  .compare-grid{ grid-template-columns: 1fr; }
+  .og-cards    { grid-template-columns: repeat(2, 1fr); }
+  .juice-visual{ flex-direction: column; gap: 12px; }
+  .arrow-right { transform: rotate(90deg); margin-bottom: 0; }
+  .saju-char-box { width: 42px; height: 42px; font-size: 19px; }
+}
+@media (max-width: 360px) {
+  .og-cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📖 지장간 기초 완전 정리</div>
+  <h1>딸기맛 음료라고 적혀있어도<br>딸기가 <em>100%</em> 들어간 건 아닙니다<br><span style="font-size:0.72em;opacity:0.75;">이게 바로 지지(地支)입니다</span></h1>
+  <p>현승리 작명 채널 | 초등학생도 이해하는 지장간 완전 해설</p>
+</div>
+
+<div class="container">
+
+  <!-- ❶ 도입 -->
+  <div class="section">
+
+    <div class="hook">
+      <div class="hook-label">🧃 이것부터 기억하세요</div>
+      <div class="big">"딸기맛 음료"라고 적혀있어도<br>딸기가 100% 들어간 것은 아닙니다</div>
+
+      <!-- 딸기 음료 SVG 일러스트 -->
+      <div class="juice-visual">
+
+        <!-- 음료 병 SVG -->
+        <div class="juice-bottle">
+          <svg width="90" height="130" viewBox="0 0 90 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 뚜껑 -->
+            <rect x="30" y="4" width="30" height="14" rx="5" fill="#e11d48"/>
+            <!-- 목 -->
+            <rect x="34" y="16" width="22" height="8" rx="3" fill="#fca5a5"/>
+            <!-- 병 몸통 -->
+            <rect x="18" y="24" width="54" height="90" rx="14" fill="#fee2e2"/>
+            <!-- 음료 (빨간 액체) -->
+            <rect x="18" y="50" width="54" height="64" rx="0 0 14 14" fill="#f97316" opacity="0.7"/>
+            <rect x="18" y="88" width="54" height="26" rx="0 0 14 14" fill="#dc2626" opacity="0.85"/>
+            <!-- 라벨 배경 -->
+            <rect x="23" y="30" width="44" height="46" rx="8" fill="white" opacity="0.92"/>
+            <!-- 라벨 텍스트 -->
+            <text x="45" y="50" text-anchor="middle" font-family="'Noto Serif KR', serif" font-size="9" font-weight="bold" fill="#dc2626">딸기맛</text>
+            <text x="45" y="63" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-size="7" fill="#92400e">STRAWBERRY</text>
+            <!-- 딸기 이모지 대신 간단한 하트 -->
+            <text x="45" y="56" text-anchor="middle" font-size="11" dy="8">🍓</text>
+            <!-- 하이라이트 -->
+            <rect x="24" y="28" width="8" height="36" rx="4" fill="white" opacity="0.35"/>
+          </svg>
+          <div class="bottle-label">앞면 라벨<br>"딸기맛"</div>
+        </div>
+
+        <div class="arrow-right">→</div>
+
+        <!-- 성분표 -->
+        <div class="ingredient-list">
+          <div class="il-title">📋 뒷면 성분표</div>
+          <div class="il-row">
+            <div class="il-dot" style="background:#ef4444;"></div>
+            <div class="il-name">딸기향</div>
+            <div class="il-bar-wrap"><div class="il-bar" style="width:54%;background:#ef4444;"></div></div>
+            <div class="il-pct" style="color:#dc2626;">54%</div>
+          </div>
+          <div class="il-row">
+            <div class="il-dot" style="background:#f59e0b;"></div>
+            <div class="il-name">색소</div>
+            <div class="il-bar-wrap"><div class="il-bar" style="width:23%;background:#f59e0b;"></div></div>
+            <div class="il-pct" style="color:#b45309;">23%</div>
+          </div>
+          <div class="il-row">
+            <div class="il-dot" style="background:#94a3b8;"></div>
+            <div class="il-name">당류</div>
+            <div class="il-bar-wrap"><div class="il-bar" style="width:23%;background:#94a3b8;"></div></div>
+            <div class="il-pct" style="color:#64748b;">23%</div>
+          </div>
+          <div style="margin-top:8px;padding-top:7px;border-top:1px dashed #fde68a;font-size:10px;color:#92400e;line-height:1.5;">
+            ⚠️ 딸기가 절반뿐인데<br>"딸기맛"이라고 적혀있어요
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 지지 / 지장간 정의 2칸 -->
+    <div class="def-grid">
+      <div class="def-box" style="background:#eff6ff;border:1px solid #bfdbfe;">
+        <div class="d-label" style="color:var(--blue-dark);">🏷️ 지지(地支)란?</div>
+        <p>사주의 <strong>12개 글자</strong>.<br>子丑寅卯辰巳午未申酉戌亥<br><br>이 글자들이 바로<br><strong>음료의 앞면 라벨</strong>이에요.</p>
+      </div>
+      <div class="def-box" style="background:#fefce8;border:1px solid #fde68a;">
+        <div class="d-label" style="color:#92400e;">📋 지장간(支藏干)이란?</div>
+        <p>지지 안에 숨어있는<br><strong>진짜 성분 비율</strong>이에요.<br><br>음료의 <strong>뒷면 성분표</strong>라고<br>기억하세요!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ❷ 12지지 실제 성분표 (오행별 그룹) -->
+  <div class="section">
+    <div class="section-title">
+      <div class="badge" style="background:#f0fdf4;">📋</div>
+      12지지의 실제 성분표 (지장간 비율)
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:18px;font-size:13px;line-height:1.75;">
+      만세력에서는 오행을 색깔로 표시해요.<br>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;">
+        <span style="background:#dcfce7;color:#166534;border-radius:7px;padding:4px 11px;font-size:12px;font-weight:700;">🌿 목(木) — 초록</span>
+        <span style="background:#fee2e2;color:#991b1b;border-radius:7px;padding:4px 11px;font-size:12px;font-weight:700;">🔥 화(火) — 빨강</span>
+        <span style="background:#fef9c3;color:#713f12;border-radius:7px;padding:4px 11px;font-size:12px;font-weight:700;">🌍 토(土) — 노랑</span>
+        <span style="background:#f1f5f9;color:#334155;border-radius:7px;padding:4px 11px;font-size:12px;font-weight:700;">⚙️ 금(金) — 흰색/회색</span>
+        <span style="background:#1e293b;color:#e2e8f0;border-radius:7px;padding:4px 11px;font-size:12px;font-weight:700;">💧 수(水) — 검정</span>
+      </div>
+      <div style="margin-top:12px;padding:10px 12px;background:#fff7ed;border-radius:8px;font-size:13px;color:#92400e;">
+        ⚠️ 그런데 이 <strong>색깔(라벨)만 보면 안 됩니다.</strong><br>
+        각 글자 안에는 여러 기운이 <strong>비율로 섞여있어요.</strong>
+      </div>
+    </div>
+
+    <!-- 목(木) 그룹 -->
+    <div class="ohaeng-group">
+      <div class="og-header" style="background:var(--mok);">
+        <div>
+          <div class="og-title">🌿 목(木) — 초록색 라벨</div>
+          <div class="og-sub">寅·卯 / 인·묘</div>
+        </div>
+      </div>
+      <div class="og-cards">
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-mok">寅</div>
+            <div class="jc-name"><div class="kor">인 (寅)</div><div class="sub">木 54%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--mok)">木</div><div class="bar-w"><div class="bar-f bw" style="width:54%"></div></div><div class="bar-pct">54%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:#f97316">火</div><div class="bar-w"><div class="bar-f bf" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-mok">卯</div>
+            <div class="jc-name"><div class="kor">묘 (卯)</div><div class="sub">木 100%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--mok)">木</div><div class="bar-w"><div class="bar-f bw" style="width:100%"></div></div><div class="bar-pct">100%</div></div>
+          <div style="margin-top:4px;font-size:10px;background:#dcfce7;color:#166534;border-radius:5px;padding:3px 6px;text-align:center;">순수 100%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 화(火) 그룹 -->
+    <div class="ohaeng-group">
+      <div class="og-header" style="background:var(--hwa);">
+        <div>
+          <div class="og-title">🔥 화(火) — 빨간색 라벨</div>
+          <div class="og-sub">巳·午 / 사·오</div>
+        </div>
+      </div>
+      <div class="og-cards">
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-hwa">巳</div>
+            <div class="jc-name"><div class="kor">사 (巳)</div><div class="sub">火 54%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:#f97316">火</div><div class="bar-w"><div class="bar-f bf" style="width:54%"></div></div><div class="bar-pct">54%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-hwa">午</div>
+            <div class="jc-name"><div class="kor">오 (午)</div><div class="sub">火 70%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:#f97316">火</div><div class="bar-w"><div class="bar-f bf" style="width:70%"></div></div><div class="bar-pct">70%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:30%"></div></div><div class="bar-pct">30%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 토(土) 그룹 -->
+    <div class="ohaeng-group">
+      <div class="og-header" style="background:var(--to);">
+        <div>
+          <div class="og-title">🌍 토(土) — 노란색 라벨</div>
+          <div class="og-sub">丑·辰·未·戌 / 축·진·미·술</div>
+        </div>
+      </div>
+      <div class="og-cards">
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-to">丑</div>
+            <div class="jc-name"><div class="kor">축 (丑)</div><div class="sub">土 60%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:60%"></div></div><div class="bar-pct">60%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--su)">水</div><div class="bar-w"><div class="bar-f bwa" style="width:30%"></div></div><div class="bar-pct">30%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:10%"></div></div><div class="bar-pct">10%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-to">辰</div>
+            <div class="jc-name"><div class="kor">진 (辰)</div><div class="sub">土 60%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:60%"></div></div><div class="bar-pct">60%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--mok)">木</div><div class="bar-w"><div class="bar-f bw" style="width:30%"></div></div><div class="bar-pct">30%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:10%"></div></div><div class="bar-pct">10%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-to">未</div>
+            <div class="jc-name"><div class="kor">미 (未)</div><div class="sub">土 60%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:60%"></div></div><div class="bar-pct">60%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:#f97316">火</div><div class="bar-w"><div class="bar-f bf" style="width:30%"></div></div><div class="bar-pct">30%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--mok)">木</div><div class="bar-w"><div class="bar-f bw" style="width:10%"></div></div><div class="bar-pct">10%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-to">戌</div>
+            <div class="jc-name"><div class="kor">술 (戌)</div><div class="sub">土 60%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:60%"></div></div><div class="bar-pct">60%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:30%"></div></div><div class="bar-pct">30%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:#f97316">火</div><div class="bar-w"><div class="bar-f bf" style="width:10%"></div></div><div class="bar-pct">10%</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 금(金) 그룹 -->
+    <div class="ohaeng-group">
+      <div class="og-header" style="background:var(--geum);">
+        <div>
+          <div class="og-title">⚙️ 금(金) — 흰색/회색 라벨</div>
+          <div class="og-sub">申·酉 / 신·유</div>
+        </div>
+      </div>
+      <div class="og-cards">
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-geum">申</div>
+            <div class="jc-name"><div class="kor">신 (申)</div><div class="sub">金 54%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:54%"></div></div><div class="bar-pct">54%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--su)">水</div><div class="bar-w"><div class="bar-f bwa" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-geum">酉</div>
+            <div class="jc-name"><div class="kor">유 (酉)</div><div class="sub">金 100%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--geum)">金</div><div class="bar-w"><div class="bar-f bm" style="width:100%"></div></div><div class="bar-pct">100%</div></div>
+          <div style="margin-top:4px;font-size:10px;background:#f1f5f9;color:#334155;border-radius:5px;padding:3px 6px;text-align:center;">순수 100%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수(水) 그룹 -->
+    <div class="ohaeng-group">
+      <div class="og-header" style="background:var(--su);">
+        <div>
+          <div class="og-title">💧 수(水) — 검정색 라벨</div>
+          <div class="og-sub">子·亥 / 자·해</div>
+        </div>
+      </div>
+      <div class="og-cards">
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-su">子</div>
+            <div class="jc-name"><div class="kor">자 (子)</div><div class="sub">水 100%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--blue-mid)">水</div><div class="bar-w"><div class="bar-f bwa" style="width:100%"></div></div><div class="bar-pct">100%</div></div>
+          <div style="margin-top:4px;font-size:10px;background:#dbeafe;color:#1e40af;border-radius:5px;padding:3px 6px;text-align:center;">순수 100%</div>
+        </div>
+        <div class="jc">
+          <div class="jc-head">
+            <div class="jc-char ch-su">亥</div>
+            <div class="jc-name"><div class="kor">해 (亥)</div><div class="sub">水 54%</div></div>
+          </div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--blue-mid)">水</div><div class="bar-w"><div class="bar-f bwa" style="width:54%"></div></div><div class="bar-pct">54%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--mok)">木</div><div class="bar-w"><div class="bar-f bw" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+          <div class="jc-row"><div class="jc-lbl" style="color:var(--to)">土</div><div class="bar-w"><div class="bar-f be" style="width:23%"></div></div><div class="bar-pct">23%</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ❸ 질문 + 답 + 사주 예시 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="badge" style="background:#fce7f3;">🤔</div>
+      그렇다면, 어떤 사주가 진짜 좋은 사주일까요?
+    </div>
+
+    <!-- 질문 -->
+    <div style="background:linear-gradient(135deg,#1e3a8a,#1e40af);color:white;border-radius:14px;padding:20px 18px;margin-bottom:16px;">
+      <div style="font-size:11px;opacity:0.7;margin-bottom:8px;letter-spacing:0.5px;">💬 많은 분들이 이렇게 생각합니다</div>
+      <div style="font-family:'Noto Serif KR',serif;font-size:clamp(14px,3.8vw,18px);font-weight:700;line-height:1.6;">
+        "모든 오행(木·火·土·金·水)이<br>다 갖춰져 있으면 좋은 사주 아닌가요?"
+      </div>
+    </div>
+
+    <!-- 답 -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 16px;margin-bottom:20px;">
+      <div style="font-size:13px;color:var(--sub);margin-bottom:10px;font-weight:700;">💡 답변</div>
+      <div style="font-size:14px;line-height:1.8;margin-bottom:12px;">
+        <strong>맞습니다. 하지만 오행만 다 보면 안 됩니다.</strong>
+      </div>
+      <div style="background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1px solid #fbbf24;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8;color:#92400e;">
+        모든 오행이 다 갖춰진 것보다 중요한 것은<br>
+        <strong>아이가 지나치게 약하거나 지나치게 과하지 않게</strong><br>
+        해주는 것입니다.
+      </div>
+    </div>
+
+    <!-- 실제 사주 예시 -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="background:#1e293b;padding:14px 18px;color:white;">
+        <div style="font-size:10px;opacity:0.6;letter-spacing:1px;margin-bottom:4px;">📌 실제 사주 예시</div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;line-height:1.5;">오행이 다 있어 보이지만…<br>실제론 금(金)이 너무 강한 사주</div>
+      </div>
+
+      <div style="padding:18px 16px 0;">
+        <div class="saju-table-wrap">
+          <table class="saju-table">
+            <thead>
+              <tr>
+                <th>시주(時柱)</th>
+                <th class="me">일주(日柱)<br><span style="font-size:9px;font-weight:400;opacity:0.7;">나 자신</span></th>
+                <th>월주(月柱)</th>
+                <th>년주(年柱)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="saju-char-box pal-geum">庚</div>
+                  <div class="sub-label">경(庚)<br>⚙️ 金</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-mok" style="border:2px solid var(--mok);">甲</div>
+                  <div class="sub-label" style="color:var(--wood-dark);font-weight:700;">갑(甲)<br>🌿 木 ← 나</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-geum">辛</div>
+                  <div class="sub-label">신(辛)<br>⚙️ 金</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-su">癸</div>
+                  <div class="sub-label">계(癸)<br>💧 水</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="saju-char-box pal-to">戌</div>
+                  <div class="sub-label">술(戌)<br>🌍 土</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-geum">申</div>
+                  <div class="sub-label">신(申)<br>⚙️ 金</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-hwa">巳</div>
+                  <div class="sub-label">사(巳)<br>🔥 火</div>
+                </td>
+                <td>
+                  <div class="saju-char-box pal-geum">酉</div>
+                  <div class="sub-label">유(酉)<br>⚙️ 金</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 오행 라벨 카운팅 -->
+      <div style="padding:16px 16px 0;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:1px;color:var(--sub);margin-bottom:10px;">👁️ 겉으로 보이는 오행 (라벨 기준)</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
+          <span style="background:#dcfce7;color:#166534;border-radius:8px;padding:5px 12px;font-size:13px;font-weight:700;flex-shrink:0;">🌿 木 1개</span>
+          <span style="background:#fee2e2;color:#991b1b;border-radius:8px;padding:5px 12px;font-size:13px;font-weight:700;flex-shrink:0;">🔥 火 1개</span>
+          <span style="background:#fef9c3;color:#713f12;border-radius:8px;padding:5px 12px;font-size:13px;font-weight:700;flex-shrink:0;">🌍 土 1개</span>
+          <span style="background:#f1f5f9;color:#334155;border-radius:8px;padding:5px 12px;font-size:13px;font-weight:700;flex-shrink:0;">⚙️ 金 4개</span>
+          <span style="background:#1e293b;color:#e2e8f0;border-radius:8px;padding:5px 12px;font-size:13px;font-weight:700;flex-shrink:0;">💧 水 1개</span>
+        </div>
+        <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:11px 14px;font-size:13px;color:#166534;margin-bottom:16px;">
+          ✅ 오행 5개 모두 있음 → <strong>일반 상식으로는 "균형 잡힌 좋은 사주!"</strong>
+        </div>
+      </div>
+
+      <!-- 지장간 실제 분포 -->
+      <div style="padding:0 16px 16px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:1px;color:var(--sub);margin-bottom:10px;">🔍 지장간까지 열어보면 (진짜 성분표)</div>
+        <div style="background:#f8fafc;border-radius:10px;padding:14px 14px;margin-bottom:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+            <div style="width:30px;font-weight:700;color:var(--mok);font-size:11px;flex-shrink:0;">🌿木</div>
+            <div style="flex:1;height:13px;background:#f1f5f9;border-radius:99px;overflow:hidden;"><div style="width:7%;height:100%;background:var(--wood-mid);border-radius:99px;"></div></div>
+            <div style="width:52px;text-align:right;font-size:11px;font-weight:700;color:var(--wood-dark);">아주 적음</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+            <div style="width:30px;font-weight:700;color:var(--hwa);font-size:11px;flex-shrink:0;">🔥火</div>
+            <div style="flex:1;height:13px;background:#f1f5f9;border-radius:99px;overflow:hidden;"><div style="width:11%;height:100%;background:#f97316;border-radius:99px;"></div></div>
+            <div style="width:52px;text-align:right;font-size:11px;font-weight:700;color:#c2410c;">적음</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+            <div style="width:30px;font-weight:700;color:var(--to);font-size:11px;flex-shrink:0;">🌍土</div>
+            <div style="flex:1;height:13px;background:#f1f5f9;border-radius:99px;overflow:hidden;"><div style="width:18%;height:100%;background:var(--earth-mid);border-radius:99px;"></div></div>
+            <div style="width:52px;text-align:right;font-size:11px;font-weight:700;color:var(--earth-dark);">보통</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+            <div style="width:30px;font-weight:700;color:var(--geum);font-size:11px;flex-shrink:0;">⚙️金</div>
+            <div style="flex:1;height:13px;background:#f1f5f9;border-radius:99px;overflow:hidden;"><div style="width:64%;height:100%;background:#64748b;border-radius:99px;"></div></div>
+            <div style="width:52px;text-align:right;font-size:11px;font-weight:700;color:var(--metal-dark);">매우 많음</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:30px;font-weight:700;color:var(--blue-mid);font-size:11px;flex-shrink:0;">💧水</div>
+            <div style="flex:1;height:13px;background:#f1f5f9;border-radius:99px;overflow:hidden;"><div style="width:10%;height:100%;background:var(--blue-mid);border-radius:99px;"></div></div>
+            <div style="width:52px;text-align:right;font-size:11px;font-weight:700;color:var(--blue-dark);">적음</div>
+          </div>
+        </div>
+        <div style="background:#fff1f2;border:1px solid #fda4af;border-radius:10px;padding:12px 14px;font-size:13px;color:#9f1239;line-height:1.75;">
+          ❌ <strong>지장간으로 보면 金의 기운이 전체 60% 이상.</strong><br>
+          겉으로 오행 5개가 다 있어도, 실제론 쇠가 압도적으로 많은 사주입니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 목금 상극 -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);margin-bottom:14px;">
+      <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:14px;">🌿⚔️⚙️ 나무(木)로 태어났는데 쇠(金)가 너무 많다면?</div>
+      <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px;">
+        <div style="background:var(--wood-light);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:26px;margin-bottom:4px;">🌱</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--wood-dark);">甲木 (갑목)</div>
+          <div style="font-size:11px;color:var(--wood-dark);margin-top:3px;">나 자신 — 어린 나무</div>
+        </div>
+        <div style="text-align:center;font-size:22px;color:#9f1239;font-weight:700;">vs</div>
+        <div style="background:var(--metal-light);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:26px;margin-bottom:4px;">🪓</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--metal-dark);">金×4개</div>
+          <div style="font-size:11px;color:var(--metal-dark);margin-top:3px;">庚·辛·申·酉 — 도끼</div>
+        </div>
+      </div>
+      <div style="font-size:13px;line-height:1.8;">
+        목(木)과 금(金)은 <strong>상극(相剋)</strong> 관계 — 쇠가 나무를 베는 관계예요.<br>
+        이 사주는 어린 나무 하나가 도끼 네 자루에 둘러싸인 상태입니다.<br>
+        명리학에서는 이것을 <strong>신약(身弱)</strong>하다고 해요.<br>
+        즉, <strong>내가 너무 약하게 태어난 사주</strong>입니다.
+      </div>
+    </div>
+
+    <!-- 운에서 금이 들어오면 -->
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;box-shadow:0 1px 4px rgba(0,0,0,0.04);margin-bottom:14px;">
+      <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:14px;">📅 그런데 그 해 운(運)에서 金이 또 들어오면?</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.75;">
+        <div style="background:#f8fafc;border-radius:10px;padding:11px 13px;">사주에 金이 이미 4개.<br>그런데 그 해의 운에서 金이 또 추가됩니다.</div>
+        <div style="text-align:center;font-size:18px;color:#cbd5e1;">↓</div>
+        <div style="background:#fff1f2;border:1px solid #fda4af;border-radius:10px;padding:11px 13px;color:#9f1239;"><strong>어린 나무 하나에 도끼 다섯 자루가 달려드는 해.</strong><br>아이에게 굉장히 힘든 시간이 될 수 있습니다.</div>
+        <div style="text-align:center;font-size:18px;color:#cbd5e1;">↓</div>
+        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:11px 13px;color:#92400e;"><strong>이게 바로 오행 5개를 다 채우려다 생기는 문제입니다.</strong><br>좋아 보여서 선택했는데, 아이에게 가장 힘든 사주가 될 수 있어요.</div>
+      </div>
+    </div>
+
+    <!-- 핵심 결론 -->
+    <div style="background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;border-radius:14px;padding:20px 18px;">
+      <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:12px;color:#93c5fd;">💡 순서가 중요합니다</div>
+      <div style="font-size:13px;line-height:1.85;">
+        <div style="margin-bottom:10px;"><strong style="color:#93c5fd;">① 내가 먼저 튼튼해야 합니다.</strong><br>내 기운이 건강하면 운에서 어떤 기운이 들어와도 잘 쓸 수 있어요.</div>
+        <div style="margin-bottom:10px;"><strong style="color:#93c5fd;">② 오행 구족(5개 다 갖추기)은 그 다음입니다.</strong><br>내가 약한 상태에서 오행만 다 채우면 균형이 아닌 혼란이 됩니다.</div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:9px;padding:12px 13px;"><strong style="color:#fbbf24;">결론: 아이가 지나치게 약하거나 과하지 않게 해주는 것이 먼저,<br>오행을 다 갖추는 것은 그 다음입니다.</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ❹ 전문가의 딜레마 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="badge" style="background:#fce7f3;">😅</div>
+      전문가의 딜레마 — 제대로 알수록 더 고민됩니다
+    </div>
+
+    <div class="callout gray">
+      <div class="callout-icon">👶</div>
+      <div>
+        <strong>아이 출생 택일</strong>이란, 아이가 태어날 날짜를 골라드리는 상담이에요.<br>
+        부모님의 기대가 담긴 만큼, 전문가도 늘 같은 고민에 빠집니다.
+      </div>
+    </div>
+
+    <div class="case-label">📌 상황 A — 라벨(겉 오행)만 보고 줄 때</div>
+    <div class="chat-wrap" style="margin-bottom:12px;">
+      <div class="chat-date">아이 출생 택일 상담</div>
+      <div class="chat-row left">
+        <div class="chat-avatar">👩</div>
+        <div>
+          <div class="chat-name">의뢰인</div>
+          <div class="chat-bubble">선생님! 오행이 다 갖춰진 날로 골라주셨나요? 😊</div>
+        </div>
+        <div class="chat-time">오후 2:10</div>
+      </div>
+      <div class="chat-row right">
+        <div>
+          <div class="chat-bubble bubble-thought">(속마음) 지장간까지 보면 木이 60% 넘게 몰려있는데… 겉으로는 5개 다 있으니까…</div>
+        </div>
+        <div class="chat-avatar" style="background:#bfdbfe;">🧑‍💼</div>
+        <div class="chat-time">오후 2:11</div>
+      </div>
+      <div class="chat-row right">
+        <div>
+          <div class="chat-bubble bubble-expert">네! 木🌿 火🔥 土🌍 金⚙️ 水💧 오행이 모두 갖춰진 날로 잡았어요! 🙏</div>
+        </div>
+        <div class="chat-avatar" style="background:#bfdbfe;">🧑‍💼</div>
+        <div class="chat-time">오후 2:12</div>
+      </div>
+      <div class="chat-row left">
+        <div class="chat-avatar">👩</div>
+        <div>
+          <div class="chat-name">의뢰인</div>
+          <div class="chat-bubble">와!! 너무 좋아요 감사합니다 🥰🥰</div>
+        </div>
+        <div class="chat-time">오후 2:13</div>
+      </div>
+    </div>
+
+    <div class="callout green" style="margin-bottom:24px;">
+      <div class="callout-icon">✅</div>
+      <div>의뢰인은 매우 만족합니다. 하지만 이 날은 지장간으로 보면 <strong>木이 60% 이상 편중</strong>된 날이었어요. 겉 라벨엔 5개 다 있지만 <strong>실제론 전혀 균형이 아닌 날</strong>이었습니다.</div>
+    </div>
+
+    <div class="case-label">📌 상황 B — 지장간 비율까지 정확하게 줄 때</div>
+    <div class="chat-wrap" style="margin-bottom:12px;">
+      <div class="chat-date">아이 출생 택일 상담</div>
+      <div class="chat-row left">
+        <div class="chat-avatar">👨</div>
+        <div>
+          <div class="chat-name">의뢰인</div>
+          <div class="chat-bubble">오행 균형 잘 맞는 날로 골라주셨나요?</div>
+        </div>
+        <div class="chat-time">오후 4:00</div>
+      </div>
+      <div class="chat-row right">
+        <div>
+          <div class="chat-bubble bubble-expert">네, 지장간 비율까지 계산해서 실제로 고르게 담긴 날로 골랐어요. 겉으로는 木·火·土 세 가지지만, 진짜 균형 잡힌 날입니다 😊</div>
+        </div>
+        <div class="chat-avatar" style="background:#bfdbfe;">🧑‍💼</div>
+        <div class="chat-time">오후 4:02</div>
+      </div>
+      <div class="chat-row left">
+        <div class="chat-avatar">👨</div>
+        <div>
+          <div class="chat-name">의뢰인</div>
+          <div class="chat-bubble">오행이 3개밖에 없잖아요? 😟 金이랑 水가 없으면 균형이 안 잡힌 거 아닌가요? 다른 데는 5개 다 있다던데요…</div>
+        </div>
+        <div class="chat-time">오후 4:03</div>
+      </div>
+      <div class="chat-row right">
+        <div>
+          <div class="chat-bubble bubble-thought">(속마음) 이 날이 훨씬 더 균형 잡혀있는데… 3개로 보인다는 것만으로 의심받다니. 😓</div>
+        </div>
+        <div class="chat-avatar" style="background:#bfdbfe;">🧑‍💼</div>
+        <div class="chat-time">오후 4:04</div>
+      </div>
+    </div>
+
+    <div class="callout red" style="margin-bottom:18px;">
+      <div class="callout-icon">😭</div>
+      <div><strong>정확하게 줄수록 오히려 의심받는 아이러니.</strong><br>라벨만 세면 5개가 더 좋아 보이니까요.</div>
+    </div>
+
+    <div class="compare-grid">
+      <div class="cbox good">
+        <div class="c-lbl">😊 라벨(겉 오행)만 볼 때</div>
+        오행 5개가 다 있는 날<br><br>
+        ✅ 의뢰인 만족도 높음<br>
+        ❌ 지장간 비율은 불균형
+      </div>
+      <div class="cbox bad">
+        <div class="c-lbl">🎯 지장간 비율까지 볼 때</div>
+        오행 3개지만 비율이 고른 날<br><br>
+        ✅ 진짜 균형 잡힌 날<br>
+        ❌ "왜 3개뿐이에요?" 의심
+      </div>
+    </div>
+
+    <div class="callout dark" style="margin-top:14px;">
+      <div class="callout-icon">💬</div>
+      <div style="color:white;"><strong>이 딜레마를 아는 것 자체가 이미 한 단계 위입니다.</strong><br>지장간까지 들여다보고 고른 날, 그게 진짜 전문가의 택일이에요.</div>
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ❺ 지장간 비율이 왜 중요한가 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="badge" style="background:#dbeafe;">📊</div>
+      지장간 비율이 왜 중요할까요?
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 18px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+      <ul class="checklist">
+        <li>
+          <span style="font-size:20px;flex-shrink:0;">1️⃣</span>
+          <div><strong>라벨이 아닌 실제 기운의 양을 알 수 있습니다.</strong><br>
+          "사화(巳) = 火"로만 계산하면 불이 100이지만 실제론 54예요. 이 차이가 쌓이면 전혀 다른 결과가 납니다.</div>
+        </li>
+        <li>
+          <span style="font-size:20px;flex-shrink:0;">2️⃣</span>
+          <div><strong>"오행이 다 있어야 좋다"는 건 잘못된 상식입니다.</strong><br>
+          겉으로 5개가 다 있어도 한쪽으로 몰려있을 수 있고, 3개뿐인 날이 훨씬 더 고를 수 있어요.</div>
+        </li>
+        <li>
+          <span style="font-size:20px;flex-shrink:0;">3️⃣</span>
+          <div><strong>AI 앱도 오래된 철학관도 이 부분을 자주 놓칩니다.</strong><br>
+          지장간 비율까지 반영하는 것이 진짜 정밀한 택일의 기준입니다.</div>
+        </li>
+        <li>
+          <span style="font-size:20px;flex-shrink:0;">4️⃣</span>
+          <div><strong>아이가 튼튼하게 태어나야 운도 잘 쓸 수 있습니다.</strong><br>
+          내 기운이 건강하면 어떤 운이 와도 그걸 내 것으로 쓸 수 있어요.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 출처 -->
+  <div class="source-card">
+    <div class="source-title">📌 출처 및 채널 안내</div>
+    <div class="source-desc">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+    <div class="source-links">
+      <a class="source-link" href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
+      <a class="source-link" href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a class="source-link" href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a class="source-link" href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어</a>
+      <a class="source-link" href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
