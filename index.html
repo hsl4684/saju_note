@@ -6,13 +6,14 @@
 <title>사주로 보는 자녀 성별 예측</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:#ffffff;color:#37352f;padding:2.5rem 2rem;max-width:720px;margin:0 auto;line-height:1.7;}
-  .emoji{font-size:2.2rem;display:block;margin-bottom:0.4rem;}
-  h1{font-size:1.9rem;font-weight:700;color:#37352f;margin-bottom:0.3rem;}
-  .sub{font-size:0.88rem;color:#9b9a97;margin-bottom:1.5rem;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:#ffffff;color:#37352f;padding:1.5rem 1rem;max-width:720px;margin:0 auto;line-height:1.7;}
+  .emoji{font-size:2rem;display:block;margin-bottom:0.4rem;}
+  h1{font-size:1.6rem;font-weight:700;color:#37352f;margin-bottom:0.3rem;}
+  .sub{font-size:0.85rem;color:#9b9a97;margin-bottom:1.2rem;}
   hr{border:none;border-top:1px solid #e9e9e7;margin:1.5rem 0;}
   .sec{font-size:0.72rem;font-weight:600;color:#9b9a97;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.7rem;margin-top:1.5rem;}
   .callout{background:#f7f6f3;border-radius:6px;padding:0.9rem 1.1rem;margin-bottom:0.75rem;display:flex;gap:10px;align-items:flex-start;font-size:0.92rem;}
+  .callout.blue{background:#eff6ff;}
   .ci{flex-shrink:0;font-size:1rem;margin-top:2px;}
   .callout strong{font-weight:600;}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:0.75rem;}
@@ -22,7 +23,6 @@
   .tag{display:inline-block;padding:3px 11px;border-radius:999px;font-size:0.85rem;font-weight:500;}
   .tb{background:#dbeafe;color:#1e40af;}
   .tp{background:#fce7f3;color:#9d174d;}
-  .tt{background:#d1fae5;color:#065f46;}
   table{width:100%;border-collapse:collapse;margin-bottom:0.75rem;font-size:0.9rem;}
   th{background:#f7f6f3;color:#9b9a97;font-weight:600;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;padding:8px 14px;text-align:left;border:1px solid #e9e9e7;}
   td{padding:9px 14px;border:1px solid #e9e9e7;vertical-align:middle;line-height:1.6;}
@@ -32,6 +32,59 @@
   .bp{background:#fce7f3;color:#9d174d;}
   .bg{background:#f1f0ed;color:#6b7280;}
   .note{font-size:0.82rem;color:#9b9a97;margin-top:0.4rem;line-height:1.6;}
+
+  /* 초보자 안심 배너 */
+  .beginner-banner{background:linear-gradient(135deg,#ecfdf5 0%,#eff6ff 100%);border:1.5px solid #a7f3d0;border-radius:10px;padding:1rem 1.1rem;margin-bottom:1.1rem;display:flex;gap:10px;align-items:flex-start;}
+  .beginner-banner .bi{font-size:1.4rem;flex-shrink:0;}
+  .beginner-banner h3{font-size:0.92rem;font-weight:700;color:#065f46;margin-bottom:4px;}
+  .beginner-banner p{font-size:0.85rem;color:#374151;line-height:1.6;}
+  .beginner-banner ul{margin:6px 0 0 0;padding-left:1rem;font-size:0.85rem;color:#374151;line-height:1.9;}
+
+  /* 핵심 포인트 강조 박스 */
+  .focus-box{background:#1e40af;border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1rem;color:#fff;text-align:center;}
+  .focus-box .fb-label{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;opacity:0.7;margin-bottom:6px;}
+  .focus-box .fb-main{font-size:1.25rem;font-weight:700;margin-bottom:4px;}
+  .focus-box .fb-sub{font-size:0.85rem;opacity:0.85;}
+
+  /* 시주 위치 강조 다이어그램 */
+  .sijoo-diagram{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:0.75rem;}
+  .sj-col{border-radius:8px;padding:0.6rem 0.25rem;text-align:center;border:2px solid transparent;}
+  .sj-col.active{background:#dbeafe;border-color:#1e40af;box-shadow:0 0 0 3px #bfdbfe;}
+  .sj-col.inactive{background:#f7f6f3;border-color:#e9e9e7;opacity:0.55;}
+  .sj-label{font-size:0.63rem;font-weight:700;color:#1e40af;margin-bottom:5px;line-height:1.3;}
+  .sj-label.dim{color:#9b9a97;}
+  .sj-char{width:36px;height:36px;border-radius:6px;margin:0 auto 2px;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;}
+  .sj-char.active-top{background:#1e40af;color:#fff;}
+  .sj-char.active-bot{background:#3b82f6;color:#fff;}
+  .sj-char.inactive-c{background:#e5e7eb;color:#9ca3af;}
+  .sj-row-label{font-size:0.58rem;color:#6b7280;margin-bottom:3px;}
+  .sj-row-label.blue{color:#1d4ed8;font-weight:600;}
+
+  /* 글자 대조 카드 */
+  .lookup-tabs{display:flex;gap:6px;margin-bottom:0.75rem;flex-wrap:wrap;}
+  .lookup-tab{padding:7px 16px;border-radius:999px;font-size:0.82rem;font-weight:600;cursor:pointer;border:2px solid #e9e9e7;background:#fff;color:#6b7280;transition:all 0.15s;}
+  .lookup-tab.active-blue{background:#1e40af;color:#fff;border-color:#1e40af;}
+  .lookup-tab.active-pink{background:#9d174d;color:#fff;border-color:#9d174d;}
+  .lookup-panel{display:none;}
+  .lookup-panel.show{display:block;}
+
+  /* 천간: 양기/음기 섹션 분리 */
+  .char-section-label{font-size:0.72rem;font-weight:700;margin:0 0 6px;padding:3px 10px;border-radius:4px;display:inline-block;}
+  .char-section-label.yang{background:#dbeafe;color:#1e40af;}
+  .char-section-label.yin{background:#fce7f3;color:#9d174d;}
+  .char-section{margin-bottom:12px;}
+  .char-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:0;}
+  .char-grid-6{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:0;}
+
+  .char-card{border-radius:10px;padding:0.75rem 0.2rem;text-align:center;border:1.5px solid transparent;}
+  .char-card.yang{background:#dbeafe;border-color:#bfdbfe;}
+  .char-card.yin{background:#fce7f3;border-color:#fbcfe8;}
+  .char-card .hanja{font-size:1.5rem;font-weight:700;line-height:1.2;}
+  .char-card.yang .hanja{color:#1e40af;}
+  .char-card.yin .hanja{color:#9d174d;}
+  .char-card .hangul{font-size:0.78rem;font-weight:600;margin-top:4px;}
+  .char-card.yang .hangul{color:#1d4ed8;}
+  .char-card.yin .hangul{color:#be185d;}
 
   /* 앱 카드 */
   .app-card{background:#fff;border:1px solid #e9e9e7;border-radius:8px;padding:1rem 1.25rem;display:flex;gap:14px;align-items:flex-start;margin-bottom:0.75rem;}
@@ -47,20 +100,13 @@
   .step-list li{display:flex;gap:10px;align-items:flex-start;font-size:0.9rem;color:#37352f;margin-bottom:0.5rem;}
   .step-num{width:22px;height:22px;border-radius:50%;background:#dbeafe;color:#1e40af;font-size:0.72rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 
-  /* 사주팔자 표 */
-  .sajoo-table{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:0.5rem;}
-  .sajoo-table th{text-align:center;padding:7px 4px;font-size:0.75rem;font-weight:600;color:#9b9a97;border:1px solid #e9e9e7;background:#f7f6f3;}
-  .sajoo-table td{text-align:center;padding:10px 4px;border:1px solid #e9e9e7;vertical-align:middle;}
-  .srow-label{font-size:0.68rem;color:#9b9a97;font-weight:600;line-height:1.5;}
-  .gc{font-size:1.15rem;font-weight:700;line-height:1.3;}
-  .cs{font-size:0.7rem;color:#9b9a97;margin-top:2px;}
-  .hl-th{background:#fad4e8 !important;color:#9d174d !important;}
-  .hl-td{background:#fce7f3 !important;}
-  .hl-char{color:#9d174d !important;}
-  .hl-sub{color:#c4607a !important;}
-  .hl-badge{font-size:0.66rem;color:#9d174d;font-weight:600;margin-top:3px;display:block;}
-
-
+  /* 오픈채팅 CTA */
+  .kakao-cta{background:linear-gradient(135deg,#fee500 0%,#ffd700 100%);border-radius:12px;padding:1.4rem 1.5rem;margin-bottom:1rem;text-align:center;}
+  .kakao-cta .kc-badge{display:inline-block;background:rgba(0,0,0,0.08);color:#3d2e00;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;padding:2px 10px;border-radius:999px;margin-bottom:10px;}
+  .kakao-cta h3{font-size:1.05rem;font-weight:700;color:#3d2e00;margin-bottom:4px;}
+  .kakao-cta p{font-size:0.85rem;color:#5a4500;margin-bottom:12px;line-height:1.6;}
+  .kakao-cta .kc-code{display:inline-block;background:rgba(0,0,0,0.1);color:#3d2e00;font-size:0.82rem;font-weight:700;padding:3px 14px;border-radius:999px;margin-bottom:14px;letter-spacing:0.05em;}
+  .kakao-btn{display:inline-block;background:#3d2e00;color:#fee500;font-size:0.95rem;font-weight:700;padding:10px 28px;border-radius:8px;text-decoration:none;letter-spacing:0.02em;}
 
   /* 출처 섹션 */
   .source-card{background:#f7f6f3;border-radius:8px;padding:1rem 1.25rem;border-left:3px solid #d4537e;}
@@ -69,9 +115,24 @@
   .source-desc{font-size:0.85rem;color:#6b7280;margin-bottom:10px;line-height:1.6;}
   .source-links{display:flex;flex-wrap:wrap;gap:8px;}
   .source-link{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:999px;font-size:0.8rem;font-weight:500;text-decoration:none;border:1px solid #e9e9e7;background:#fff;color:#37352f;}
-  .source-link:hover{background:#f7f6f3;}
 
-  @media(max-width:500px){.grid2,.concept-grid{grid-template-columns:1fr;}.app-card{flex-direction:column;}}
+  @media(max-width:480px){
+    body{padding:1.2rem 0.9rem;}
+    h1{font-size:1.35rem;}
+    .focus-box .fb-main{font-size:1.1rem;}
+    .app-card{flex-direction:column;}
+    .sj-char{width:30px;height:30px;font-size:0.88rem;}
+    .sj-label{font-size:0.58rem;}
+    .char-grid-5{grid-template-columns:repeat(5,1fr);}
+    .char-grid-6{grid-template-columns:repeat(6,1fr);}
+    .char-card .hanja{font-size:1.25rem;}
+    .char-card .hangul{font-size:0.7rem;}
+    table{font-size:0.82rem;}
+    td,th{padding:7px 8px;}
+    .kakao-cta{padding:1.1rem 1rem;}
+    .source-links{gap:6px;}
+    .source-link{font-size:0.75rem;padding:4px 10px;}
+  }
 </style>
 </head>
 <body>
@@ -80,7 +141,21 @@
 <h1>사주로 보는 자녀 성별 예측</h1>
 <p class="sub">시주(時柱) 분석을 통한 아이 성별 예측 원리 정리</p>
 
-<div class="sec">핵심 개념</div>
+<!-- ① 초보자 안심 배너 -->
+<div class="beginner-banner">
+  <div class="bi">😊</div>
+  <div>
+    <h3>사주 생초보도 OK! 걱정 마세요 🙌</h3>
+    <p>한자를 전혀 몰라도 됩니다. 복잡한 이론도 필요 없어요.<br>
+    이 페이지의 순서대로만 따라가면 누구든 3분 안에 확인할 수 있어요!</p>
+    <ul>
+      <li>📱 무료 앱에서 내 사주 8글자 확인</li>
+      <li>👉 맨 왼쪽 2글자(시주)만 찾기</li>
+      <li>🔍 아래 글자 카드에서 내 글자의 색깔 확인 — 끝!</li>
+    </ul>
+  </div>
+</div>
+
 <div class="callout">
   <span class="ci">📌</span>
   <div>사주에서 <strong>시주(時柱)</strong>는 자식궁이라 불리며, 이 자리를 통해 아이의 성별을 예측할 수 있다. 자식운은 우연이 아니며, 시주의 글자가 <strong>양기(陽氣)</strong>인지 <strong>음기(陰氣)</strong>인지에 따라 성별 확률이 결정된다.</div>
@@ -88,7 +163,52 @@
 
 <hr>
 
-<div class="sec">📱 시작 전 — 내 사주팔자 확인하는 법</div>
+<!-- ② 시주만 보면 된다 강조 -->
+<div class="focus-box">
+  <div class="fb-label">⭐ 핵심 포인트</div>
+  <div class="fb-main">사주 8글자 중 딱 2글자만 보면 됩니다</div>
+  <div class="fb-sub">맨 왼쪽 기둥 = 시주(時柱) — 이 2글자만 확인하세요!</div>
+</div>
+
+<div class="sijoo-diagram">
+  <div class="sj-col active">
+    <div class="sj-label">⭐ 시주<br>(여기!)</div>
+    <div class="sj-char active-top">庚</div>
+    <div class="sj-row-label blue">↑ 위 글자</div>
+    <div class="sj-char active-bot">申</div>
+    <div class="sj-row-label blue">↑ 아래 글자</div>
+    <div style="font-size:0.68rem;color:#1e40af;font-weight:700;margin-top:5px;">✓ 이 2글자만!</div>
+  </div>
+  <div class="sj-col inactive">
+    <div class="sj-label dim">일주</div>
+    <div class="sj-char inactive-c">戊</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div class="sj-char inactive-c">寅</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div style="font-size:0.65rem;color:#9b9a97;margin-top:5px;">안 봐도 됨</div>
+  </div>
+  <div class="sj-col inactive">
+    <div class="sj-label dim">월주</div>
+    <div class="sj-char inactive-c">丙</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div class="sj-char inactive-c">午</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div style="font-size:0.65rem;color:#9b9a97;margin-top:5px;">안 봐도 됨</div>
+  </div>
+  <div class="sj-col inactive">
+    <div class="sj-label dim">연주</div>
+    <div class="sj-char inactive-c">甲</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div class="sj-char inactive-c">子</div>
+    <div class="sj-row-label">&nbsp;</div>
+    <div style="font-size:0.65rem;color:#9b9a97;margin-top:5px;">안 봐도 됨</div>
+  </div>
+</div>
+<p class="note" style="margin-bottom:1rem;">↑ 앱 화면에서 <strong>맨 왼쪽 기둥(시주)의 위아래 2글자</strong>만 메모하세요. 나머지 6글자는 이번 분석에서 볼 필요 없어요!</p>
+
+<hr>
+
+<div class="sec">📱 STEP 1 — 내 사주팔자 확인하는 법</div>
 <div class="app-card">
   <div class="app-icon">🔮</div>
   <div class="app-info">
@@ -103,92 +223,86 @@
 <ul class="step-list">
   <li><span class="step-num">1</span>앱스토어 또는 플레이스토어에서 <strong>천을귀인</strong> 검색 후 설치</li>
   <li><span class="step-num">2</span>앱 실행 후 <strong>생년월일시</strong> 입력</li>
-  <li><span class="step-num">3</span>화면에 표시되는 <strong>8글자(사주팔자)</strong>를 아래 표와 비교해서 읽으면 완성!</li>
+  <li><span class="step-num">3</span>화면에 표시되는 <strong>8글자 중 맨 왼쪽 기둥(시주) 2글자</strong>만 메모!</li>
 </ul>
 
 <hr>
 
-<div class="sec">📖 사주팔자 구조 이해하기</div>
-<div class="callout">
+<!-- ③ 글자 시각화 대조 -->
+<div class="sec">📖 STEP 2 — 내 시주 글자 찾기</div>
+
+<div class="callout blue">
   <span class="ci">💡</span>
-  <div>사주팔자는 <strong>4개의 기둥</strong>으로 이루어져 있고, 각 기둥은 위아래 글자 2개씩 총 <strong>8글자</strong>예요. 앱에서는 왼쪽부터 <strong>시주 → 일주 → 월주 → 연주</strong> 순서로 표시돼요. 아이 성별을 보려면 <strong>맨 왼쪽 기둥(시주)</strong>을 확인하세요.</div>
+  <div><strong>한자를 읽을 필요 없어요!</strong> 아래 카드에서 <strong>모양이 같은 글자</strong>를 찾아서 색깔만 확인하면 끝! 파란색 = 🔵 양기(남자), 핑크색 = 🩷 음기(여자)입니다.</div>
 </div>
 
-<table class="sajoo-table">
-  <thead>
-    <tr>
-      <th style="width:14%;"></th>
-      <th class="hl-th">시주<br><span style="font-size:0.66rem;font-weight:400;">(時柱) ← 여기!</span></th>
-      <th>일주<br><span style="font-size:0.66rem;font-weight:400;">(日柱)</span></th>
-      <th>월주<br><span style="font-size:0.66rem;font-weight:400;">(月柱)</span></th>
-      <th>연주<br><span style="font-size:0.66rem;font-weight:400;">(年柱)</span></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><span class="srow-label">위 글자<br>천간(天干)</span></td>
-      <td class="hl-td"><div class="gc hl-char">庚</div><div class="cs hl-sub">경</div><span class="hl-badge">시간(時干)</span></td>
-      <td><div class="gc">戊</div><div class="cs">무</div></td>
-      <td><div class="gc">丙</div><div class="cs">병</div></td>
-      <td><div class="gc">甲</div><div class="cs">갑</div></td>
-    </tr>
-    <tr>
-      <td><span class="srow-label">아래 글자<br>지지(地支)</span></td>
-      <td class="hl-td"><div class="gc hl-char">申</div><div class="cs hl-sub">신</div><span class="hl-badge">시지(時支)</span></td>
-      <td><div class="gc">寅</div><div class="cs">인</div></td>
-      <td><div class="gc">午</div><div class="cs">오</div></td>
-      <td><div class="gc">子</div><div class="cs">자</div></td>
-    </tr>
-  </tbody>
-</table>
-<p class="note">↑ 예시입니다. 앱에서 확인한 내 사주의 <strong>맨 왼쪽 기둥 2글자</strong>를 아래 기준으로 분석하세요.</p>
-
-<div class="callout" style="margin-top:1rem;">
-  <span class="ci">😊</span>
-  <div><strong>한자를 몰라도 괜찮아요!</strong> 읽을 필요 없이 <strong>어떤 글자인지 모양만 확인</strong>하면 돼요. 아래 목록에서 내 시주 글자를 찾아 체크하기만 하면 됩니다.</div>
+<div style="font-size:0.85rem;font-weight:600;color:#374151;margin-bottom:8px;">시주의 어떤 글자를 찾으시나요?</div>
+<div class="lookup-tabs">
+  <button class="lookup-tab active-blue" onclick="showPanel('top')">위 글자 (천간) — 10개</button>
+  <button class="lookup-tab" id="tab-bot" onclick="showPanel('bot')">아래 글자 (지지) — 12개</button>
 </div>
 
+<!-- 천간 패널 -->
+<div class="lookup-panel show" id="panel-top">
+  <div style="font-size:0.82rem;color:#6b7280;margin-bottom:12px;">시주 <strong>위 글자</strong>를 찾아보세요. 총 10개 중 하나예요. 색깔로 바로 구분됩니다!</div>
 
-
-<hr>
-
-<div class="sec">시간(時干) — 시주의 위 글자로 확인</div>
-<div class="grid2">
-  <div class="card">
-    <div class="cl">🔵 양기 → 남자 가능성 높음</div>
-    <div class="tw">
-      <span class="tag tb">갑 (甲)</span><span class="tag tb">병 (丙)</span><span class="tag tb">무 (戊)</span><span class="tag tb">경 (庚)</span><span class="tag tb">임 (壬)</span>
+  <div class="char-section">
+    <div class="char-section-label yang">🔵 양기 5개 — 남자 가능성 높음</div>
+    <div class="char-grid-5">
+      <div class="char-card yang"><div class="hanja">甲</div><div class="hangul">갑</div></div>
+      <div class="char-card yang"><div class="hanja">丙</div><div class="hangul">병</div></div>
+      <div class="char-card yang"><div class="hanja">戊</div><div class="hangul">무</div></div>
+      <div class="char-card yang"><div class="hanja">庚</div><div class="hangul">경</div></div>
+      <div class="char-card yang"><div class="hanja">壬</div><div class="hangul">임</div></div>
     </div>
   </div>
-  <div class="card">
-    <div class="cl">🩷 음기 → 여자 가능성 높음</div>
-    <div class="tw">
-      <span class="tag tp">을 (乙)</span><span class="tag tp">정 (丁)</span><span class="tag tp">기 (己)</span><span class="tag tp">신 (辛)</span><span class="tag tp">계 (癸)</span>
+
+  <div class="char-section">
+    <div class="char-section-label yin">🩷 음기 5개 — 여자 가능성 높음</div>
+    <div class="char-grid-5">
+      <div class="char-card yin"><div class="hanja">乙</div><div class="hangul">을</div></div>
+      <div class="char-card yin"><div class="hanja">丁</div><div class="hangul">정</div></div>
+      <div class="char-card yin"><div class="hanja">己</div><div class="hangul">기</div></div>
+      <div class="char-card yin"><div class="hanja">辛</div><div class="hangul">신</div></div>
+      <div class="char-card yin"><div class="hanja">癸</div><div class="hangul">계</div></div>
     </div>
   </div>
+  <p class="note">파란 배경이면 🔵 양기(남자), 핑크 배경이면 🩷 음기(여자)예요.</p>
 </div>
 
-<hr>
+<!-- 지지 패널 -->
+<div class="lookup-panel" id="panel-bot">
+  <div style="font-size:0.82rem;color:#6b7280;margin-bottom:12px;">시주 <strong>아래 글자</strong>를 찾아보세요. 총 12개 중 하나예요. 색깔로 바로 구분됩니다!</div>
 
-<div class="sec">시지(時支) — 시주의 아래 글자로 확인</div>
-<div class="grid2">
-  <div class="card">
-    <div class="cl">🔵 양기 지지 → 남자</div>
-    <div class="tw">
-      <span class="tag tb">인 (寅)</span><span class="tag tb">진 (辰)</span><span class="tag tb">사 (巳)</span><span class="tag tb">신 (申)</span><span class="tag tb">술 (戌)</span><span class="tag tb">해 (亥)</span>
+  <div class="char-section">
+    <div class="char-section-label yang">🔵 양기 6개 — 남자 가능성 높음</div>
+    <div class="char-grid-6">
+      <div class="char-card yang"><div class="hanja">寅</div><div class="hangul">인</div></div>
+      <div class="char-card yang"><div class="hanja">辰</div><div class="hangul">진</div></div>
+      <div class="char-card yang"><div class="hanja">巳</div><div class="hangul">사</div></div>
+      <div class="char-card yang"><div class="hanja">申</div><div class="hangul">신</div></div>
+      <div class="char-card yang"><div class="hanja">戌</div><div class="hangul">술</div></div>
+      <div class="char-card yang"><div class="hanja">亥</div><div class="hangul">해</div></div>
     </div>
   </div>
-  <div class="card">
-    <div class="cl">🩷 음기 지지 → 여자</div>
-    <div class="tw">
-      <span class="tag tp">자 (子)</span><span class="tag tp">축 (丑)</span><span class="tag tp">묘 (卯)</span><span class="tag tp">오 (午)</span><span class="tag tp">미 (未)</span><span class="tag tp">유 (酉)</span>
+
+  <div class="char-section">
+    <div class="char-section-label yin">🩷 음기 6개 — 여자 가능성 높음</div>
+    <div class="char-grid-6">
+      <div class="char-card yin"><div class="hanja">子</div><div class="hangul">자</div></div>
+      <div class="char-card yin"><div class="hanja">丑</div><div class="hangul">축</div></div>
+      <div class="char-card yin"><div class="hanja">卯</div><div class="hangul">묘</div></div>
+      <div class="char-card yin"><div class="hanja">午</div><div class="hangul">오</div></div>
+      <div class="char-card yin"><div class="hanja">未</div><div class="hangul">미</div></div>
+      <div class="char-card yin"><div class="hanja">酉</div><div class="hangul">유</div></div>
     </div>
   </div>
+  <p class="note">파란 배경이면 🔵 양기(남자), 핑크 배경이면 🩷 음기(여자)예요.</p>
 </div>
 
 <hr>
 
-<div class="sec">시주 전체 판별표</div>
+<div class="sec">STEP 3 — 시주 전체 판별표</div>
 <table>
   <thead>
     <tr>
@@ -199,23 +313,23 @@
   </thead>
   <tbody>
     <tr>
-      <td><span class="badge bb">양기</span></td>
-      <td><span class="badge bb">양기</span></td>
+      <td><span class="badge bb">🔵 양기</span></td>
+      <td><span class="badge bb">🔵 양기</span></td>
       <td>👦 <strong>남자 확률 높음</strong></td>
     </tr>
     <tr>
-      <td><span class="badge bp">음기</span></td>
-      <td><span class="badge bp">음기</span></td>
+      <td><span class="badge bp">🩷 음기</span></td>
+      <td><span class="badge bp">🩷 음기</span></td>
       <td>👧 <strong>여자 확률 높음</strong></td>
     </tr>
     <tr>
-      <td><span class="badge bb">양기</span></td>
-      <td><span class="badge bp">음기</span></td>
+      <td><span class="badge bb">🔵 양기</span></td>
+      <td><span class="badge bp">🩷 음기</span></td>
       <td><span class="badge bg">혼합</span> 배우자 사주까지 함께 봐야 함</td>
     </tr>
     <tr>
-      <td><span class="badge bp">음기</span></td>
-      <td><span class="badge bb">양기</span></td>
+      <td><span class="badge bp">🩷 음기</span></td>
+      <td><span class="badge bb">🔵 양기</span></td>
       <td><span class="badge bg">혼합</span> 배우자 사주까지 함께 봐야 함</td>
     </tr>
   </tbody>
@@ -235,6 +349,18 @@
 
 <hr>
 
+<!-- ④ 오픈채팅방 CTA -->
+<div class="sec">커뮤니티</div>
+<div class="kakao-cta">
+  <div class="kc-badge">💬 현승리의 사주 작명 커뮤니티</div>
+  <h3>무료 출산택일 받아가세요! 🎁</h3>
+  <p>카카오 오픈채팅방에서 현승리가 직접 운영하는<br>사주·작명 커뮤니티에 참여해보세요.</p>
+  <div class="kc-code">참여코드 : 4684</div><br>
+  <a class="kakao-btn" href="https://open.kakao.com/o/gBSetQ6h" target="_blank">💛 무료 출산택일 받으러 가기</a>
+</div>
+
+<hr>
+
 <div class="sec">출처</div>
 <div class="source-card">
   <div class="source-title">콘텐츠 출처</div>
@@ -244,8 +370,28 @@
     <a class="source-link" href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
     <a class="source-link" href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램 @free_hsl</a>
     <a class="source-link" href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+    <a class="source-link" href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 천을귀인 (iOS)</a>
+    <a class="source-link" href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">▶ 천을귀인 (Android)</a>
+    <a class="source-link" href="https://open.kakao.com/o/gBSetQ6h" target="_blank">💬 오픈채팅방</a>
   </div>
 </div>
+
+<script>
+function showPanel(which) {
+  document.getElementById('panel-top').classList.remove('show');
+  document.getElementById('panel-bot').classList.remove('show');
+  document.querySelectorAll('.lookup-tab').forEach(t => {
+    t.classList.remove('active-blue','active-pink');
+  });
+  if (which === 'top') {
+    document.getElementById('panel-top').classList.add('show');
+    document.querySelectorAll('.lookup-tab')[0].classList.add('active-blue');
+  } else {
+    document.getElementById('panel-bot').classList.add('show');
+    document.getElementById('tab-bot').classList.add('active-pink');
+  }
+}
+</script>
 
 </body>
 </html>
