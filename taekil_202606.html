@@ -497,6 +497,48 @@
     margin-bottom: 20px;
     box-shadow: 0 4px 12px rgba(184,134,11,0.3);
   }
+  /* WEEK TABS */
+  .week-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 28px 0 24px;
+    flex-wrap: wrap;
+  }
+  .week-tab {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 6px;
+    border-radius: 10px;
+    border: 2px solid #e0d8cc;
+    background: #f9f8f5;
+    color: var(--text-soft);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+  }
+  .week-tab:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-light);
+  }
+  .week-tab.active {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    border-color: var(--gold);
+    color: #f0d060;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .week-tab .tab-range {
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.8;
+    display: block;
+    margin-top: 2px;
+  }
+  .week-section { display: none; }
+  .week-section.active { display: block; }
 </style>
 </head>
 <body>
@@ -518,7 +560,31 @@
     </div>
   </div>
 
-  <!-- SAJU 1 -->
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" onclick="showWeek(1, this)">
+      1주차
+      <span class="tab-range">6/1 ~ 6/7</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(2, this)">
+      2주차
+      <span class="tab-range">6/8 ~ 6/14</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(3, this)">
+      3주차
+      <span class="tab-range">6/15 ~ 6/21</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(4, this)">
+      4주차
+      <span class="tab-range">6/22 ~ 6/28</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(5, this)">
+      5주차
+      <span class="tab-range">6/29 ~ 7/5</span>
+    </button>
+  </div>
+
+  <div class="week-section active" data-week="1"><!-- SAJU 1 -->
   <div class="section-title">① 6월 1일 ~ 6월 7일 추천</div>
 
   <div class="saju-card">
@@ -564,7 +630,7 @@
       <div class="tag-row">
         <span class="tag tag-gold">⚖️ 오행 균형 사주</span>
         <span class="tag tag-gold">✨ 천을귀인 포함</span>
-        <span class="tag tag-green">🌿 오행구족격</span>
+        <span class="tag tag-green">🌿 지장간 구족</span>
         <span class="tag tag-blue">💧 음양 조화</span>
       </div>
 
@@ -572,6 +638,11 @@
       <div class="ohaeng-section">
         <div class="ohaeng-title">🔢 오행 분포 (지장간 포함 정밀 계산)</div>
         <div class="ohaeng-bars">
+          <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:1%"></div></div>
+            <div class="ohaeng-pct c-wood">1%</div>
+          </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:32.8%"></div></div>
@@ -583,19 +654,14 @@
             <div class="ohaeng-pct c-earth">25.6%</div>
           </div>
           <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20%"></div></div>
-            <div class="ohaeng-pct c-water">20.0%</div>
-          </div>
-          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:20.6%"></div></div>
             <div class="ohaeng-pct c-metal">20.6%</div>
           </div>
           <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:1%"></div></div>
-            <div class="ohaeng-pct c-wood">~1%</div>
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20%"></div></div>
+            <div class="ohaeng-pct c-water">20.0%</div>
           </div>
         </div>
       </div>
@@ -632,16 +698,16 @@
       <div class="callout callout-green">
         <div class="callout-icon">🌿</div>
         <div class="callout-text">
-          <strong>오행구족격(五行俱足格) — 다섯 기운이 모두 존재</strong>
-          목(木)이 지장간(支藏干 — 지지 안에 숨어 있는 천간의 기운)에 약 1% 포함되어 있어, <strong>다섯 가지 오행(목·화·토·금·수)이 모두 갖춰진 사주</strong>입니다. 이를 오행구족격이라고 하며, 굉장히 드물고 귀한 구성으로 봅니다.
+          <strong>지장간 구족 — 다섯 기운이 모두 존재</strong>
+          목(木)이 지장간(支藏干 — 지지 안에 숨어 있는 천간의 기운)에 1% 포함되어 있어, <strong>다섯 가지 오행(목·화·토·금·수)이 모두 갖춰진 사주</strong>입니다. 
         </div>
       </div>
 
-      <div class="callout callout-gray">
-        <div class="callout-icon">⚠️</div>
+      <div class="callout callout-blue">
+        <div class="callout-icon">💡</div>
         <div class="callout-text">
-          <strong>주의할 점 — 목(木)의 과도한 강화는 피하세요</strong>
-          화(火)가 32.8%로 가장 강한 기운입니다. 이런 사주에서 목(木)이 강해지면 "장작에 불을 더 붙이는 격"이 되어 불균형이 생길 수 있습니다. 다행히 미토(未土)의 지장간에 목이 약 1%만 포함되어 있어 큰 문제가 되지 않습니다.
+          <strong>이름 작명 포인트</strong>
+          화(火)가 32.8%로 가장 강한 기운입니다. 이 사주에는 목(木)과 함께 목을 돕는 수(水)의 기운을 이름에 넣어주면 오행의 조화를 더욱 잘 이룰 수 있습니다.
         </div>
       </div>
 
@@ -677,7 +743,8 @@
     </div>
   </div>
 
-  <!-- SAJU 2 -->
+  </div><!-- /week1 -->
+  <div class="week-section" data-week="2"><!-- SAJU 2 -->
   <div class="section-title">② 6월 8일 ~ 6월 14일 추천 (1순위)</div>
 
   <div class="saju-card">
@@ -750,14 +817,14 @@
         <div class="ohaeng-title">🔢 실질 오행 분포 (사유반합 적용 후)</div>
         <div class="ohaeng-bars">
           <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
+            <div class="ohaeng-pct c-wood">10점</div>
+          </div>
+          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:41%"></div></div>
             <div class="ohaeng-pct c-fire">41점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:30%"></div></div>
-            <div class="ohaeng-pct c-metal">30점</div>
           </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div>
@@ -765,9 +832,9 @@
             <div class="ohaeng-pct c-earth">19점</div>
           </div>
           <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
-            <div class="ohaeng-pct c-wood">10점</div>
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:30%"></div></div>
+            <div class="ohaeng-pct c-metal">30점</div>
           </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
@@ -851,7 +918,7 @@
         <div class="callout-icon">💡</div>
         <div class="callout-text">
           <strong>현승리의 솔직한 추천 순위</strong>
-          사주를 깊이 이해하신 분이라면 <strong>6월 12일 유시</strong>가 더 좋습니다. 하지만 "목화토금수가 모두 있는 사주"를 원하시거나, 기존 방식에 익숙하신 분들께는 이 날이 더 편하게 느껴질 수 있어요. 대안으로 충분히 좋은 사주입니다.
+          사주를 깊이 이해하신 분이라면 <strong>6월 12일 유시</strong>가 더 좋습니다. 하지만 사주에 대한 깊은 이해 없이 택일을 하면, 겉으로 보기에 그럴듯한 설명으로 혼란을 주는 곳에 휘둘릴 수 있습니다. 오행구족격처럼 직관적으로 이해하기 쉬운 사주라면, 어디서 어떤 설명을 들어도 스스로 판단할 수 있는 근거가 됩니다. 대안으로 충분히 좋은 사주입니다.
         </div>
       </div>
 
@@ -883,7 +950,7 @@
       <!-- TAGS -->
       <div class="tag-row">
         <span class="tag tag-blue">💧 수(水) 일간</span>
-        <span class="tag tag-green">🌿 오행 구비</span>
+        <span class="tag tag-green">🌿 오행구족격</span>
         <span class="tag" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">📊 신약 경향</span>
       </div>
 
@@ -891,6 +958,11 @@
       <div class="ohaeng-section">
         <div class="ohaeng-title">🔢 오행 분포</div>
         <div class="ohaeng-bars">
+          <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
+            <div class="ohaeng-pct c-wood">10점</div>
+          </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:31%"></div></div>
@@ -910,11 +982,6 @@
             <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:16%"></div></div>
             <div class="ohaeng-pct c-water">16점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
-            <div class="ohaeng-pct c-wood">10점</div>
           </div>
         </div>
         <div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:#0d47a1;">
@@ -1000,7 +1067,8 @@
     </div>
   </div>
 
-  <!-- SAJU 4 -->
+  </div><!-- /week2 -->
+  <div class="week-section" data-week="3"><!-- SAJU 4 -->
   <div class="section-title">④ 6월 15일 ~ 6월 21일 추천</div>
 
   <div class="saju-card">
@@ -1046,7 +1114,7 @@
       <div class="tag-row">
         <span class="tag tag-blue">💧 수(水) 일간</span>
         <span class="tag tag-gold">⚖️ 어느 정도 균형</span>
-        <span class="tag tag-green">🌿 오행구족격</span>
+        <span class="tag tag-green">🌿 지장간 구족</span>
         <span class="tag" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🌦️ 조후(調候) 우수</span>
         <span class="tag" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✅ 백호대살 없음</span>
       </div>
@@ -1056,19 +1124,14 @@
         <div class="ohaeng-title">🔢 오행 분포 (지장간 포함 정밀 계산)</div>
         <div class="ohaeng-bars">
           <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:14.6%"></div></div>
+            <div class="ohaeng-pct c-wood">14.6점</div>
+          </div>
+          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:31%"></div></div>
             <div class="ohaeng-pct c-fire">31.0점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20.8%"></div></div>
-            <div class="ohaeng-pct c-water">20.8점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:20%"></div></div>
-            <div class="ohaeng-pct c-metal">20.0점</div>
           </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div>
@@ -1076,9 +1139,14 @@
             <div class="ohaeng-pct c-earth">13.6점</div>
           </div>
           <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:14.6%"></div></div>
-            <div class="ohaeng-pct c-wood">14.6점</div>
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:20%"></div></div>
+            <div class="ohaeng-pct c-metal">20.0점</div>
+          </div>
+          <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20.8%"></div></div>
+            <div class="ohaeng-pct c-water">20.8점</div>
           </div>
         </div>
         <div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:#0d47a1;">
@@ -1093,8 +1161,8 @@
       <div class="callout callout-gold">
         <div class="callout-icon">🌿</div>
         <div class="callout-text">
-          <strong>오행구족격(五行俱足格) — 다섯 기운이 모두 존재</strong>
-          겉보기엔 토(土)가 없어 보이죠? 하지만 지장간(支藏干 — 지지 안에 숨어 있는 기운)까지 보면 이야기가 달라집니다. <strong>해수(亥水) 지장간에 무토(戊土) 23%</strong>가 있고, <strong>오화(午火) 지장간에 기토(己土) 30%</strong>가 포함되어 있어요. 계산하면 토가 13.6점이나 됩니다. 지장간까지 정확히 보면 목·화·토·금·수 다섯 기운이 모두 갖춰진 오행구족격입니다.
+          <strong>지장간 구족 — 다섯 기운이 모두 존재</strong>
+          겉보기엔 토(土)가 없어 보이죠? 하지만 지장간(支藏干 — 지지 안에 숨어 있는 기운)까지 보면 이야기가 달라집니다. <strong>해수(亥水) 지장간에 무토(戊土) 23%</strong>가 있고, <strong>오화(午火) 지장간에 기토(己土) 30%</strong>가 포함되어 있어요. 계산하면 토가 13.6점이나 됩니다. 지장간까지 정확히 보면 목·화·토·금·수 다섯 기운이 모두 갖춰진 지장간 구족입니다.
         </div>
       </div>
 
@@ -1128,7 +1196,7 @@
       <div class="strength-grid">
         <div class="strength-item">
           <div class="si-icon">🌿</div>
-          <div class="si-title">오행구족격</div>
+          <div class="si-title">지장간 구족</div>
           <div class="si-desc">지장간까지 포함하면 5기운 모두 갖춤</div>
         </div>
         <div class="strength-item">
@@ -1151,7 +1219,8 @@
     </div>
   </div>
 
-  <!-- SAJU 5 -->
+  </div><!-- /week3 -->
+  <div class="week-section" data-week="4"><!-- SAJU 5 -->
   <div class="section-title">⑤ 6월 22일 ~ 6월 28일 추천</div>
 
   <div class="saju-card">
@@ -1197,7 +1266,7 @@
       <div class="tag-row">
         <span class="tag tag-blue">💧 수(水) 일간</span>
         <span class="tag tag-gold">⚖️ 완벽한 50:50 균형</span>
-        <span class="tag tag-green">🌿 오행구족격</span>
+        <span class="tag tag-green">🌿 지장간 구족</span>
         <span class="tag" style="background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8;">🌦️ 조후 우수</span>
         <span class="tag" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✅ 백호대살 없음</span>
       </div>
@@ -1217,9 +1286,19 @@
         <div class="ohaeng-title">🔢 오행 분포 (지장간 포함 정밀 계산)</div>
         <div class="ohaeng-bars">
           <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
+            <div class="ohaeng-pct c-wood">10점</div>
+          </div>
+          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:31%"></div></div>
             <div class="ohaeng-pct c-fire">31점</div>
+          </div>
+          <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:9%"></div></div>
+            <div class="ohaeng-pct c-earth">9점</div>
           </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
@@ -1227,19 +1306,9 @@
             <div class="ohaeng-pct c-metal">40점</div>
           </div>
           <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
-            <div class="ohaeng-pct c-wood">10점</div>
-          </div>
-          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:10%"></div></div>
             <div class="ohaeng-pct c-water">10점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:9%"></div></div>
-            <div class="ohaeng-pct c-earth">9점</div>
           </div>
         </div>
         <div style="background:#e3f2fd;border:1px solid #90caf9;border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:#0d47a1;">
@@ -1262,8 +1331,8 @@
       <div class="callout callout-gold">
         <div class="callout-icon">🌿</div>
         <div class="callout-text">
-          <strong>오행구족격 — 지장간까지 보면 토도 있어요</strong>
-          겉으로 보면 토(土)가 없는 것 같죠? 하지만 오화(午火)의 지장간에 기토(己土)가 포함되어 있어 토의 기운이 9점 존재합니다. 따라서 지장간까지 정확히 계산하면 목·화·토·금·수 다섯 기운이 모두 갖춰진 <strong>오행구족격</strong>입니다.
+          <strong>지장간 구족 — 지장간까지 보면 토도 있어요</strong>
+          겉으로 보면 토(土)가 없는 것 같죠? 하지만 오화(午火)의 지장간에 기토(己土)가 포함되어 있어 토의 기운이 9점 존재합니다. 따라서 지장간까지 정확히 계산하면 목·화·토·금·수 다섯 기운이 모두 갖춰진 <strong>지장간 구족</strong>입니다.
         </div>
       </div>
 
@@ -1294,7 +1363,7 @@
         </div>
         <div class="strength-item">
           <div class="si-icon">🌿</div>
-          <div class="si-title">오행구족격</div>
+          <div class="si-title">지장간 구족</div>
           <div class="si-desc">지장간 포함 5기운 모두 갖춤</div>
         </div>
         <div class="strength-item">
@@ -1355,16 +1424,16 @@
           <div class="callout callout-gray" style="margin-bottom:12px;">
             <div class="callout-icon">⚠️</div>
             <div class="callout-text">
-              <strong>진유합금(辰酉合金) — 겉보기와 다른 실체</strong>
-              이 사주는 겉으로 보면 목·화·토·금·수가 다 있어 보입니다. 하지만 진토(辰土)와 유금(酉金)이 만나면 <strong>진유합금(辰酉合金)</strong>이 일어납니다. 합(合)이란 두 기운이 만나 하나로 변환되는 현상인데, 진토가 금(金)으로 바뀌면서 <strong>토의 기운이 사라집니다.</strong> 결국 겉보기에 토가 있어 보여도 실제로는 없는 것이나 마찬가지예요.
+              <strong>진유합금(辰酉合金) — 알고 보면 괜찮아요</strong>
+              진토(辰土)와 유금(酉金)이 만나면 <strong>진유합금(辰酉合金)</strong>이 일어나 겉으로 보이는 토의 기운이 금(金)으로 변환됩니다. 팔자에 투출된 토는 없지만, <strong>오화(午火)의 지장간에 기토(己土)가 존재</strong>하므로 지장간 기준으로는 구족이라 볼 수 있습니다.
             </div>
           </div>
 
-          <div class="callout callout-red" style="margin-bottom:16px;">
-            <div class="callout-icon">🔥</div>
+          <div class="callout callout-gray" style="margin-bottom:16px;">
+            <div class="callout-icon">📊</div>
             <div class="callout-text">
-              <strong>화(火)의 기운이 너무 강해 신약</strong>
-              진유합금으로 인해 토가 사라지고 금이 늘어나지만, 시간(時干)에 병화(丙火)가 추가되면서 화의 기운이 매우 강해집니다. 수(水) 일간 입장에서 화는 나를 극(剋)하는 기운이라 <strong>다소 신약한 사주</strong>가 됩니다.
+              <strong>화(火)의 기운이 강한 편 — 신약하지만 보완 가능</strong>
+              시간(時干)에 병화(丙火)가 있어 화의 기운이 강한 편입니다. 수(水) 일간 입장에서 다소 신약하지만, 이름에서 금·수 기운으로 충분히 보완할 수 있습니다.
             </div>
           </div>
 
@@ -1386,31 +1455,32 @@
                 <tr style="background:#fafafa;border-bottom:1px solid #f0f0f0;">
                   <td style="padding:10px 12px;font-weight:600;">팔자 투출 토(土)</td>
                   <td style="padding:10px 12px;text-align:center;">✅ 지장간에 존재</td>
-                  <td style="padding:10px 12px;text-align:center;">⚠️ 진유합금으로 투출 토 없음<br><small style="color:var(--text-soft);">오화 지장간 기토는 존재</small></td>
+                  <td style="padding:10px 12px;text-align:center;">진유합금으로 겉보기 토 없음<br><small style="color:var(--text-soft);">지장간에는 존재 ✅</small></td>
                 </tr>
                 <tr style="border-bottom:1px solid #f0f0f0;">
-                  <td style="padding:10px 12px;font-weight:600;">오행구족격</td>
+                  <td style="padding:10px 12px;font-weight:600;">지장간 구족</td>
                   <td style="padding:10px 12px;text-align:center;">✅ 해당</td>
-                  <td style="padding:10px 12px;text-align:center;">⚠️ 팔자에 토 투출 없음</td>
+                  <td style="padding:10px 12px;text-align:center;">지장간 구족 ✅</td>
                 </tr>
                 <tr style="background:#fafafa;">
-                  <td style="padding:10px 12px;font-weight:600;">현승리 추천</td>
-                  <td style="padding:10px 12px;text-align:center;"><span style="background:#fff9c4;padding:3px 10px;border-radius:6px;font-weight:700;color:#7a4f00;">추천 ⭐</span></td>
-                  <td style="padding:10px 12px;text-align:center;"><span style="background:#f5f5f5;padding:3px 10px;border-radius:6px;font-weight:700;color:#9e9e9e;">비추천</span></td>
+                  <td style="padding:10px 12px;font-weight:600;">현승리 견해</td>
+                  <td style="padding:10px 12px;text-align:center;"><span style="background:#fff9c4;padding:3px 10px;border-radius:6px;font-weight:700;color:#7a4f00;">조금 더 추천 ⭐</span></td>
+                  <td style="padding:10px 12px;text-align:center;"><span style="background:#e3f2fd;padding:3px 10px;border-radius:6px;font-weight:700;color:#1565c0;">지장간 구족 ✅</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div style="background:#fffde7;border:1px solid #ffe082;border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:#5a4000;line-height:1.7;">
-            🎯 <strong>정리:</strong> 6월 28일에 태어난다면 <strong>유시(酉時)</strong>를 선택하세요. 진시는 겉으로만 좋아 보이고, 실제로는 진유합금으로 토가 사라지고 화가 강해져 신약한 사주가 됩니다.
+            🎯 <strong>정리:</strong> 두 사주 모두 지장간 기준으로는 구족이며, 합(合)에 의해 기운의 변화가 있을 뿐 큰 틀에서는 유사합니다. 굳이 고른다면 <strong>유시(酉時)</strong>가 조금 더 균형적이지만, 진시도 충분히 좋은 사주입니다.
           </div>
 
 
     </div>
   </div>
 
-  <!-- SAJU 6 -->
+  </div><!-- /week4 -->
+  <div class="week-section" data-week="5"><!-- SAJU 6 -->
   <div class="section-title">⑥ 6월 29일 ~ 7월 5일 추천</div>
 
   <div class="saju-card">
@@ -1420,7 +1490,7 @@
         <h2>2026년 7월 2일 유시(酉時)</h2>
         <p>유시(酉時) · 오후 5시 30분 ~ 7시 29분 · 화(火) 정(丁) 일간</p>
         <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center;">
-          <span style="background:rgba(255,255,255,0.25);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;">87점 · 참고</span>
+          <span style="background:rgba(255,255,255,0.25);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;">87점 · 대안 추천</span>
           <span style="background:#f0d060;color:#1a1a2e;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;">⭐ 6월 30일 신시 87점 최종추천</span>
           <span style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">📅 6월 29일 ~ 7월 5일 범위</span>
         </div>
@@ -1466,6 +1536,11 @@
         <div class="ohaeng-title">🔢 오행 분포 (지장간 포함 정밀 계산)</div>
         <div class="ohaeng-bars">
           <div class="ohaeng-row">
+            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
+            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
+            <div class="ohaeng-pct c-wood">10점</div>
+          </div>
+          <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:41%"></div></div>
             <div class="ohaeng-pct c-fire">41점</div>
@@ -1474,11 +1549,6 @@
             <div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div>
             <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:31%"></div></div>
             <div class="ohaeng-pct c-earth">31점</div>
-          </div>
-          <div class="ohaeng-row">
-            <div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div>
-            <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div>
-            <div class="ohaeng-pct c-wood">10점</div>
           </div>
           <div class="ohaeng-row">
             <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
@@ -1528,7 +1598,7 @@
         <div class="callout-icon">🌳</div>
         <div class="callout-text">
           <strong>목(木) 기운과 육아 — 알고 준비하면 괜찮아요</strong>
-          화(火) 일간 사주에서 목(木)은 어머니(모친성)를 나타내기도 합니다. 목이 화와 함께 강하게 작용하면, 자녀의 어릴 때 육아가 다소 힘겨울 수 있다고 봅니다. 다만, 이는 "힘들다"는 신호이지 나쁜 사주라는 뜻이 아닙니다. <strong>크고 나면 잘 성장합니다.</strong>
+          화(火) 일간 사주에서 목(木)은 어머니(모친성)를 나타내기도 합니다. 목이 화와 함께 강하게 작용하면, 자녀의 어릴 때 육아가 다소 힘겨울 수 있다고 봅니다. 다만, 이는 "힘들다"는 신호이지 나쁜 사주라는 뜻이 아닙니다. <strong>크고 나면 잘 성장합니다.</strong><br><br>미리 알고 준비하는 것과 모르고 당하는 것은 전혀 다릅니다. 이 사주를 선택했다면 초기 육아에 여유와 도움의 손길을 미리 마련해두는 것이 좋습니다.
         </div>
       </div>
 
@@ -1536,7 +1606,7 @@
         <div class="callout-icon">⚠️</div>
         <div class="callout-text">
           <strong>백호대살(白虎大殺) — 이 사주의 단점</strong>
-          백호대살은 사고·부상·수술과 관련된 흉살입니다. 이 사주에는 백호대살이 있어 이 점에서 주의가 필요합니다. 다만 흉살 하나만으로 사주 전체를 판단하지는 않으며, 다른 장점들과 함께 종합적으로 이해해야 합니다.
+          백호대살은 삶의 굴곡과 강한 에너지를 상징하는 글자입니다. 전통적으로는 사고·부상과 연관짓기도 하지만, 현대에는 <strong>강한 추진력이나 리더십 있는 기운</strong>으로 해석하기도 합니다. 단점이기도 하지만 잘 활용하면 오히려 힘이 되는 에너지입니다.
         </div>
       </div>
 
@@ -1587,6 +1657,11 @@
           </div>
 
           <!-- SINSI OHAENG -->
+          <div class="tag-row" style="margin-bottom:16px;">
+            <span class="tag tag-green">🌿 지장간구족격</span>
+            <span class="tag tag-gold">✨ 천을귀인</span>
+            <span class="tag" style="background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;">✅ 백호대살 없음</span>
+          </div>
           <div class="ohaeng-section">
             <div class="ohaeng-title">🔢 오행 분포</div>
             <div class="ohaeng-bars">
@@ -1606,14 +1681,14 @@
                 <div class="ohaeng-pct c-earth">15.9점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
-                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:13.1%"></div></div>
-                <div class="ohaeng-pct c-water">13.1점</div>
-              </div>
-              <div class="ohaeng-row">
                 <div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:5.4%"></div></div>
                 <div class="ohaeng-pct c-metal">5.4점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:13.1%"></div></div>
+                <div class="ohaeng-pct c-water">13.1점</div>
               </div>
             </div>
             <div style="background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;padding:12px 14px;margin-top:12px;font-size:13px;color:#1b5e20;">
@@ -1632,8 +1707,16 @@
           <div class="callout callout-gold" style="margin-bottom:12px;">
             <div class="callout-icon">✨</div>
             <div class="callout-text">
-              <strong>천을귀인 있고, 백호대살 없음</strong>
-              7월 2일 유시와 달리 백호대살이 없습니다. 천을귀인도 있어 귀인의 도움까지 갖춘 사주입니다.
+              <strong>천을귀인(天乙貴人) — 귀인의 도움</strong>
+              천을귀인이 있어 어려운 상황에서 귀인을 만나 위기를 극복하는 힘이 있다고 봅니다. 사주에서 가장 길한 신살 중 하나입니다.
+            </div>
+          </div>
+
+          <div class="callout callout-green" style="margin-bottom:12px;">
+            <div class="callout-icon">✅</div>
+            <div class="callout-text">
+              <strong>백호대살 없음 — 안정적인 구성</strong>
+              7월 2일 유시와 달리 백호대살이 없습니다. 강한 흉살 없이 안정적인 기운을 갖춘 사주입니다.
             </div>
           </div>
 
@@ -1675,7 +1758,7 @@
                 </tr>
                 <tr>
                   <td style="padding:10px 12px;font-weight:600;">현승리 추천</td>
-                  <td style="padding:10px 12px;text-align:center;"><span style="background:#f5f5f5;padding:3px 10px;border-radius:6px;font-weight:700;color:#757575;">참고용</span></td>
+                  <td style="padding:10px 12px;text-align:center;"><span style="background:#e8f5e9;padding:3px 10px;border-radius:6px;font-weight:700;color:#2e7d32;">대안 추천</span></td>
                   <td style="padding:10px 12px;text-align:center;"><span style="background:#dbeafe;padding:3px 10px;border-radius:6px;font-weight:700;color:#1e40af;">최종 추천 ⭐</span></td>
                 </tr>
               </tbody>
@@ -1688,6 +1771,8 @@
 
     </div>
   </div>
+
+  </div><!-- /week5 -->
 
   <!-- DISCLAIMER -->
   <div class="callout callout-gray" style="margin-bottom: 8px;">
@@ -1743,5 +1828,18 @@
   </div>
 </div>
 
+<script>
+function showWeek(week, btn) {
+  // hide all sections
+  document.querySelectorAll('.week-section').forEach(el => el.classList.remove('active'));
+  // deactivate all tabs
+  document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+  // show selected
+  document.querySelector('.week-section[data-week="' + week + '"]').classList.add('active');
+  btn.classList.add('active');
+  // smooth scroll to tabs
+  document.querySelector('.week-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
 </body>
 </html>
