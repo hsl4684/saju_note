@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7월 출산 예정자 필독 — 오미합화의 비밀 | 현승리</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #b8860b;
+    --gold-light: #fef9e7;
+    --gold-border: #f0d060;
+    --dark: #1a1a2e;
+    --dark2: #16213e;
+    --text: #2d2d2d;
+    --text-soft: #555;
+    --wood: #4a7c59;
+    --wood-light: #e8f5e9;
+    --fire: #c0392b;
+    --fire-light: #fdecea;
+    --earth: #d4a017;
+    --earth-light: #fffde7;
+    --metal: #607d8b;
+    --metal-light: #ecf0f1;
+    --water: #1565c0;
+    --water-light: #e3f2fd;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f8f7f4;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.15), transparent 60%);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.2);
+    border: 1px solid var(--gold-border);
+    color: #f0d060;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(22px, 5vw, 34px);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .hero h1 span { color: #f0d060; }
+  .hero-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    position: relative;
+  }
+
+  /* ── CONTAINER ── */
+  .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+    margin: 40px 0 16px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+  }
+
+  /* ── SAJU TABLE ── */
+  .saju-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 32px;
+    border: 1px solid #ece8df;
+  }
+  .saju-card-header {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .saju-icon {
+    width: 40px; height: 40px;
+    background: var(--fire);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .saju-card-header-info h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .saju-card-header-info p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 2px;
+  }
+  .saju-card-body { padding: 24px; }
+
+  .saju-table-wrap { margin-bottom: 24px; }
+  .saju-col-labels {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 6px; margin-bottom: 4px;
+  }
+  .saju-col-label {
+    text-align: center; font-size: 11px; font-weight: 700;
+    color: var(--text-soft); letter-spacing: 1px; padding: 2px 0;
+  }
+  .saju-row-header {
+    background: #2d2d2d; color: #f0d060; border-radius: 6px;
+    text-align: center; font-size: 11px; font-weight: 700;
+    padding: 5px 0; letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .saju-table {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 6px; margin-bottom: 6px;
+  }
+  .saju-cell {
+    border-radius: 10px; padding: 12px 4px 10px;
+    text-align: center; border: 2px solid transparent;
+  }
+  .saju-cell-char {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 28px; font-weight: 700; line-height: 1; margin-bottom: 5px;
+  }
+  .saju-cell-kor { font-size: 11px; font-weight: 700; opacity: 0.85; }
+  .cell-unknown { background: #f5f5f5; color: #9e9e9e; border-color: #e0e0e0; }
+  .cell-wood  { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+  .cell-fire  { background: #fdecea; color: #c0392b; border-color: #ef9a9a; }
+  .cell-earth { background: #fffde7; color: #9a7600; border-color: #ffe082; }
+  .cell-metal { background: #ecf0f1; color: #455a64; border-color: #b0bec5; }
+  .cell-water { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+
+  /* ── OHAENG BARS ── */
+  .ohaeng-section { margin-bottom: 24px; }
+  .ohaeng-title {
+    font-size: 13px; font-weight: 600;
+    color: var(--text-soft); margin-bottom: 12px; letter-spacing: 0.5px;
+  }
+  .ohaeng-bars { display: flex; flex-direction: column; gap: 8px; }
+  .ohaeng-row { display: flex; align-items: center; gap: 10px; }
+  .ohaeng-label {
+    width: 70px; font-size: 12px; font-weight: 600; flex-shrink: 0;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .ohaeng-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .ohaeng-bar-wrap {
+    flex: 1; background: #f0ede8; border-radius: 6px;
+    height: 16px; overflow: hidden;
+  }
+  .ohaeng-bar-fill { height: 100%; border-radius: 6px; }
+  .ohaeng-pct { width: 44px; font-size: 12px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
+
+  /* ── COLORS ── */
+  .c-wood { color: var(--wood); } .c-fire { color: var(--fire); }
+  .c-earth { color: var(--earth); } .c-metal { color: var(--metal); }
+  .c-water { color: var(--water); }
+  .bg-wood { background: var(--wood); } .bg-fire { background: var(--fire); }
+  .bg-earth { background: var(--earth); } .bg-metal { background: var(--metal); }
+  .bg-water { background: var(--water); }
+
+  /* ── TAGS ── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tag { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .tag-gold { background: #fef9e7; color: #92650a; border: 1px solid #f0d060; }
+  .tag-red  { background: var(--fire-light); color: var(--fire); border: 1px solid #ef9a9a; }
+  .tag-blue { background: var(--water-light); color: var(--water); border: 1px solid #90caf9; }
+  .tag-warn { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+  .tag-purple { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+
+  /* ── CALLOUT ── */
+  .callout {
+    border-radius: 10px; padding: 16px 18px; margin-bottom: 16px;
+    font-size: 14px; display: flex; gap: 12px; align-items: flex-start;
+  }
+  .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .callout-text { flex: 1; line-height: 1.75; }
+  .callout-text p { margin: 0; line-height: 1.75; }
+  .callout-text strong { font-size: 14px; font-weight: 700; }
+  .callout-text .ct-title { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .callout-gold { background: var(--gold-light); border-left: 4px solid var(--gold); }
+  .callout-blue { background: var(--water-light); border-left: 4px solid var(--water); }
+  .callout-green{ background: var(--wood-light); border-left: 4px solid var(--wood); }
+  .callout-red  { background: var(--fire-light); border-left: 4px solid var(--fire); }
+  .callout-gray { background: #f5f5f5; border-left: 4px solid #9e9e9e; }
+  .callout-warn { background: #fff3e0; border-left: 4px solid #ff9800; }
+
+  /* ── STEP BOXES (상담 요청법) ── */
+  .step-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .step-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: #fff; border-radius: 12px;
+    padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border: 1px solid #ece8df;
+  }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; color: #fff;
+  }
+  .step-num.fire-bg { background: var(--fire); }
+  .step-num.gold-bg { background: var(--gold); }
+  .step-num.water-bg { background: var(--water); }
+  .step-body h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
+  .step-body p  { font-size: 13px; color: var(--text-soft); line-height: 1.7; }
+
+  /* ── SCRIPT BOX ── */
+  .script-box {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    border-radius: 12px; padding: 22px 20px; margin: 20px 0;
+  }
+  .script-box .sb-label {
+    color: #f0d060; font-size: 12px; font-weight: 700;
+    letter-spacing: 1px; margin-bottom: 12px;
+  }
+  .script-quote {
+    background: rgba(255,255,255,0.08);
+    border-left: 3px solid #f0d060;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  .script-quote p {
+    color: #fff; font-size: 15px; font-weight: 600; line-height: 1.8;
+  }
+  .script-quote .sq-note { color: rgba(255,255,255,0.55); font-size: 12px; margin-top: 6px; }
+
+  /* ── TRANSFORM VISUAL ── */
+  .transform-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px; flex-wrap: wrap; margin: 20px 0;
+  }
+  .t-box {
+    border-radius: 12px; padding: 12px 16px; text-align: center;
+    min-width: 76px;
+  }
+  .t-box .char { font-family: 'Noto Serif KR', serif; font-size: 26px; font-weight: 700; display: block; }
+  .t-box .desc { font-size: 11px; margin-top: 4px; font-weight: 600; }
+  .t-fire { background: #fdecea; color: #c0392b; border: 2px solid #ef9a9a; }
+  .t-earth { background: #fffde7; color: #9a7600; border: 2px solid #ffe082; }
+  .t-result { background: #c0392b; color: #fff; border: 2px solid #922b21; }
+  .t-arrow { font-size: 22px; color: #9e9e9e; font-weight: 700; }
+
+  /* ── STRENGTH GRID ── */
+  .strength-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin-bottom: 16px;
+  }
+  .strength-item {
+    background: var(--gold-light); border: 1px solid var(--gold-border);
+    border-radius: 10px; padding: 14px;
+  }
+  .strength-item .si-icon { font-size: 20px; margin-bottom: 4px; }
+  .strength-item .si-title { font-weight: 700; font-size: 13px; color: #7a5200; margin-bottom: 3px; }
+  .strength-item .si-desc { font-size: 12px; color: #8a6820; line-height: 1.5; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid #ece8df; margin: 20px 0; }
+
+  /* ── WARNING BANNER ── */
+  .warn-banner {
+    background: linear-gradient(135deg, #b71c1c, #c62828);
+    border-radius: 14px; padding: 22px 20px; margin: 24px 0;
+    position: relative; overflow: hidden;
+  }
+  .warn-banner::before {
+    content: '⚠️';
+    position: absolute; right: 16px; top: 14px;
+    font-size: 48px; opacity: 0.15;
+  }
+  .warn-banner .wb-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: #fff; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .warn-banner h3 { color: #fff; font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .warn-banner p  { color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.8; }
+
+  /* ── EBOOK CTA ── */
+  .ebook-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin: 40px 0 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(184,134,11,0.15), transparent 60%);
+  }
+  .ebook-img { width: 90px; flex-shrink: 0; position: relative; }
+  .ebook-img img { width: 100%; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .ebook-info { flex: 1; position: relative; }
+  .ebook-info .eb-badge { font-size: 11px; color: #f0d060; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+  .ebook-info h3 {
+    font-family: 'Noto Serif KR', serif;
+    color: #fff; font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 10px;
+  }
+  .ebook-btn {
+    display: inline-block; background: var(--gold); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 10px 20px;
+    border-radius: 8px; text-decoration: none; letter-spacing: 0.5px;
+  }
+  @media (max-width: 480px) {
+    .ebook-section { flex-direction: column; text-align: center; }
+    .ebook-img { width: 100px; }
+  }
+
+  /* ── KAKAO CTA ── */
+  .kakao-section {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border: 1px solid #ece8df;
+    position: relative;
+    overflow: hidden;
+  }
+  .kakao-profile { width: 80px; flex-shrink: 0; }
+  .kakao-profile img { width: 100%; border-radius: 10px; }
+  .kakao-info { flex: 1; }
+  .kakao-info .kk-badge {
+    display: inline-block; background: #FEE500; color: #3a1d00;
+    font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px;
+  }
+  .kakao-info h3 {
+    font-family: 'Noto Serif KR', serif; font-size: 16px; font-weight: 700;
+    color: var(--dark); margin-bottom: 4px; line-height: 1.4;
+  }
+  .kakao-info p { font-size: 12px; color: var(--text-soft); margin-bottom: 12px; line-height: 1.5; }
+  .kakao-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #FEE500; color: #3a1d00;
+    font-size: 13px; font-weight: 700; padding: 10px 20px;
+    border-radius: 8px; text-decoration: none;
+  }
+  .code-pill {
+    display: inline-block; background: #f5f5f5; border: 1px solid #ddd;
+    border-radius: 20px; padding: 3px 12px;
+    font-size: 13px; font-weight: 700; color: #333; margin-top: 8px;
+  }
+  @media (max-width: 480px) {
+    .kakao-section { flex-direction: column; text-align: center; }
+    .kakao-profile { width: 70px; }
+  }
+
+
+  /* ── CTA 전자책 ── */
+  .cta-ebook {
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    margin: 24px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: var(--shadow);
+  }
+  .cta-ebook-left { display: flex; align-items: flex-start; gap: 14px; flex: 1; }
+  .cta-book-icon { font-size: 36px; flex-shrink: 0; line-height: 1; }
+  .cta-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    color: var(--gold); margin-bottom: 4px; text-transform: uppercase;
+  }
+  .cta-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px; font-weight: 700; color: var(--dark);
+    line-height: 1.45; margin-bottom: 6px;
+  }
+  .cta-desc { font-size: 12px; color: var(--text-soft); line-height: 1.6; }
+  .cta-btn-dark {
+    display: inline-block; flex-shrink: 0;
+    background: var(--dark); color: #f0d060;
+    font-size: 13px; font-weight: 700;
+    padding: 11px 18px; border-radius: 10px;
+    text-decoration: none; white-space: nowrap;
+    border: 1.5px solid rgba(240,208,96,0.3);
+  }
+  @media (max-width: 480px) {
+    .cta-ebook { flex-direction: column; align-items: flex-start; }
+    .cta-btn-dark { width: 100%; text-align: center; }
+  }
+
+  /* ── CTA 카카오 ── */
+  .cta-kakao {
+    background: #1c1a2e;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .cta-kakao-top {
+    padding: 22px 22px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .cta-kakao-badge {
+    display: inline-block;
+    background: #FEE500; color: #1c1a2e;
+    font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .cta-kakao-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 17px; font-weight: 700; color: #fff;
+    margin-bottom: 6px;
+  }
+  .cta-kakao-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+  .cta-kakao-bottom {
+    padding: 18px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    background: rgba(255,255,255,0.04);
+  }
+  .cta-code-row { display: flex; align-items: center; gap: 10px; }
+  .cta-code-label { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .cta-code-num {
+    font-size: 22px; font-weight: 900; color: #FEE500;
+    letter-spacing: 3px;
+  }
+  .cta-btn-kakao {
+    display: inline-block; flex-shrink: 0;
+    background: #FEE500; color: #1c1a2e;
+    font-size: 13px; font-weight: 700;
+    padding: 11px 18px; border-radius: 10px;
+    text-decoration: none; white-space: nowrap;
+  }
+  @media (max-width: 480px) {
+    .cta-kakao-bottom { flex-direction: column; align-items: flex-start; }
+    .cta-btn-kakao { width: 100%; text-align: center; }
+  }
+  /* ── FOOTER ── */
+  .footer {
+    background: #1a1a2e; padding: 32px 24px;
+    margin-top: 20px;
+  }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title { color: #f0d060; font-size: 13px; font-weight: 700; margin-bottom: 14px; letter-spacing: 1px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .footer-links a {
+    color: rgba(255,255,255,0.75); font-size: 12px; text-decoration: none;
+    padding: 5px 12px; border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06);
+  }
+  .footer-credit { color: rgba(255,255,255,0.4); font-size: 11px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-badge">7월 출산 예정자 필독 가이드</div>
+  <h1>🔥 7월 아이 택일·작명,<br><span>이 말 먼저 하세요</span></h1>
+  <p class="hero-sub">병오년(丙午年) · 을미월(乙未月) 2026년 7월 출생 분석</p>
+</div>
+
+<div class="container">
+
+  <!-- ② 가장 먼저 해야 할 말 -->
+  <div class="section-title">① 상담 전, 이 말부터 꼭 하세요!</div>
+
+  <div class="warn-banner">
+    <div class="wb-badge">⚠️ 핵심 주의사항</div>
+    <h3>7월생 택일·작명은 "합"을 보지 않으면 엉터리가 나올 수 있습니다</h3>
+    <p>
+      7월 사주에는 <strong>오미합화(午未合化)</strong>라는 특별한 현상이 있습니다.
+      이걸 모르는 곳에서 택일·작명을 받으면, 겉으로는 균형 잡힌 것처럼 보여도
+      실제로는 한쪽으로 완전히 쏠린 사주가 나올 수 있습니다.
+    </p>
+  </div>
+
+  <div class="script-box">
+    <div class="sb-label">📌 상담 시 반드시 이렇게 말하세요</div>
+    <div class="script-quote">
+      <p>
+        "혹시 <strong style="color:#f0d060;">합(合)과 지장간(地藏干)까지</strong> 봐주실 수 있나요?<br>
+        7월 사주는 오미합화가 있어서 꼭 확인이 필요하다고 들었어요."
+      </p>
+      <div class="sq-note">👆 이 한 마디가 엉터리 사주를 막는 가장 중요한 요청입니다.</div>
+    </div>
+  </div>
+
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num fire-bg">1</div>
+      <div class="step-body">
+        <h4>합(合)이 뭔가요?</h4>
+        <p>사주 글자들끼리 만나면 서로 기운이 <strong>변하는 현상</strong>이 생깁니다. 예를 들어 흙(土) 기운인 글자가 옆에 불(火) 글자와 만나면 <strong>실제로는 불 기운으로 바뀌어버립니다.</strong> 이걸 모르면 흙이 있다고 착각하고 오행 계산을 틀리게 하게 됩니다.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num gold-bg">2</div>
+      <div class="step-body">
+        <h4>지장간(地藏干)이 뭔가요?</h4>
+        <p>사주 글자 안에는 <strong>눈에 보이지 않는 숨은 기운</strong>이 있습니다. 마치 상자 안에 든 내용물처럼요. 정확한 사주 분석을 하려면 이 숨은 기운까지 봐야 합니다.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num water-bg">3</div>
+      <div class="step-body">
+        <h4>왜 7월이 특히 중요한가요?</h4>
+        <p>7월에는 <strong>오미합화(午未合化)</strong>라는 변환이 일어납니다. 미(未)는 원래 흙(土) 기운인데, 옆에 오(午)가 있으면 불(火) 기운으로 바뀝니다. 이걸 모르고 택일·작명을 하면 완전히 잘못된 결과가 나와요.</p>
+      </div>
+    </div>
+
+
+  <!-- ② 사주 구조 -->
+  <div class="section-title">② 7월생 아이 사주, 기본 구조부터 보자</div>
+
+  <div class="callout callout-gold">
+    <div class="callout-icon">📅</div>
+    <div class="callout-text">
+      <span class="ct-title">언제부터 을미월(乙未月)인가요?</span>
+      <p><strong>2026년 7월 7일(소서·小暑)</strong>부터 을미월이 시작됩니다. 7월 1일~6일 출생은 갑오월(甲午月)이고, <strong>7월 7일 이후 출생부터 이 자료의 사주 구조가 적용</strong>됩니다. 제왕절개 예정일을 꼭 확인해보세요.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-gray">
+    <div class="callout-icon">💡</div>
+    <div class="callout-text">
+      <span class="ct-title">사주(四柱)가 뭔가요?</span>
+      <p>사주는 태어난 <strong>연도·월·일·시간</strong>, 이 4가지를 각각 두 글자로 적은 것입니다. 총 8글자라서 <strong>'사주팔자(四柱八字)'</strong>라고도 해요. 각 글자에는 불·물·나무·쇠·흙, 다섯 가지 자연의 기운(오행)이 담겨 있습니다.</p>
+    </div>
+  </div>
+
+  <div class="saju-card">
+    <div class="saju-card-header">
+      <div class="saju-icon">🔥</div>
+      <div class="saju-card-header-info">
+        <h2>2026년 7월 출생 — 사주팔자 기본 구조</h2>
+        <p>월주·년주는 정해진 값 / 일주·시주는 태어나는 날·시간에 따라 결정</p>
+      </div>
+    </div>
+    <div class="saju-card-body">
+
+      <div class="saju-table-wrap">
+        <div style="font-size:12px;color:var(--text-soft);font-weight:700;margin-bottom:8px;">📋 사주팔자 구조 (시주 → 일주 → 월주 → 년주)</div>
+        <div class="saju-col-labels">
+          <div class="saju-col-label">시주 時</div>
+          <div class="saju-col-label">일주 日</div>
+          <div class="saju-col-label">월주 月</div>
+          <div class="saju-col-label">년주 年</div>
+        </div>
+
+        <div class="saju-row-header">천 간 (天干) — 사주의 윗줄</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-unknown">
+            <div class="saju-cell-char">?</div>
+            <div class="saju-cell-kor">태어난 시간</div>
+          </div>
+          <div class="saju-cell cell-unknown">
+            <div class="saju-cell-char">?</div>
+            <div class="saju-cell-kor">태어난 날</div>
+          </div>
+          <div class="saju-cell cell-wood">
+            <div class="saju-cell-char">乙</div>
+            <div class="saju-cell-kor">을 · 목(木)</div>
+          </div>
+          <div class="saju-cell cell-fire">
+            <div class="saju-cell-char">丙</div>
+            <div class="saju-cell-kor">병 · 화(火)</div>
+          </div>
+        </div>
+
+        <div class="saju-row-header">지 지 (地支) — 사주의 아랫줄</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-unknown">
+            <div class="saju-cell-char">?</div>
+            <div class="saju-cell-kor">태어난 시간</div>
+          </div>
+          <div class="saju-cell cell-unknown">
+            <div class="saju-cell-char">?</div>
+            <div class="saju-cell-kor">태어난 날</div>
+          </div>
+          <div class="saju-cell cell-earth">
+            <div class="saju-cell-char">未</div>
+            <div class="saju-cell-kor">미 · 토(土)*</div>
+          </div>
+          <div class="saju-cell cell-fire">
+            <div class="saju-cell-char">午</div>
+            <div class="saju-cell-kor">오 · 화(火)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag tag-red">🔥 화(火) 기운 강함</span>
+        <span class="tag tag-warn">⚠️ 합(合) 반드시 확인 필요</span>
+        <span class="tag tag-purple">🔄 오미합화(午未合化) 주의</span>
+      </div>
+
+      <div class="callout callout-gray">
+        <div class="callout-icon">❓</div>
+        <div class="callout-text">
+          <span class="ct-title">? 표시가 있는 칸은 뭔가요?</span>
+          <p>일주(태어난 날)와 시주(태어난 시간)는 제왕절개 택일로 정하는 부분입니다. <strong>바로 이 두 칸을 어떻게 채우느냐가 택일의 핵심</strong>이에요. 월주는 <strong>7월 7일(소서)부터 을미(乙未)</strong>가 적용되며, 대체로 7월생의 사주는 아래와 같습니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <!-- ③ 오미합화 설명 -->
+  <div class="section-title">③ 오미합화(午未合化)란 무엇인가?</div>
+
+  <div class="saju-card">
+    <div class="saju-card-header">
+      <div class="saju-icon">🔄</div>
+      <div class="saju-card-header-info">
+        <h2>오미합화(午未合化) — 7월 사주의 핵심 비밀</h2>
+        <p>미(未)가 토(土)가 아닌 화(火)로 작동하는 이유</p>
+      </div>
+    </div>
+    <div class="saju-card-body">
+
+      <div class="callout callout-red">
+        <div class="callout-icon">🔑</div>
+        <div class="callout-text">
+          <span class="ct-title">쉽게 이해하는 오미합화</span>
+          <p>7월 사주의 아랫줄에는 <strong>미(未)</strong>가 있습니다. 미(未)는 원래 <strong>흙(土) 기운</strong>이에요. 그런데 옆에 오(午)가 있으면 두 글자가 결합해서 <strong>미(未)가 불(火) 기운으로 변해버립니다.</strong> 마치 뜨거운 땅이 불에 달궈져 아스팔트의 열이 올라오는 것처럼요.</p>
+        </div>
+      </div>
+
+      <!-- 변환 시각화 -->
+      <div style="background:#f5f5f5;border-radius:12px;padding:20px;margin-bottom:20px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-soft);margin-bottom:14px;text-align:center;">🔄 오미합화 변환 과정</div>
+        <div class="transform-row">
+          <div class="t-box t-fire">
+            <span class="char">午</span>
+            <span class="desc">오 · 화(火) 🔥</span>
+          </div>
+          <div class="t-arrow">+</div>
+          <div class="t-box t-earth">
+            <span class="char">未</span>
+            <span class="desc">미 · 원래는 토(土) 🌍</span>
+          </div>
+          <div class="t-arrow">→</div>
+          <div class="t-box t-result">
+            <span class="char">🔥</span>
+            <span class="desc" style="color:rgba(255,255,255,0.85);">화(火)로 변환!</span>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:12px;color:var(--text-soft);margin-top:8px;">미(未)는 흙처럼 보여도, 오(午) 옆에선 불이 됩니다</div>
+      </div>
+
+      <!-- 오행 분포 비교 -->
+      <div class="ohaeng-section">
+        <div class="ohaeng-title">📊 오미합화 적용 전 vs 후 — 기운 변화</div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+          <!-- 합 미적용 -->
+          <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid #ece8df;">
+            <div style="font-size:11px;font-weight:700;color:#9e9e9e;margin-bottom:10px;letter-spacing:0.5px;">⚠️ 합 미적용 (잘못된 계산)</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:52%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">12점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:100%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">23점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:65%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">15점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+              </div>
+            </div>
+            <div style="margin-top:10px;font-size:11px;color:#e65100;background:#fff3e0;padding:6px 10px;border-radius:6px;">토가 있어 균형처럼 보임 😶</div>
+          </div>
+
+          <!-- 합 적용 -->
+          <div style="background:#fff;border-radius:10px;padding:14px;border:2px solid var(--gold);">
+            <div style="font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px;letter-spacing:0.5px;">✅ 합 적용 (실제 기운)</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:25%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">10점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:100%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">40점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:0%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+              </div>
+              <div class="ohaeng-row">
+                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
+                <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div>
+                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+              </div>
+            </div>
+            <div style="margin-top:10px;font-size:11px;color:#c0392b;background:#fdecea;padding:6px 10px;border-radius:6px;">이미 불이 50점 중 40점! 🔥</div>
+          </div>
+        </div>
+
+        <!-- 핵심 설명 박스 -->
+        <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:12px;padding:18px 20px;margin-top:16px;">
+          <div style="color:#f0d060;font-size:13px;font-weight:700;margin-bottom:10px;">🎯 이게 왜 중요한가요?</div>
+          <div style="color:rgba(255,255,255,0.85);font-size:13px;line-height:1.9;">
+            위 점수는 <strong style="color:#f0d060;">연도·월 기준만 계산한 것</strong>입니다.<br>
+            아직 태어나는 <strong style="color:#f0d060;">날짜와 시간이 정해지지 않았는데</strong>, 이미 50점 중 40점이 불(火)이에요.<br><br>
+            여기에 택일을 잘못하면 나머지 50점도 불로 채워질 수 있습니다.<br>
+            반대로, <strong style="color:#93c5fd;">택일을 잘 하면 나머지 50점으로 균형을 맞출 수 있어요.</strong><br><br>
+            <strong style="color:#f0d060;">그래서 7월생은 택일이 특히 더 중요합니다.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-text">
+          <span class="ct-title">합을 모르는 곳에서 택일·작명을 받으면?</span>
+          <p>왼쪽처럼 토(土)가 있으니 "균형 잡혔다"고 착각합니다. 하지만 실제로는 이미 불 기운 40점으로 출발하는 사주예요. 이걸 모르면 나머지 일주·시주도 엉뚱하게 채워져서 사주 전체가 불로만 가득 찰 수 있습니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ④ 7월생 성격 & 기질 -->
+  <div class="section-title">④ 7월생 아이의 기질 — 불 기운 가득한 아이</div>
+
+  <div class="callout callout-red">
+    <div class="callout-icon">☀️</div>
+    <div class="callout-text">
+      <span class="ct-title">불(火) 기운이 강한 아이, 어떤 특징이 있을까요?</span>
+      <p>오미합화로 사주가 불 기운으로 가득합니다. 불은 밝음·열정·표현력의 상징이에요. 잘 다루면 빛나는 아이가 되고, 균형을 맞춰주면 더욱 빛납니다.</p>
+    </div>
+  </div>
+
+  <div class="strength-grid">
+    <div class="strength-item">
+      <div class="si-icon">☀️</div>
+      <div class="si-title">밝고 긍정적</div>
+      <div class="si-desc">타고난 양기(陽氣)가 강해 어디서든 분위기를 밝히고, 웃음이 많습니다</div>
+    </div>
+    <div class="strength-item">
+      <div class="si-icon">🎭</div>
+      <div class="si-title">끼와 표현력</div>
+      <div class="si-desc">화(火)는 예술·표현의 기운입니다. 무대 위에서 빛나는 재능이 있어요</div>
+    </div>
+    <div class="strength-item">
+      <div class="si-icon">🤝</div>
+      <div class="si-title">사교성·인기</div>
+      <div class="si-desc">밝은 에너지로 자연스럽게 사람들을 끌어당깁니다. 친구를 쉽게 사귀어요</div>
+    </div>
+    <div class="strength-item">
+      <div class="si-icon">⚡</div>
+      <div class="si-title">직관력·추진력</div>
+      <div class="si-desc">번뜩이는 아이디어와 빠른 판단력을 가집니다. 행동력도 뛰어나요</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ⑤ 균형 잡기 -->
+  <div class="section-title">⑤ 그래서 7월은 택일·작명이 더 중요합니다</div>
+
+  <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:12px;padding:22px 20px;margin-bottom:20px;">
+    <div style="color:#f0d060;font-size:13px;font-weight:700;margin-bottom:12px;">🎯 작명의 핵심 원칙 — 7월생에게 필요한 것</div>
+    <div style="color:rgba(255,255,255,0.85);font-size:14px;line-height:1.9;">
+      7월생은 이미 사주에 <strong style="color:#f0d060;">불(火) 기운이 40점</strong>으로 출발합니다.<br>
+      여기서 이름까지 불 기운으로 지으면 어떻게 될까요?<br><br>
+      이미 뜨거운 방에 히터를 또 켜는 것과 같아요. 🔥🔥🔥<br><br>
+      그래서 7월생 이름에는 반드시 <strong style="color:#93c5fd;">물(水, 수) 💧</strong> 또는
+      <strong style="color:#b0bec5;">쇠(金, 금) ⚪</strong> 기운의 한자를 넣어서
+      <strong style="color:#f0d060;">전체 사주의 균형을 맞춰야</strong> 합니다.
+    </div>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">💧</div>
+    <div class="callout-text">
+      <span class="ct-title">불 기운이 너무 강하면 어떻게 되나요?</span>
+      <p>성격이 급해지고 감정 기복이 커질 수 있어요. 자기 표현이 과해지거나 한 가지에 오래 집중하기 어려워질 수도 있습니다. 이름에 <strong>물(水)·쇠(金) 기운</strong>의 한자를 넣어주면 자연스럽게 균형이 잡혀요.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-icon">✅</div>
+    <div class="callout-text">
+      <span class="ct-title">현승리 작명집이 다른 이유</span>
+      <p>합(合)과 지장간(地藏干)까지 정밀하게 계산한 뒤 작명합니다. 7월 사주의 오미합화를 반드시 반영해서 실제 필요한 기운을 이름에 담아드립니다.</p>
+    </div>
+  </div>
+
+  <!-- 전자책 CTA -->
+  <div class="cta-ebook">
+    <div class="cta-ebook-left">
+      <div class="cta-book-icon">📖</div>
+      <div>
+        <div class="cta-label">무료 전자책</div>
+        <div class="cta-title">작명하기 전,<br>알았다면 좋았을 것들</div>
+        <div class="cta-desc">합·지장간·오행 균형까지, 작명에서 절대 속지 않는 법을 담았습니다.</div>
+      </div>
+    </div>
+    <a href="https://hslee.co.kr/ebook" target="_blank" class="cta-btn-dark">무료로 읽기 →</a>
+  </div>
+
+  <!-- 카카오 CTA -->
+  <div class="cta-kakao">
+    <div class="cta-kakao-top">
+      <div class="cta-kakao-badge">🎁 무료 출산택일</div>
+      <div class="cta-kakao-title">현승리의 사주·작명 커뮤니티</div>
+      <div class="cta-kakao-desc">오픈채팅방에서 무료 출산택일 정보를 받아보세요. 입장 시 참여코드가 필요합니다.</div>
+    </div>
+    <div class="cta-kakao-bottom">
+      <div class="cta-code-row">
+        <span class="cta-code-label">참여코드</span>
+        <span class="cta-code-num">4684</span>
+      </div>
+      <a href="https://open.kakao.com/o/gBSetQ6h" target="_blank" class="cta-btn-kakao">💛 무료 출산택일 입장하기</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-title">📎 출처 및 채널 안내</div>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
+      <a href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+    <div class="footer-credit">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+  </div>
+</div>
+
+</body>
+</html>
