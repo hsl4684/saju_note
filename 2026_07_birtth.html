@@ -80,7 +80,7 @@
   }
 
   /* ── CONTAINER ── */
-  .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 60px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
 
   /* ── SECTION TITLE ── */
   .section-title {
@@ -104,7 +104,7 @@
   }
   .saju-card-header {
     background: linear-gradient(135deg, #1a1a2e, #0f3460);
-    padding: 20px 24px;
+    padding: 16px 18px;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -128,12 +128,12 @@
     color: rgba(255,255,255,0.6);
     margin-top: 2px;
   }
-  .saju-card-body { padding: 24px; }
+  .saju-card-body { padding: 20px 16px; }
 
   .saju-table-wrap { margin-bottom: 24px; }
   .saju-col-labels {
     display: grid; grid-template-columns: repeat(4,1fr);
-    gap: 6px; margin-bottom: 4px;
+    gap: 4px; margin-bottom: 4px;
   }
   .saju-col-label {
     text-align: center; font-size: 11px; font-weight: 700;
@@ -146,15 +146,15 @@
   }
   .saju-table {
     display: grid; grid-template-columns: repeat(4,1fr);
-    gap: 6px; margin-bottom: 6px;
+    gap: 4px; margin-bottom: 6px;
   }
   .saju-cell {
-    border-radius: 10px; padding: 12px 4px 10px;
+    border-radius: 10px; padding: 10px 4px 8px;
     text-align: center; border: 2px solid transparent;
   }
   .saju-cell-char {
     font-family: 'Noto Serif KR', serif;
-    font-size: 28px; font-weight: 700; line-height: 1; margin-bottom: 5px;
+    font-size: clamp(20px, 5vw, 28px); font-weight: 700; line-height: 1; margin-bottom: 5px;
   }
   .saju-cell-kor { font-size: 11px; font-weight: 700; opacity: 0.85; }
   .cell-unknown { background: #f5f5f5; color: #9e9e9e; border-color: #e0e0e0; }
@@ -173,8 +173,8 @@
   .ohaeng-bars { display: flex; flex-direction: column; gap: 8px; }
   .ohaeng-row { display: flex; align-items: center; gap: 10px; }
   .ohaeng-label {
-    width: 70px; font-size: 12px; font-weight: 600; flex-shrink: 0;
-    display: flex; align-items: center; gap: 5px;
+    width: 52px; font-size: 11px; font-weight: 600; flex-shrink: 0;
+    display: flex; align-items: center; gap: 4px;
   }
   .ohaeng-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .ohaeng-bar-wrap {
@@ -182,7 +182,7 @@
     height: 16px; overflow: hidden;
   }
   .ohaeng-bar-fill { height: 100%; border-radius: 6px; }
-  .ohaeng-pct { width: 44px; font-size: 12px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
+  .ohaeng-pct { width: 36px; font-size: 11px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
 
   /* ── COLORS ── */
   .c-wood { color: var(--wood); } .c-fire { color: var(--fire); }
@@ -191,6 +191,17 @@
   .bg-wood { background: var(--wood); } .bg-fire { background: var(--fire); }
   .bg-earth { background: var(--earth); } .bg-metal { background: var(--metal); }
   .bg-water { background: var(--water); }
+
+
+  /* ── 오행 비교 차트 반응형 ── */
+  .ohaeng-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 500px) {
+    .ohaeng-compare-grid { grid-template-columns: 1fr; }
+  }
 
   /* ── TAGS ── */
   .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
@@ -278,6 +289,9 @@
   .strength-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 10px; margin-bottom: 16px;
+  }
+  @media (max-width: 400px) {
+    .strength-grid { grid-template-columns: 1fr; }
   }
   .strength-item {
     background: var(--gold-light); border: 1px solid var(--gold-border);
@@ -693,36 +707,36 @@
       <div class="ohaeng-section">
         <div class="ohaeng-title">📊 오미합화 적용 전 vs 후 — 기운 변화</div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="ohaeng-compare-grid">
 
           <!-- 합 미적용 -->
           <div style="background:#fff;border-radius:10px;padding:14px;border:1px solid #ece8df;">
             <div style="font-size:11px;font-weight:700;color:#9e9e9e;margin-bottom:10px;letter-spacing:0.5px;">⚠️ 합 미적용 (잘못된 계산)</div>
             <div style="display:flex;flex-direction:column;gap:6px;">
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:52%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">12점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">12점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:100%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">23점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">23점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:65%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">15점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">15점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">0점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">0점</div>
               </div>
             </div>
             <div style="margin-top:10px;font-size:11px;color:#e65100;background:#fff3e0;padding:6px 10px;border-radius:6px;">토가 있어 균형처럼 보임 😶</div>
@@ -733,29 +747,29 @@
             <div style="font-size:11px;font-weight:700;color:var(--gold);margin-bottom:10px;letter-spacing:0.5px;">✅ 합 적용 (실제 기운)</div>
             <div style="display:flex;flex-direction:column;gap:6px;">
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:25%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">10점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">10점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:100%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">40점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">40점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:0%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">0점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">0점</div>
               </div>
               <div class="ohaeng-row">
-                <div class="ohaeng-label" style="width:56px;font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
+                <div class="ohaeng-label" style="font-size:11px;"><span class="ohaeng-dot bg-water"></span><span class="c-water">수</span></div>
                 <div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div>
-                <div class="ohaeng-pct" style="width:36px;font-size:11px;">0점</div>
+                <div class="ohaeng-pct" style="font-size:11px;">0점</div>
               </div>
             </div>
             <div style="margin-top:10px;font-size:11px;color:#c0392b;background:#fdecea;padding:6px 10px;border-radius:6px;">이미 불이 50점 중 40점! 🔥</div>
