@@ -502,30 +502,7 @@ body{
 
 <div class="container">
 
-<!-- ❶ 오행이란? -->
-<div class="section">
-  <div class="section-label">기초 개념</div>
-  <div class="section-title">먼저, 오행(五行)이 뭔가요?</div>
-  <div class="card">
-    <p>사주는 태어난 <strong>연·월·일·시</strong>를 기반으로 사람의 기운을 분석하는 동양 철학입니다. 이때 세상의 모든 기운을 5가지로 분류하는데, 이를 <strong>오행(五行)</strong>이라고 부릅니다.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;">
-      <div class="oheng-badge wood">木 목 · 나무</div>
-      <div class="oheng-badge fire">火 화 · 불</div>
-      <div class="oheng-badge earth">土 토 · 흙</div>
-      <div class="oheng-badge metal">金 금 · 쇠</div>
-      <div class="oheng-badge water">水 수 · 물</div>
-    </div>
-    <p style="font-size:14px;color:#374151;">사주 안에 이 다섯 기운이 각각 얼마나 들어 있는지가 나타납니다.<br>많은 분들이 "다섯 가지 기운이 모두 있으면 좋은 사주 아닌가요?"라고 물으십니다. 맞는 말 같지만, 여기서부터 함정이 시작됩니다.</p>
-  </div>
-  <div class="callout yellow">
-    <div class="callout-icon">💡</div>
-    <div><strong>오행구족(五行俱足)</strong>이란 목·화·토·금·수 다섯 기운이 모두 갖춰진 상태입니다. 다섯 가지가 '있는지 없는지'보다, 각각 <strong>얼마나 강하고 약한지의 균형</strong>이 훨씬 중요합니다.</div>
-  </div>
-</div>
-
-<div class="divider">· · ·</div>
-
-<!-- ❷ 지장간이란? (jijanggan_basic에서 가져옴) -->
+<!-- ❷ 지장간이란? -->
 <div class="section">
   <!-- 퀴즈 인터럽트 -->
   <div style="background:linear-gradient(135deg,#fef9c3,#fef3c7);border:2px solid #fbbf24;border-radius:16px;padding:22px 18px;margin-bottom:20px;">
@@ -577,19 +554,6 @@ body{
     <p style="font-size:14px;line-height:1.75;">사주도 똑같습니다. <strong>겉에 보이는 글자(라벨)와 실제 안에 담긴 기운의 양(성분표)은 다릅니다.</strong><br>사주의 지지(地支, 지지는 사주를 구성하는 12개의 글자 중 아래 칸을 말합니다)는 겉으로 보면 "화(火)"처럼 한 가지 기운인 것 같지만, <span style="color:var(--accent);font-weight:700;">실제 안에는 여러 기운이 숨겨져 있습니다.</span> 이것이 바로 <strong>지장간(支藏干)</strong>입니다.</p>
   </div>
 
-  <div class="def-grid">
-    <div class="def-box">
-      <div class="def-icon">🏷️</div>
-      <div class="def-name">지지(地支)</div>
-      <p>사주의 아래 칸 글자.<br>子·丑·寅·卯… 등 12개.<br>겉으로 보이는 <strong>라벨</strong>입니다.</p>
-    </div>
-    <div class="def-box" style="border-color:var(--accent);background:var(--accent-l);">
-      <div class="def-icon">🧬</div>
-      <div class="def-name" style="color:var(--accent);">지장간(支藏干)</div>
-      <p>지지 안에 숨어있는 천간(기운)들.<br>실제 작용하는 기운의<br><strong>비율·성분표</strong>입니다.</p>
-    </div>
-  </div>
-
   <!-- 대표 사례: 사(巳)화의 지장간 -->
   <div class="card" style="border-color:#fca5a5;">
     <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:14px;color:var(--hwa);">🔥 예시: 사(巳)화 — 겉에서 보면 그냥 火</div>
@@ -623,19 +587,73 @@ body{
 
   <div class="callout gray" style="margin-bottom:16px;">
     <div class="callout-icon">🔍</div>
-    <div>목·화·토·금·수가 <strong>각각 몇 개 있는지만</strong> 세는 방식입니다. 예를 들어 목 1개·화 1개·토 1개·금 1개·수 1개 → "오행이 다 갖춰졌으니 좋은 사주"라고 판단합니다. 언뜻 맞는 말 같지만, 실제로는 매우 큰 오류가 숨어 있습니다.</div>
+    <div>목·화·토·금·수가 <strong>각각 몇 개 있는지만</strong> 세는 방식입니다. 아래처럼 갯수를 세고 "오행이 다 갖춰졌으니 균형 잡힌 사주"라고 판단합니다. 언뜻 맞는 말 같지만, 실제로는 매우 큰 오류가 숨어 있습니다.</div>
+  </div>
+
+  <!-- 오행 갯수 시각화 -->
+  <div style="background:#fff;border:1px solid #ece8df;border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+    <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);padding:12px 16px;">
+      <div style="color:#f0d060;font-size:11px;font-weight:700;letter-spacing:1px;">❌ 단순 갯수 세기 — 작명 어플·일부 철학관의 방식</div>
+    </div>
+    <div style="padding:16px;">
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:52px;font-size:12px;font-weight:700;color:#4a7c59;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#4a7c59;display:inline-block;"></span>목(木)</div>
+          <div style="display:flex;gap:5px;align-items:center;flex:1;flex-wrap:wrap;">
+            <div style="width:28px;height:28px;border-radius:7px;background:#e8f5e9;border:2px solid #a5d6a7;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#2e7d32;">木</div>
+          </div>
+          <div style="font-size:11px;color:#888;flex-shrink:0;">1개</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:52px;font-size:12px;font-weight:700;color:#c0392b;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#c0392b;display:inline-block;"></span>화(火)</div>
+          <div style="display:flex;gap:5px;align-items:center;flex:1;flex-wrap:wrap;">
+            <div style="width:28px;height:28px;border-radius:7px;background:#fdecea;border:2px solid #ef9a9a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#c0392b;">火</div>
+            <div style="width:28px;height:28px;border-radius:7px;background:#fdecea;border:2px solid #ef9a9a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#c0392b;">火</div>
+            <div style="width:28px;height:28px;border-radius:7px;background:#fdecea;border:2px solid #ef9a9a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#c0392b;">火</div>
+          </div>
+          <div style="font-size:11px;color:#888;flex-shrink:0;">3개</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:52px;font-size:12px;font-weight:700;color:#d4a017;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#d4a017;display:inline-block;"></span>토(土)</div>
+          <div style="display:flex;gap:5px;align-items:center;flex:1;flex-wrap:wrap;">
+            <div style="width:28px;height:28px;border-radius:7px;background:#fffde7;border:2px solid #ffe082;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#9a7600;">土</div>
+            <div style="width:28px;height:28px;border-radius:7px;background:#fffde7;border:2px solid #ffe082;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#9a7600;">土</div>
+            <div style="width:28px;height:28px;border-radius:7px;background:#fffde7;border:2px solid #ffe082;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#9a7600;">土</div>
+          </div>
+          <div style="font-size:11px;color:#888;flex-shrink:0;">3개</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:52px;font-size:12px;font-weight:700;color:#607d8b;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#607d8b;display:inline-block;"></span>금(金)</div>
+          <div style="display:flex;gap:5px;align-items:center;flex:1;">
+            <div style="width:28px;height:28px;border-radius:7px;background:#f1f5f9;border:2px dashed #cbd5e1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#94a3b8;">없음</div>
+          </div>
+          <div style="font-size:11px;color:#aaa;flex-shrink:0;">0개</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:52px;font-size:12px;font-weight:700;color:#1565c0;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#1565c0;display:inline-block;"></span>수(水)</div>
+          <div style="display:flex;gap:5px;align-items:center;flex:1;">
+            <div style="width:28px;height:28px;border-radius:7px;background:#e3f2fd;border:2px solid #90caf9;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#1565c0;">水</div>
+          </div>
+          <div style="font-size:11px;color:#888;flex-shrink:0;">1개</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;background:#fffde7;border:1px solid #f9e04b;border-radius:8px;padding:10px 13px;font-size:12px;color:#5a4000;line-height:1.7;">
+        💬 작명 어플의 판단: <strong>"금(金) 0개 → 금 기운이 필요합니다! 이름에 금 기운을 넣어드릴게요."</strong><br>
+        <span style="color:#b45309;">→ 그런데 정말 금이 필요한 걸까요? 지장간으로 보면 전혀 다른 이야기가 펼쳐집니다.</span>
+      </div>
+    </div>
   </div>
 
   <div class="compare-grid">
     <div class="cbox bad">
       <div class="c-lbl">❌ 단순 갯수 세기</div>
-      목 1개, 화 1개, 토 1개<br>금 1개, 수 1개<br><br>
-      "오행 5개 다 있으니<br>균형 잡힌 사주입니다!"<br><br>
+      목 1개, 화 3개, 토 3개<br>금 0개, 수 1개<br><br>
+      "금이 없으니 이름에<br>금 기운을 넣어야 해요!"<br><br>
       <strong>→ 라벨만 보는 판단</strong>
     </div>
     <div class="cbox good">
       <div class="c-lbl">✅ 지장간 비율 확인</div>
-      겉엔 5개지만<br>실제 기운 비율은?<br><br>
+      겉엔 금 0개지만<br>실제 기운 비율은?<br><br>
       나를 돕는 기운과<br>억누르는 기운의 비율이<br>얼마나 되는지 봅니다
     </div>
   </div>
@@ -651,24 +669,23 @@ body{
 
 <div class="divider">· · ·</div>
 
-<!-- ❹ 실제 사례 (balance 파일에서) -->
+<!-- ❹ 실제 사례 -->
 <div class="section">
   <div class="section-label">실제 사례</div>
-  <div class="section-title">오행구족인데 왜 힘든 삶이 될 수 있을까?</div>
+  <div class="section-title">이 사주, 작명 어플은 뭐라고 할까요?</div>
 
   <div class="callout blue" style="margin-bottom:14px;">
     <div class="callout-icon">🌳</div>
-    <div><strong>예시 사주: 나무(木) 일간 갑(甲)</strong><br>이 아이는 나무의 기운으로 태어났습니다. 일간(日干, 나를 나타내는 글자)이 갑(甲)·나무 기운입니다.</div>
+    <div><strong>예시 사주: 나무(木) 일간 을(乙)</strong><br>이 아이는 나무의 기운으로 태어났습니다. 일간(日干, 나를 나타내는 글자)이 을(乙)·나무 기운입니다.</div>
   </div>
 
-  <!-- 사주팔자 표 (taekil 디자인 스타일) -->
+  <!-- 사주팔자 표 -->
   <div style="background:#fff;border:1px solid #ece8df;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
     <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);padding:14px 16px;">
       <div style="font-size:11px;color:#f0d060;font-weight:700;letter-spacing:1px;margin-bottom:2px;">예시 사주</div>
-      <div style="color:white;font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;">갑(甲) 일간 — 오행구족이지만 극신약</div>
+      <div style="color:white;font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;">을(乙) 일간 — 겉으로는 금(金) 0개</div>
     </div>
     <div style="padding:16px;">
-      <!-- 사주팔자 테이블 -->
       <div style="font-size:11px;color:#555;font-weight:700;margin-bottom:8px;">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:4px;">
         <div style="text-align:center;font-size:10px;font-weight:700;color:#555;padding:2px 0;">시주 時</div>
@@ -679,117 +696,131 @@ body{
       <!-- 천간 -->
       <div style="background:#2d2d2d;color:#f0d060;border-radius:6px;text-align:center;font-size:10px;font-weight:700;padding:5px 0;letter-spacing:1px;margin-bottom:5px;">천간(天干) — 하늘의 기운</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:5px;">
-        <div style="background:#ecf0f1;color:#455a64;border:2px solid #b0bec5;border-radius:8px;padding:10px 2px 8px;text-align:center;">
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">庚</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">경 · 금(金)</div>
-        </div>
-        <div style="background:#e8f5e9;color:#2e7d32;border:2px solid #a5d6a7;border-radius:8px;padding:10px 2px 8px;text-align:center;position:relative;">
-          <div style="position:absolute;top:4px;right:4px;background:#b8860b;color:white;font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;">★나</div>
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">甲</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">갑 · 목(木)</div>
-        </div>
-        <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:10px 2px 8px;text-align:center;">
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">丙</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">병 · 화(火)</div>
-        </div>
         <div style="background:#e3f2fd;color:#1565c0;border:2px solid #90caf9;border-radius:8px;padding:10px 2px 8px;text-align:center;">
           <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">壬</div>
           <div style="font-size:10px;font-weight:700;opacity:0.85;">임 · 수(水)</div>
+        </div>
+        <div style="background:#e8f5e9;color:#2e7d32;border:2px solid #a5d6a7;border-radius:8px;padding:10px 2px 8px;text-align:center;position:relative;">
+          <div style="position:absolute;top:4px;right:4px;background:#b8860b;color:white;font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;">★나</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">乙</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">을 · 목(木)</div>
+        </div>
+        <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:10px 2px 8px;text-align:center;">
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">丁</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">정 · 화(火)</div>
+        </div>
+        <div style="background:#fffde7;color:#9a7600;border:2px solid #ffe082;border-radius:8px;padding:10px 2px 8px;text-align:center;">
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">己</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">기 · 토(土)</div>
         </div>
       </div>
       <!-- 지지 -->
       <div style="background:#2d2d2d;color:#f0d060;border-radius:6px;text-align:center;font-size:10px;font-weight:700;padding:5px 0;letter-spacing:1px;margin-bottom:5px;">지지(地支) — 땅의 기운</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:14px;">
-        <div style="background:#ecf0f1;color:#455a64;border:2px solid #b0bec5;border-radius:8px;padding:10px 2px 8px;text-align:center;">
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">申</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">신 · 금(金)</div>
+        <div style="background:#fffde7;color:#9a7600;border:2px solid #ffe082;border-radius:8px;padding:10px 2px 8px;text-align:center;">
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">未</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">미 · 토(土)</div>
         </div>
         <div style="background:#fffde7;color:#9a7600;border:2px solid #ffe082;border-radius:8px;padding:10px 2px 8px;text-align:center;">
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">戌</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">술 · 토(土)</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">未</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">미 · 토(土)</div>
         </div>
         <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:10px 2px 8px;text-align:center;">
           <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">午</div>
           <div style="font-size:10px;font-weight:700;opacity:0.85;">오 · 화(火)</div>
         </div>
-        <div style="background:#fffde7;color:#9a7600;border:2px solid #ffe082;border-radius:8px;padding:10px 2px 8px;text-align:center;">
-          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">戌</div>
-          <div style="font-size:10px;font-weight:700;opacity:0.85;">술 · 토(土)</div>
+        <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:10px 2px 8px;text-align:center;">
+          <div style="font-family:'Noto Serif KR',serif;font-size:clamp(18px,5vw,26px);font-weight:700;line-height:1;margin-bottom:4px;">巳</div>
+          <div style="font-size:10px;font-weight:700;opacity:0.85;">사 · 화(火)</div>
         </div>
       </div>
       <!-- 오행 분포 바 -->
-      <div style="font-size:12px;font-weight:600;color:#555;margin-bottom:10px;">⚠️ 지장간 기준 실제 오행 분포</div>
+      <div style="font-size:12px;font-weight:600;color:#555;margin-bottom:10px;">📊 지장간 기준 실제 오행 분포</div>
       <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:12px;">
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:60px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#4a7c59;display:inline-block;flex-shrink:0;"></span>목(木)</div>
-          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:10%;height:100%;background:#4a7c59;border-radius:6px;"></div></div>
-          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">10%</div>
+          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:11%;height:100%;background:#4a7c59;border-radius:6px;"></div></div>
+          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">11%</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:60px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#c0392b;display:inline-block;flex-shrink:0;"></span>화(火)</div>
-          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:27%;height:100%;background:#c0392b;border-radius:6px;"></div></div>
-          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">27%</div>
+          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:63%;height:100%;background:#c0392b;border-radius:6px;"></div></div>
+          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#c0392b;">63%</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:60px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#d4a017;display:inline-block;flex-shrink:0;"></span>토(土)</div>
-          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:26%;height:100%;background:#d4a017;border-radius:6px;"></div></div>
-          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">26%</div>
+          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:16%;height:100%;background:#d4a017;border-radius:6px;"></div></div>
+          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">16%</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:60px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#607d8b;display:inline-block;flex-shrink:0;"></span>금(金)</div>
-          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:25%;height:100%;background:#607d8b;border-radius:6px;"></div></div>
-          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">25%</div>
+          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:0%;height:100%;background:#607d8b;border-radius:6px;"></div></div>
+          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#aaa;">0%</div>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:60px;font-size:11px;font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;"><span style="width:9px;height:9px;border-radius:50%;background:#1565c0;display:inline-block;flex-shrink:0;"></span>수(水)</div>
-          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:12%;height:100%;background:#1565c0;border-radius:6px;"></div></div>
-          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">12%</div>
+          <div style="flex:1;background:#f0ede8;border-radius:6px;height:14px;overflow:hidden;"><div style="width:10%;height:100%;background:#1565c0;border-radius:6px;"></div></div>
+          <div style="width:40px;font-size:11px;font-weight:600;text-align:right;color:#555;">10%</div>
         </div>
       </div>
       <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:11px 13px;font-size:12px;color:#7f1d1d;line-height:1.7;">
-        💡 나를 돕는 기운(木+水) = <strong>22%</strong> &nbsp;|&nbsp; 나를 억누르는 기운(火+土+金) = <strong>78%</strong>
+        🔥 화(火) 기운이 무려 <strong>63%</strong>로 압도적 — 나무(乙)를 소진시키는 불이 넘쳐흐릅니다.<br>
+        金은 0%이지만, 이미 나무는 불에 타들어 가고 있는 상태입니다.
       </div>
     </div>
   </div>
 
+  <!-- 핵심 문제 카드 -->
   <div class="card" style="margin-top:14px;">
     <p style="font-weight:700;margin-bottom:10px;">📊 이 사주의 핵심 문제</p>
-    <p style="font-size:14px;line-height:1.8;">목·화·토·금·수 다섯 가지가 <strong>모두 존재</strong>합니다. 작명 어플이라면 "오행구족! 균형 잡힌 사주"라고 표시하겠죠.</p>
-    <p style="font-size:14px;line-height:1.8;margin-top:10px;">하지만 지장간으로 보면 나(갑목·甲木)를 직접 돕는 기운인 <strong>목(木)과 수(水)를 합쳐도 고작 22%</strong>. 반면 나무를 소모시키는 화(火)·억누르는 토(土)·베는 금(金)이 <strong>78%</strong>를 차지합니다.</p>
+    <p style="font-size:14px;line-height:1.8;">겉으로 보면 금(金)이 0개입니다. 작명 어플은 즉시 이렇게 판단합니다.</p>
+    <div style="background:#fffde7;border:1px solid #f9e04b;border-radius:10px;padding:13px 14px;margin:12px 0;font-size:13px;color:#5a4000;line-height:1.75;">
+      💬 <strong>작명 어플의 판단:</strong><br>
+      "금(金) 기운이 없습니다! 이름에 금 기운을 보완해드릴게요."
+    </div>
+    <p style="font-size:14px;line-height:1.8;">그런데 잠깐 — 이 사주에서 정말 금(金)이 필요할까요?</p>
     <div class="callout red" style="margin-top:14px;">
-      <div class="callout-icon">⚡</div>
-      <div><strong>이걸 극신약(極身弱)이라고 합니다</strong><br>일간(나)의 기운이 극도로 약한 상태. 다섯 가지 기운이 다 있어도 내 기둥이 너무 가냘픕니다. 어린 나무 한 그루에 도끼 세 자루가 달려드는 것과 같습니다.</div>
+      <div class="callout-icon">🪓</div>
+      <div>
+        <strong>금(金)은 목(木)을 베는 기운입니다</strong><br>
+        이 아이는 목(木)으로 태어났는데, 이미 화(火) 63%가 나무를 태우고 있습니다. 나무는 지금 매우 약한 상태입니다.<br><br>
+        여기에 이름으로 금(金)까지 넣는다면?<br>
+        <strong>불에 타들어 가고 있는 나무에 도끼까지 추가로 내려치는 격입니다.</strong>
+      </div>
     </div>
   </div>
 
-  <!-- 나무 vs 금 시각 카드 -->
+  <!-- 나무 vs 불+도끼 시각 카드 -->
   <div class="card">
-    <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:14px;">🌿 나무(木)로 태어났는데 쇠(金)가 너무 많다면?</div>
+    <div style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;margin-bottom:14px;">🌿 약한 나무에 금(金)을 이름으로 넣으면?</div>
     <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px;">
-      <div style="background:var(--mok-l);border-radius:12px;padding:14px;text-align:center;">
-        <div style="font-size:28px;margin-bottom:4px;">🌱</div>
-        <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:var(--mok);">甲木(갑목)</div>
-        <div style="font-size:11px;color:var(--mok);margin-top:3px;">나 자신 — 어린 나무</div>
+      <div style="background:#dcfce7;border:2px solid #86efac;border-radius:12px;padding:14px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:4px;">🌿</div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:#166534;">乙木(을목)</div>
+        <div style="font-size:11px;color:#166534;margin-top:3px;">나 자신 — 이미 불에 약한 나무</div>
       </div>
-      <div style="text-align:center;font-size:22px;color:#9f1239;font-weight:700;">vs</div>
-      <div style="background:var(--geum-l);border-radius:12px;padding:14px;text-align:center;">
-        <div style="font-size:28px;margin-bottom:4px;">🪓</div>
-        <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:#374151;">金 × 다수</div>
-        <div style="font-size:11px;color:#374151;margin-top:3px;">庚·辛·申·酉 — 도끼들</div>
+      <div style="text-align:center;font-size:22px;color:#9f1239;font-weight:700;">＋</div>
+      <div style="background:#fff1f2;border:2px solid #fca5a5;border-radius:12px;padding:14px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:4px;">🔥🪓</div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:14px;font-weight:700;color:#9f1239;">火 63% + 이름의 金</div>
+        <div style="font-size:11px;color:#9f1239;margin-top:3px;">불 + 도끼가 동시에</div>
       </div>
     </div>
-    <p style="font-size:13px;line-height:1.8;">목(木)과 금(金)은 <strong>상극(相剋)</strong> 관계 — 쇠가 나무를 베는 관계입니다. 어린 나무 하나가 도끼 여럿에 둘러싸인 상태. 명리학에서는 이것을 <strong>신약(身弱)</strong>하다고 합니다. 즉, <strong>내가 너무 약하게 태어난 사주</strong>입니다.</p>
-    <div style="margin-top:12px;background:#f8fafc;border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.75;">
-      📅 <strong>그 해 운(運)에서 金이 또 들어오면?</strong><br>
-      사주에 金이 이미 많은데 그 해의 기운까지 金이라면 — 어린 나무에 도끼가 하나 더 추가됩니다. 아이에게 굉장히 힘든 시간이 될 수 있습니다.
-    </div>
-    <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 14px;margin-top:10px;font-size:13px;color:#92400e;line-height:1.75;">
-      ⚠️ <strong>이게 바로 오행 5개를 다 채우려다 생기는 문제입니다.</strong><br>
-      좋아 보여서 선택했는데, 지장간으로 보면 아이에게 가장 힘든 사주가 될 수 있어요.
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.75;">
+      <div style="background:#f8fafc;border-radius:10px;padding:11px 13px;">
+        목(木)과 금(金)은 <strong>상극(相剋)</strong> 관계입니다 — 쇠가 나무의 뿌리를 자릅니다.<br>
+        화(火)가 나무를 태우고 있는 상황에서, 금(金)까지 더해지면 나무는 더 이상 버티기 어렵습니다.
+      </div>
+      <div style="background:#fff1f2;border:1px solid #fda4af;border-radius:10px;padding:11px 13px;color:#9f1239;">
+        ❌ <strong>갯수만 보고 금을 보완하면</strong> — 이미 약한 나무의 뿌리까지 자르는 작명이 됩니다.<br>
+        겉으로는 "오행을 보완했다"고 하지만, 실제로는 아이의 기운을 더 약하게 만드는 결과입니다.
+      </div>
+      <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:10px;padding:11px 13px;color:#14532d;">
+        ✅ <strong>지장간까지 보면</strong> — 이 사주에서 진짜 필요한 것은 금(金)이 아니라, 나무를 살려주는 수(水, 물) 기운이거나 화의 과한 기운을 덜어주는 방향입니다.
+      </div>
     </div>
   </div>
 </div>
-
 <div class="divider">· · ·</div>
 
 <!-- ❺ 균형이 무너지면 힘든 시기 — 세운 섹션 -->
@@ -798,83 +829,68 @@ body{
   <div class="section-title">왜 균형이 무너지면 힘든 시기가 올까?</div>
 
   <div class="card">
-    <p style="font-size:14px;line-height:1.8;">사주는 태어날 때 한 번 정해지지만, 해마다 바뀌는 <strong>그 해의 기운(세운, 歲運)</strong>이 사주와 만나며 삶에 영향을 줍니다. 이름의 오행도 마찬가지입니다. 이름이 사주의 약한 부분을 잘 보완하면, 어떤 해가 와도 덜 흔들리게 됩니다.</p>
+    <p style="font-size:14px;line-height:1.8;">사주는 태어날 때 한 번 정해지지만, 해마다 바뀌는 <strong>그 해의 기운(세운, 歲運)</strong>이 사주와 만나며 삶에 영향을 줍니다. 이름의 오행도 마찬가지입니다. 이름이 사주의 <strong>내가 진짜 필요한 것</strong>을 채워줄 때, 어떤 해가 와도 더 잘 버티게 됩니다.</p>
   </div>
 
-  <!-- 병오년 시각화 -->
-  <div style="background:linear-gradient(160deg,#1a0a00 0%,#3b0f0f 50%,#1c0a00 100%);border-radius:16px;padding:20px;margin:0 0 14px;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:0;right:0;width:130px;height:130px;opacity:0.12;">
-      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-        <path d="M80 10 Q60 40 70 70 Q50 55 55 85 Q40 70 50 100 Q60 120 80 130 Q100 120 110 100 Q120 70 105 85 Q110 55 90 70 Q100 40 80 10Z" fill="#f97316"/>
-        <path d="M80 30 Q68 55 74 78 Q60 65 65 90 Q72 108 80 118 Q88 108 95 90 Q100 65 86 78 Q92 55 80 30Z" fill="#fbbf24"/>
-      </svg>
-    </div>
-    <div style="color:#fbbf24;font-size:12px;font-weight:700;letter-spacing:0.1em;margin-bottom:14px;">🔥 2026년 병오년(丙午年) — 불(火)의 해</div>
+  <!-- 약한 나무 + 금의 해 시각화 -->
+  <div style="background:linear-gradient(160deg,#1a0a00 0%,#3b0f0f 50%,#1c0a00 100%);border-radius:16px;padding:20px;margin:0 0 10px;position:relative;overflow:hidden;">
+    <div style="color:#fca5a5;font-size:12px;font-weight:700;letter-spacing:0.1em;margin-bottom:14px;">🪓 약한 나무일 때 — 금(金)의 해가 무섭습니다</div>
     <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <!-- 내 사주 -->
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px;flex:1;min-width:130px;">
         <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-align:center;">내 사주의 기운</div>
         <div style="display:flex;flex-direction:column;gap:5px;">
           <div style="display:flex;align-items:center;gap:6px;">
             <div style="width:8px;height:8px;border-radius:50%;background:#86efac;flex-shrink:0;"></div>
             <span style="font-size:12px;color:#86efac;flex:1;">목(木) 나무</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.5);">10%</span>
+            <span style="font-size:10px;color:#fca5a5;">11% 약함</span>
           </div>
           <div style="display:flex;align-items:center;gap:6px;">
             <div style="width:8px;height:8px;border-radius:50%;background:#fca5a5;flex-shrink:0;"></div>
             <span style="font-size:12px;color:#fca5a5;flex:1;">화(火) 불</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.5);">27%</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px;">
-            <div style="width:8px;height:8px;border-radius:50%;background:#fcd34d;flex-shrink:0;"></div>
-            <span style="font-size:12px;color:#fcd34d;flex:1;">토(土) 흙</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.5);">26.3%</span>
+            <span style="font-size:10px;color:#fca5a5;">63% 과다</span>
           </div>
         </div>
-        <div style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.4);text-align:center;">나무가 이미 매우 약한 상태</div>
+        <div style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.4);text-align:center;">이미 불에 타들어 가는 나무</div>
       </div>
-      <!-- 플러스 -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
-        <div style="font-size:20px;">🔥</div>
+        <div style="font-size:20px;">🌿</div>
         <div style="font-size:22px;color:#f97316;">➕</div>
-        <div style="font-size:20px;">🔥</div>
+        <div style="font-size:20px;">🪓</div>
       </div>
-      <!-- 병오년 -->
       <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px;flex:1;min-width:130px;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-align:center;">병오년 유입 기운</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-align:center;">금(金)의 해 or 이름의 金</div>
         <div style="text-align:center;">
           <div style="display:flex;justify-content:center;gap:8px;margin-bottom:8px;">
-            <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:8px 12px;text-align:center;">
-              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">丙</div>
-              <div style="font-size:10px;font-weight:700;">화(火)</div>
+            <div style="background:#ecf0f1;color:#455a64;border:2px solid #b0bec5;border-radius:8px;padding:8px 12px;">
+              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">庚</div>
+              <div style="font-size:10px;font-weight:700;">금(金)</div>
             </div>
-            <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:8px 12px;text-align:center;">
-              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">午</div>
-              <div style="font-size:10px;font-weight:700;">화(火)</div>
+            <div style="background:#ecf0f1;color:#455a64;border:2px solid #b0bec5;border-radius:8px;padding:8px 12px;">
+              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">申</div>
+              <div style="font-size:10px;font-weight:700;">금(金)</div>
             </div>
           </div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.5);">불 기운이 쏟아져 들어옴</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);">도끼가 들어옴</div>
         </div>
       </div>
     </div>
-    <!-- 결과 -->
     <div style="background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:10px;padding:13px;text-align:center;">
-      <div style="color:#fca5a5;font-size:13px;font-weight:700;margin-bottom:4px;">약한 나무 + 불의 해 = 버티기 힘든 시기</div>
-      <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.7;">이미 약한 나무에 불이 쏟아지면 — 타들어 갑니다.<br>건강·관계·사업 등 여러 면에서 평탄하지 않은 시기를 보낼 가능성이 높아집니다.</div>
+      <div style="color:#fca5a5;font-size:13px;font-weight:700;margin-bottom:4px;">약한 나무 + 도끼(金) = 버티기 힘든 시기</div>
+      <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.7;">이미 불에 타들어 가는 나무에 도끼까지 내려치면 — 남은 기운마저 꺾입니다.<br>이름에 금(金) 기운을 넣는 것도 같은 효과가 됩니다.</div>
     </div>
   </div>
 
   <!-- 비교 카드 -->
-  <div class="compare-grid">
+  <div class="compare-grid" style="margin-bottom:10px;">
     <div class="cbox bad">
       <div class="c-lbl">❌ 오행구족 but 불균형</div>
       다섯 기운이 다 있어도<br>'나'(목)가 극도로 약함<br><br>
-      불의 해 → 나무가 타들어 감<br>→ 힘든 시기
+      금(金)의 해 → 뿌리가 잘림<br>→ 힘든 시기
     </div>
     <div class="cbox good">
       <div class="c-lbl">✅ 오행 미구족 but 균형</div>
-      화(火)가 없어도<br>나무(나)의 기운이 튼튼함<br><br>
-      불의 해 → 꽃을 피우는 해<br>→ 도약의 시기
+      금(金)이 없어도<br>나무(나)의 기운이 튼튼함<br><br>
+      금(金)의 해 → 건강한 가지치기<br>→ 도약의 시기
     </div>
   </div>
 </div>
@@ -884,71 +900,54 @@ body{
 <!-- ❻ 오행이 없어도 괜찮은 경우 — 균형의 힘 -->
 <div class="section">
   <div class="section-label">균형의 힘</div>
-  <div class="section-title">오행이 없어도 괜찮은 경우</div>
+  <div class="section-title">같은 금(金)인데, 왜 누구에겐 독이고 누구에겐 약일까?</div>
 
-  <div class="callout green" style="margin-bottom:14px;">
-    <div class="callout-icon">🌳</div>
-    <div><strong>튼튼한 나무 사주 — 화(火) 없어도 괜찮습니다</strong></div>
+  <div class="callout purple" style="margin-bottom:16px;">
+    <div class="callout-icon">💡</div>
+    <div>오행의 '있고 없음'이 문제가 아닙니다. <strong>내 뿌리가 얼마나 단단한가</strong>가 핵심입니다.<br>같은 금(金) 기운도, 내 상태에 따라 전혀 다른 결과를 만듭니다.</div>
   </div>
 
-  <div style="background:linear-gradient(160deg,#0a1f0a 0%,#14401a 50%,#0d2e12 100%);border-radius:16px;padding:20px;margin:0 0 14px;position:relative;overflow:hidden;">
-    <div style="color:#86efac;font-size:12px;font-weight:700;letter-spacing:0.1em;margin-bottom:14px;">🌳 튼튼한 나무 사주의 기운</div>
-    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;">
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px;flex:1;min-width:130px;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-align:center;">내 사주의 기운</div>
-        <div style="display:flex;flex-direction:column;gap:5px;">
-          <div style="display:flex;align-items:center;gap:6px;">
-            <div style="width:8px;height:8px;border-radius:50%;background:#86efac;flex-shrink:0;"></div>
-            <span style="font-size:12px;color:#86efac;flex:1;">목(木) 나무</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.5);">많음</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px;">
-            <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
-            <span style="font-size:12px;color:rgba(255,255,255,0.4);flex:1;">화(火) 불</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.3);">없음</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:6px;">
-            <div style="width:8px;height:8px;border-radius:50%;background:#93c5fd;flex-shrink:0;"></div>
-            <span style="font-size:12px;color:#93c5fd;flex:1;">수(水) 물</span>
-            <span style="font-size:10px;color:rgba(255,255,255,0.5);">적당</span>
-          </div>
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.4);text-align:center;">화(火)는 없지만, 나무가 튼실함</div>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
-        <div style="font-size:20px;">🌞</div>
-        <div style="font-size:22px;color:#fbbf24;">➕</div>
-        <div style="font-size:20px;">🔥</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:14px;flex:1;min-width:130px;">
-        <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-align:center;">병오년 유입 기운</div>
-        <div style="text-align:center;">
-          <div style="display:flex;justify-content:center;gap:8px;margin-bottom:8px;">
-            <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:8px 12px;">
-              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">丙</div>
-              <div style="font-size:10px;font-weight:700;">화(火)</div>
-            </div>
-            <div style="background:#fdecea;color:#c0392b;border:2px solid #ef9a9a;border-radius:8px;padding:8px 12px;">
-              <div style="font-family:'Noto Serif KR',serif;font-size:20px;font-weight:700;">午</div>
-              <div style="font-size:10px;font-weight:700;">화(Fire)</div>
-            </div>
-          </div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.5);">햇살처럼 따뜻하게 유입</div>
-        </div>
+  <!-- 약한 나무 vs 강한 나무 시각 비교 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+    <!-- 약한 나무 -->
+    <div style="background:linear-gradient(160deg,#2d0a0a,#4a1010);border-radius:14px;padding:16px;text-align:center;">
+      <div style="font-size:11px;color:#fca5a5;font-weight:700;margin-bottom:12px;letter-spacing:0.05em;">😰 약한 나무일 때</div>
+      <div style="font-size:34px;margin-bottom:8px;">🌱</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:10px;line-height:1.6;">뿌리가 얕고<br>불(火)에 이미 지쳐있음</div>
+      <div style="background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.4);border-radius:8px;padding:8px;">
+        <div style="font-size:18px;margin-bottom:4px;">🪓</div>
+        <div style="font-size:11px;color:#fca5a5;font-weight:700;">금(金) = 뿌리를 자르는 도끼</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">버티지 못하고 꺾임</div>
       </div>
     </div>
-    <div style="background:rgba(134,239,172,0.12);border:1px solid rgba(134,239,172,0.3);border-radius:10px;padding:13px;text-align:center;">
-      <div style="color:#86efac;font-size:13px;font-weight:700;margin-bottom:4px;">튼튼한 나무 + 햇살(불의 해) = 꽃이 피고 열매 맺는 시기 🌸</div>
-      <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.7;">튼튼한 나무에 햇살이 내리쬐면 — 꽃이 핍니다 🌸<br>화(火)가 사주에 없어도 뿌리가 단단하면, 불의 해는 위협이 아닌 성장의 햇살이 됩니다.</div>
+    <!-- 강한 나무 -->
+    <div style="background:linear-gradient(160deg,#0a2010,#14401a);border-radius:14px;padding:16px;text-align:center;">
+      <div style="font-size:11px;color:#86efac;font-weight:700;margin-bottom:12px;letter-spacing:0.05em;">💪 강한 나무일 때</div>
+      <div style="font-size:34px;margin-bottom:8px;">🌳</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:10px;line-height:1.6;">뿌리가 깊고<br>물(水)로 풍성하게 자람</div>
+      <div style="background:rgba(134,239,172,0.15);border:1px solid rgba(134,239,172,0.35);border-radius:8px;padding:8px;">
+        <div style="font-size:18px;margin-bottom:4px;">✂️</div>
+        <div style="font-size:11px;color:#86efac;font-weight:700;">금(金) = 건강한 가지치기</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;">더 풍성하게 자라남</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 핵심 메시지 -->
+  <div class="highlight-box" style="margin-bottom:14px;">
+    <div class="big">내가 약한 나무일 때는<br>금(金)의 기운이 너무 무섭지만,<br>내가 강한 나무일 때는<br>금(金)의 해가 두렵지 않습니다.</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.8;margin-top:12px;">
+      부족한 오행을 채우는 게 아닙니다.<br>
+      <strong style="color:#93c5fd;">내가 진짜 필요한 것을 채우는 것</strong> — 그것이 작명의 핵심입니다.<br>
+      뿌리를 단단하게 만들어주는 이름이라면, 어떤 해가 오더라도 아이는 흔들리지 않습니다.
     </div>
   </div>
 
   <div class="callout green">
     <div class="callout-icon">🌱</div>
-    <div><strong>오행이 없어도 걱정하지 마세요</strong><br>중요한 것은 '있느냐 없느냐'가 아니라, 사주 전체의 균형과 일간의 힘입니다. 뿌리 깊은 나무는 어떤 바람에도 흔들리지 않습니다.</div>
+    <div><strong>오행이 없어도 걱정하지 마세요</strong><br>중요한 것은 '있느냐 없느냐'가 아니라, 사주 전체의 균형과 일간의 힘입니다. 뿌리 깊은 나무는 어떤 가지치기에도 더 강해집니다.</div>
   </div>
 </div>
-
 <div class="divider">· · ·</div>
 
 <!-- ❼ 작명의 진짜 의미 -->
