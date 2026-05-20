@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사주 경도 보정 확인 도구 | 현승리 작명</title>
+<title>출산택일 경도 보정 확인 도구 | 현승리 작명</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -24,406 +24,206 @@
     --radius: 16px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
+  body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
   .page { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
 
-  /* Hero */
   .hero {
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
-    border-radius: var(--radius);
-    padding: 36px 28px;
-    margin-bottom: 24px;
-    color: white;
-    position: relative;
-    overflow: hidden;
+    border-radius: var(--radius); padding: 36px 28px; margin-bottom: 24px;
+    color: white; position: relative; overflow: hidden;
   }
   .hero::before {
-    content: '';
-    position: absolute; top: -40px; right: -40px;
-    width: 180px; height: 180px;
-    background: rgba(255,255,255,0.07);
-    border-radius: 50%;
+    content: ''; position: absolute; top: -40px; right: -40px;
+    width: 180px; height: 180px; background: rgba(255,255,255,0.07); border-radius: 50%;
   }
   .hero-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
+    display: inline-block; background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3); border-radius: 20px;
+    padding: 4px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 14px;
   }
   .hero h1 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: clamp(22px, 5vw, 30px);
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 10px;
+    font-family: 'Noto Serif KR', serif; font-size: clamp(22px, 5vw, 30px);
+    font-weight: 700; line-height: 1.3; margin-bottom: 10px;
   }
-  .hero p {
-    font-size: 14px;
-    opacity: 0.85;
-    line-height: 1.6;
-  }
+  .hero p { font-size: 14px; opacity: 0.85; line-height: 1.6; }
 
-  /* Section card */
   .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
+    background: var(--card); border-radius: var(--radius); padding: 24px;
+    margin-bottom: 20px; box-shadow: var(--shadow); border: 1px solid var(--border);
   }
   .section-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 700;
+    margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
   }
   .section-title .icon {
-    width: 28px; height: 28px;
-    background: var(--primary-light);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 15px;
+    width: 28px; height: 28px; background: var(--primary-light);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px;
   }
 
-  /* Callout */
-  .callout {
-    border-radius: 12px;
-    padding: 16px 18px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    line-height: 1.65;
-  }
+  .callout { border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; font-size: 14px; line-height: 1.65; }
   .callout-blue { background: var(--primary-light); border-left: 4px solid var(--primary); }
   .callout-pink { background: var(--accent-light); border-left: 4px solid var(--accent); }
   .callout-gold { background: var(--gold-light); border-left: 4px solid var(--gold); }
   .callout-green { background: var(--green-light); border-left: 4px solid var(--green); }
   .callout-title {
-    display: block;
-    font-weight: 700;
-    font-size: 13px;
-    margin-bottom: 6px;
-    letter-spacing: 0.02em;
+    display: block; font-weight: 700; font-size: 13px;
+    margin-bottom: 6px; letter-spacing: 0.02em;
   }
   .callout-blue .callout-title { color: var(--primary); }
   .callout-pink .callout-title { color: var(--accent); }
   .callout-gold .callout-title { color: var(--gold); }
   .callout-green .callout-title { color: var(--green); }
 
-  /* Search tool */
-  .search-selects {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-  }
+  .search-selects { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
   .search-selects select {
-    flex: 1;
-    min-width: 140px;
-    padding: 13px 14px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    background: white;
-    color: var(--text);
-    outline: none;
+    flex: 1; min-width: 140px; padding: 13px 14px;
+    border: 2px solid var(--border); border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+    background: white; color: var(--text); outline: none; cursor: pointer;
     transition: border-color 0.2s;
-    cursor: pointer;
-    appearance: auto;
   }
   .search-selects select:focus { border-color: var(--primary); }
-  .search-input-wrap {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 0;
-  }
   .search-input-wrap input {
-    flex: 1;
-    padding: 13px 16px;
-    border: 2px solid var(--border);
-    border-radius: 10px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    background: white;
-    color: var(--text);
-    outline: none;
+    width: 100%; padding: 13px 16px;
+    border: 2px solid var(--border); border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+    background: white; color: var(--text); outline: none;
     transition: border-color 0.2s;
   }
   .search-input-wrap input:focus { border-color: var(--primary); }
   .search-input-wrap input::placeholder { color: #9ca3af; }
-  .search-wrap {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-  }
+  .search-label { font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 5px; display: block; }
+  .search-group { margin-bottom: 12px; }
 
-  /* Result box */
   .result-box {
-    border-radius: 14px;
-    padding: 22px;
-    border: 2px solid transparent;
-    display: none;
-    animation: fadeIn 0.35s ease;
+    border-radius: 14px; padding: 22px; border: 2px solid transparent;
+    display: none; animation: fadeIn 0.35s ease; margin-top: 18px;
   }
-  @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; } }
   .result-box.show { display: block; }
   .result-box.type-more { background: #eff6ff; border-color: #93c5fd; }
   .result-box.type-less { background: #ecfdf5; border-color: #6ee7b7; }
   .result-box.type-same { background: #f9fafb; border-color: #d1d5db; }
   .result-city { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 700; margin-bottom: 6px; }
   .result-sido { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
-  .result-main {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .result-badge {
-    display: inline-block;
-    padding: 3px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-  }
+  .result-main { font-size: 18px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .result-badge { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
   .badge-more { background: #1e40af; color: white; }
   .badge-less { background: #065f46; color: white; }
   .badge-same { background: #6b7280; color: white; }
   .result-detail { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; }
-  .result-times {
-    background: rgba(255,255,255,0.7);
-    border-radius: 10px;
-    padding: 14px 16px;
-    font-size: 13px;
-    line-height: 2;
-  }
-  .result-times strong { color: var(--primary); }
-  .time-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; border-bottom: 1px dashed rgba(0,0,0,0.08); }
+  .result-times { background: rgba(255,255,255,0.7); border-radius: 10px; padding: 14px 16px; font-size: 13px; }
+  .time-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed rgba(0,0,0,0.08); }
   .time-row:last-child { border-bottom: none; }
   .time-label { color: var(--text-muted); font-size: 12px; }
   .time-value { font-weight: 700; font-size: 14px; }
 
-  /* Quick search chips */
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
   .chip {
-    padding: 5px 12px;
-    background: var(--primary-light);
-    color: var(--primary);
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-    font-family: 'Noto Sans KR', sans-serif;
-    transition: all 0.15s;
+    padding: 5px 12px; background: var(--primary-light); color: var(--primary);
+    border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer;
+    border: none; font-family: 'Noto Sans KR', sans-serif; transition: all 0.15s;
   }
   .chip:hover { background: var(--primary); color: white; }
 
-  /* Table */
-  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
-  .data-table th {
-    background: var(--primary);
-    color: white;
-    padding: 10px 12px;
-    text-align: left;
-    font-weight: 700;
-    font-size: 12px;
+  /* Calculator */
+  .calc-section {
+    background: white; border: 2px solid var(--primary-light);
+    border-radius: 14px; padding: 20px; margin-top: 20px;
   }
-  .data-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); }
-  .data-table tr:hover td { background: var(--primary-light); }
-  .data-table tr:last-child td { border-bottom: none; }
-  .tag-more { color: #1e40af; font-weight: 700; }
-  .tag-less { color: #065f46; font-weight: 700; }
-  .tag-same { color: #6b7280; font-weight: 700; }
-  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+  .calc-title { font-family: 'Noto Serif KR', serif; font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--primary); }
+  .calc-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  .calc-row label { font-size: 12px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px; }
+  .calc-row input,
+  .calc-row select {
+    padding: 11px 13px; border: 2px solid var(--border); border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+    background: white; color: var(--text); outline: none; transition: border-color 0.2s;
+    width: 100%;
+  }
+  .calc-row input:focus,
+  .calc-row select:focus { border-color: var(--primary); }
+  .calc-field { flex: 1; min-width: 140px; }
+  .calc-out { margin-top: 14px; }
 
   /* CTA */
   .cta-ebook {
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 40%, #7c3aed 100%);
-    border-radius: var(--radius);
-    padding: 32px 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    border-radius: var(--radius); padding: 32px 24px; margin-bottom: 20px;
+    text-align: center; position: relative; overflow: hidden;
   }
   .cta-ebook::before {
-    content: '';
-    position: absolute; top: -50px; right: -50px;
-    width: 200px; height: 200px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 50%;
+    content: ''; position: absolute; top: -50px; right: -50px;
+    width: 200px; height: 200px; background: rgba(255,255,255,0.06); border-radius: 50%;
   }
   .cta-ebook::after {
-    content: '';
-    position: absolute; bottom: -30px; left: -30px;
-    width: 130px; height: 130px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 50%;
+    content: ''; position: absolute; bottom: -30px; left: -30px;
+    width: 130px; height: 130px; background: rgba(255,255,255,0.04); border-radius: 50%;
   }
   .cta-ebook-inner { position: relative; z-index: 1; }
   .cta-ebook-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    color: #fde68a;
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    margin-bottom: 14px;
+    display: inline-block; background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3); color: #fde68a;
+    border-radius: 20px; padding: 4px 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 14px;
   }
   .cta-ebook h3 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: clamp(17px, 4vw, 22px);
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffffff;
-    line-height: 1.35;
+    font-family: 'Noto Serif KR', serif; font-size: clamp(17px, 4vw, 22px);
+    font-weight: 700; margin-bottom: 10px; color: #ffffff; line-height: 1.35;
   }
-  .cta-ebook h3 em {
-    font-style: normal;
-    color: #fde68a;
-    text-decoration: underline;
-    text-decoration-color: rgba(253,230,138,0.4);
-    text-underline-offset: 3px;
-  }
-  .cta-ebook p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 20px;
-    line-height: 1.65;
-  }
+  .cta-ebook h3 em { font-style: normal; color: #fde68a; text-decoration: underline; text-decoration-color: rgba(253,230,138,0.4); text-underline-offset: 3px; }
+  .cta-ebook p { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.65; }
   .btn-ebook {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #fde68a;
-    color: #1e1b4b;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
-    transition: all 0.25s;
-    box-shadow: 0 4px 20px rgba(253,230,138,0.4);
-    letter-spacing: 0.01em;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fde68a; color: #1e1b4b; padding: 14px 32px;
+    border-radius: 50px; font-weight: 700; font-size: 15px;
+    text-decoration: none; transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(253,230,138,0.4); letter-spacing: 0.01em;
   }
-  .btn-ebook:hover {
-    background: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(253,230,138,0.5);
-  }
+  .btn-ebook:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(253,230,138,0.5); }
   .btn-ebook .arrow { font-size: 16px; transition: transform 0.2s; }
   .btn-ebook:hover .arrow { transform: translateX(4px); }
 
   .cta-kakao {
     background: linear-gradient(135deg, #fef9c3, #fde047);
-    border-radius: var(--radius);
-    padding: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 2px solid #eab308;
+    border-radius: var(--radius); padding: 24px; margin-bottom: 20px;
+    text-align: center; border: 2px solid #eab308;
   }
-  .cta-kakao h3 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #713f12;
-  }
+  .cta-kakao h3 { font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #713f12; }
   .cta-kakao p { font-size: 13px; color: #713f12; margin-bottom: 14px; }
   .btn-kakao {
-    display: inline-block;
-    background: #191919;
-    color: #fde047;
-    padding: 12px 28px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    text-decoration: none;
-    transition: all 0.2s;
+    display: inline-block; background: #191919; color: #fde047;
+    padding: 12px 28px; border-radius: 10px; font-weight: 700;
+    font-size: 14px; text-decoration: none; transition: all 0.2s;
   }
   .btn-kakao:hover { background: #333; }
   .code-badge {
-    display: inline-block;
-    background: #191919;
-    color: #fde047;
-    padding: 2px 10px;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 13px;
-    font-family: monospace;
-    margin: 0 3px;
+    display: inline-block; background: #191919; color: #fde047;
+    padding: 2px 10px; border-radius: 6px; font-weight: 700;
+    font-size: 13px; font-family: monospace; margin: 0 3px;
   }
 
-  /* Source */
-  .source-section {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 24px;
-    border: 1px solid var(--border);
-  }
+  .source-section { background: var(--card); border-radius: var(--radius); padding: 24px; border: 1px solid var(--border); }
   .source-title { font-weight: 700; font-size: 14px; margin-bottom: 14px; color: var(--text-muted); }
   .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
   .source-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 7px 13px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text);
-    transition: all 0.2s;
-    background: white;
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 7px 13px; border: 1px solid var(--border); border-radius: 8px;
+    text-decoration: none; font-size: 12px; font-weight: 700;
+    color: var(--text); transition: all 0.2s; background: white;
   }
   .source-link:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
   .source-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; line-height: 1.6; }
-
-  /* Divider */
   .divider { border: none; border-top: 2px dashed var(--border); margin: 20px 0; }
-
-  /* No result */
   .no-result { text-align: center; padding: 24px; color: var(--text-muted); font-size: 14px; display: none; }
   .no-result.show { display: block; }
-
-  .search-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-muted);
-    margin-bottom: 5px;
-    display: block;
-  }
-  .search-group { margin-bottom: 12px; }
 
   @media (max-width: 500px) {
     .search-selects { flex-direction: column; }
     .search-selects select { width: 100%; min-width: unset; }
-    .result-main { font-size: 15px; }
-    .result-city { font-size: 19px; }
     .hero { padding: 26px 18px; }
     .card { padding: 18px; }
+    .calc-row { flex-direction: column; }
   }
 </style>
 </head>
@@ -432,44 +232,56 @@
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-badge">📍 사주 경도 보정 도구</div>
-    <h1>내 출생지의<br>정확한 시각 보정값은?</h1>
-    <p>현승리 작명에서 사용하는 <strong>30분 보정 기준</strong>이 우리 동네와 얼마나 차이 나는지 확인하세요.<br>전국 160개 지역 제공</p>
+    <div class="hero-badge">👶 출산택일 경도 보정 도구</div>
+    <h1>택일 날짜,<br>우리 아이 사주에 정확한가요?</h1>
+    <p>병원이 위치한 지역에 따라 <strong>실제 수술 시각</strong>이 달라집니다.<br>아이가 태어날 병원 지역을 선택하면 정확한 시각 보정값을 확인할 수 있어요.</p>
   </div>
 
   <!-- Why card -->
   <div class="card">
-    <div class="section-title"><span class="icon">🧭</span> 왜 경도 보정이 필요한가요?</div>
+    <div class="section-title"><span class="icon">🧭</span> 왜 병원 위치가 중요한가요?</div>
+
     <div class="callout callout-blue">
-      <span class="callout-title">🌐 한국은 일본 시간대를 쓰고 있어요</span>
-      한국 표준시(KST)는 일본 아카시시를 지나는 <strong>동경 135도</strong>를 기준으로 합니다.<br>
-      하지만 한국의 실제 경도는 대부분 <strong>126~129도</strong> 사이예요.<br>
-      그래서 시계 시간과 실제 태양의 위치 사이에 차이가 생깁니다.
+      <span class="callout-title">🌏 한국과 일본은 왜 시차가 없을까요?</span>
+      한국과 일본은 시차가 없습니다. 같은 시간대를 쓰거든요.<br><br>
+      시간대는 태양이 하늘 한가운데 오는 경도선을 기준으로 정해요.<br>
+      한국과 일본이 공통으로 쓰는 기준선은 <strong>동경 135도선</strong>입니다.<br><br>
+      이 선은 일본 효고현 <strong>아카시시(明石市)</strong> 근처를 지나가요.<br>
+      아카시시가 일본 표준시 기준 도시로 유명한 이유가 바로 이것입니다.<br><br>
+      그런데 한국은 실제로 동경 <strong>126~129도</strong> 사이에 위치해 있어요.<br>
+      135도 기준으로 시계를 맞추다 보니, <strong>우리 시계는 실제 태양보다 약 26~35분 빠르게</strong> 가고 있습니다.
     </div>
+
     <div class="callout callout-pink">
-      <span class="callout-title">🚨 "09시 00분 ~ 11시 59분" 식으로 나누는 곳은 실제 사주와 다를 수 있어요</span>
-      많은 사주 앱이나 철학관에서는 <strong>시계 시간 기준으로 딱 나눠서</strong> 사시(巳時) = 09:00~11:59, 오시(午時) = 12:00~13:59 … 이런 식으로 처리합니다.<br><br>
-      하지만 이건 경도 보정을 전혀 하지 않은 방식으로, <strong>실제 태양의 위치와 최대 35분 이상</strong> 차이가 날 수 있어요.<br><br>
-      이런 곳에서 뽑은 사주는 <strong>시주(時柱)가 잘못 산출될 가능성</strong>이 있습니다.<br>
-      <strong>작명은 사주 한 글자 한 글자를 정밀하게 분석하는 작업</strong>이기 때문에, 시주 하나가 달라지면 이름 전체의 방향이 달라집니다.<br>
-      세밀함이 필요한 작명일수록, 경도 보정된 정확한 시각으로 사주를 봐야 합니다.
+      <span class="callout-title">🚨 시계 시간 그대로 택일하는 곳은 위험할 수 있어요</span>
+      일부 사주 앱이나 철학관에서는 사시(巳時) = 09:00~11:59, 오시(午時) = 12:00~13:59 …<br>
+      이런 식으로 <strong>시계 시간 그대로</strong> 나눠서 사주를 봅니다.<br><br>
+      이 방식은 경도 보정을 전혀 하지 않은 거예요.<br>
+      실제 태양 기준과 최대 <strong>35분 이상</strong> 차이가 날 수 있습니다.<br><br>
+      사주는 딱 경계가 있어요. 예를 들어 오전 9시 30분이 사시(巳時)의 시작이라면,<br>
+      9시 29분생과 9시 31분생의 <strong>시주(時柱)는 완전히 다른 글자</strong>가 됩니다.<br><br>
+      경계 시각 근처에 태어난 아이라면, 잘못된 방식으로 뽑은 사주는<br>
+      <strong>우리 아이의 팔자 자체가 완전히 달라질 수 있어요.</strong>
     </div>
+
     <div class="callout callout-gold">
-      <span class="callout-title">⚠️ 그래서 현승리 작명은 어떻게 하나요?</span>
-      기본적으로 <strong>30분 보정 기준</strong>을 사용하되, 출생지를 확인해서 경도 보정값을 적용합니다.<br>
-      특히 시주가 바뀌는 경계값 근처 시간대(예: 9시 30분 전후, 11시 30분 전후 등)에 태어난 분은 <strong>출생지 경도를 반드시 확인</strong>합니다.
+      <span class="callout-title">✅ 현승리는 어떻게 확인하나요?</span>
+      기본적으로 <strong>30분 보정 기준</strong>을 사용하되, 아이가 태어날 <strong>병원 위치의 경도</strong>를 추가로 확인합니다.<br>
+      특히 시주가 바뀌는 경계 시각 근처에 수술이 잡혀 있다면, 몇 분 차이로 팔자가 달라지기 때문에<br>
+      병원 지역의 정확한 보정값을 적용해 작명합니다.<br>
+      아래에서 직접 확인해 보세요!
     </div>
   </div>
 
   <!-- Search tool -->
   <div class="card">
-    <div class="section-title"><span class="icon">🔍</span> 내 출생지 경도 보정값 확인</div>
-    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">지역명을 검색하거나, 아래 빠른 버튼을 눌러보세요.</p>
+    <div class="section-title"><span class="icon">🏥</span> 아이가 태어날 병원 지역 선택</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">병원이 있는 시/군/구를 선택하거나 검색하세요.</p>
 
     <div class="chips" id="quickChips"></div>
 
     <div class="search-group">
-      <span class="search-label">① 시/도와 지역을 선택하세요</span>
+      <span class="search-label">① 시/도 → 지역 순서로 선택하세요</span>
       <div class="search-selects">
         <select id="sidoSelect" onchange="filterCities()">
           <option value="">— 시/도 선택 —</option>
@@ -482,52 +294,68 @@
     <div class="search-group">
       <span class="search-label">② 또는 지역명을 직접 입력하세요</span>
       <div class="search-input-wrap">
-        <input type="text" id="searchInput" placeholder="예: 부산, 강릉, 전주..." oninput="liveSearch()" />
+        <input type="text" id="searchInput" placeholder="예: 서울, 부산, 수원..." oninput="liveSearch()" />
       </div>
     </div>
 
-    <div id="resultBox" class="result-box" style="margin-top:18px;"></div>
+    <div id="resultBox" class="result-box"></div>
     <div id="noResult" class="no-result">찾는 지역이 없습니다. 다른 검색어를 입력해 보세요.</div>
+
+    <!-- Calculator -->
+    <div class="calc-section" id="calcSection" data-diff-sec="0" data-city-name="">
+      <div class="calc-title">📅 현승리에게 받은 택일 날짜로 실제 수술 시각 확인</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
+        현승리에게 받은 택일 날짜와 시주를 선택하면, 병원 위치 기준 정확한 수술 시각 범위를 알려드립니다.
+      </p>
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>택일 날짜</label>
+          <input type="date" id="takilDate" onchange="updateCalc()" />
+        </div>
+        <div class="calc-field">
+          <label>택일 시주</label>
+          <select id="takilSiju" onchange="updateCalc()">
+            <option value="">— 시주 선택 —</option>
+            <option value="23:30">자시(子時) · 23:30 ~ 01:29</option>
+            <option value="01:30">축시(丑時) · 01:30 ~ 03:29</option>
+            <option value="03:30">인시(寅時) · 03:30 ~ 05:29</option>
+            <option value="05:30">묘시(卯時) · 05:30 ~ 07:29</option>
+            <option value="07:30">진시(辰時) · 07:30 ~ 09:29</option>
+            <option value="09:30">사시(巳時) · 09:30 ~ 11:29</option>
+            <option value="11:30">오시(午時) · 11:30 ~ 13:29</option>
+            <option value="13:30">미시(未時) · 13:30 ~ 15:29</option>
+            <option value="15:30">신시(申時) · 15:30 ~ 17:29</option>
+            <option value="17:30">유시(酉時) · 17:30 ~ 19:29</option>
+            <option value="19:30">술시(戌時) · 19:30 ~ 21:29</option>
+            <option value="21:30">해시(亥時) · 21:30 ~ 23:29</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-out" id="calcOut">
+        <p style="color:var(--text-muted);font-size:13px;text-align:center">위에서 병원 지역을 먼저 선택한 뒤, 날짜와 시주를 입력하세요.</p>
+      </div>
+    </div>
   </div>
 
   <!-- How to read -->
   <div class="card">
     <div class="section-title"><span class="icon">📖</span> 결과를 어떻게 읽나요?</div>
     <div class="callout callout-blue">
-      <span class="callout-title">🔵 "더 빼기" = 표준 30분보다 시간을 더 앞당겨야 해요</span>
+      <span class="callout-title">🔵 "더 빼기" = 수술을 조금 더 일찍 잡아야 해요</span>
       예: 서울 (2분 05초 더 빼기)<br>
-      → 30분 보정한 시각에서 <strong>2분 05초를 추가로 더 빼줘야</strong> 정확한 실제 시간이 됩니다.<br>
-      → 경계값 근처 시간에 태어났다면 시주가 달라질 수 있어요.
+      → 받은 택일 시각보다 <strong>2분 05초 일찍</strong> 수술이 시작되어야 사주가 맞아요.<br>
+      → 경계 시각 근처라면 시주가 달라질 수 있어요.
     </div>
     <div class="callout callout-green">
-      <span class="callout-title">🟢 "덜 빼기" = 표준 30분보다 덜 빼도 돼요</span>
+      <span class="callout-title">🟢 "덜 빼기" = 수술을 조금 더 늦게 잡아도 돼요</span>
       예: 부산 (6분 19초 덜 빼기)<br>
-      → 30분 보정한 시각보다 <strong>6분 19초가 늦게 시작</strong>한다는 뜻입니다.<br>
+      → 받은 택일 시각보다 <strong>6분 19초 늦게</strong> 시작해도 같은 시주예요.<br>
       → 동쪽 지역일수록 태양이 더 일찍 뜨기 때문이에요.
     </div>
     <div class="callout callout-gold">
-      <span class="callout-title">🟡 "거의 동일" = 30분 보정으로 충분해요</span>
-      30초 미만 오차는 실무에서 무시 가능한 수준입니다.<br>
+      <span class="callout-title">🟡 "거의 동일" = 그대로 진행하면 돼요</span>
+      30초 미만 오차는 실무상 무시 가능한 수준입니다.<br>
       대전, 청주, 순천 등 동경 127.5도 근방 지역이 해당됩니다.
-    </div>
-  </div>
-
-  <!-- Full table toggle -->
-  <div class="card">
-    <div class="section-title"><span class="icon">📋</span> 전국 지역 보정값 목록</div>
-    <div id="sidoTabs" class="chips" style="margin-bottom:14px;"></div>
-    <div class="table-wrap">
-      <table class="data-table" id="fullTable">
-        <thead>
-          <tr>
-            <th>지역</th>
-            <th>경도(E)</th>
-            <th>30분 기준 대비</th>
-            <th>비고</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-      </table>
     </div>
   </div>
 
@@ -540,7 +368,7 @@
       <h3>작명하기 전<br><em>알았다면 좋았을 것들</em></h3>
       <p>이름 하나가 운명을 바꿀 수 있다면,<br>제대로 알고 지어야 하지 않을까요?<br>사주·작명의 핵심 원리를 쉽고 깊게 담았습니다.</p>
       <a href="https://hslee.co.kr/ebook" target="_blank" class="btn-ebook">
-        📖 지금 무료로 읽기 <span class="arrow">→</span>
+        📖 지금 무료로 읽기 <span class="arrow">&#8594;</span>
       </a>
     </div>
   </div>
@@ -566,221 +394,220 @@
   </div>
 
 </div>
-
 <script>
+
 const DATA = [{"sido": "서울특별시", "city": "서울", "lon": 126.978, "diff_sec": -125, "diff_label": "2분 05초 더 빼기", "memo": "수도권 대표 기준"}, {"sido": "경기도", "city": "수원", "lon": 127.029, "diff_sec": -113, "diff_label": "1분 53초 더 빼기", "memo": "경기 남부"}, {"sido": "경기도", "city": "성남", "lon": 127.126, "diff_sec": -90, "diff_label": "1분 30초 더 빼기", "memo": "경기 동부권"}, {"sido": "경기도", "city": "고양", "lon": 126.832, "diff_sec": -160, "diff_label": "2분 40초 더 빼기", "memo": "경기 서북부"}, {"sido": "경기도", "city": "용인", "lon": 127.178, "diff_sec": -77, "diff_label": "1분 17초 더 빼기", "memo": "경기 남부"}, {"sido": "경기도", "city": "부천", "lon": 126.766, "diff_sec": -176, "diff_label": "2분 56초 더 빼기", "memo": "경기 서부"}, {"sido": "경기도", "city": "안산", "lon": 126.831, "diff_sec": -161, "diff_label": "2분 41초 더 빼기", "memo": "경기 서부"}, {"sido": "경기도", "city": "안양", "lon": 126.957, "diff_sec": -130, "diff_label": "2분 10초 더 빼기", "memo": "경기 중부"}, {"sido": "경기도", "city": "화성", "lon": 126.831, "diff_sec": -161, "diff_label": "2분 41초 더 빼기", "memo": "경기 서남부"}, {"sido": "경기도", "city": "남양주", "lon": 127.217, "diff_sec": -68, "diff_label": "1분 08초 더 빼기", "memo": "경기 동북부"}, {"sido": "경기도", "city": "평택", "lon": 127.113, "diff_sec": -93, "diff_label": "1분 33초 더 빼기", "memo": "경기 남부"}, {"sido": "경기도", "city": "의정부", "lon": 127.048, "diff_sec": -108, "diff_label": "1분 48초 더 빼기", "memo": "경기 북부"}, {"sido": "경기도", "city": "파주", "lon": 126.78, "diff_sec": -173, "diff_label": "2분 53초 더 빼기", "memo": "경기 서북부"}, {"sido": "경기도", "city": "김포", "lon": 126.716, "diff_sec": -188, "diff_label": "3분 08초 더 빼기", "memo": "경기 서북부"}, {"sido": "경기도", "city": "광명", "lon": 126.867, "diff_sec": -152, "diff_label": "2분 32초 더 빼기", "memo": "경기 서부"}, {"sido": "경기도", "city": "시흥", "lon": 126.803, "diff_sec": -167, "diff_label": "2분 47초 더 빼기", "memo": "경기 서부"}, {"sido": "경기도", "city": "군포", "lon": 126.935, "diff_sec": -136, "diff_label": "2분 16초 더 빼기", "memo": "경기 중부"}, {"sido": "경기도", "city": "하남", "lon": 127.215, "diff_sec": -68, "diff_label": "1분 08초 더 빼기", "memo": "경기 동부"}, {"sido": "경기도", "city": "구리", "lon": 127.13, "diff_sec": -89, "diff_label": "1분 29초 더 빼기", "memo": "경기 동부"}, {"sido": "경기도", "city": "광주", "lon": 127.255, "diff_sec": -59, "diff_label": "0분 59초 더 빼기", "memo": "경기 동남부"}, {"sido": "경기도", "city": "이천", "lon": 127.435, "diff_sec": -16, "diff_label": "거의 동일", "memo": "경기 동남부"}, {"sido": "경기도", "city": "안성", "lon": 127.28, "diff_sec": -53, "diff_label": "0분 53초 더 빼기", "memo": "경기 남동부"}, {"sido": "경기도", "city": "오산", "lon": 127.078, "diff_sec": -101, "diff_label": "1분 41초 더 빼기", "memo": "경기 남부"}, {"sido": "경기도", "city": "의왕", "lon": 126.969, "diff_sec": -127, "diff_label": "2분 07초 더 빼기", "memo": "경기 중부"}, {"sido": "경기도", "city": "양주", "lon": 127.046, "diff_sec": -109, "diff_label": "1분 49초 더 빼기", "memo": "경기 북부"}, {"sido": "경기도", "city": "포천", "lon": 127.2, "diff_sec": -72, "diff_label": "1분 12초 더 빼기", "memo": "경기 북동부"}, {"sido": "경기도", "city": "여주", "lon": 127.637, "diff_sec": 33, "diff_label": "0분 33초 덜 빼기", "memo": "경기 동부"}, {"sido": "경기도", "city": "양평", "lon": 127.487, "diff_sec": -3, "diff_label": "거의 동일", "memo": "경기 동부"}, {"sido": "경기도", "city": "가평", "lon": 127.511, "diff_sec": 3, "diff_label": "거의 동일", "memo": "경기 동북부"}, {"sido": "경기도", "city": "연천", "lon": 127.076, "diff_sec": -102, "diff_label": "1분 42초 더 빼기", "memo": "경기 북부"}, {"sido": "경기도", "city": "동두천", "lon": 127.061, "diff_sec": -105, "diff_label": "1분 45초 더 빼기", "memo": "경기 북부"}, {"sido": "경기도", "city": "과천", "lon": 126.987, "diff_sec": -123, "diff_label": "2분 03초 더 빼기", "memo": "경기 중부"}, {"sido": "인천광역시", "city": "인천", "lon": 126.63, "diff_sec": -209, "diff_label": "3분 29초 더 빼기", "memo": "광역시"}, {"sido": "광주광역시", "city": "광주", "lon": 126.85, "diff_sec": -156, "diff_label": "2분 36초 더 빼기", "memo": "광역시"}, {"sido": "대전광역시", "city": "대전", "lon": 127.38, "diff_sec": -29, "diff_label": "거의 동일", "memo": "광역시"}, {"sido": "대구광역시", "city": "대구", "lon": 128.6, "diff_sec": 264, "diff_label": "4분 24초 덜 빼기", "memo": "광역시"}, {"sido": "부산광역시", "city": "부산", "lon": 129.08, "diff_sec": 379, "diff_label": "6분 19초 덜 빼기", "memo": "광역시"}, {"sido": "울산광역시", "city": "울산", "lon": 129.32, "diff_sec": 437, "diff_label": "7분 17초 덜 빼기", "memo": "광역시"}, {"sido": "세종특별자치시", "city": "세종", "lon": 127.29, "diff_sec": -50, "diff_label": "0분 50초 더 빼기", "memo": "특별자치시"}, {"sido": "강원특별자치도", "city": "춘천", "lon": 127.73, "diff_sec": 55, "diff_label": "0분 55초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "원주", "lon": 127.92, "diff_sec": 101, "diff_label": "1분 41초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "강릉", "lon": 128.88, "diff_sec": 331, "diff_label": "5분 31초 덜 빼기", "memo": "동해안"}, {"sido": "강원특별자치도", "city": "속초", "lon": 128.59, "diff_sec": 262, "diff_label": "4분 22초 덜 빼기", "memo": "동해안"}, {"sido": "강원특별자치도", "city": "동해", "lon": 129.11, "diff_sec": 386, "diff_label": "6분 26초 덜 빼기", "memo": "동해안"}, {"sido": "강원특별자치도", "city": "삼척", "lon": 129.17, "diff_sec": 401, "diff_label": "6분 41초 덜 빼기", "memo": "동해안"}, {"sido": "강원특별자치도", "city": "태백", "lon": 128.99, "diff_sec": 358, "diff_label": "5분 58초 덜 빼기", "memo": "강원 남동부"}, {"sido": "강원특별자치도", "city": "홍천", "lon": 127.89, "diff_sec": 94, "diff_label": "1분 34초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "횡성", "lon": 127.99, "diff_sec": 118, "diff_label": "1분 58초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "영월", "lon": 128.46, "diff_sec": 230, "diff_label": "3분 50초 덜 빼기", "memo": "강원 남부"}, {"sido": "강원특별자치도", "city": "평창", "lon": 128.39, "diff_sec": 214, "diff_label": "3분 34초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "정선", "lon": 128.66, "diff_sec": 278, "diff_label": "4분 38초 덜 빼기", "memo": "강원 내륙"}, {"sido": "강원특별자치도", "city": "철원", "lon": 127.31, "diff_sec": -46, "diff_label": "0분 46초 더 빼기", "memo": "강원 서북부"}, {"sido": "강원특별자치도", "city": "화천", "lon": 127.71, "diff_sec": 50, "diff_label": "0분 50초 덜 빼기", "memo": "강원 북부"}, {"sido": "강원특별자치도", "city": "양구", "lon": 127.99, "diff_sec": 118, "diff_label": "1분 58초 덜 빼기", "memo": "강원 북부"}, {"sido": "강원특별자치도", "city": "인제", "lon": 128.17, "diff_sec": 161, "diff_label": "2분 41초 덜 빼기", "memo": "강원 북부"}, {"sido": "강원특별자치도", "city": "고성", "lon": 128.47, "diff_sec": 233, "diff_label": "3분 53초 덜 빼기", "memo": "동해안"}, {"sido": "강원특별자치도", "city": "양양", "lon": 128.62, "diff_sec": 269, "diff_label": "4분 29초 덜 빼기", "memo": "동해안"}, {"sido": "충청북도", "city": "청주", "lon": 127.489, "diff_sec": -3, "diff_label": "거의 동일", "memo": "충북 중심"}, {"sido": "충청북도", "city": "충주", "lon": 127.926, "diff_sec": 102, "diff_label": "1분 42초 덜 빼기", "memo": "충북 북부"}, {"sido": "충청북도", "city": "제천", "lon": 128.191, "diff_sec": 166, "diff_label": "2분 46초 덜 빼기", "memo": "충북 북동부"}, {"sido": "충청북도", "city": "보은", "lon": 127.729, "diff_sec": 55, "diff_label": "0분 55초 덜 빼기", "memo": "충북 남부"}, {"sido": "충청북도", "city": "옥천", "lon": 127.571, "diff_sec": 17, "diff_label": "거의 동일", "memo": "충북 남부"}, {"sido": "충청북도", "city": "영동", "lon": 127.783, "diff_sec": 68, "diff_label": "1분 08초 덜 빼기", "memo": "충북 남부"}, {"sido": "충청북도", "city": "진천", "lon": 127.443, "diff_sec": -14, "diff_label": "거의 동일", "memo": "충북 중부"}, {"sido": "충청북도", "city": "괴산", "lon": 127.786, "diff_sec": 69, "diff_label": "1분 09초 덜 빼기", "memo": "충북 중부"}, {"sido": "충청북도", "city": "음성", "lon": 127.69, "diff_sec": 46, "diff_label": "0분 46초 덜 빼기", "memo": "충북 북서부"}, {"sido": "충청북도", "city": "단양", "lon": 128.365, "diff_sec": 208, "diff_label": "3분 28초 덜 빼기", "memo": "충북 북동부"}, {"sido": "충청남도", "city": "천안", "lon": 127.152, "diff_sec": -84, "diff_label": "1분 24초 더 빼기", "memo": "충남 북부"}, {"sido": "충청남도", "city": "공주", "lon": 127.12, "diff_sec": -91, "diff_label": "1분 31초 더 빼기", "memo": "충남 중부"}, {"sido": "충청남도", "city": "보령", "lon": 126.612, "diff_sec": -213, "diff_label": "3분 33초 더 빼기", "memo": "충남 서해안"}, {"sido": "충청남도", "city": "아산", "lon": 127.003, "diff_sec": -119, "diff_label": "1분 59초 더 빼기", "memo": "충남 북부"}, {"sido": "충청남도", "city": "서산", "lon": 126.45, "diff_sec": -252, "diff_label": "4분 12초 더 빼기", "memo": "충남 서해안"}, {"sido": "충청남도", "city": "논산", "lon": 127.098, "diff_sec": -96, "diff_label": "1분 36초 더 빼기", "memo": "충남 남부"}, {"sido": "충청남도", "city": "계룡", "lon": 127.249, "diff_sec": -60, "diff_label": "1분 00초 더 빼기", "memo": "충남 남동부"}, {"sido": "충청남도", "city": "당진", "lon": 126.645, "diff_sec": -205, "diff_label": "3분 25초 더 빼기", "memo": "충남 서해안"}, {"sido": "충청남도", "city": "금산", "lon": 127.488, "diff_sec": -3, "diff_label": "거의 동일", "memo": "충남 동남부"}, {"sido": "충청남도", "city": "부여", "lon": 126.912, "diff_sec": -141, "diff_label": "2분 21초 더 빼기", "memo": "충남 남서부"}, {"sido": "충청남도", "city": "서천", "lon": 126.691, "diff_sec": -194, "diff_label": "3분 14초 더 빼기", "memo": "충남 서해안"}, {"sido": "충청남도", "city": "청양", "lon": 126.803, "diff_sec": -167, "diff_label": "2분 47초 더 빼기", "memo": "충남 중부"}, {"sido": "충청남도", "city": "홍성", "lon": 126.66, "diff_sec": -202, "diff_label": "3분 22초 더 빼기", "memo": "충남 서부"}, {"sido": "충청남도", "city": "예산", "lon": 126.849, "diff_sec": -156, "diff_label": "2분 36초 더 빼기", "memo": "충남 중부"}, {"sido": "충청남도", "city": "태안", "lon": 126.299, "diff_sec": -288, "diff_label": "4분 48초 더 빼기", "memo": "충남 서해안"}, {"sido": "전북특별자치도", "city": "전주", "lon": 127.148, "diff_sec": -84, "diff_label": "1분 24초 더 빼기", "memo": "전북 중심"}, {"sido": "전북특별자치도", "city": "군산", "lon": 126.736, "diff_sec": -183, "diff_label": "3분 03초 더 빼기", "memo": "전북 서해안"}, {"sido": "전북특별자치도", "city": "익산", "lon": 126.957, "diff_sec": -130, "diff_label": "2분 10초 더 빼기", "memo": "전북 북부"}, {"sido": "전북특별자치도", "city": "정읍", "lon": 126.856, "diff_sec": -155, "diff_label": "2분 35초 더 빼기", "memo": "전북 서남부"}, {"sido": "전북특별자치도", "city": "남원", "lon": 127.39, "diff_sec": -26, "diff_label": "거의 동일", "memo": "전북 동남부"}, {"sido": "전북특별자치도", "city": "김제", "lon": 126.88, "diff_sec": -149, "diff_label": "2분 29초 더 빼기", "memo": "전북 서부"}, {"sido": "전북특별자치도", "city": "완주", "lon": 127.162, "diff_sec": -81, "diff_label": "1분 21초 더 빼기", "memo": "전북 중심"}, {"sido": "전북특별자치도", "city": "진안", "lon": 127.424, "diff_sec": -18, "diff_label": "거의 동일", "memo": "전북 동부"}, {"sido": "전북특별자치도", "city": "무주", "lon": 127.66, "diff_sec": 38, "diff_label": "0분 38초 덜 빼기", "memo": "전북 동북부"}, {"sido": "전북특별자치도", "city": "임실", "lon": 127.279, "diff_sec": -53, "diff_label": "0분 53초 더 빼기", "memo": "전북 중남부"}, {"sido": "전북특별자치도", "city": "순창", "lon": 127.137, "diff_sec": -87, "diff_label": "1분 27초 더 빼기", "memo": "전북 남부"}, {"sido": "전북특별자치도", "city": "고창", "lon": 126.702, "diff_sec": -192, "diff_label": "3분 12초 더 빼기", "memo": "전북 서남부"}, {"sido": "전북특별자치도", "city": "부안", "lon": 126.733, "diff_sec": -184, "diff_label": "3분 04초 더 빼기", "memo": "전북 서해안"}, {"sido": "전라남도", "city": "목포", "lon": 126.392, "diff_sec": -266, "diff_label": "4분 26초 더 빼기", "memo": "전남 서남부"}, {"sido": "전라남도", "city": "여수", "lon": 127.663, "diff_sec": 39, "diff_label": "0분 39초 덜 빼기", "memo": "전남 동부"}, {"sido": "전라남도", "city": "순천", "lon": 127.487, "diff_sec": -3, "diff_label": "거의 동일", "memo": "전남 동부"}, {"sido": "전라남도", "city": "나주", "lon": 126.71, "diff_sec": -190, "diff_label": "3분 10초 더 빼기", "memo": "전남 서부"}, {"sido": "전라남도", "city": "광양", "lon": 127.695, "diff_sec": 47, "diff_label": "0분 47초 덜 빼기", "memo": "전남 동부"}, {"sido": "전라남도", "city": "담양", "lon": 126.988, "diff_sec": -123, "diff_label": "2분 03초 더 빼기", "memo": "전남 북부"}, {"sido": "전라남도", "city": "곡성", "lon": 127.292, "diff_sec": -50, "diff_label": "0분 50초 더 빼기", "memo": "전남 북동부"}, {"sido": "전라남도", "city": "구례", "lon": 127.463, "diff_sec": -9, "diff_label": "거의 동일", "memo": "전남 북동부"}, {"sido": "전라남도", "city": "고흥", "lon": 127.285, "diff_sec": -52, "diff_label": "0분 52초 더 빼기", "memo": "전남 남부"}, {"sido": "전라남도", "city": "보성", "lon": 127.08, "diff_sec": -101, "diff_label": "1분 41초 더 빼기", "memo": "전남 남부"}, {"sido": "전라남도", "city": "화순", "lon": 126.986, "diff_sec": -123, "diff_label": "2분 03초 더 빼기", "memo": "전남 중부"}, {"sido": "전라남도", "city": "장흥", "lon": 126.907, "diff_sec": -142, "diff_label": "2분 22초 더 빼기", "memo": "전남 남부"}, {"sido": "전라남도", "city": "강진", "lon": 126.767, "diff_sec": -176, "diff_label": "2분 56초 더 빼기", "memo": "전남 남부"}, {"sido": "전라남도", "city": "해남", "lon": 126.599, "diff_sec": -216, "diff_label": "3분 36초 더 빼기", "memo": "전남 서남부"}, {"sido": "전라남도", "city": "영암", "lon": 126.696, "diff_sec": -193, "diff_label": "3분 13초 더 빼기", "memo": "전남 서남부"}, {"sido": "전라남도", "city": "무안", "lon": 126.482, "diff_sec": -244, "diff_label": "4분 04초 더 빼기", "memo": "전남 서부"}, {"sido": "전라남도", "city": "함평", "lon": 126.516, "diff_sec": -236, "diff_label": "3분 56초 더 빼기", "memo": "전남 서부"}, {"sido": "전라남도", "city": "영광", "lon": 126.512, "diff_sec": -237, "diff_label": "3분 57초 더 빼기", "memo": "전남 서북부"}, {"sido": "전라남도", "city": "장성", "lon": 126.784, "diff_sec": -172, "diff_label": "2분 52초 더 빼기", "memo": "전남 북부"}, {"sido": "전라남도", "city": "완도", "lon": 126.755, "diff_sec": -179, "diff_label": "2분 59초 더 빼기", "memo": "전남 남부"}, {"sido": "전라남도", "city": "진도", "lon": 126.263, "diff_sec": -297, "diff_label": "4분 57초 더 빼기", "memo": "전남 서남부"}, {"sido": "전라남도", "city": "신안", "lon": 126.108, "diff_sec": -334, "diff_label": "5분 34초 더 빼기", "memo": "전남 도서"}, {"sido": "경상북도", "city": "포항", "lon": 129.366, "diff_sec": 448, "diff_label": "7분 28초 덜 빼기", "memo": "경북 동해안"}, {"sido": "경상북도", "city": "경주", "lon": 129.224, "diff_sec": 414, "diff_label": "6분 54초 덜 빼기", "memo": "경북 동남부"}, {"sido": "경상북도", "city": "김천", "lon": 128.114, "diff_sec": 147, "diff_label": "2분 27초 덜 빼기", "memo": "경북 서부"}, {"sido": "경상북도", "city": "안동", "lon": 128.729, "diff_sec": 295, "diff_label": "4분 55초 덜 빼기", "memo": "경북 북부"}, {"sido": "경상북도", "city": "구미", "lon": 128.344, "diff_sec": 203, "diff_label": "3분 23초 덜 빼기", "memo": "경북 서부"}, {"sido": "경상북도", "city": "영주", "lon": 128.624, "diff_sec": 270, "diff_label": "4분 30초 덜 빼기", "memo": "경북 북부"}, {"sido": "경상북도", "city": "영천", "lon": 128.938, "diff_sec": 345, "diff_label": "5분 45초 덜 빼기", "memo": "경북 남동부"}, {"sido": "경상북도", "city": "상주", "lon": 128.16, "diff_sec": 158, "diff_label": "2분 38초 덜 빼기", "memo": "경북 서북부"}, {"sido": "경상북도", "city": "문경", "lon": 128.199, "diff_sec": 168, "diff_label": "2분 48초 덜 빼기", "memo": "경북 북서부"}, {"sido": "경상북도", "city": "경산", "lon": 128.741, "diff_sec": 298, "diff_label": "4분 58초 덜 빼기", "memo": "경북 남부"}, {"sido": "경상북도", "city": "의성", "lon": 128.699, "diff_sec": 288, "diff_label": "4분 48초 덜 빼기", "memo": "경북 중부"}, {"sido": "경상북도", "city": "청송", "lon": 129.057, "diff_sec": 374, "diff_label": "6분 14초 덜 빼기", "memo": "경북 동부"}, {"sido": "경상북도", "city": "영양", "lon": 129.112, "diff_sec": 387, "diff_label": "6분 27초 덜 빼기", "memo": "경북 북동부"}, {"sido": "경상북도", "city": "영덕", "lon": 129.365, "diff_sec": 448, "diff_label": "7분 28초 덜 빼기", "memo": "경북 동해안"}, {"sido": "경상북도", "city": "청도", "lon": 128.735, "diff_sec": 296, "diff_label": "4분 56초 덜 빼기", "memo": "경북 남부"}, {"sido": "경상북도", "city": "고령", "lon": 128.262, "diff_sec": 183, "diff_label": "3분 03초 덜 빼기", "memo": "경북 서남부"}, {"sido": "경상북도", "city": "성주", "lon": 128.282, "diff_sec": 188, "diff_label": "3분 08초 덜 빼기", "memo": "경북 서부"}, {"sido": "경상북도", "city": "칠곡", "lon": 128.401, "diff_sec": 216, "diff_label": "3분 36초 덜 빼기", "memo": "경북 서부"}, {"sido": "경상북도", "city": "예천", "lon": 128.455, "diff_sec": 229, "diff_label": "3분 49초 덜 빼기", "memo": "경북 북서부"}, {"sido": "경상북도", "city": "봉화", "lon": 128.732, "diff_sec": 296, "diff_label": "4분 56초 덜 빼기", "memo": "경북 북부"}, {"sido": "경상북도", "city": "울진", "lon": 129.4, "diff_sec": 456, "diff_label": "7분 36초 덜 빼기", "memo": "경북 동해안"}, {"sido": "경상북도", "city": "울릉", "lon": 130.905, "diff_sec": 817, "diff_label": "13분 37초 덜 빼기", "memo": "울릉도"}, {"sido": "경상남도", "city": "창원", "lon": 128.681, "diff_sec": 283, "diff_label": "4분 43초 덜 빼기", "memo": "경남 중심"}, {"sido": "경상남도", "city": "진주", "lon": 128.108, "diff_sec": 146, "diff_label": "2분 26초 덜 빼기", "memo": "경남 서부"}, {"sido": "경상남도", "city": "통영", "lon": 128.433, "diff_sec": 224, "diff_label": "3분 44초 덜 빼기", "memo": "경남 남부"}, {"sido": "경상남도", "city": "사천", "lon": 128.064, "diff_sec": 135, "diff_label": "2분 15초 덜 빼기", "memo": "경남 서남부"}, {"sido": "경상남도", "city": "김해", "lon": 128.889, "diff_sec": 333, "diff_label": "5분 33초 덜 빼기", "memo": "경남 동부"}, {"sido": "경상남도", "city": "밀양", "lon": 128.748, "diff_sec": 300, "diff_label": "4분 00초 덜 빼기", "memo": "경남 북동부"}, {"sido": "경상남도", "city": "거제", "lon": 128.621, "diff_sec": 269, "diff_label": "4분 29초 덜 빼기", "memo": "경남 남부"}, {"sido": "경상남도", "city": "양산", "lon": 129.037, "diff_sec": 369, "diff_label": "6분 09초 덜 빼기", "memo": "경남 동부"}, {"sido": "경상남도", "city": "의령", "lon": 128.261, "diff_sec": 183, "diff_label": "3분 03초 덜 빼기", "memo": "경남 중부"}, {"sido": "경상남도", "city": "함안", "lon": 128.406, "diff_sec": 217, "diff_label": "3분 37초 덜 빼기", "memo": "경남 중부"}, {"sido": "경상남도", "city": "창녕", "lon": 128.493, "diff_sec": 238, "diff_label": "3분 58초 덜 빼기", "memo": "경남 북부"}, {"sido": "경상남도", "city": "고성", "lon": 128.323, "diff_sec": 198, "diff_label": "3분 18초 덜 빼기", "memo": "경남 남부"}, {"sido": "경상남도", "city": "남해", "lon": 127.893, "diff_sec": 94, "diff_label": "1분 34초 덜 빼기", "memo": "경남 남서부"}, {"sido": "경상남도", "city": "하동", "lon": 127.751, "diff_sec": 60, "diff_label": "1분 00초 덜 빼기", "memo": "경남 서남부"}, {"sido": "경상남도", "city": "산청", "lon": 127.873, "diff_sec": 90, "diff_label": "1분 30초 덜 빼기", "memo": "경남 서부"}, {"sido": "경상남도", "city": "함양", "lon": 127.725, "diff_sec": 54, "diff_label": "0분 54초 덜 빼기", "memo": "경남 서부"}, {"sido": "경상남도", "city": "거창", "lon": 127.909, "diff_sec": 98, "diff_label": "1분 38초 덜 빼기", "memo": "경남 북서부"}, {"sido": "경상남도", "city": "합천", "lon": 128.165, "diff_sec": 160, "diff_label": "2분 40초 덜 빼기", "memo": "경남 북부"}, {"sido": "제주특별자치도", "city": "제주시", "lon": 126.531, "diff_sec": -233, "diff_label": "3분 53초 더 빼기", "memo": "제주 북부"}, {"sido": "제주특별자치도", "city": "서귀포시", "lon": 126.56, "diff_sec": -226, "diff_label": "3분 46초 더 빼기", "memo": "제주 남부"}];
 
-// Build sido list
+const elSido = document.getElementById('sidoSelect');
+const elCity = document.getElementById('citySelect');
 const sidoList = [...new Set(DATA.map(d => d.sido))];
-const sidoSelect = document.getElementById('sidoSelect');
-const citySelect = document.getElementById('citySelect');
 
 sidoList.forEach(s => {
   const o = document.createElement('option');
   o.value = s; o.textContent = s;
-  sidoSelect.appendChild(o);
+  elSido.appendChild(o);
 });
 
 function filterCities() {
-  const sido = sidoSelect.value;
-  citySelect.innerHTML = '<option value="">지역 선택</option>';
-  const cities = DATA.filter(d => !sido || d.sido === sido);
-  cities.forEach(d => {
+  const sido = elSido.value;
+  elCity.innerHTML = '<option value="">— 병원 지역 선택 —</option>';
+  DATA.filter(d => !sido || d.sido === sido).forEach(d => {
     const o = document.createElement('option');
-    o.value = d.city; o.dataset.sido = d.sido;
-    o.textContent = d.city;
-    citySelect.appendChild(o);
+    o.value = d.city; o.textContent = d.city;
+    elCity.appendChild(o);
   });
-  document.getElementById('resultBox').classList.remove('show');
-  document.getElementById('noResult').classList.remove('show');
+  clearResult();
 }
 
 function selectCity() {
-  const city = citySelect.value;
-  const sido = sidoSelect.value;
+  const city = elCity.value;
+  const sido = elSido.value;
   if (!city) return;
   const found = DATA.find(d => d.city === city && (!sido || d.sido === sido));
-  if (found) showResult(found);
+  if (found) { showResult(found); updateCalc(); }
 }
 
 function liveSearch() {
   const q = document.getElementById('searchInput').value.trim();
-  if (!q) {
-    document.getElementById('resultBox').classList.remove('show');
-    document.getElementById('noResult').classList.remove('show');
-    return;
-  }
+  document.getElementById('noResult').classList.remove('show');
+  if (!q) { clearResult(); return; }
   const found = DATA.find(d => d.city.includes(q) || d.sido.includes(q));
-  if (found) {
-    showResult(found);
-    document.getElementById('noResult').classList.remove('show');
-  } else {
-    document.getElementById('resultBox').classList.remove('show');
+  if (found) { showResult(found); updateCalc(); }
+  else {
+    clearResult();
     document.getElementById('noResult').classList.add('show');
   }
 }
 
-function getType(diff_sec) {
-  const abs = Math.abs(diff_sec);
-  if (abs <= 60) return 'same';
-  return diff_sec < 0 ? 'more' : 'less';
+function clearResult() {
+  document.getElementById('resultBox').classList.remove('show');
 }
 
-function getBadgeHtml(diff_sec, diff_label) {
-  const t = getType(diff_sec);
-  if (t === 'same') return '<span class="result-badge badge-same">≈ 거의 동일</span>';
-  if (t === 'more') return '<span class="result-badge badge-more">⬆ ' + diff_label + '</span>';
-  return '<span class="result-badge badge-less">⬇ ' + diff_label + '</span>';
+function getType(ds) {
+  return Math.abs(ds) <= 60 ? 'same' : ds < 0 ? 'more' : 'less';
 }
 
-function getEmoji(diff_sec) {
-  const t = getType(diff_sec);
-  if (t === 'same') return '🟡';
-  if (t === 'more') return '🔵';
-  return '🟢';
-}
-
-function getWarning(diff_sec) {
-  const abs = Math.abs(diff_sec);
-  if (abs <= 60) return '30분 일괄 보정으로 충분한 지역입니다. 오차가 거의 없어요.';
-  if (abs <= 180) return '경계값 시간(시주가 바뀌는 시간 근처)에 태어났다면 확인이 필요할 수 있어요.';
-  return '30분 보정과의 차이가 크기 때문에, 경계값 시간대 분들은 반드시 출생지 경도 보정을 확인하세요!';
+function secToHHMM(s) {
+  const neg = s < 0;
+  const abs = Math.abs(s);
+  const h = Math.floor(abs / 3600);
+  const m = Math.floor((abs % 3600) / 60);
+  const sec = abs % 60;
+  const base = h + ':' + String(m).padStart(2,'0');
+  const full = sec ? base + ':' + String(sec).padStart(2,'0') : base;
+  return (neg ? '-' : '') + full;
 }
 
 function showResult(d) {
   const type = getType(d.diff_sec);
   const box = document.getElementById('resultBox');
-  const abs = Math.abs(d.diff_sec);
-  const absMin = Math.floor(abs / 60);
-  const absSec = abs % 60;
+  const emoji = type === 'same' ? '🟡' : type === 'more' ? '🔵' : '🟢';
+  const badgeCls = type === 'same' ? 'badge-same' : type === 'more' ? 'badge-more' : 'badge-less';
+  const warn = Math.abs(d.diff_sec) <= 60
+    ? '30분 보정 기준으로 충분한 지역이에요. 추가 보정이 거의 필요 없어요.'
+    : Math.abs(d.diff_sec) <= 180
+    ? '경계 시간대(시주가 바뀌는 시각 근처)라면 확인이 필요할 수 있어요.'
+    : '차이가 크기 때문에 경계 시간대 아이라면 반드시 출생지 경도를 확인하세요!';
 
-  // Compute standard (30분 보정) and actual ranges for 사시(巳時) as example
-  // 사시 = 09:00~11:00 → with 30min correction → 09:30~11:30
-  // Additional correction from diff_sec
-  function applyCorrection(baseMin, additionalSec) {
-    const total = baseMin * 60 + additionalSec;
-    const h = Math.floor(total / 3600);
-    const m = Math.floor((total % 3600) / 60);
-    const s = total % 60;
-    if (s === 0) return h + '시 ' + String(m).padStart(2,'0') + '분';
-    return h + '시 ' + String(m).padStart(2,'0') + '분 ' + String(s).padStart(2,'0') + '초';
+  // 사시(巳時) 기준 계산 예시
+  const adjust = -d.diff_sec;
+  function ts(sec) {
+    const h = Math.floor(sec/3600);
+    const mn = Math.floor((sec%3600)/60);
+    const s = sec%60;
+    return h + ':' + String(mn).padStart(2,'0') + (s ? ':'+String(s).padStart(2,'0') : '');
   }
-
-  // 사시(巳時) 기준 09:30~11:30 → adjust by diff
-  const adjust = -d.diff_sec; // diff_sec < 0 means subtract more (earlier start)
-  const siStart = 9*3600 + 30*60 + adjust;
-  const siEnd = 11*3600 + 30*60 + adjust;
-
-  function secToTime(s) {
-    const h = Math.floor(s/3600);
-    const m = Math.floor((s%3600)/60);
-    const sec = s % 60;
-    if (sec === 0) return h + ':' + String(m).padStart(2,'0');
-    return h + ':' + String(m).padStart(2,'0') + ':' + String(sec).padStart(2,'0');
-  }
-
-  const warning = getWarning(d.diff_sec);
-  const emoji = getEmoji(d.diff_sec);
 
   box.className = 'result-box show type-' + type;
-  box.innerHTML = \`
-    <div class="result-city">\${emoji} \${d.city}</div>
-    <div class="result-sido">\${d.sido} · 동경 \${d.lon}도 · \${d.memo}</div>
-    <div class="result-main">\${getBadgeHtml(d.diff_sec, d.diff_label)}</div>
-    <div class="result-detail">30분 일괄 보정 기준 대비 <strong>\${d.diff_label}</strong>이 필요합니다.</div>
-    <div class="result-times">
-      <div class="time-row">
-        <span class="time-label">📌 실제 경도 보정값</span>
-        <span class="time-value">(135 − \${d.lon}) × 4분 = \${(-(d.diff_sec + 1800)/60).toFixed(1)}분 보정</span>
-      </div>
-      <div class="time-row">
-        <span class="time-label">⏱ 사시(巳時·오전 09~11시) 정확 범위</span>
-        <span class="time-value">\${secToTime(siStart)} ~ \${secToTime(siEnd)}</span>
-      </div>
-      <div class="time-row">
-        <span class="time-label">📊 참고 메모</span>
-        <span class="time-value" style="font-size:12px;text-align:right;max-width:200px">\${warning}</span>
-      </div>
-    </div>
-  \`;
+  box.innerHTML =
+    '<div class="result-city">' + emoji + ' ' + d.city + '</div>' +
+    '<div class="result-sido">' + d.sido + ' · 동경 ' + d.lon + '도 · ' + d.memo + '</div>' +
+    '<div class="result-main"><span class="result-badge ' + badgeCls + '">' + d.diff_label + '</span></div>' +
+    '<div class="result-detail">30분 일괄 보정 기준 대비 <strong>' + d.diff_label + '</strong>이 필요합니다.</div>' +
+    '<div class="result-times">' +
+      '<div class="time-row"><span class="time-label">📌 경도 보정값</span><span class="time-value">' + (-(d.diff_sec+1800)/60).toFixed(1) + '분 보정</span></div>' +
+      '<div class="time-row"><span class="time-label">⏱ 사시(巳時) 정확 범위 (이 병원 기준)</span><span class="time-value">' + ts(9*3600+30*60+adjust) + ' ~ ' + ts(11*3600+30*60+adjust) + '</span></div>' +
+      '<div class="time-row"><span class="time-label">📊 참고</span><span class="time-value" style="font-size:12px;text-align:right;max-width:200px">' + warn + '</span></div>' +
+    '</div>';
+
+  // store current diff_sec for calculator
+  document.getElementById('calcSection').dataset.diffSec = d.diff_sec;
+  document.getElementById('calcSection').dataset.cityName = d.city;
+}
+
+// ── 택일 날짜 확인 계산기 ──────────────────────────────
+function updateCalc() {
+  const section = document.getElementById('calcSection');
+  const diffSec = parseInt(section.dataset.diffSec || '0');
+  const cityName = section.dataset.cityName || '';
+  const dateVal = document.getElementById('takilDate').value;
+  const sijuVal = document.getElementById('takilSiju').value;
+  const calcOut = document.getElementById('calcOut');
+
+  if (!dateVal || !sijuVal) {
+    calcOut.innerHTML = '<p style="color:var(--text-muted);font-size:13px;text-align:center">📅 택일 날짜와 시주를 선택하면 실제 수술 시각이 계산됩니다.</p>';
+    return;
+  }
+  if (!cityName) {
+    calcOut.innerHTML = '<p style="color:var(--text-muted);font-size:13px;text-align:center">위에서 병원 지역을 먼저 선택해 주세요.</p>';
+    return;
+  }
+
+  // Parse date
+  const [y, mo, d2] = dateVal.split('-').map(Number);
+
+  // sijuVal = "HH:MM" — start of the 2-hour siju window (30분 보정 기준)
+  const [sh, sm] = sijuVal.split(':').map(Number);
+  const sijuStartSec = sh * 3600 + sm * 60;   // 시주 시작 (30분 보정 기준)
+  const sijuEndSec   = sijuStartSec + 2 * 3600 - 60; // 시주 끝 (01:29 뒤)
+
+  // Apply additional location correction
+  // diffSec < 0 → subtract more → start is earlier
+  const actualStartSec = sijuStartSec + diffSec;
+  const actualEndSec   = sijuEndSec   + diffSec;
+
+  // Format seconds-of-day as "H시 MM분 SS초" with day-overflow handling
+  function fmtSec(s) {
+    const norm = ((s % 86400) + 86400) % 86400;
+    const hh = Math.floor(norm / 3600);
+    const mm = Math.floor((norm % 3600) / 60);
+    const ss = norm % 60;
+    return hh + '시 ' + String(mm).padStart(2,'0') + '분' + (ss ? ' ' + String(ss).padStart(2,'0') + '초' : '');
+  }
+
+  function formatDate(y, mo, d, extraDays) {
+    const dt = new Date(y, mo - 1, d);
+    dt.setDate(dt.getDate() + extraDays);
+    const days = ['일','월','화','수','목','금','토'];
+    return dt.getFullYear() + '년 ' + (dt.getMonth()+1) + '월 ' + dt.getDate() + '일 (' + days[dt.getDay()] + ')';
+  }
+
+  // Day shift for start (자시처럼 자정을 넘는 경우 대비)
+  function dayShift(rawSec) {
+    if (rawSec < 0) return -1;
+    if (rawSec >= 86400) return 1;
+    return 0;
+  }
+
+  const startDate = formatDate(y, mo, d2, dayShift(actualStartSec));
+  const endDate   = formatDate(y, mo, d2, dayShift(actualEndSec));
+
+  // 기준 시주 범위 (30분 보정, 보정 전)
+  const baseStart = fmtSec(sijuStartSec);
+  const baseEnd   = fmtSec(sijuEndSec);
+  const actualStart = fmtSec(actualStartSec);
+  const actualEnd   = fmtSec(actualEndSec);
+
+  // siju label from select
+  const sijuLabel = document.getElementById('takilSiju').selectedOptions[0].text.split('·')[0].trim();
+
+  const diffMin = Math.floor(Math.abs(diffSec) / 60);
+  const diffS   = Math.abs(diffSec) % 60;
+  const diffStr = diffSec === 0
+    ? '보정 없음 (거의 동일)'
+    : (diffSec < 0 ? diffMin + '분' + (diffS ? ' ' + diffS + '초' : '') + ' 앞당겨짐'
+                   : diffMin + '분' + (diffS ? ' ' + diffS + '초' : '') + ' 늦춰짐');
+
+  const type = getType(diffSec);
+  const alertColor = type === 'more' ? '#1e40af' : '#065f46';
+  const alertBg    = type === 'more' ? '#dbeafe' : '#d1fae5';
+
+  // 날짜 바뀌는지 여부
+  const dateChangedStart = dayShift(actualStartSec) !== 0;
+  const dateChangedEnd   = dayShift(actualEndSec)   !== 0;
+  const showStartDate = dateChangedStart ? '<div style="font-size:11px;opacity:0.7;margin-bottom:2px">' + startDate + '</div>' : '';
+  const showEndDate   = dateChangedEnd   ? '<span style="font-size:10px;opacity:0.7"> (' + endDate + ')</span>' : '';
+
+  calcOut.innerHTML =
+    '<div style="background:' + alertBg + ';border-radius:12px;padding:18px 20px;margin-bottom:14px">' +
+      '<div style="font-size:12px;color:' + alertColor + ';font-weight:700;margin-bottom:10px">📍 ' + cityName + ' 병원 기준 · ' + sijuLabel + ' 실제 수술 가능 시간대</div>' +
+      showStartDate +
+      '<div style="font-size:26px;font-weight:700;color:' + alertColor + ';letter-spacing:-0.5px">' +
+        actualStart + ' ~ ' + actualEnd + showEndDate +
+      '</div>' +
+    '</div>' +
+    '<div class="time-row"><span class="time-label">현승리 기준 (30분 보정)</span><span class="time-value">' + baseStart + ' ~ ' + baseEnd + '</span></div>' +
+    '<div class="time-row"><span class="time-label">병원 위치 추가 보정</span><span class="time-value">' + diffStr + '</span></div>' +
+    '<div class="time-row" style="border-bottom:none;padding-top:10px">' +
+      '<span class="time-label" style="font-weight:700;color:' + alertColor + '">✅ 이 병원에서의 실제 ' + sijuLabel + ' 범위</span>' +
+      '<span class="time-value" style="color:' + alertColor + ';font-size:15px">' + actualStart + ' ~ ' + actualEnd + '</span>' +
+    '</div>';
 }
 
 // Quick chips
-const quickCities = ['서울','부산','인천','대구','울산','광주(광역시)','대전','세종','제주시'];
 const chipsEl = document.getElementById('quickChips');
-['서울','부산','인천','대구','울산','대전','세종'].forEach(c => {
+['서울','부산','인천','대구','울산','대전','세종','강릉','여수','포항','제주시'].forEach(c => {
   const b = document.createElement('button');
   b.className = 'chip'; b.textContent = c;
   b.onclick = () => {
     const found = DATA.find(d => d.city === c);
-    if (found) showResult(found);
-    document.getElementById('searchInput').value = c;
-    document.getElementById('noResult').classList.remove('show');
-  };
-  chipsEl.appendChild(b);
-});
-['강릉','여수','포항','제주시'].forEach(c => {
-  const b = document.createElement('button');
-  b.className = 'chip'; b.textContent = c;
-  b.onclick = () => {
-    const found = DATA.find(d => d.city === c);
-    if (found) showResult(found);
+    if (found) { showResult(found); updateCalc(); }
     document.getElementById('searchInput').value = c;
     document.getElementById('noResult').classList.remove('show');
   };
   chipsEl.appendChild(b);
 });
 
-// Sido tabs for table
-const tabsEl = document.getElementById('sidoTabs');
-const tableBody = document.getElementById('tableBody');
-let currentSido = '';
-
-function renderTable(sido) {
-  const rows = sido ? DATA.filter(d => d.sido === sido) : DATA;
-  tableBody.innerHTML = rows.map(d => {
-    const t = getType(d.diff_sec);
-    const cls = t === 'more' ? 'tag-more' : t === 'less' ? 'tag-less' : 'tag-same';
-    return \`<tr onclick="showResult(DATA.find(x=>x.city==='\${d.city}'&&x.sido==='\${d.sido}'));window.scrollTo({top:document.getElementById('resultBox').offsetTop-80,behavior:'smooth'})">
-      <td><strong>\${d.city}</strong></td>
-      <td style="color:var(--text-muted)">\${d.lon}°</td>
-      <td class="\${cls}">\${d.diff_label}</td>
-      <td style="font-size:12px;color:var(--text-muted)">\${d.memo}</td>
-    </tr>\`;
-  }).join('');
-}
-
-// All tab
-const allTab = document.createElement('button');
-allTab.className = 'chip'; allTab.textContent = '전체';
-allTab.style.background = 'var(--primary)'; allTab.style.color = 'white';
-allTab.onclick = () => {
-  currentSido = '';
-  renderTable('');
-  document.querySelectorAll('#sidoTabs .chip').forEach(c => {
-    c.style.background = ''; c.style.color = '';
-  });
-  allTab.style.background = 'var(--primary)'; allTab.style.color = 'white';
-};
-tabsEl.appendChild(allTab);
-
-sidoList.forEach(s => {
-  const b = document.createElement('button');
-  b.className = 'chip';
-  b.textContent = s.replace('특별자치도','').replace('특별자치시','').replace('특별시','').replace('광역시','').replace('도','').replace('특별','');
-  b.onclick = () => {
-    currentSido = s;
-    renderTable(s);
-    document.querySelectorAll('#sidoTabs .chip').forEach(c => {
-      c.style.background = ''; c.style.color = '';
-    });
-    b.style.background = 'var(--primary)'; b.style.color = 'white';
-    allTab.style.background = ''; allTab.style.color = '';
-  };
-  tabsEl.appendChild(b);
-});
-
-renderTable('');
 </script>
 </body>
 </html>
