@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>2026년 7월 출생택일 추천 사주 분석 | 현승리</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #b8860b;
+    --gold-light: #fef9e7;
+    --gold-border: #f0d060;
+    --dark: #1a1a2e;
+    --dark2: #16213e;
+    --text: #2d2d2d;
+    --text-soft: #555;
+    --wood: #4a7c59;
+    --wood-light: #e8f5e9;
+    --fire: #c0392b;
+    --fire-light: #fdecea;
+    --earth: #d4a017;
+    --earth-light: #fffde7;
+    --metal: #607d8b;
+    --metal-light: #ecf0f1;
+    --water: #1565c0;
+    --water-light: #e3f2fd;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f8f7f4;
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 52px 20px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.15), transparent 60%);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.2);
+    border: 1px solid var(--gold-border);
+    color: #f0d060;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(20px, 5.5vw, 36px);
+    color: #fff; font-weight: 700; line-height: 1.45;
+    margin-bottom: 10px; position: relative; word-break: keep-all;
+  }
+  .hero h1 span { color: #f0d060; }
+  .hero-sub { color: rgba(255,255,255,0.65); font-size: 13px; position: relative; word-break: keep-all; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px; font-weight: 700; color: var(--dark);
+    margin: 36px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+    word-break: keep-all;
+  }
+
+  /* CARD */
+  .saju-card {
+    background: #fff; border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden;
+    margin-bottom: 28px; border: 1px solid #ece8df;
+  }
+  .saju-card-header {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    padding: 18px; display: flex; align-items: flex-start; gap: 12px;
+  }
+  .saju-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px; font-weight: 700; color: #fff;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .saju-card-header-info { flex: 1; min-width: 0; }
+  .saju-card-header-info h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(14px, 3.8vw, 17px);
+    color: #fff; font-weight: 600; word-break: keep-all; line-height: 1.4;
+  }
+  .saju-card-header-info p {
+    font-size: 11px; color: rgba(255,255,255,0.6);
+    margin-top: 3px; word-break: keep-all; line-height: 1.5;
+  }
+  .header-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .header-badge-score {
+    background: #f0d060; color: #1a1a2e;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-badge-silver {
+    background: rgba(255,255,255,0.25); color: #fff;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-badge-range {
+    background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+    font-size: 10px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; word-break: keep-all;
+  }
+  .saju-card-body { padding: 18px 16px; overflow: hidden; }
+
+  /* SAJU TABLE */
+  .saju-table-wrap { margin-bottom: 20px; width: 100%; overflow: hidden; }
+  .saju-table-label { font-size: 11px; color: var(--text-soft); font-weight: 700; margin-bottom: 8px; }
+  .saju-col-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 4px; }
+  .saju-col-label { text-align: center; font-size: 10px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; padding: 2px 0; }
+  .saju-row-header {
+    background: #2d2d2d; color: #f0d060; border-radius: 6px;
+    text-align: center; font-size: 10px; font-weight: 700;
+    padding: 5px 0; letter-spacing: 1px; margin-bottom: 5px;
+  }
+  .saju-table { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 5px; width: 100%; min-width: 0; }
+  .saju-cell { border-radius: 8px; padding: 10px 2px 8px; text-align: center; border: 2px solid transparent; min-width: 0; overflow: hidden; }
+  .saju-cell-char {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(18px, 5vw, 26px);
+    font-weight: 700; line-height: 1; margin-bottom: 4px;
+  }
+  .saju-cell-kor { font-size: 10px; font-weight: 700; opacity: 0.85; line-height: 1.3; }
+  .cell-wood  { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+  .cell-fire  { background: #fdecea; color: #c0392b; border-color: #ef9a9a; }
+  .cell-earth { background: #fffde7; color: #9a7600; border-color: #ffe082; }
+  .cell-metal { background: #ecf0f1; color: #455a64; border-color: #b0bec5; }
+  .cell-water { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+
+  /* OHAENG BARS */
+  .ohaeng-section { margin-bottom: 20px; }
+  .ohaeng-title { font-size: 12px; font-weight: 600; color: var(--text-soft); margin-bottom: 10px; }
+  .ohaeng-bars { display: flex; flex-direction: column; gap: 7px; }
+  .ohaeng-row { display: flex; align-items: center; gap: 8px; }
+  .ohaeng-label { width: 60px; font-size: 11px; font-weight: 600; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+  .ohaeng-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .ohaeng-bar-wrap { flex: 1; background: #f0ede8; border-radius: 6px; height: 14px; overflow: hidden; }
+  .ohaeng-bar-fill { height: 100%; border-radius: 6px; }
+  .ohaeng-pct { width: 44px; font-size: 11px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
+
+  /* YINYANG BAR */
+  .yinyang-section { margin-bottom: 20px; }
+  .yinyang-title { font-size: 12px; font-weight: 600; color: var(--text-soft); margin-bottom: 8px; }
+  .yinyang-bar-wrap {
+    width: 100%; display: flex; border-radius: 8px; overflow: hidden;
+  }
+  .yinyang-yang {
+    background: #c0392b;
+    padding: 5px 8px 5px 0;
+    text-align: right;
+    font-size: 10px; font-weight: 700; color: #fff;
+    white-space: nowrap;
+  }
+  .yinyang-yin {
+    background: #1565c0;
+    padding: 5px 0 5px 8px;
+    font-size: 10px; font-weight: 700; color: #fff;
+    white-space: nowrap;
+  }
+  .yinyang-labels {
+    display: flex; justify-content: space-between;
+    margin-top: 5px; font-size: 10px; font-weight: 600;
+  }
+  .yinyang-label-yang { color: #c0392b; }
+  .yinyang-label-yin  { color: #1565c0; }
+
+  .c-wood { color: var(--wood); } .c-fire { color: var(--fire); }
+  .c-earth { color: var(--earth); } .c-metal { color: var(--metal); } .c-water { color: var(--water); }
+  .bg-wood { background: var(--wood); } .bg-fire { background: var(--fire); }
+  .bg-earth { background: var(--earth); } .bg-metal { background: var(--metal); } .bg-water { background: var(--water); }
+
+  /* TAGS */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .tag { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; word-break: keep-all; }
+  .tag-gold   { background: #fef9e7; color: #92650a; border: 1px solid #f0d060; }
+  .tag-green  { background: var(--wood-light); color: var(--wood); border: 1px solid #a5d6a7; }
+  .tag-blue   { background: var(--water-light); color: var(--water); border: 1px solid #90caf9; }
+  .tag-gray   { background: #f5f5f5; color: #666; border: 1px solid #ddd; }
+  .tag-purple { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+  .tag-teal   { background: #e0f2f1; color: #00695c; border: 1px solid #80cbc4; }
+  .tag-orange { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+
+  /* CALLOUT */
+  .callout { border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .callout-text { flex: 1; line-height: 1.75; word-break: keep-all; }
+  .callout-text strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; word-break: keep-all; }
+  .callout-gold  { background: var(--gold-light); border-left: 4px solid var(--gold); }
+  .callout-blue  { background: var(--water-light); border-left: 4px solid var(--water); }
+  .callout-green { background: var(--wood-light); border-left: 4px solid var(--wood); }
+  .callout-gray  { background: #f5f5f5; border-left: 4px solid #9e9e9e; }
+
+  /* STRENGTH GRID */
+  .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .strength-item { background: var(--gold-light); border: 1px solid var(--gold-border); border-radius: 10px; padding: 12px; }
+  .strength-item .si-icon { font-size: 16px; margin-bottom: 4px; }
+  .strength-item .si-title { font-weight: 700; font-size: 12px; color: #7a5200; margin-bottom: 2px; }
+  .strength-item .si-desc { font-size: 11px; color: #8a6820; line-height: 1.5; word-break: keep-all; }
+
+  .divider { border: none; border-top: 1px solid #ece8df; margin: 16px 0; }
+
+  /* INSIGHT BOX */
+  .insight-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; }
+  .insight-box-title { color: #f0d060; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .insight-box-body { color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.8; word-break: keep-all; }
+
+  /* BALANCE NOTE */
+  .balance-note { background: #fffde7; border: 1px solid #f9e04b; border-radius: 8px; padding: 11px 13px; margin-top: 10px; font-size: 12px; color: #5a4000; line-height: 1.7; word-break: keep-all; }
+
+  .section-sub-label { font-size: 12px; font-weight: 700; color: var(--text-soft); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+
+  /* WEEK TABS */
+  .week-tabs { display: flex; gap: 6px; margin: 24px 0 20px; width: 100%; }
+  .week-tab {
+    flex: 1; min-width: 0;
+    padding: 10px 4px; border-radius: 10px;
+    border: 2px solid #e0d8cc; background: #f9f8f5; color: var(--text-soft);
+    font-size: 12px; font-weight: 700; text-align: center; cursor: pointer;
+    transition: all 0.2s ease; line-height: 1.4;
+    box-sizing: border-box;
+  }
+  .week-tab:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-light); }
+  .week-tab.active {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    border-color: var(--gold); color: #f0d060;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .week-tab .tab-range { font-size: 9px; font-weight: 500; opacity: 0.8; display: block; margin-top: 2px; }
+  .week-section { display: none; width: 100%; overflow: hidden; }
+  .week-section.active { display: block; }
+
+  /* EBOOK CTA */
+  .ebook-section {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    border-radius: var(--radius); padding: 36px 24px; margin: 40px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .ebook-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(184,134,11,0.18), transparent 55%);
+  }
+  .ebook-section::after {
+    content: '✦ ✦ ✦';
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    color: rgba(240,208,96,0.3); font-size: 11px; letter-spacing: 8px;
+  }
+  .ebook-info { position: relative; }
+  .ebook-cover-wrap { display: flex; justify-content: center; margin-bottom: 20px; position: relative; }
+  .ebook-cover-box {
+    width: 130px; height: 180px; border-radius: 10px;
+    background: linear-gradient(160deg, #1e3a5f, #0d2137);
+    border: 1px solid rgba(240,208,96,0.4);
+    box-shadow: 6px 6px 24px rgba(0,0,0,0.5), -2px -2px 8px rgba(240,208,96,0.1);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding: 16px;
+  }
+  .ebook-cover-box .ec-icon { font-size: 32px; }
+  .ebook-cover-box .ec-title {
+    font-family: 'Noto Serif KR', serif;
+    color: #f0d060; font-size: 11px; font-weight: 700;
+    text-align: center; line-height: 1.7; word-break: keep-all;
+  }
+  .ebook-free-badge {
+    position: absolute; top: -8px; right: calc(50% - 72px);
+    background: #f0d060; color: #1a1a2e;
+    font-size: 10px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .ebook-info .eb-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.25); border: 1px solid rgba(240,208,96,0.4);
+    color: #f0d060; font-size: 11px; letter-spacing: 1px; font-weight: 700;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .ebook-info h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(17px, 4.5vw, 22px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .ebook-info p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 18px; line-height: 1.6; word-break: keep-all; }
+  .ebook-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 14px; font-weight: 700;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(184,134,11,0.4);
+  }
+
+  /* FREE NAME CTA */
+  .free-name-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid rgba(240,208,96,0.35);
+    border-radius: var(--radius); padding: 28px 24px; margin: 16px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .free-name-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(240,208,96,0.08), transparent 60%);
+  }
+  .free-name-inner { position: relative; }
+  .free-name-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 11px; font-weight: 800;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .free-name-section h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(16px, 4vw, 20px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .free-name-section p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 16px; line-height: 1.6; word-break: keep-all; }
+  .free-name-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #1a1a2e;
+    font-size: 14px; font-weight: 800;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  /* FOOTER */
+  .footer { background: var(--dark2); padding: 32px 20px; color: rgba(255,255,255,0.6); font-size: 13px; }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title { font-family: 'Noto Serif KR', serif; color: #f0d060; font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 18px; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+  .footer-links a:hover { color: #f0d060; }
+  .footer-credit { font-size: 11px; color: rgba(255,255,255,0.35); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; line-height: 1.7; word-break: keep-all; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">✦ 2026년 출생택일 분석</div>
+  <h1>이 날 태어나면 왜 좋을까?<br><span>현승리의 7월 택일 사주 해설</span></h1>
+  <p class="hero-sub">사주명리학 기반 · 오행 균형 분석 · 초보자도 쉽게 이해하는 설명</p>
+</div>
+
+<div class="container">
+
+  <div class="callout callout-gold" style="margin-top: 8px;">
+    <div class="callout-icon">📌</div>
+    <div class="callout-text">
+      <strong>이 자료를 보기 전에</strong>
+      택일은 단순히 "좋은 날"을 고르는 것이 아닙니다. 아이가 태어날 때의 사주가 얼마나 균형 잡혀 있는지, 오행(목·화·토·금·수)이 고르게 분포되는지를 봅니다. 한자나 전문 용어를 몰라도 괜찮아요. 아래 설명을 차근차근 읽으시면 됩니다.
+    </div>
+  </div>
+
+  <!-- WEEK TABS -->
+  <div class="week-tabs">
+    <button class="week-tab active" onclick="showWeek(3, this)">
+      3주차<span class="tab-range">7/15~7/21</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(4, this)">
+      4주차<span class="tab-range">7/22~7/28</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(5, this)">
+      5주차<span class="tab-range">7/29~8/4</span>
+    </button>
+  </div>
+
+
+  <!-- ===================================================== -->
+  <!-- 3주차                                                  -->
+  <!-- ===================================================== -->
+  <div class="week-section active" data-week="3">
+    <div class="section-title">7월 15일 ~ 7월 21일 추천</div>
+
+    <!-- 3주차 1순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#b8860b,#d4a017);">1</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 17일 유시(酉時)</h2>
+          <p>오후 5시 30분 ~ 7시 29분 · 수(水) 임(壬) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-score">⭐ 82점 · 1순위</span>
+            <span class="header-badge-range">📅 3주차 최우선 추천</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">己</div><div class="saju-cell-kor">기 · 토(土)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">壬</div><div class="saju-cell-kor">임 · 수(水)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">辰</div><div class="saju-cell-kor">진 · 토(土)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 진유합금(辰酉合金)</div>
+          <div class="insight-box-body">
+            겉으로 보면 금(金)의 기운이 유금(酉金) 하나뿐이라 약해 보입니다. 그런데 <strong style="color:#f0d060;">진토(辰土)와 유금(酉金)이 만나면 진유합금(辰酉合金)</strong>이 됩니다. 진토가 금(金)으로 변하는 현상인데, 합을 반영하면 금의 기운이 훨씬 강해집니다.<br><br>
+            수(水) 일간으로서 나를 돕는 금이 강해져 수+금 합산 약 40%로 균형에 가까운 사주가 됩니다. 겉보기엔 토가 많아 불리해 보이지만, 실제로는 진유합금이 나를 도와주는 구조입니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-blue">💧 수(水) 일간 · 임(壬)</span>
+          <span class="tag tag-purple">🔄 진유합금(辰酉合金)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">📐 정관격</span>
+        </div>
+
+        <!-- 오행 분포 -->
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포 (진유합금 적용 후)</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div><div class="ohaeng-pct c-wood">10점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:40%"></div></div><div class="ohaeng-pct c-fire">40점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:10%"></div></div><div class="ohaeng-pct c-earth">10점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:30%"></div></div><div class="ohaeng-pct c-metal">30점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:10%"></div></div><div class="ohaeng-pct c-water">10점</div></div>
+          </div>
+          <div class="balance-note">
+            💧 수(水) 일간은 금+수가 '내 편'입니다. 금 30 + 수 10 = <strong>40점</strong>. 이름에 수·금 기운을 담아 보완하면 더욱 균형 잡힌 사주가 됩니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:56.6%">양기 56.6%</div>
+            <div class="yinyang-yin" style="width:43.4%">음기 43.4%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 이 주차 1순위인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">☯️</div>
+          <div class="callout-text">
+            <strong>조후(음양 균형)가 이 주차 최상 — 56.6점</strong>
+            음양의 조화를 나타내는 조후 점수가 56.6점으로 이 주차에서 가장 높습니다. 기(己)토의 습함, 오화(午火) 안의 기토 습토까지 더해 음기가 잘 보완된 사주입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">📐</div>
+          <div class="callout-text">
+            <strong>정관격(正官格) — 사회에서 인정받는 삶의 기운</strong>
+            격국이 정관격입니다. 원칙과 질서를 중시하고, 성실하게 노력해 사회에서 인정받는 삶의 기운을 가진 격입니다. 오행구족격에 정관격까지 더해진 완성도 높은 사주입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름으로 보완하면 더욱 빛나는 사주</strong>
+            수(水) 일간으로 40%의 신약한 편이므로, 이름에 수(水)와 금(金) 기운을 담아 일간을 강화해주는 것이 이 사주에서 특히 중요합니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🔄</div><div class="si-title">진유합금 효과</div><div class="si-desc">진토가 금으로 변환, 내 기운 강화</div></div>
+          <div class="strength-item"><div class="si-icon">☯️</div><div class="si-title">조후 최상 56.6점</div><div class="si-desc">이 주차에서 가장 이상적인 음양 균형</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족 · 정관격</div><div class="si-desc">다섯 오행 모두 갖춰진 드문 구성</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">수·금 기운으로 일간 강화</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3주차 2순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#607d8b,#78909c);">2</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 18일 유시(酉時)</h2>
+          <p>오후 5시 30분 ~ 7시 29분 · 수(水) 계(癸) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 81점 · 2순위</span>
+            <span class="header-badge-range">📅 3주차</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">辛</div><div class="saju-cell-kor">신 · 금(金)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">癸</div><div class="saju-cell-kor">계 · 수(水)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">巳</div><div class="saju-cell-kor">사 · 화(火)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-blue">💧 수(水) 일간 · 계(癸)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">🍃 식신격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:12%"></div></div><div class="ohaeng-pct c-wood">12점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:34%"></div></div><div class="ohaeng-pct c-fire">33.8점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:20%"></div></div><div class="ohaeng-pct c-earth">19.6점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:25%"></div></div><div class="ohaeng-pct c-metal">24.6점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:10%"></div></div><div class="ohaeng-pct c-water">10점</div></div>
+          </div>
+          <div class="balance-note">
+            💧 수(水) 일간은 금+수가 '내 편'입니다. 금 24.6 + 수 10 = <strong>34.6점</strong>. 이름에 수(水) 기운을 보충하면 더욱 빛나는 사주입니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:60.8%">양기 60.8%</div>
+            <div class="yinyang-yin" style="width:39.2%">음기 39.2%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 좋은 사주인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">🍃</div>
+          <div class="callout-text">
+            <strong>식신격(食神格) + 천을귀인 — 복덕과 귀인의 조합</strong>
+            식신격은 표현력·창의성·넉넉한 복덕을 상징하는 격입니다. 여기에 천을귀인까지 더해져 귀인의 도움을 받으면서 창의적인 재능을 꽃피우는 삶의 기운을 가집니다.
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">🌿</div>
+          <div class="callout-text">
+            <strong>오행구족격 — 목·화·토·금·수 모두 갖춰진 드문 사주</strong>
+            다섯 오행이 빠짐없이 갖춰진 구족격입니다. 균형보다 풍요로운 오행의 다양성이 이 사주의 매력입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름으로 완성하는 사주</strong>
+            이름에 수(水) 기운을 충분히 담아 일간을 강화하면, 오행구족격·식신격·천을귀인이 가진 좋은 기운이 더욱 빛을 발합니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🍃</div><div class="si-title">식신격</div><div class="si-desc">창의·표현·복덕의 기운을 가진 격국</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족격</div><div class="si-desc">다섯 오행 모두 갖춰진 드문 구성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">수 기운으로 일간 강화 및 음기 보충</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3주차 3순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#8d6e63,#a1887f);">3</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 18일 신시(申時)</h2>
+          <p>오후 3시 30분 ~ 5시 29분 · 수(水) 계(癸) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 79점 · 3순위</span>
+            <span class="header-badge-range">📅 유시가 어렵다면 대안</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">💡</div>
+          <div class="callout-text">
+            <strong>유시(17:30~19:29) 맞추기 어렵다면?</strong>
+            같은 날 신시(申時, 오후 3:30~5:29)도 좋은 대안입니다. 같은 계(癸) 일간이지만 시주가 달라져 시간(時干)이 신(辛) → 경(庚)으로 바뀝니다.
+          </div>
+        </div>
+
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">癸</div><div class="saju-cell-kor">계 · 수(水)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">申</div><div class="saju-cell-kor">신 · 금(金)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">巳</div><div class="saju-cell-kor">사 · 화(火)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-blue">💧 수(水) 일간 · 계(癸)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">🍃 식신격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:12%"></div></div><div class="ohaeng-pct c-wood">12점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:34%"></div></div><div class="ohaeng-pct c-fire">33.8점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:22%"></div></div><div class="ohaeng-pct c-earth">21.9점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:20%"></div></div><div class="ohaeng-pct c-metal">20점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:12%"></div></div><div class="ohaeng-pct c-water">12.3점</div></div>
+          </div>
+          <div class="balance-note">
+            💧 수(水) 일간은 금+수가 '내 편'입니다. 금 20 + 수 12.3 = <strong>32.3점</strong>. 천을귀인·오행구족격·식신격이 있어 이름 보완을 잘 하면 균형 잡힌 삶을 살 수 있습니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:61.6%">양기 61.6%</div>
+            <div class="yinyang-yin" style="width:38.4%">음기 38.4%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 좋은 사주인가?</div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">🌿</div>
+          <div class="callout-text">
+            <strong>오행구족격 — 목·화·토·금·수 모두 갖춰진 드문 사주</strong>
+            다섯 오행이 빠짐없이 갖춰진 구족격입니다. 목(木)·화(火)·토(土)·금(金)·수(水) 모두 사주에 표현되어 있어, 삶의 다양한 영역에서 균형 있는 기운을 가집니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">✨</div>
+          <div class="callout-text">
+            <strong>천을귀인(天乙貴人) — 귀인의 도움을 받는 사주</strong>
+            천을귀인이 포함되어 있어, 살면서 결정적인 순간에 귀인을 만나 도움받는 기운을 갖고 있습니다. 사주에서 매우 귀하게 여기는 길성 중 하나입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름에 수·금 기운 보완이 중요</strong>
+            수(水) 일간으로 금+수 합산 32.3점의 신약한 편입니다. 이름에 수(水)와 금(金) 기운을 담아 일간을 강화해주는 것이 이 사주에서 특히 중요합니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족격</div><div class="si-desc">다섯 오행 모두 갖춰진 드문 구성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">🍃</div><div class="si-title">식신격</div><div class="si-desc">창의·표현·복덕의 기운을 가진 격국</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">수·금 기운으로 일간 강화</div></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /week3 -->
+
+
+  <!-- ===================================================== -->
+  <!-- 4주차                                                  -->
+  <!-- ===================================================== -->
+  <div class="week-section" data-week="4">
+    <div class="section-title">7월 22일 ~ 7월 28일 추천</div>
+
+    <!-- 4주차 1순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#b8860b,#d4a017);">1</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 24일 신시(申時)</h2>
+          <p>오후 3시 30분 ~ 5시 29분 · 토(土) 기(己) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-score">⭐ 87점 · 1순위</span>
+            <span class="header-badge-range">📅 4주차 최우선 추천</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-water"><div class="saju-cell-char">壬</div><div class="saju-cell-kor">임 · 수(水)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">己</div><div class="saju-cell-kor">기 · 토(土)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">申</div><div class="saju-cell-kor">신 · 금(金)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">亥</div><div class="saju-cell-kor">해 · 수(水)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gold">🌍 토(土) 일간 · 기(己)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">🏛️ 건록격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:15%"></div></div><div class="ohaeng-pct c-wood">14.6점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:40%"></div></div><div class="ohaeng-pct c-fire">40점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:17%"></div></div><div class="ohaeng-pct c-earth">16.9점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:5%"></div></div><div class="ohaeng-pct c-metal">5.4점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:23%"></div></div><div class="ohaeng-pct c-water">23.1점</div></div>
+          </div>
+          <div class="balance-note">
+            🌍 토(土) 일간은 화+토가 '내 편'입니다. 화 40 + 토 16.9 = <strong>56.9점</strong>. 이름에 금(金)·수(水) 기운을 담아 균형을 맞춰주면 더욱 좋습니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:61.2%">양기 61.2%</div>
+            <div class="yinyang-yin" style="width:38.8%">음기 38.8%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 이 주차 1순위인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">✨</div>
+          <div class="callout-text">
+            <strong>천을귀인(天乙貴人) — 귀인의 도움을 받는 사주</strong>
+            천을귀인은 살면서 귀인을 만나 결정적인 도움을 받는 길성(吉星)입니다. 어렵고 힘든 순간에 좋은 사람이 나타나 길을 열어주는 기운입니다. 사주에서 매우 귀하게 여기는 길성 중 하나입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">🌿</div>
+          <div class="callout-text">
+            <strong>오행구족격 — 목·화·토·금·수가 모두 갖춰진 드문 사주</strong>
+            오행 다섯 가지가 빠짐없이 갖춰진 오행구족격입니다. 목(木)·화(火)·토(土)·금(金)·수(水)가 모두 있어 삶의 다양한 영역에서 균형 있는 기운을 가집니다. 이 주차에서 오행구족격은 큰 장점입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름에 금·수 기운으로 균형 완성</strong>
+            토(土) 일간으로 신강한 편이므로, 이름에 금(金)과 수(水) 기운을 담아 오행의 균형을 보완해주는 것이 좋습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 최고의 길성</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족격</div><div class="si-desc">목·화·토·금·수 모두 갖춰진 구성</div></div>
+          <div class="strength-item"><div class="si-icon">🏛️</div><div class="si-title">건록격</div><div class="si-desc">자립심·실력으로 성공하는 강인한 기운</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">금·수 기운으로 오행 균형 완성</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4주차 2순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#607d8b,#78909c);">2</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 25일 사시(巳時)</h2>
+          <p>오전 9시 30분 ~ 11시 29분 · 금(金) 경(庚) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 87점 · 2순위</span>
+            <span class="header-badge-range">📅 4주차</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">辛</div><div class="saju-cell-kor">신 · 금(金)</div></div>
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">巳</div><div class="saju-cell-kor">사 · 화(火)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 을경합금(乙庚合金)과 지장간 구족격</div>
+          <div class="insight-box-body">
+            이 사주의 핵심은 <strong style="color:#f0d060;">을경합금(乙庚合金)</strong>입니다. 천간에 을목(乙木)과 경금(庚金)이 함께 있으면 서로 합이 되어, 을목이 금(金)으로 변합니다. 겉으로 보이는 을목(乙木)은 실제로는 금(金)의 기운으로 작동하는 것입니다.<br><br>
+            그렇다면 목(木)이 아예 없는 사주가 될까요? 그렇지 않습니다. <strong style="color:#f0d060;">미토(未土)의 지장간에는 정(丁)·을(乙)·기(己)가 숨어 있는데, 이 중 을(乙)이 목(木)의 기운</strong>입니다. 지장간까지 보면 목이 살아 있어, 오행 전체가 갖춰진 지장간 구족격이 완성됩니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">⚙️ 금(金) 일간 · 경(庚)</span>
+          <span class="tag tag-purple">🔄 을경합금(乙庚合金)</span>
+          <span class="tag tag-green">🌿 지장간 구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">💰 정재격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포 (표면 기준)</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:2%"></div></div><div class="ohaeng-pct c-wood">2점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:28%"></div></div><div class="ohaeng-pct c-fire">28.4점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:17%"></div></div><div class="ohaeng-pct c-earth">17.3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:32%"></div></div><div class="ohaeng-pct c-metal">32.3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20%"></div></div><div class="ohaeng-pct c-water">20점</div></div>
+          </div>
+          <div class="balance-note">
+            ⚙️ 금(金) 일간은 금+토가 '내 편'입니다. 을경합금 반영 시 금 32.3 + 을목(금으로 변환) + 토 17.3 = <strong>49.6점</strong>으로 50%에 가장 가까운, 압도적으로 균형 잡힌 사주입니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:51.6%">양기 51.6%</div>
+            <div class="yinyang-yin" style="width:48.4%">음기 48.4%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 좋은 사주인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-text">
+            <strong>49.6점 — 50%에 가장 가까운 압도적인 균형 사주</strong>
+            을경합금을 반영하면 금+토가 49.6점으로, 사주에서 가장 이상적인 50:50에 극도로 근접합니다. 어느 한쪽으로 치우치지 않고 평탄하고 안정적인 삶의 기운을 가진 사주입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-blue">
+          <div class="callout-icon">✨</div>
+          <div class="callout-text">
+            <strong>천을귀인(天乙貴人) — 귀인의 도움을 받는 사주</strong>
+            천을귀인이 포함되어 있어 살면서 결정적인 순간에 귀인을 만나 도움받는 기운을 갖고 있습니다. 사주에서 매우 귀하게 여기는 길성 중 하나로, 균형 잡힌 명식에 귀인 복까지 더해진 완성도 높은 사주입니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">⚖️</div><div class="si-title">49.6% 압도적 균형</div><div class="si-desc">50%에 가장 가까운 평탄한 명식</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">지장간 구족격</div><div class="si-desc">미토 지장간의 을목으로 오행 완성</div></div>
+          <div class="strength-item"><div class="si-icon">💰</div><div class="si-title">정재격</div><div class="si-desc">성실함으로 쌓는 안정적 재물 복</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4주차 3순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#8d6e63,#a1887f);">3</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 7월 25일 유시(酉時)</h2>
+          <p>오후 5시 30분 ~ 7시 29분 · 금(金) 경(庚) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 85점 · 3순위</span>
+            <span class="header-badge-range">📅 사시가 어렵다면 대안</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">💡</div>
+          <div class="callout-text">
+            <strong>사시(09:30~11:29) 맞추기 어렵다면?</strong>
+            같은 날 유시(酉時, 오후 5:30~7:29)도 좋은 대안입니다. 같은 경(庚) 일간이며, 5가지 오행이 모두 고르게 분포된 구족격입니다.
+          </div>
+        </div>
+
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div>
+            <div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">⚙️ 금(金) 일간 · 경(庚)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">💰 정재격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:22%"></div></div><div class="ohaeng-pct c-wood">22점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:23%"></div></div><div class="ohaeng-pct c-fire">23점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:15%"></div></div><div class="ohaeng-pct c-earth">15점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:20%"></div></div><div class="ohaeng-pct c-metal">20점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:20%"></div></div><div class="ohaeng-pct c-water">20점</div></div>
+          </div>
+          <div class="balance-note">
+            ⚙️ 금(金) 일간은 금+토가 '내 편'입니다. 금 20 + 토 15 = <strong>35점</strong>으로 신약한 편이지만, 오행이 모두 20점 내외로 고르게 퍼져 있어 매우 안정적인 분포입니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:53.0%">양기 53.0%</div>
+            <div class="yinyang-yin" style="width:47.0%">음기 47.0%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 이 사주의 특징은?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">🌿</div>
+          <div class="callout-text">
+            <strong>오행구족격이 가장 확실한 사주 — 고른 분포가 최대 강점</strong>
+            목 22점 · 화 23점 · 토 15점 · 금 20점 · 수 20점. 다섯 오행이 모두 골고루 분포되어 있어 오행구족격이 가장 명확하게 드러나는 사주입니다. 어느 한 기운이 치우치지 않고 고른 분포 자체가 이 사주의 가장 큰 매력입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-blue">
+          <div class="callout-icon">✨</div>
+          <div class="callout-text">
+            <strong>천을귀인 — 귀인의 도움을 받는 사주</strong>
+            천을귀인이 포함되어 있어, 살면서 결정적인 순간에 귀인을 만나 도움받는 기운을 갖고 있습니다. 오행구족격에 천을귀인까지 더해진 완성도 높은 구성입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름에 금·토 기운으로 일간 보완이 필요</strong>
+            금(金)으로 태어났지만 금+토가 35점으로 신약한 편입니다. 이름에 금(金)과 함께 금을 돕는 토(土) 기운을 담아 일간을 강화해주는 것이 좋습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족격</div><div class="si-desc">다섯 오행이 고르게 분포된 드문 구성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">💰</div><div class="si-title">정재격</div><div class="si-desc">성실함으로 쌓는 안정적 재물 복</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">금·토 기운으로 일간 강화</div></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /week4 -->
+
+
+  <!-- ===================================================== -->
+  <!-- 5주차                                                  -->
+  <!-- ===================================================== -->
+  <div class="week-section" data-week="5">
+    <div class="section-title">7월 29일 ~ 8월 4일 추천</div>
+
+    <!-- 5주차 1순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#b8860b,#d4a017);">1</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 8월 4일 오시(午時)</h2>
+          <p>오전 11시 30분 ~ 오후 1시 29분 · 금(金) 경(庚) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-score">⭐ 88점 · 1순위</span>
+            <span class="header-badge-range">📅 5주차 최우선 추천</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-water"><div class="saju-cell-char">壬</div><div class="saju-cell-kor">임 · 수(水)</div></div>
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">戌</div><div class="saju-cell-kor">술 · 토(土)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 을경합금(乙庚合金)과 지장간 구족격</div>
+          <div class="insight-box-body">
+            이 사주에도 <strong style="color:#f0d060;">을경합금(乙庚合金)</strong>이 작용합니다. 천간의 을목(乙木)이 경금(庚金)과 합이 되어 금(金)으로 변합니다. 겉보기에는 오행이 모두 있는 것처럼 보이지만, 을목이 금으로 변하면 목(木)이 사라지는 것 아닐까요?<br><br>
+            여기서 중요한 것이 <strong style="color:#f0d060;">미토(未土)의 지장간</strong>입니다. 미토 안에는 정(丁)·을(乙)·기(己)가 숨어 있는데, 이 중 을(乙)이 목(木)의 기운입니다. 천간의 을목은 합으로 금이 되었지만, 미토 지장간의 을목은 여전히 목의 기운으로 살아 있습니다. 따라서 지장간까지 보면 오행이 모두 갖춰진 지장간 구족격이 완성됩니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">⚙️ 금(金) 일간 · 경(庚)</span>
+          <span class="tag tag-purple">🔄 을경합금(乙庚合金)</span>
+          <span class="tag tag-green">🌿 지장간 구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">💰 정재격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포 (표면 기준)</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:2%"></div></div><div class="ohaeng-pct c-wood">2점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:32%"></div></div><div class="ohaeng-pct c-fire">32점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:30%"></div></div><div class="ohaeng-pct c-earth">30점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:26%"></div></div><div class="ohaeng-pct c-metal">26점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:10%"></div></div><div class="ohaeng-pct c-water">10점</div></div>
+          </div>
+          <div class="balance-note">
+            ⚙️ 금(金) 일간은 금+토가 '내 편'입니다. 을경합금 반영 시 금+토 = <strong>56점</strong>으로 대체로 조화로운 신강 사주입니다. 이름에 수(水)·목(木) 기운을 담아 오행을 더욱 풍요롭게 보완하면 좋습니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:54.2%">양기 54.2%</div>
+            <div class="yinyang-yin" style="width:45.8%">음기 45.8%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 이 주차 1순위인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">⭐</div>
+          <div class="callout-text">
+            <strong>이 주차 최고점 88점 — 억부·조후·격국·귀인 고루 조화</strong>
+            을경합금 반영 시 금+토 56%로 대체로 조화로운 억부, 54.2 : 45.8의 안정적인 음양 조후, 정재격의 재물 복, 그리고 천을귀인까지 네 가지 좋은 기운이 한 사주에 담겨 있습니다.
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">💰</div>
+          <div class="callout-text">
+            <strong>정재격(正財格) + 지장간 구족격 — 풍요롭고 완성도 높은 사주</strong>
+            정재격은 성실함으로 안정적인 재물을 쌓는 기운입니다. 지장간까지 보면 오행이 모두 갖춰진 지장간 구족격이며, 천을귀인까지 포함된 완성도 높은 사주입니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">💰</div><div class="si-title">정재격</div><div class="si-desc">성실함으로 쌓는 안정적 재물 복</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">지장간 구족격</div><div class="si-desc">미토 지장간의 을목으로 오행 완성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">☯️</div><div class="si-title">음양 조후 안정</div><div class="si-desc">54.2 : 45.8 균형 잡힌 음양 구성</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5주차 2순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#607d8b,#78909c);">2</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 8월 4일 미시(未時)</h2>
+          <p>오후 1시 30분 ~ 3시 29분 · 금(金) 경(庚) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 87점 · 2순위</span>
+            <span class="header-badge-range">📅 5주차</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">💡</div>
+          <div class="callout-text">
+            <strong>오시(11:30~13:29) 맞추기 어렵다면?</strong>
+            같은 날 미시(未時, 오후 1:30~3:29)도 1점 차이의 훌륭한 대안입니다. 같은 경(庚) 일간이며, 지장간 구족격·천을귀인·정재격을 그대로 갖추고 있습니다.
+          </div>
+        </div>
+
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-water"><div class="saju-cell-char">癸</div><div class="saju-cell-kor">계 · 수(水)</div></div>
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">戌</div><div class="saju-cell-kor">술 · 토(土)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 을경합금으로 단단해지는 금(金)의 기운</div>
+          <div class="insight-box-body">
+            이 사주 역시 <strong style="color:#f0d060;">을경합금(乙庚合金)</strong>이 작용합니다. 천간의 을목(乙木)이 경금(庚金)과 합이 되어 금(金)으로 변하면서, 일간인 금(金)의 기운이 더욱 단단해집니다. 거기에 미토(未土)·술토(戌土)·미토(未土)로 이어지는 토(土)의 기운이 금을 든든하게 받쳐주는 구조입니다.<br><br>
+            그 결과 금+토(내 편)가 <strong style="color:#f0d060;">59점</strong>으로, 억부 면에서는 1순위(오시)보다 조금 더 신강한 편입니다. 다만 미토 지장간의 을목이 여전히 목의 기운으로 살아 있어 지장간 구족격이 유지됩니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">⚙️ 금(金) 일간 · 경(庚)</span>
+          <span class="tag tag-purple">🔄 을경합금(乙庚合金)</span>
+          <span class="tag tag-green">🌿 지장간 구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">💰 정재격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포 (표면 기준)</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:3%"></div></div><div class="ohaeng-pct c-wood">3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:28%"></div></div><div class="ohaeng-pct c-fire">28점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:33%"></div></div><div class="ohaeng-pct c-earth">33점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:26%"></div></div><div class="ohaeng-pct c-metal">26점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:10%"></div></div><div class="ohaeng-pct c-water">10점</div></div>
+          </div>
+          <div class="balance-note">
+            ⚙️ 금(金) 일간은 금+토가 '내 편'입니다. 을경합금 반영 시 <strong>59점</strong>으로 신강한 사주입니다. 1순위(오시)에 비해 억부 균형이 조금 더 신강 쪽으로 치우쳐 있습니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:51.6%">양기 51.6%</div>
+            <div class="yinyang-yin" style="width:48.4%">음기 48.4%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 1순위와 비교해서 어떤 차이가 있나요?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">☯️</div>
+          <div class="callout-text">
+            <strong>억부는 1순위보다 신강하지만, 조후 균형은 더 뛰어남</strong>
+            1순위(오시)가 억부 56%, 조후 54.2 : 45.8이라면, 미시는 억부 59%로 조금 더 신강하지만, 조후는 51.6 : 48.4로 양기와 음기가 더욱 균형 잡힙니다. 어느 쪽을 더 중시하느냐에 따라 선택이 달라질 수 있습니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름에 목·수 기운 보완이 중요</strong>
+            이 사주가 신강한 이유는 미토·술토·미토로 이어지는 토(土)의 인성이 금(金) 일간을 강하게 생해주기 때문입니다. 인성이 과한 신강 사주에서는 관성(목·화)이나 식상(수·목)으로 균형을 맞추는 것이 좋습니다. 이름에 목(木)과 수(水) 기운을 담아 신강함을 조절해주는 것이 좋습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">☯️</div><div class="si-title">조후 51.6 : 48.4</div><div class="si-desc">이 주차 가장 균형 잡힌 음양 조후</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">지장간 구족격</div><div class="si-desc">미토 지장간의 을목으로 오행 완성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">💰</div><div class="si-title">정재격</div><div class="si-desc">성실함으로 쌓는 안정적 재물 복</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5주차 3순위 -->
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num" style="background:linear-gradient(135deg,#8d6e63,#a1887f);">3</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 8월 3일 신시(申時)</h2>
+          <p>오후 3시 30분 ~ 5시 29분 · 토(土) 기(己) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-silver">⭐ 84점 · 3순위</span>
+            <span class="header-badge-range">📅 5주차</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-water"><div class="saju-cell-char">壬</div><div class="saju-cell-kor">임 · 수(水)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">己</div><div class="saju-cell-kor">기 · 토(土)</div></div>
+            <div class="saju-cell cell-wood"><div class="saju-cell-char">乙</div><div class="saju-cell-kor">을 · 목(木)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">申</div><div class="saju-cell-kor">신 · 금(金)</div></div>
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div>
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">未</div><div class="saju-cell-kor">미 · 토(土)</div></div>
+            <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 오미합화(午未合火)로 달라지는 토(土)의 비율</div>
+          <div class="insight-box-body">
+            사주에 미토(未土)가 있고 오화(午火)가 있을 때, 이 두 글자가 만나면 <strong style="color:#f0d060;">오미합화(午未合火)</strong>가 됩니다. 미토(土)가 화(火)로 바뀌는 현상입니다. 그래서 지지에 토가 두 글자(신·유 아님, 미토·오화)가 있어 보여도 실제 토의 점수는 12.3점으로 낮게 나오는 이유가 바로 이 합 때문입니다.<br><br>
+            토(土)로 태어나 토를 돕는 화(火)까지 더하면 <strong style="color:#f0d060;">화 40 + 토 12.3 = 52.3점</strong>으로 대체로 균형에 가까운 신강 사주가 됩니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gold">🌍 토(土) 일간 · 기(己)</span>
+          <span class="tag tag-purple">🔄 오미합화(午未合火)</span>
+          <span class="tag tag-green">🌿 오행구족격</span>
+          <span class="tag tag-gold">✨ 천을귀인</span>
+          <span class="tag tag-teal">🏛️ 건록격</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div><div class="ohaeng-pct c-wood">10점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:40%"></div></div><div class="ohaeng-pct c-fire">40점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:12%"></div></div><div class="ohaeng-pct c-earth">12.3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:25%"></div></div><div class="ohaeng-pct c-metal">25.4점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:12%"></div></div><div class="ohaeng-pct c-water">12.3점</div></div>
+          </div>
+          <div class="balance-note">
+            🌍 토(土) 일간은 화+토가 '내 편'입니다. 화 40 + 토 12.3 = <strong>52.3점</strong>. 오미합화 덕분에 화의 기운이 강화되어 대체로 균형에 가까운 신강 사주입니다.
+          </div>
+        </div>
+
+        <!-- 음양 시각화 -->
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:57.3%">양기 57.3%</div>
+            <div class="yinyang-yin" style="width:42.7%">음기 42.7%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 좋은 사주인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">🏛️</div>
+          <div class="callout-text">
+            <strong>건록격(建祿格) — 자수성가형 강인한 삶의 기운</strong>
+            건록격은 스스로의 힘으로 일어서는 자립심과 강인함을 상징합니다. 외부 도움보다 자기 실력으로 성공하는 기운이며, 꾸준히 노력해 사회적 지위를 쌓아가는 삶의 방향을 가집니다.
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">🌿</div>
+          <div class="callout-text">
+            <strong>오행구족격 + 천을귀인 — 완성도 높은 사주</strong>
+            목·화·토·금·수 다섯 오행이 모두 갖춰진 구족격이며, 천을귀인까지 포함됩니다. 52.3점의 안정적인 신강 균형에 오행구족격까지 더해진 좋은 사주입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-gray">
+          <div class="callout-icon">📝</div>
+          <div class="callout-text">
+            <strong>이름에 수·금 기운으로 조후 보완이 중요</strong>
+            억부는 52.3%로 대체로 균형에 가깝지만, 조후 면에서 음기가 다소 강한 편입니다. 이름에 수(水)와 금(金) 기운을 담아 음양 조화를 더욱 풍요롭게 보완하는 것이 좋습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🏆 핵심 장점 요약</div>
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🔄</div><div class="si-title">오미합화</div><div class="si-desc">미토가 화로 변환, 억부 균형 달성</div></div>
+          <div class="strength-item"><div class="si-icon">🌿</div><div class="si-title">오행구족격</div><div class="si-desc">다섯 오행 모두 갖춰진 드문 구성</div></div>
+          <div class="strength-item"><div class="si-icon">✨</div><div class="si-title">천을귀인</div><div class="si-desc">귀인의 도움을 받는 길성 포함</div></div>
+          <div class="strength-item"><div class="si-icon">📝</div><div class="si-title">이름 보완 권장</div><div class="si-desc">수·금 기운으로 조후 음양 균형 완성</div></div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /week5 -->
+
+
+  <!-- EBOOK CTA -->
+  <div class="ebook-section">
+    <div class="ebook-info">
+      <div class="eb-badge">📖 무료 전자책</div>
+      <div class="ebook-cover-wrap">
+        <div class="ebook-cover-box">
+          <div class="ec-icon">📗</div>
+          <div class="ec-title">작명하기 전,<br>알았다면<br>좋았을 것들</div>
+        </div>
+        <div class="ebook-free-badge">🎁 무료 공개</div>
+      </div>
+      <h3>작명하기 전,<br>알았다면 좋았을 것들</h3>
+      <p>구독자 1.4만 작명 유튜버 현승리가 직접 쓴<br>작명 실패 없는 A to Z 가이드</p>
+      <a href="https://hslee.co.kr/ebook" target="_blank" class="ebook-btn">📖 무료로 읽어보기 →</a>
+    </div>
+  </div>
+
+  <!-- FREE NAME CTA -->
+  <div class="free-name-section">
+    <div class="free-name-inner">
+      <div class="free-name-badge">🎁 무료 서비스</div>
+      <h3>내 이름, 사주에 맞게<br>잘 지어졌을까?</h3>
+      <p>사주 균형 · 오행 분석 · 이름의 기운까지<br>현승리가 직접 분석한 무료 이름풀이 서비스</p>
+      <a href="https://hslee.co.kr/service" target="_blank" class="free-name-btn">✨ 무료 이름풀이 받기 →</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-title">📎 출처 및 채널 안내</div>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
+      <a href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+    <div class="footer-credit">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+  </div>
+</div>
+
+<script>
+function showWeek(week, btn) {
+  document.querySelectorAll('.week-section').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.week-tab').forEach(el => el.classList.remove('active'));
+  document.querySelector('.week-section[data-week="' + week + '"]').classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
