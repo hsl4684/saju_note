@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>2026년 6월 꼭 피해야 할 날 사주 분석 | 현승리</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+  :root {
+    --red: #b91c1c;
+    --red-light: #fef2f2;
+    --red-border: #fca5a5;
+    --dark: #1a1a2e;
+    --dark2: #16213e;
+    --text: #2d2d2d;
+    --text-soft: #555;
+    --wood: #4a7c59;
+    --wood-light: #e8f5e9;
+    --fire: #c0392b;
+    --fire-light: #fdecea;
+    --earth: #d4a017;
+    --earth-light: #fffde7;
+    --metal: #607d8b;
+    --metal-light: #ecf0f1;
+    --water: #1565c0;
+    --water-light: #e3f2fd;
+    --gold: #b8860b;
+    --gold-light: #fef9e7;
+    --gold-border: #f0d060;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f8f7f4;
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* HERO — 경고 분위기 */
+  .hero {
+    background: linear-gradient(135deg, #1c0606 0%, #3b0d0d 50%, #7f1d1d 100%);
+    padding: 52px 20px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(220,38,38,0.18), transparent 60%);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(220,38,38,0.25);
+    border: 1px solid #f87171;
+    color: #fca5a5;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(20px, 5.5vw, 36px);
+    color: #fff; font-weight: 700; line-height: 1.45;
+    margin-bottom: 10px; position: relative; word-break: keep-all;
+  }
+  .hero h1 span { color: #fca5a5; }
+  .hero-sub { color: rgba(255,255,255,0.65); font-size: 13px; position: relative; word-break: keep-all; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px; font-weight: 700; color: var(--dark);
+    margin: 36px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid var(--red);
+    word-break: keep-all;
+  }
+
+  /* 경고 배너 */
+  .warn-banner {
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    border-radius: var(--radius);
+    border: 1px solid #818cf8;
+    padding: 20px 20px;
+    margin: 16px 0 28px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .warn-banner-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .warn-banner-text { flex: 1; }
+  .warn-banner-text strong {
+    color: #c7d2fe;
+    font-size: 14px; font-weight: 700; margin-bottom: 8px;
+  }
+  .warn-banner-text p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.85; word-break: keep-all; }
+
+  /* CARD */
+  .saju-card {
+    background: #fff; border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden;
+    margin-bottom: 28px; border: 1px solid #ece8df;
+  }
+  .saju-card-header {
+    background: linear-gradient(135deg, #450a0a, #7f1d1d);
+    padding: 18px; display: flex; align-items: flex-start; gap: 12px;
+  }
+  .saju-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px; font-weight: 700; color: #fff;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .saju-card-header-info { flex: 1; min-width: 0; }
+  .saju-card-header-info h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(14px, 3.8vw, 17px);
+    color: #fff; font-weight: 600; word-break: keep-all; line-height: 1.4;
+  }
+  .saju-card-header-info p {
+    font-size: 11px; color: rgba(255,255,255,0.6);
+    margin-top: 3px; word-break: keep-all; line-height: 1.5;
+  }
+  .header-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .header-badge-warn {
+    background: #ef4444; color: #fff;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-badge-rank {
+    background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+    font-size: 10px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; word-break: keep-all;
+  }
+
+  .saju-card-body { padding: 18px 16px; overflow: hidden; }
+
+  /* SAJU TABLE */
+  .saju-table-wrap { margin-bottom: 20px; width: 100%; overflow: hidden; }
+  .saju-table-label { font-size: 11px; color: var(--text-soft); font-weight: 700; margin-bottom: 8px; }
+  .saju-col-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 4px; }
+  .saju-col-label { text-align: center; font-size: 10px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; padding: 2px 0; }
+  .saju-row-header {
+    background: #2d2d2d; color: #fca5a5; border-radius: 6px;
+    text-align: center; font-size: 10px; font-weight: 700;
+    padding: 5px 0; letter-spacing: 1px; margin-bottom: 5px;
+  }
+  .saju-table { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 5px; width: 100%; min-width: 0; }
+  .saju-cell { border-radius: 8px; padding: 10px 2px 8px; text-align: center; border: 2px solid transparent; min-width: 0; overflow: hidden; }
+  .saju-cell-char {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(18px, 5vw, 26px);
+    font-weight: 700; line-height: 1; margin-bottom: 4px;
+  }
+  .saju-cell-kor { font-size: 10px; font-weight: 700; opacity: 0.85; line-height: 1.3; }
+  .cell-wood  { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+  .cell-fire  { background: #fdecea; color: #c0392b; border-color: #ef9a9a; }
+  .cell-earth { background: #fffde7; color: #9a7600; border-color: #ffe082; }
+  .cell-metal { background: #ecf0f1; color: #455a64; border-color: #b0bec5; }
+  .cell-water { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+
+  /* OHAENG BARS */
+  .ohaeng-section { margin-bottom: 20px; }
+  .ohaeng-title { font-size: 12px; font-weight: 600; color: var(--text-soft); margin-bottom: 10px; }
+  .ohaeng-bars { display: flex; flex-direction: column; gap: 7px; }
+  .ohaeng-row { display: flex; align-items: center; gap: 8px; }
+  .ohaeng-label { width: 60px; font-size: 11px; font-weight: 600; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+  .ohaeng-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .ohaeng-bar-wrap { flex: 1; background: #f0ede8; border-radius: 6px; height: 14px; overflow: hidden; }
+  .ohaeng-bar-fill { height: 100%; border-radius: 6px; }
+  .ohaeng-pct { width: 44px; font-size: 11px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
+
+  .c-wood { color: var(--wood); } .c-fire { color: var(--fire); }
+  .c-earth { color: var(--earth); } .c-metal { color: var(--metal); } .c-water { color: var(--water); }
+  .bg-wood { background: var(--wood); } .bg-fire { background: var(--fire); }
+  .bg-earth { background: var(--earth); } .bg-metal { background: var(--metal); } .bg-water { background: var(--water); }
+
+  /* 오행 없음 강조 */
+  .ohaeng-zero { background: #fee2e2; border-radius: 6px; padding: 8px 12px; margin-top: 10px; font-size: 12px; color: #991b1b; font-weight: 600; line-height: 1.7; word-break: keep-all; }
+  .ohaeng-zero strong { display: block; font-size: 13px; margin-bottom: 2px; }
+
+  /* 극신강 배지 */
+  .extreme-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fef2f2; border: 2px solid #fca5a5;
+    color: #991b1b; font-size: 12px; font-weight: 800;
+    padding: 6px 14px; border-radius: 10px; margin-bottom: 14px;
+  }
+
+  /* TAGS */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .tag { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; word-break: keep-all; }
+  .tag-red    { background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+  .tag-gold   { background: #fef9e7; color: #92650a; border: 1px solid #f0d060; }
+  .tag-green  { background: var(--wood-light); color: var(--wood); border: 1px solid #a5d6a7; }
+  .tag-blue   { background: var(--water-light); color: var(--water); border: 1px solid #90caf9; }
+  .tag-gray   { background: #f5f5f5; color: #666; border: 1px solid #ddd; }
+  .tag-orange { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+
+  /* CALLOUT */
+  .callout { border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .callout-text { flex: 1; line-height: 1.75; word-break: keep-all; }
+  .callout-text strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; word-break: keep-all; }
+  .callout-red   { background: #fef2f2; border-left: 4px solid #dc2626; }
+  .callout-gold  { background: var(--gold-light); border-left: 4px solid var(--gold); }
+  .callout-blue  { background: var(--water-light); border-left: 4px solid var(--water); }
+  .callout-green { background: var(--wood-light); border-left: 4px solid var(--wood); }
+  .callout-gray  { background: #f5f5f5; border-left: 4px solid #9e9e9e; }
+
+  /* PROBLEM LIST */
+  .problem-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .problem-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: #fef2f2; border: 1px solid #fecaca;
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .problem-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #dc2626; color: #fff;
+    font-size: 11px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .problem-text { flex: 1; font-size: 13px; color: #7f1d1d; line-height: 1.7; word-break: keep-all; }
+  .problem-text strong { font-weight: 700; }
+
+  /* INSIGHT BOX */
+  .insight-box { background: linear-gradient(135deg, #450a0a, #7f1d1d); border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; }
+  .insight-box-title { color: #fca5a5; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .insight-box-body { color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.8; word-break: keep-all; }
+
+  .divider { border: none; border-top: 1px solid #ece8df; margin: 16px 0; }
+  .section-sub-label { font-size: 12px; font-weight: 700; color: var(--text-soft); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+
+  /* SOLUTION BOX */
+  .solution-box {
+    background: linear-gradient(135deg, #1e3a5f, #0f2a4a);
+    border: 1px solid #3b82f6;
+    border-radius: 12px; padding: 16px;
+    margin-top: 4px; margin-bottom: 0;
+  }
+  .solution-box-title { color: #93c5fd; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+  .solution-box-body { color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.8; word-break: keep-all; }
+  .solution-box-body strong { color: #93c5fd; }
+
+  /* EBOOK CTA */
+  .ebook-section {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    border-radius: var(--radius); padding: 36px 24px; margin: 40px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .ebook-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(184,134,11,0.18), transparent 55%);
+  }
+  .ebook-section::after {
+    content: '✦ ✦ ✦';
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    color: rgba(240,208,96,0.3); font-size: 11px; letter-spacing: 8px;
+  }
+  .ebook-info { position: relative; }
+  .ebook-cover-wrap { display: flex; justify-content: center; margin-bottom: 20px; position: relative; }
+  .ebook-cover-box {
+    width: 130px; height: 180px; border-radius: 10px;
+    background: linear-gradient(160deg, #1e3a5f, #0d2137);
+    border: 1px solid rgba(240,208,96,0.4);
+    box-shadow: 6px 6px 24px rgba(0,0,0,0.5), -2px -2px 8px rgba(240,208,96,0.1);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding: 16px;
+  }
+  .ebook-cover-box .ec-icon { font-size: 32px; }
+  .ebook-cover-box .ec-title {
+    font-family: 'Noto Serif KR', serif;
+    color: #f0d060; font-size: 11px; font-weight: 700;
+    text-align: center; line-height: 1.7; word-break: keep-all;
+  }
+  .ebook-free-badge {
+    position: absolute; top: -8px; right: calc(50% - 72px);
+    background: #f0d060; color: #1a1a2e;
+    font-size: 10px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .ebook-info .eb-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.25); border: 1px solid rgba(240,208,96,0.4);
+    color: #f0d060; font-size: 11px; letter-spacing: 1px; font-weight: 700;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .ebook-info h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(17px, 4.5vw, 22px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .ebook-info p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 18px; line-height: 1.6; word-break: keep-all; }
+  .ebook-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 14px; font-weight: 700;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(184,134,11,0.4);
+  }
+
+  /* FREE NAME CTA */
+  .free-name-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid rgba(240,208,96,0.35);
+    border-radius: var(--radius); padding: 28px 24px; margin: 16px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .free-name-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(240,208,96,0.08), transparent 60%);
+  }
+  .free-name-inner { position: relative; }
+  .free-name-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 11px; font-weight: 800;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .free-name-section h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(16px, 4vw, 20px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .free-name-section p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 16px; line-height: 1.6; word-break: keep-all; }
+  .free-name-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #1a1a2e;
+    font-size: 14px; font-weight: 800;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  /* FOOTER */
+  .footer { background: var(--dark2); padding: 32px 20px; color: rgba(255,255,255,0.6); font-size: 13px; }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title { font-family: 'Noto Serif KR', serif; color: #f0d060; font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 18px; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+  .footer-links a:hover { color: #f0d060; }
+  .footer-credit { font-size: 11px; color: rgba(255,255,255,0.35); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; line-height: 1.7; word-break: keep-all; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">⚠️ 2026년 6월 주의 날짜 분석</div>
+  <h1>이 날 태어나면 왜 힘들까?<br><span>현승리의 6월 피해야 할 날 사주 해설</span></h1>
+  <p class="hero-sub">사주명리학 기반 · 오행 불균형 분석 · 초보자도 쉽게 이해하는 설명</p>
+</div>
+
+<div class="container">
+
+  <div class="warn-banner">
+    <div class="warn-banner-icon">💛</div>
+    <div class="warn-banner-text">
+      <strong style="display:block;color:#c7d2fe;font-size:14px;font-weight:700;margin-bottom:8px;">먼저 이것부터 읽어주세요 — 걱정하지 않으셔도 괜찮아요!</strong>
+      <div style="background:rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;margin-bottom:12px;border-left:3px solid #fde68a;">
+        <p style="color:#fde68a;font-weight:700;font-size:13px;margin-bottom:4px;">❤️ 가장 중요한 것은 산모와 태아의 건강입니다</p>
+        <p style="color:rgba(255,255,255,0.9);font-size:13px;line-height:1.85;">택일은 가능한 범위 안에서 참고하는 것입니다. 산모의 몸 상태, 의료진의 판단, 태아의 안전이 언제나 최우선입니다. 좋은 시간을 고르는 것보다 산모와 아이가 건강하게 출산하는 것이 훨씬 더 중요하다는 점, 꼭 기억해 주세요.</p>
+      </div>
+      <p>혹시 이 날에 아이를 낳으셨더라도 너무 걱정하지 마세요. 사주에는 어떤 날이든 고유한 장점이 있고, 불균형한 부분은 <strong style="color:#c7d2fe;display:inline;">이름으로 충분히 보완할 수 있습니다.</strong> 실제로 많은 분들이 이름 하나로 사주의 균형을 크게 바꾸고 있어요 😊</p>
+      <p style="margin-top:10px;">이 자료는 "이 날은 절대 안 된다"는 뜻이 아니라, <strong style="color:#c7d2fe;display:inline;">이 날 중에서도 특히 '오시(오전 11:30~오후 1:29)'만 피해도</strong> 사주가 크게 달라질 수 있다는 점을 알려드리기 위한 참고 자료입니다. 시간 하나만 바꿔도 오행의 구성이 완전히 달라지거든요.</p>
+      <p style="margin-top:10px;">💡 <strong style="color:#c7d2fe;display:inline;">왜 6월에 양기가 강한 건 어쩌면 당연한 걸까요?</strong> 2026년은 병오년(丙午年)입니다. 병(丙)은 뜨거운 불의 기운, 오(午)도 불의 기운을 품은 해입니다. 여기에 6월은 사주에서 화(火, 불)의 기운이 가장 강해지는 달이에요. 불의 해 + 불의 달이 만났으니 양기가 강한 것은 어쩌면 자연스러운 현상입니다. 거기에 정오(正午)에 해당하는 오시(午時)까지 더해지면 불기운이 세 겹으로 쌓이게 됩니다. 그래서 6월의 오시는 특히 주의가 필요한 것입니다.</p>
+      <p style="margin-top:10px;">한자나 전문 용어를 몰라도 괜찮아요. 천천히 읽어보시면 충분히 이해하실 수 있습니다 🙂</p>
+    </div>
+  </div>
+
+  <div class="section-title">6월 꼭 피해야 할 날 TOP 3</div>
+
+  <!-- ===== 1위 ===== -->
+  <div class="saju-card">
+    <div class="saju-card-header">
+      <div class="saju-num" style="background:linear-gradient(135deg,#dc2626,#ef4444);">1</div>
+      <div class="saju-card-header-info">
+        <h2>2026년 6월 13일 오시(午時)</h2>
+        <p>오전 11시 30분 ~ 오후 1시 29분 · 토(土) 무(戊) 일간</p>
+        <div class="header-badges">
+          <span class="header-badge-warn">🚨 가장 피해야 할 날 1위</span>
+          <span class="header-badge-rank">📅 6월 최우선 주의</span>
+        </div>
+      </div>
+    </div>
+    <div class="saju-card-body">
+
+      <div class="saju-table-wrap">
+        <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+        <div class="saju-col-labels">
+          <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+          <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+        </div>
+        <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-earth"><div class="saju-cell-char">戊</div><div class="saju-cell-kor">무 · 토(土)</div></div>
+          <div class="saju-cell cell-earth"><div class="saju-cell-char">戊</div><div class="saju-cell-kor">무 · 토(土)</div></div>
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">甲</div><div class="saju-cell-kor">갑 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+        </div>
+        <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+        </div>
+      </div>
+
+      <div class="extreme-badge">🔥 억부(신강·신약 균형) : 52 + 38 = <strong style="margin-left:4px;">극신강</strong></div>
+
+      <div class="ohaeng-section">
+        <div class="ohaeng-title">🔢 오행 분포</div>
+        <div class="ohaeng-bars">
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:10%"></div></div><div class="ohaeng-pct c-wood">10점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:52%"></div></div><div class="ohaeng-pct c-fire">52점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:38%"></div></div><div class="ohaeng-pct c-earth">38점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot" style="background:#607d8b;"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div><div class="ohaeng-pct c-metal" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div><div class="ohaeng-pct c-water" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+        </div>
+        <div class="ohaeng-zero">
+          <strong>⚠️ 없는 오행이 2개! — 금(金)과 수(水)가 아예 없어요</strong>
+          오행 다섯 가지 중 금과 수가 완전히 비어 있습니다. 이름으로 반드시 보완이 필요합니다.
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag tag-orange">🌍 토(土) 일간 · 무(戊)</span>
+        <span class="tag tag-red">🚨 극신강</span>
+        <span class="tag tag-red">❌ 금(金) 없음</span>
+        <span class="tag tag-red">❌ 수(水) 없음</span>
+        <span class="tag tag-red">☀️ 양기 100%</span>
+      </div>
+
+      <hr class="divider">
+      <div class="section-sub-label">🚨 왜 피해야 할까? — 4가지 문제점</div>
+
+      <div class="problem-list">
+        <div class="problem-item">
+          <div class="problem-num">1</div>
+          <div class="problem-text"><strong>없는 오행이 2개나 있어요</strong><br>금(金)과 수(水)가 사주에 한 점도 없습니다. 오행 중 두 가지가 완전히 빠진 것은 매우 불균형한 사주입니다. 없는 오행과 관련된 삶의 영역(금 → 의리·결단력, 수 → 지혜·감성)이 약해질 수 있습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">2</div>
+          <div class="problem-text"><strong>토로 태어났는데, 불이 너무 많아 흙이 갈라져요</strong><br>토(土, 흙)로 태어난 사주인데, 화(火, 불)가 52점이나 됩니다. 불이 너무 강하면 흙이 갈라지고(조토·燥土) 메말라버립니다. 비유하자면, 뜨거운 불 위에 흙을 올려놓으면 바싹 말라 쓸모없어지는 것과 같습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">3</div>
+          <div class="problem-text"><strong>양기만 가득한 사주예요 — 음기가 0%</strong><br>사주에서 음양의 균형은 매우 중요합니다. 이 사주는 모든 글자가 양(陽)의 기운으로만 가득 차 있어, 따뜻함과 서늘함의 균형이 완전히 무너진 상태입니다. 음양 균형은 삶의 안정감과 직결됩니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">4</div>
+          <div class="problem-text"><strong>이름에 강력한 수(水) 기운이 꼭 필요해요</strong><br>없는 오행(금·수) 중에서도 특히 수(水)의 기운을 이름에 강하게 담아야 합니다. 수는 불을 잡아주는 기운으로, 과도한 화(火)를 제어하고 사주의 균형을 맞추는 역할을 합니다.</div>
+        </div>
+      </div>
+
+      <div class="solution-box">
+        <div class="solution-box-title">💡 이름으로 보완하려면?</div>
+        <div class="solution-box-body">
+          이 사주는 문제가 많아 <strong>택일 자체를 피하는 것이 가장 좋습니다.</strong> 불가피하게 이 날을 택한다면, 이름에 <strong>수(水)와 금(金)</strong> 기운을 최대한 강하게 담아야 합니다. 수·금 기운은 과도한 화와 토를 조절해 삶의 균형을 잡아주는 역할을 합니다.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== 2위 ===== -->
+  <div class="saju-card">
+    <div class="saju-card-header">
+      <div class="saju-num" style="background:linear-gradient(135deg,#b91c1c,#dc2626);">2</div>
+      <div class="saju-card-header-info">
+        <h2>2026년 6월 21일 오시(午時)</h2>
+        <p>오전 11시 30분 ~ 오후 1시 29분 · 화(火) 병(丙) 일간</p>
+        <div class="header-badges">
+          <span class="header-badge-warn">🚨 피해야 할 날 2위</span>
+          <span class="header-badge-rank">📅 6월 주의</span>
+        </div>
+      </div>
+    </div>
+    <div class="saju-card-body">
+
+      <div class="saju-table-wrap">
+        <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+        <div class="saju-col-labels">
+          <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+          <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+        </div>
+        <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">甲</div><div class="saju-cell-kor">갑 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">甲</div><div class="saju-cell-kor">갑 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+        </div>
+        <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">寅</div><div class="saju-cell-kor">인 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+        </div>
+      </div>
+
+      <div class="extreme-badge">🔥 억부 : 목 20 + 화 71 = <strong style="margin-left:4px;">극신강 (합산 91점!)</strong></div>
+
+      <div class="ohaeng-section">
+        <div class="ohaeng-title">🔢 오행 분포</div>
+        <div class="ohaeng-bars">
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:20%"></div></div><div class="ohaeng-pct c-wood">20점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:71%"></div></div><div class="ohaeng-pct c-fire" style="color:#dc2626;font-weight:900;">71점 🔥</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:9%"></div></div><div class="ohaeng-pct c-earth">9점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div><div class="ohaeng-pct c-metal" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div><div class="ohaeng-pct c-water" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+        </div>
+        <div class="ohaeng-zero">
+          <strong>⚠️ 지장간까지 봐도 없는 오행이 2개! — 금(金)과 수(水)가 아예 없어요</strong>
+          지장간(천간·지지 속에 숨어 있는 기운)까지 살펴봐도 금과 수가 단 한 점도 없습니다. 오행이 목과 화에만 극도로 쏠린 사주입니다.
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag tag-red">🔥 화(火) 일간 · 병(丙)</span>
+        <span class="tag tag-red">🚨 극신강 91점</span>
+        <span class="tag tag-red">❌ 금(金) 없음</span>
+        <span class="tag tag-red">❌ 수(水) 없음</span>
+        <span class="tag tag-red">☀️ 양기 100%</span>
+      </div>
+
+      <hr class="divider">
+      <div class="section-sub-label">🚨 왜 피해야 할까? — 4가지 문제점</div>
+
+      <div class="problem-list">
+        <div class="problem-item">
+          <div class="problem-num">1</div>
+          <div class="problem-text"><strong>지장간까지 봐도 없는 오행이 2개</strong><br>사주팔자 여덟 글자 안에 숨어 있는 지장간(地藏干)까지 전부 확인해도, 금(金)과 수(水)는 한 점도 없습니다. 오행이 목과 화 두 가지에만 몰려 있는 극단적 불균형 사주입니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">2</div>
+          <div class="problem-text"><strong>불(火)로 태어났는데, 불이 71점이나 돼요</strong><br>화(火, 불) 일간으로 태어난 아이가, 사주에서 화의 기운이 71점이나 됩니다. 불이 이미 넘쳐 흐르는데 더 많은 불이 더해지면, 삶의 기운이 지나치게 뜨겁고 급하게 흘러갈 수 있습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">3</div>
+          <div class="problem-text"><strong>양기만 가득한 사주 — 음기가 0%</strong><br>갑(甲)·병(丙)·오(午) 등 이 사주의 모든 글자는 양(陽)의 기운입니다. 음기가 전혀 없어 음양의 조화가 완전히 무너진 상태입니다. 비유하자면, 낮만 있고 밤이 없는 세상과 같습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">4</div>
+          <div class="problem-text"><strong>이름에 강력한 수(水) 기운이 꼭 필요해요</strong><br>수(水, 물)는 불을 제어하는 가장 강력한 기운입니다. 71점에 달하는 화(火)를 잡아줄 수(水) 기운이 이름에 반드시 들어가야 합니다. 마찬가지로 금(金)도 수를 만드는 데 도움을 주므로 함께 보완하는 것이 좋습니다.</div>
+        </div>
+      </div>
+
+      <div class="solution-box">
+        <div class="solution-box-title">💡 이름으로 보완하려면?</div>
+        <div class="solution-box-body">
+          이 사주도 <strong>택일 자체를 피하는 것이 가장 좋습니다.</strong> 불가피하다면, 이름에 <strong>수(水)와 금(金)</strong> 기운을 아주 강하게 담아야 합니다. 71점의 불기운을 제어할 수 있는 강한 수(水)의 기운이 이름에서 보완되어야 균형을 맞출 수 있습니다.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== 3위 ===== -->
+  <div class="saju-card">
+    <div class="saju-card-header">
+      <div class="saju-num" style="background:linear-gradient(135deg,#9b1c1c,#b91c1c);">3</div>
+      <div class="saju-card-header-info">
+        <h2>2026년 6월 22일 오시(午時)</h2>
+        <p>오전 11시 30분 ~ 오후 1시 29분 · 화(火) 정(丁) 일간</p>
+        <div class="header-badges">
+          <span class="header-badge-warn">🚨 피해야 할 날 3위</span>
+          <span class="header-badge-rank">📅 6월 주의</span>
+        </div>
+      </div>
+    </div>
+    <div class="saju-card-body">
+
+      <div class="saju-table-wrap">
+        <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+        <div class="saju-col-labels">
+          <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+          <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+        </div>
+        <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丁</div><div class="saju-cell-kor">정 · 화(火)</div></div>
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">甲</div><div class="saju-cell-kor">갑 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+        </div>
+        <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+        <div class="saju-table">
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-wood"><div class="saju-cell-char">卯</div><div class="saju-cell-kor">묘 · 목(木)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          <div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+        </div>
+      </div>
+
+      <div class="extreme-badge">🔥 억부 : 목 30 + 화 58 = <strong style="margin-left:4px;">극신강 (합산 88점)</strong></div>
+
+      <div class="ohaeng-section">
+        <div class="ohaeng-title">🔢 오행 분포</div>
+        <div class="ohaeng-bars">
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:30%"></div></div><div class="ohaeng-pct c-wood">30점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:58%"></div></div><div class="ohaeng-pct c-fire" style="color:#dc2626;font-weight:900;">58점 🔥</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:12%"></div></div><div class="ohaeng-pct c-earth">12점</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:0%"></div></div><div class="ohaeng-pct c-metal" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+          <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:0%"></div></div><div class="ohaeng-pct c-water" style="color:#dc2626;font-weight:900;">0점 ❌</div></div>
+        </div>
+        <div class="ohaeng-zero">
+          <strong>⚠️ 지장간까지 봐도 없는 오행이 2개! — 금(金)과 수(水)가 아예 없어요</strong>
+          지장간까지 확인해도 금과 수는 한 점도 없습니다. 2위 날짜와 구조가 비슷하지만 목이 더 강한 형태입니다.
+        </div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag tag-red">🔥 화(火) 일간 · 정(丁)</span>
+        <span class="tag tag-red">🚨 극신강 88점</span>
+        <span class="tag tag-red">❌ 금(金) 없음</span>
+        <span class="tag tag-red">❌ 수(水) 없음</span>
+        <span class="tag tag-red">☀️ 양기 100%</span>
+      </div>
+
+      <hr class="divider">
+      <div class="section-sub-label">🚨 왜 피해야 할까? — 4가지 문제점</div>
+
+      <div class="problem-list">
+        <div class="problem-item">
+          <div class="problem-num">1</div>
+          <div class="problem-text"><strong>지장간까지 봐도 없는 오행이 2개</strong><br>지장간까지 전부 살펴봐도 금(金)과 수(水)는 한 점도 없습니다. 2위 날짜(6월 21일)와 유사한 구조이지만, 목(木)이 더 많아 불기운을 키우는 구조입니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">2</div>
+          <div class="problem-text"><strong>불(火)로 태어났는데, 불이 58점이나 돼요</strong><br>정(丁)은 화(火, 불) 일간입니다. 사주에서 화가 58점, 목이 30점으로 목은 불을 더 강하게 만드는 기운이므로 실질적으로 불의 기운이 훨씬 강한 사주입니다. 과도한 열기로 삶의 균형이 무너지기 쉽습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">3</div>
+          <div class="problem-text"><strong>양기만 가득한 사주 — 음기가 0%</strong><br>이 사주의 모든 글자 역시 양(陽)의 기운으로만 이루어져 있습니다. 음양의 균형이 전혀 없어 삶에서 안정감·차분함·여유로움이 부족할 수 있습니다.</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-num">4</div>
+          <div class="problem-text"><strong>이름에 강력한 수(水) 기운이 꼭 필요해요</strong><br>1·2위와 마찬가지로, 이름에 수(水)의 기운을 강하게 담아 과도한 화(火)를 제어하고, 없는 금(金)도 함께 보완해야 사주의 균형을 잡을 수 있습니다.</div>
+        </div>
+      </div>
+
+      <div class="solution-box">
+        <div class="solution-box-title">💡 이름으로 보완하려면?</div>
+        <div class="solution-box-body">
+          이 사주도 <strong>택일 자체를 피하는 것이 최선입니다.</strong> 불가피하다면 이름에 <strong>수(水)와 금(金)</strong> 기운을 강하게 담아야 합니다. 특히 2위 날짜와 구조가 비슷하므로, 이름 작명 시 동일한 원칙을 적용하면 됩니다.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 공통 정리 박스 -->
+  <div class="callout callout-gold" style="margin-top: 8px;">
+    <div class="callout-icon">📝</div>
+    <div class="callout-text">
+      <strong>세 날짜의 공통된 문제 — 한눈에 보기</strong>
+      6월 13일·21일·22일의 오시는 모두 <strong>①금·수 없음 ②불기운 과다 ③양기 100% ④이름으로 수 기운 보완 필수</strong>라는 공통 문제를 가지고 있습니다. 이 날들은 가급적 피하되, 부득이한 경우 반드시 전문가와 함께 이름으로 보완 작업을 해야 합니다.
+    </div>
+  </div>
+
+  <!-- EBOOK CTA -->
+  <div class="ebook-section">
+    <div class="ebook-info">
+      <div class="eb-badge">📖 무료 전자책</div>
+      <div class="ebook-cover-wrap">
+        <div class="ebook-cover-box">
+          <div class="ec-icon">📗</div>
+          <div class="ec-title">작명하기 전,<br>알았다면<br>좋았을 것들</div>
+        </div>
+        <div class="ebook-free-badge">🎁 무료 공개</div>
+      </div>
+      <h3>작명하기 전,<br>알았다면 좋았을 것들</h3>
+      <p>구독자 1.4만 작명 유튜버 현승리가 직접 쓴<br>작명 실패 없는 A to Z 가이드</p>
+      <a href="https://hslee.co.kr/ebook" target="_blank" class="ebook-btn">📖 무료로 읽어보기 →</a>
+    </div>
+  </div>
+
+  <!-- FREE NAME CTA -->
+  <div class="free-name-section">
+    <div class="free-name-inner">
+      <div class="free-name-badge">🎁 무료 서비스</div>
+      <h3>내 이름, 사주에 맞게<br>잘 지어졌을까?</h3>
+      <p>사주 균형 · 오행 분석 · 이름의 기운까지<br>현승리가 직접 분석한 무료 이름풀이 서비스</p>
+      <a href="https://hslee.co.kr/service" target="_blank" class="free-name-btn">✨ 무료 이름풀이 받기 →</a>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-title">📎 출처 및 채널 안내</div>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
+      <a href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+    <div class="footer-credit">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+  </div>
+</div>
+
+</body>
+</html>
