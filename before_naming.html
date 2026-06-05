@@ -270,7 +270,7 @@
     border-color: #86efac;
   }
 
-  /* compare table */
+  /* compare table — desktop */
   .compare-table {
     width: 100%;
     border-collapse: collapse;
@@ -297,14 +297,96 @@
     color: var(--text-sub);
     line-height: 1.6;
     border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    word-break: keep-all;
   }
   .compare-table tbody td:first-child {
     font-weight: 600;
     color: var(--ink);
-    width: 38%;
+    width: 26%;
   }
   .tag-bad { color: var(--red); font-weight: 700; }
   .tag-good { color: var(--green); font-weight: 700; }
+
+  /* ── COMPARE GRID (표 대체 - 모바일 완전 호환) ── */
+  .cmp-grid {
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    word-break: keep-all;
+  }
+  .cmp-header, .cmp-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    align-items: stretch;
+  }
+  .cmp-header {
+    background: var(--ink);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .cmp-header > div,
+  .cmp-row > div {
+    padding: 11px 13px;
+    line-height: 1.6;
+  }
+  .cmp-header > div { border-right: 1px solid rgba(255,255,255,0.1); }
+  .cmp-header > div:last-child { border-right: none; }
+  .cmp-row { border-top: 1px solid var(--border); background: #fff; }
+  .cmp-row:nth-child(even) { background: var(--paper); }
+  .cmp-label {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 12px;
+    border-right: 1px solid var(--border);
+  }
+  .cmp-col-bad {
+    color: var(--red);
+    font-weight: 600;
+    border-right: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .cmp-col-good {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* 모바일: 3열 → 라벨+2열 유지, 폰트/패딩만 줄임 */
+  @media (max-width: 480px) {
+    .cmp-header, .cmp-row {
+      grid-template-columns: 54px 1fr 1fr;
+    }
+    .cmp-header > div,
+    .cmp-row > div { padding: 9px 8px; font-size: 12px; }
+    .cmp-label { font-size: 11px; }
+    .cmp-col-bad, .cmp-col-good { font-size: 12px; }
+  }
+
+  /* 초소형 폰: 세로 카드로 전환 */
+  @media (max-width: 360px) {
+    .cmp-header { display: none; }
+    .cmp-row {
+      grid-template-columns: 1fr;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 1px solid var(--border) !important;
+      overflow: hidden;
+    }
+    .cmp-label {
+      background: var(--ink);
+      color: #fff !important;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      font-size: 11px;
+    }
+    .cmp-col-bad { border-right: none; border-bottom: 1px solid var(--border); }
+    .cmp-col-bad::before { content: '❌ '; }
+    .cmp-col-good::before { content: '✅ '; }
+  }
 
   /* ── ACTION TIP ─────────────────────── */
   .action-tip {
@@ -723,30 +805,11 @@
     .creator-row { flex-direction: column; align-items: center; }
     .creator-bubble { margin-left: 0; margin-top: 10px; border-radius: 14px; }
 
-    /* 비교표: 3열 → 세로 카드형으로 전환 */
-    .compare-table thead { display: none; }
-    .compare-table, .compare-table tbody,
-    .compare-table tr, .compare-table td { display: block; width: 100%; }
-    .compare-table tr {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-    .compare-table td {
-      padding: 10px 14px;
-      font-size: 13px;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-    }
-    .compare-table td:last-child { border-bottom: none; }
-    .compare-table td:first-child {
-      background: var(--ink);
-      color: rgba(255,255,255,0.85) !important;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-      width: 100%;
-    }
+    /* 비교표: 모바일에서 2열(잘못된/올바른)로 축소 */
+    .compare-table { font-size: 12px; }
+    .compare-table thead th,
+    .compare-table tbody td { padding: 9px 10px; }
+    .compare-table tbody td:first-child { width: 22%; font-size: 11px; }
 
     /* 오행 칩 세로 배치 */
     .element-flow { flex-direction: column; align-items: flex-start; }
@@ -849,32 +912,28 @@
 
         <br>
         <p class="lie-truth-label">한눈에 비교</p>
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>구분</th>
-              <th>잘못된 방법</th>
-              <th>올바른 방법</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>분석 방식</td>
-              <td><span class="tag-bad">오행 개수 세기</span></td>
-              <td><span class="tag-good">용신 도출 후 판단</span></td>
-            </tr>
-            <tr>
-              <td>결과</td>
-              <td><span class="tag-bad">과다한 기운을 더 키울 수 있음</span></td>
-              <td><span class="tag-good">사주의 균형에 맞는 이름</span></td>
-            </tr>
-            <tr>
-              <td>소요 시간</td>
-              <td><span class="tag-bad">짧음 (몇 분)</span></td>
-              <td><span class="tag-good">충분한 분석 시간 필요</span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="cmp-grid">
+          <div class="cmp-header">
+            <div class="cmp-label">구분</div>
+            <div class="cmp-col-bad">❌ 잘못된 방법</div>
+            <div class="cmp-col-good">✅ 올바른 방법</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">분석 방식</div>
+            <div class="cmp-col-bad">오행 개수 세기</div>
+            <div class="cmp-col-good">용신 도출 후 판단</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">결과</div>
+            <div class="cmp-col-bad">과다한 기운을 더 키울 수 있음</div>
+            <div class="cmp-col-good">사주의 균형에 맞는 이름</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">소요 시간</div>
+            <div class="cmp-col-bad">짧음 (몇 분)</div>
+            <div class="cmp-col-good">충분한 분석 시간 필요</div>
+          </div>
+        </div>
 
         <br>
         <div class="action-tip">
@@ -957,32 +1016,28 @@
 
         <br>
         <p class="lie-truth-label">한눈에 비교</p>
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th>구분</th>
-              <th>획수만 보는 작명</th>
-              <th>제대로 된 작명</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>기준</td>
-              <td><span class="tag-bad">획수 이론 하나</span></td>
-              <td><span class="tag-good">사주 + 용신 + 획수 + 음령</span></td>
-            </tr>
-            <tr>
-              <td>개인 맞춤</td>
-              <td><span class="tag-bad">누구에게나 같은 기준</span></td>
-              <td><span class="tag-good">그 사람의 사주에 맞게</span></td>
-            </tr>
-            <tr>
-              <td>설명 가능성</td>
-              <td><span class="tag-bad">"획수가 좋으니 좋습니다"</span></td>
-              <td><span class="tag-good">왜 이 이름인지 근거 설명 가능</span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="cmp-grid">
+          <div class="cmp-header">
+            <div class="cmp-label">구분</div>
+            <div class="cmp-col-bad">❌ 획수만 보는 작명</div>
+            <div class="cmp-col-good">✅ 제대로 된 작명</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">기준</div>
+            <div class="cmp-col-bad">획수 이론 하나</div>
+            <div class="cmp-col-good">사주 + 용신 + 획수 + 음령</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">개인 맞춤</div>
+            <div class="cmp-col-bad">누구에게나 같은 기준</div>
+            <div class="cmp-col-good">그 사람의 사주에 맞게</div>
+          </div>
+          <div class="cmp-row">
+            <div class="cmp-label">설명</div>
+            <div class="cmp-col-bad">"획수가 좋으니 좋습니다"</div>
+            <div class="cmp-col-good">왜 이 이름인지 근거 설명 가능</div>
+          </div>
+        </div>
 
         <br>
         <div class="action-tip">
