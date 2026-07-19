@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자주 쓰는 한자보다, 내 아이 사주에 맞는 한자 | 현승리 작명</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background: #ffffff;
+    color: #1f2937;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 55%, #9d174d 100%);
+    border-radius: 20px;
+    padding: 48px 32px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+  .hero h1 { font-size: 26px; line-height: 1.45; margin-bottom: 14px; }
+  .hero p { font-size: 15px; opacity: 0.92; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 44px; }
+  .section-title {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-sub { font-size: 14px; color: #6b7280; margin-bottom: 18px; }
+
+  /* ── Callout ── */
+  .callout {
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+  .callout-blue { background: #dbeafe; border-left: 5px solid #1e40af; }
+  .callout-pink { background: #fce7f3; border-left: 5px solid #9d174d; }
+  .callout-gray { background: #f3f4f6; border-left: 5px solid #6b7280; }
+  .callout-yellow { background: #fef9c3; border-left: 5px solid #ca8a04; }
+  .callout-title { display: block; font-weight: 800; margin-bottom: 6px; }
+  .callout-blue .callout-title { color: #1e40af; }
+  .callout-pink .callout-title { color: #9d174d; }
+  .callout-yellow .callout-title { color: #854d0e; }
+
+  /* ── 3단계 카드 ── */
+  .step-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    position: relative;
+    background: #fff;
+  }
+  .step-card.important {
+    border-color: #1e40af;
+    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+    box-shadow: 0 6px 20px rgba(30,64,175,0.12);
+  }
+  .step-num {
+    display: inline-block;
+    background: #1e40af;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .step-card.important .step-num { background: linear-gradient(90deg, #1e40af, #9d174d); }
+  .step-card h3 { font-size: 18px; margin-bottom: 8px; }
+  .step-card p { font-size: 15px; color: #374151; }
+  .most-important-tag {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: #9d174d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+
+  /* ── 링크 버튼 ── */
+  .link-btn {
+    display: block;
+    text-align: center;
+    background: #1e40af;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    margin: 16px 0;
+    transition: opacity 0.2s;
+  }
+  .link-btn:hover { opacity: 0.88; }
+  .link-btn .sub { display: block; font-size: 12px; font-weight: 500; opacity: 0.85; margin-top: 4px; }
+  .link-btn.green { background: #047857; }
+
+  /* ── 순서 리스트 ── */
+  .howto { counter-reset: howto; margin: 16px 0; }
+  .howto-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 14px;
+    align-items: flex-start;
+  }
+  .howto-item::before {
+    counter-increment: howto;
+    content: counter(howto);
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  .howto-item p { font-size: 15px; }
+
+  /* ── 용신/기신 그리드 ── */
+  .sinsal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .sinsal-card { border-radius: 14px; padding: 20px 18px; }
+  .sinsal-card.good { background: #dbeafe; }
+  .sinsal-card.bad { background: #fce7f3; }
+  .sinsal-card .name { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+  .sinsal-card.good .name { color: #1e40af; }
+  .sinsal-card.bad .name { color: #9d174d; }
+  .sinsal-card .desc { font-size: 14px; color: #374151; }
+  .sinsal-card .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+  }
+  .sinsal-card.good .tag { background: #1e40af; color: #fff; }
+  .sinsal-card.bad .tag { background: #9d174d; color: #fff; }
+
+  /* ── 한자 예시 카드 ── */
+  .hanja-demo {
+    background: #f9fafb;
+    border: 2px dashed #d1d5db;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .hanja-demo .big-char { font-size: 64px; font-weight: 800; color: #111827; line-height: 1.2; }
+  .hanja-demo .char-read { font-size: 16px; font-weight: 700; color: #1e40af; margin-top: 6px; }
+  .hanja-demo .char-note { font-size: 14px; color: #6b7280; margin-top: 12px; }
+
+  /* ── 안심 박스 ── */
+  .relax-box {
+    background: #f0fdf4;
+    border: 1.5px solid #bbf7d0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #166534;
+    margin: 18px 0;
+  }
+
+  /* ── 전자책 CTA ── */
+  .ebook-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+    border-radius: 20px;
+    padding: 36px 28px;
+    color: #fff;
+    margin-bottom: 28px;
+  }
+  .ebook-cta .ebook-visual {
+    background: #fff;
+    border-radius: 12px;
+    padding: 26px 20px;
+    text-align: center;
+    margin-bottom: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .ebook-visual .book-icon { font-size: 40px; }
+  .ebook-visual .book-title { font-size: 19px; font-weight: 800; color: #1e3a8a; margin-top: 10px; line-height: 1.4; }
+  .ebook-visual .book-author { font-size: 13px; color: #6b7280; margin-top: 6px; }
+  .ebook-cta h3 { font-size: 20px; margin-bottom: 10px; text-align: center; }
+  .ebook-cta p { font-size: 14.5px; opacity: 0.92; text-align: center; margin-bottom: 6px; }
+  .ebook-btn {
+    display: block;
+    background: #fbbf24;
+    color: #1e3a8a;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 18px;
+  }
+  .ebook-btn:hover { opacity: 0.9; }
+
+  /* ── 오픈채팅 CTA ── */
+  .openchat-cta {
+    background: linear-gradient(135deg, #9d174d 0%, #be185d 100%);
+    border-radius: 20px;
+    padding: 34px 28px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .openchat-cta h3 { font-size: 20px; margin-bottom: 10px; }
+  .openchat-cta p { font-size: 14.5px; opacity: 0.93; }
+  .openchat-btn {
+    display: block;
+    background: rgba(255,255,255,0.95);
+    color: #9d174d;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 18px;
+  }
+  .openchat-btn:hover { background: #fff; }
+  .code-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    border: 1.5px dashed rgba(255,255,255,0.6);
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  /* ── 출처 ── */
+  .source-section {
+    border-top: 1.5px solid #e5e7eb;
+    padding-top: 28px;
+    font-size: 13.5px;
+    color: #6b7280;
+  }
+  .source-section .source-note {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #374151;
+  }
+  .source-links a {
+    display: block;
+    color: #1e40af;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .source-links a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 38px 22px; }
+    .hero h1 { font-size: 22px; }
+    .section-title { font-size: 19px; }
+    .sinsal-grid { grid-template-columns: 1fr; }
+    .hanja-demo .big-char { font-size: 52px; }
+  }
+  @media (max-width: 360px) {
+    .container { padding: 28px 14px 48px; }
+    .hero h1 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ───────── HERO ───────── -->
+  <div class="hero">
+    <span class="badge">댓글 [한자] 이벤트 자료</span>
+    <h1>자주 쓰는 한자보다,<br>내 아이 <u>사주에 맞는 한자</u></h1>
+    <p>"다들 많이 쓰는 한자로 해주세요"라고 하시는 분들이 많습니다.<br>하지만 좋은 이름의 기준은 그게 아닙니다.</p>
+  </div>
+
+  <!-- ───────── 인트로 ───────── -->
+  <div class="section">
+    <div class="callout callout-pink">
+      <span class="callout-title">😥 상담에서 정말 자주 듣는 말</span>
+      "이 한자, 이름에 많이 쓰는 한자죠? 그럼 그걸로 해주세요."<br><br>
+      하지만 이름에 좋은 한자의 기준은 <b>'잘 쓰이는 한자 vs 잘 안 쓰이는 한자'</b>가 아닙니다.
+      <b>내 아이의 사주에 맞는 한자인지</b>가 핵심입니다. 남의 아이에게 좋았던 한자가 내 아이에게는 안 맞을 수도 있으니까요.
+    </div>
+    <div class="relax-box">
+      🙂 <b>한자를 전혀 몰라도 괜찮습니다.</b> 이 자료는 사주를 처음 접하는 분도 따라올 수 있게 아주 쉽게 정리했습니다. 순서대로만 읽어보세요.
+    </div>
+  </div>
+
+  <!-- ───────── 3단계 ───────── -->
+  <div class="section">
+    <div class="section-title">📌 이름 한자를 고르는 3단계</div>
+    <div class="section-sub">이 순서만 기억하면 됩니다.</div>
+
+    <div class="step-card">
+      <span class="step-num">1단계</span>
+      <h3>대법원 인명용 한자여야 한다</h3>
+      <p>아무 한자나 이름에 쓸 수 있는 게 아닙니다. 법으로 정해진 <b>'인명용 한자'</b> 안에서만 출생신고·개명이 가능합니다. 여기서 벗어나면 동사무소(주민센터)에서 접수 자체가 안 됩니다.</p>
+    </div>
+
+    <div class="step-card">
+      <span class="step-num">2단계</span>
+      <h3>한자의 뜻이 좋아야 한다</h3>
+      <p>인명용 한자 중에도 뜻이 좋지 않은 한자들이 섞여 있습니다. 음(소리)만 예쁘다고 골랐다가, 나중에 뜻을 알고 후회하는 경우가 정말 많습니다.</p>
+    </div>
+
+    <div class="step-card important">
+      <span class="most-important-tag">가장 중요 ⭐</span>
+      <span class="step-num">3단계</span>
+      <h3>내 아이의 사주에 맞는 한자여야 한다</h3>
+      <p>1·2단계를 통과해도, 마지막 관문이 남아 있습니다. 같은 한자라도 어떤 아이에게는 힘이 되고, 어떤 아이에게는 부담이 됩니다. <b>사주에 맞는 한자</b>인지가 작명의 진짜 핵심입니다.</p>
+    </div>
+  </div>
+
+  <!-- ───────── 1단계 상세 ───────── -->
+  <div class="section">
+    <div class="section-title">1️⃣ 대법원 인명용 한자, 이렇게 조회하세요</div>
+    <div class="section-sub">방법을 몰라서 못 찾는 분들이 많아서, 링크부터 바로 드립니다.</div>
+
+    <a class="link-btn" href="https://efamily.scourt.go.kr/cs/CsBltnWrtList.do?bltnbordId=0000010" target="_blank">
+      ⚖️ 대법원 전자가족관계등록시스템 바로가기
+      <span class="sub">인명용 한자를 조회하는 공식 사이트입니다</span>
+    </a>
+
+    <div class="howto">
+      <div class="howto-item"><p>위 링크로 들어가면 <b>대법원 인명용 한자 조회</b> 화면이 나옵니다.</p></div>
+      <div class="howto-item"><p>검색창에 <b>한자의 음(소리)</b>만 입력하면 됩니다. 예를 들어 '준'이라고 치면, 이름에 쓸 수 있는 '준' 한자들이 쭉 나옵니다.</p></div>
+      <div class="howto-item"><p>여기 나오는 한자가 바로 <b>실제 동사무소(주민센터)에서 확인하는 한자</b>입니다. 이 목록에 있어야 출생신고·개명이 가능합니다.</p></div>
+      <div class="howto-item"><p>페이지에서 <b>인명용 한자 전체 PDF</b>도 다운받을 수 있으니, 파일로 받아두면 두고두고 확인할 수 있습니다.</p></div>
+    </div>
+  </div>
+
+  <!-- ───────── 2단계 상세 ───────── -->
+  <div class="section">
+    <div class="section-title">2️⃣ 뜻이 좋은지, 네이버 사전으로 더블 체크</div>
+    <div class="section-sub">대법원 사이트의 불편한 점을 보완하는 방법입니다.</div>
+
+    <div class="callout callout-gray">
+      <span class="callout-title">🤔 대법원 사이트의 아쉬운 점</span>
+      대법원 조회에서는 한자의 <b>뜻이 세세하게 나오지 않습니다.</b> 그래서 "이 한자가 정말 좋은 뜻인가?"는 따로 한 번 더 확인해야 합니다.
+    </div>
+
+    <a class="link-btn green" href="https://hanja.dict.naver.com/#/category/name" target="_blank">
+      📗 네이버 대법원 인명용 한자 사전 바로가기
+      <span class="sub">한자와 뜻이 한눈에 보여서 초보자도 확인하기 쉽습니다</span>
+    </a>
+
+    <p style="font-size:15px; color:#374151;">
+      이곳에는 인명용 한자와 함께 <b>한자의 이름(뜻과 음)</b>이 나란히 나와 있어서, 성명학을 잘 모르는 분도
+      "아, 이건 좋은 뜻이구나 / 이건 좀 별로네"를 <b>직관적으로</b> 판단할 수 있습니다.
+    </p>
+
+    <div class="callout callout-blue">
+      <span class="callout-title">✅ 여기까지 하면</span>
+      대법원 조회 + 네이버 사전 더블 체크만 해도, <b>동사무소나 법원에서 반려될 확률</b>을 크게 낮출 수 있습니다.
+      하지만 아직 가장 중요한 단계가 남았습니다.
+    </div>
+  </div>
+
+  <!-- ───────── 3단계 상세 ───────── -->
+  <div class="section">
+    <div class="section-title">3️⃣ 가장 중요한 것 — 사주에 맞는 한자</div>
+    <div class="section-sub">여기서부터가 진짜 작명입니다. 어렵지 않게 개념만 소개해 드릴게요.</div>
+
+    <p style="font-size:15px; color:#374151; margin-bottom:14px;">
+      사주에는 그 사람에게 <b>힘이 되어주는 기운</b>과 <b>부담이 되는 기운</b>이 있습니다.
+      성명학에서는 이것을 아래와 같은 이름으로 부릅니다. 용어가 낯설어도 괜찮습니다. 개념만 이해하면 충분합니다.
+    </p>
+
+    <div class="sinsal-grid">
+      <div class="sinsal-card good">
+        <span class="tag">도와주는 기운</span>
+        <div class="name">용신 (用神)</div>
+        <div class="desc">내 사주에 <b>가장 필요한 핵심 기운</b>입니다. 이름에 이 기운을 담아주면 사주의 균형을 잡아주는 역할을 합니다.</div>
+      </div>
+      <div class="sinsal-card good">
+        <span class="tag">도와주는 기운</span>
+        <div class="name">희신 (喜神)</div>
+        <div class="desc">용신을 <b>옆에서 돕는 기운</b>입니다. 용신과 함께 있으면 좋은 흐름이 더 단단해집니다.</div>
+      </div>
+      <div class="sinsal-card bad">
+        <span class="tag">부담되는 기운</span>
+        <div class="name">기신 (忌神)</div>
+        <div class="desc">내 사주에 <b>부담을 주는 기운</b>입니다. 이름에 이 기운이 들어가면 균형이 오히려 흔들릴 수 있습니다.</div>
+      </div>
+      <div class="sinsal-card bad">
+        <span class="tag">부담되는 기운</span>
+        <div class="name">구신 (仇神)</div>
+        <div class="desc">기신을 <b>도와서 부담을 키우는 기운</b>입니다. 피해야 할 방향이 하나 더 있는 셈입니다.</div>
+      </div>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-title">💡 정리하면</span>
+      좋은 이름이란, 뜻만 좋은 이름이 아니라 <b>용신·희신의 기운을 담고, 기신·구신의 기운은 피한 이름</b>입니다.
+      그래서 똑같은 한자가 어떤 아이에게는 최고의 선택이 되고, 어떤 아이에게는 피해야 할 선택이 됩니다.
+    </div>
+  </div>
+
+  <!-- ───────── AI/어플 주의 ───────── -->
+  <div class="section">
+    <div class="section-title">⚠️ 어플·AI만 믿으면 안 되는 이유</div>
+    <div class="section-sub">실제로 자주 일어나는 사례 하나만 보여드리겠습니다.</div>
+
+    <div class="hanja-demo">
+      <div class="big-char">淡</div>
+      <div class="char-read">담 (물 맑을 담)</div>
+      <div class="char-note">어플과 AI는 이 한자를 어떻게 볼까요?</div>
+    </div>
+
+    <div class="callout callout-pink">
+      <span class="callout-title">🤖 어플·AI의 흔한 판단</span>
+      "앞에 삼수변(氵, 물을 뜻하는 부수)이 있으니까 이 한자는 <b>수(水) 기운</b>입니다."
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-title">🔍 실제로는</span>
+      淡(담)은 <b>수(水)만 갖고 있는 한자가 아닙니다.</b> 한자 하나에도 여러 기운이 함께 섞여 있는 경우가 많은데,
+      부수 하나만 보고 기계적으로 판단하면 <b>사주에 맞는 한자를 잘못 고르게 될 수 있습니다.</b>
+    </div>
+
+    <p style="font-size:15px; color:#374151;">
+      그래서 정확하게 <b>내 아이의 사주에 맞는 한자</b>를 찾고 싶다면, 부수만 보고 판단하는 어플·AI보다는
+      한자의 기운을 제대로 읽을 수 있는 <b>전문가를 통해 확인하는 것</b>이 안전합니다.
+    </p>
+
+    <div class="callout callout-yellow">
+      <span class="callout-title">🙏 오해하지 마세요</span>
+      전문가에게 맡기라는 말이, <b>꼭 현승리에게 작명을 맡기라는 뜻은 아닙니다.</b>
+      어느 작명가에게 가시든 좋습니다. 다만 맡기기 전에 <b>무엇을 확인해야 실패하지 않는지</b>는 꼭 알고 가셨으면 합니다.
+      아래 전자책에 그 내용을 담았습니다.
+    </div>
+  </div>
+
+  <!-- ───────── 전자책 CTA ───────── -->
+  <div class="ebook-cta">
+    <div class="ebook-visual">
+      <div class="book-icon">📕</div>
+      <div class="book-title">작명하기 전,<br>알았다면 좋았을 것들</div>
+      <div class="book-author">현승리의 작명집 · 무료 전자책</div>
+    </div>
+    <h3>전문가에게 맡기기 전, 이것만은 알고 가세요</h3>
+    <p>이름 때문에 손해 본 실제 실패 사례들과,</p>
+    <p>작명을 맡기기 전 반드시 확인해야 할 꿀팁을 담았습니다.</p>
+    <a class="ebook-btn" href="https://hslee.co.kr/ebook" target="_blank">📖 무료 전자책 보러가기</a>
+  </div>
+
+  <!-- ───────── 오픈채팅 CTA ───────── -->
+  <div class="openchat-cta">
+    <h3>💬 현승리의 사주 작명 커뮤니티</h3>
+    <p>출산택일·작명이 고민되시나요?</p>
+    <p>오픈채팅방에서 무료 출산택일 안내를 받아보세요.</p>
+    <a class="openchat-btn" href="https://open.kakao.com/o/gBSetQ6h" target="_blank">🎁 무료 출산택일 받으러 가기</a>
+    <div class="code-box">🔑 참여코드 : 4684</div>
+    <p style="font-size:13px; margin-top:10px; opacity:0.85;">참여코드를 입력해야 입장할 수 있습니다.</p>
+  </div>
+
+  <!-- ───────── 출처 ───────── -->
+  <div class="source-section">
+    <div class="source-note">
+      구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.
+    </div>
+    <div class="source-links">
+      <a href="https://www.youtube.com/@name_house" target="_blank">▶️ 유튜브 채널</a>
+      <a href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a href="https://www.hslee.co.kr" target="_blank">🏠 공식 홈페이지</a>
+      <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
