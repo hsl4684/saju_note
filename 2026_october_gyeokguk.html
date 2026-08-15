@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>2026년 10월생 잠재력 해설지 — 격국으로 보는 우리 아이 | 현승리</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --gold: #b8860b;
+    --gold-light: #fef9e7;
+    --gold-border: #f0d060;
+    --dark: #1a1a2e;
+    --dark2: #16213e;
+    --text: #2d2d2d;
+    --text-soft: #555;
+    --wood: #2e7d32;
+    --wood-light: #e8f5e9;
+    --fire: #c0392b;
+    --fire-light: #fdecea;
+    --earth: #b8860b;
+    --earth-light: #fffde7;
+    --metal: #546e7a;
+    --metal-light: #eceff1;
+    --water: #1565c0;
+    --water-light: #e3f2fd;
+    --yang-bg: #dbeafe;
+    --yang-txt: #1e40af;
+    --yin-bg: #fce7f3;
+    --yin-txt: #9d174d;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #ffffff;
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* ═══════════ HERO ═══════════ */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 52px 20px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.15), transparent 60%);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.2);
+    border: 1px solid var(--gold-border);
+    color: #f0d060;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    position: relative;
+    letter-spacing: 0.5px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    color: #fff;
+    font-size: clamp(24px, 6.5vw, 36px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .hero h1 em { color: #f0d060; font-style: normal; }
+  .hero-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 1.7;
+    position: relative;
+    margin-bottom: 22px;
+  }
+  .hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; position: relative; }
+  .hero-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .hero-chip strong { color: #f0d060; }
+
+  /* ═══════════ LAYOUT ═══════════ */
+  .container { max-width: 720px; margin: 0 auto; padding: 36px 18px 8px; }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(19px, 5vw, 24px);
+    font-weight: 700;
+    color: var(--dark);
+    margin: 44px 0 8px;
+    line-height: 1.45;
+  }
+  .section-title:first-child { margin-top: 0; }
+  .section-lead { color: var(--text-soft); font-size: 14px; margin-bottom: 20px; line-height: 1.8; }
+
+  .card {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+
+  /* ═══════════ CALLOUT ═══════════ */
+  .callout {
+    display: flex; gap: 12px; align-items: flex-start;
+    border-radius: 12px; padding: 16px 16px;
+    margin: 14px 0; font-size: 13.5px; line-height: 1.75;
+  }
+  .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .callout-text { word-break: keep-all; }
+  .callout-title { display: block; font-weight: 700; margin-bottom: 3px; }
+  .callout-gold { background: var(--gold-light); border: 1px solid #f5e6b8; }
+  .callout-gold .callout-title { color: #8a6508; }
+  .callout-fire { background: var(--fire-light); border: 1px solid #f6c9c3; }
+  .callout-fire .callout-title { color: var(--fire); }
+  .callout-blue { background: var(--yang-bg); border: 1px solid #bfd8fb; }
+  .callout-blue .callout-title { color: var(--yang-txt); }
+  .callout-green { background: var(--wood-light); border: 1px solid #c4e3c7; }
+  .callout-green .callout-title { color: var(--wood); }
+
+  /* ═══════════ 무술월 구조 시각화 ═══════════ */
+  .month-visual {
+    display: flex; flex-direction: column; align-items: center; gap: 0;
+    margin: 20px 0 6px;
+  }
+  .mv-pillar {
+    width: 100%; max-width: 250px;
+    border-radius: 14px; overflow: hidden;
+    border: 1.5px solid #e5e5e5; text-align: center;
+    background: #fff;
+  }
+  .mv-connector { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 3px 0; }
+  .mv-conn-line { width: 0; height: 13px; border-left: 2px dashed var(--gold-border); }
+  .mv-conn-label {
+    font-size: 11px; font-weight: 700; color: #a5893a;
+    background: var(--gold-light); border: 1px solid #f0e3ae;
+    padding: 3px 12px; border-radius: 999px;
+  }
+  .mv-label { font-size: 11px; font-weight: 700; padding: 7px 0; background: #f6f6f6; color: #777; letter-spacing: 1px; }
+  .mv-char {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 38px; font-weight: 700; padding: 14px 0 4px;
+  }
+  .mv-read { font-size: 12.5px; color: #888; padding-bottom: 12px; }
+  .mv-earth-top { background: linear-gradient(160deg, #fffbe8, #fff); }
+  .mv-earth-top .mv-char { color: var(--earth); }
+  .mv-hidden {
+    border-top: 1px dashed #e5d9a8;
+    padding: 10px 8px 12px; background: #fffdf3;
+  }
+  .mv-hidden-label { font-size: 10.5px; color: #a5893a; font-weight: 700; margin-bottom: 7px; letter-spacing: 0.5px; }
+  .mv-hidden-chips { display: flex; justify-content: center; gap: 5px; flex-wrap: wrap; }
+  .mv-hc {
+    font-size: 12px; font-weight: 600; padding: 4px 9px; border-radius: 8px;
+    background: #f4f4f4; color: #777; border: 1px solid #e6e6e6;
+  }
+  .mv-hc.hit {
+    background: var(--gold-light); color: #8a6508; border: 1.5px solid var(--gold-border);
+    box-shadow: 0 0 0 3px rgba(240,208,96,0.18);
+  }
+  .root-link {
+    text-align: center; margin: 10px 0 4px;
+    font-size: 13px; font-weight: 700; color: #8a6508;
+  }
+  .root-link .rl-line {
+    display: inline-block; padding: 7px 18px; border-radius: 999px;
+    background: var(--gold-light); border: 1.5px dashed var(--gold-border);
+  }
+
+  /* 화분 vs 땅 비유 */
+  .analogy {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 6px;
+  }
+  .ana-box {
+    border-radius: 14px; padding: 18px 14px; text-align: center;
+    border: 1.5px solid #ececec;
+  }
+  .ana-box .ana-emoji { font-size: 34px; margin-bottom: 8px; }
+  .ana-box .ana-name { font-weight: 700; font-size: 14px; margin-bottom: 5px; }
+  .ana-box .ana-desc { font-size: 12.5px; color: var(--text-soft); line-height: 1.65; }
+  .ana-normal { background: #fafafa; }
+  .ana-normal .ana-name { color: #888; }
+  .ana-root { background: var(--wood-light); border-color: #bcdcbf; }
+  .ana-root .ana-name { color: var(--wood); }
+
+  /* ═══════════ 일간 찾기 STEP ═══════════ */
+  .steps { counter-reset: step; margin: 18px 0 6px; }
+  .step {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 16px 0;
+  }
+  .step + .step { border-top: 1px dashed #e8e8e8; }
+  .step-num {
+    counter-increment: step;
+    flex-shrink: 0;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--dark); color: #f0d060;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+  }
+  .step-num::before { content: counter(step); }
+  .step-body { font-size: 14px; line-height: 1.75; }
+  .step-body strong { color: var(--dark); }
+  .step-body .small { font-size: 12.5px; color: #888; display: block; margin-top: 3px; }
+
+  .app-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .app-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 700; color: var(--dark);
+    background: #fafafa; border: 1.5px solid #e3e3e3;
+    padding: 9px 15px; border-radius: 999px; text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .app-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.08); border-color: var(--gold-border); }
+  .naver-alt {
+    display: flex; align-items: flex-start; gap: 7px;
+    font-size: 12px; color: #777; line-height: 1.65;
+    background: #f2fbf4; border: 1px solid #d3ecd8; border-radius: 10px;
+    padding: 9px 12px; margin-top: 10px;
+  }
+  .naver-alt .na-badge {
+    flex-shrink: 0; font-size: 10.5px; font-weight: 800; color: #fff;
+    background: #03c75a; border-radius: 6px; padding: 2px 7px; margin-top: 2px;
+  }
+
+  /* 미니 사주 그리드 (시 → 일 → 월 → 년) */
+  .mini-saju { margin: 16px 0 4px; }
+  .ms-grid {
+    display: grid; grid-template-columns: 56px repeat(4, 1fr);
+    gap: 5px; max-width: 460px; margin: 0 auto;
+  }
+  .ms-head {
+    font-size: 11.5px; font-weight: 700; color: #999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 8px 0; background: #f7f7f7; border-radius: 8px;
+  }
+  .ms-side {
+    font-size: 11px; font-weight: 700; color: #999;
+    display: flex; align-items: center; justify-content: center;
+    background: #f7f7f7; border-radius: 8px;
+  }
+  .ms-cell {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 19px; font-weight: 700; text-align: center;
+    padding: 12px 0; border-radius: 10px;
+    background: #fafafa; border: 1px solid #eee; color: #b9b9b9;
+  }
+  .ms-cell.me {
+    background: linear-gradient(160deg, #fff8dc, #ffedad);
+    border: 2.5px solid var(--gold); color: #6d5006;
+    position: relative; z-index: 1;
+    font-size: 23px;
+    transform: scale(1.14);
+    box-shadow: 0 8px 20px rgba(184,134,11,0.35), 0 0 0 4px rgba(240,208,96,0.28);
+    animation: mepulse 2s ease-in-out infinite;
+  }
+  @keyframes mepulse {
+    0%, 100% { box-shadow: 0 8px 20px rgba(184,134,11,0.35), 0 0 0 4px rgba(240,208,96,0.28); }
+    50%      { box-shadow: 0 8px 22px rgba(184,134,11,0.42), 0 0 0 9px rgba(240,208,96,0.12); }
+  }
+  .ms-cell.me::after {
+    content: '👀 이것만 보세요!';
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, #b8860b, #e0b32a); color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 999px;
+    white-space: nowrap; box-shadow: 0 3px 8px rgba(184,134,11,0.4);
+  }
+  @media (prefers-reduced-motion: reduce) { .ms-cell.me { animation: none; } }
+  .ms-cell.month-cell { background: #fffbe8; border: 1px solid #eadfa9; color: #a5893a; }
+  .ms-caption { text-align: center; font-size: 11.5px; color: #999; margin-top: 10px; line-height: 1.6; }
+
+  /* 10천간 → 5오행 매핑 */
+  .stem-map { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 16px 0 4px; }
+  .sm-item { border-radius: 12px; padding: 12px 6px 10px; text-align: center; border: 1.5px solid transparent; }
+  .sm-stems { font-family: 'Noto Serif KR', serif; font-size: 15px; font-weight: 700; line-height: 1.5; }
+  .sm-el { font-size: 12px; font-weight: 700; margin-top: 5px; }
+  .sm-wood { background: var(--wood-light); border-color: #c4e3c7; } .sm-wood .sm-stems, .sm-wood .sm-el { color: var(--wood); }
+  .sm-fire { background: var(--fire-light); border-color: #f6c9c3; } .sm-fire .sm-stems, .sm-fire .sm-el { color: var(--fire); }
+  .sm-earth { background: var(--earth-light); border-color: #ecdf9e; } .sm-earth .sm-stems, .sm-earth .sm-el { color: #9c7408; }
+  .sm-metal { background: var(--metal-light); border-color: #ccd7dc; } .sm-metal .sm-stems, .sm-metal .sm-el { color: var(--metal); }
+  .sm-water { background: var(--water-light); border-color: #bcd9f5; } .sm-water .sm-stems, .sm-water .sm-el { color: var(--water); }
+
+  /* ═══════════ 격국 카드 ═══════════ */
+  .gyeok-card {
+    border-radius: 18px; overflow: hidden;
+    border: 1.5px solid #ececec;
+    box-shadow: var(--shadow);
+    margin-bottom: 22px;
+    background: #fff;
+  }
+  .gc-head { padding: 20px 20px 16px; position: relative; }
+  .gc-eyebrow {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;
+    background: rgba(255,255,255,0.7);
+  }
+  .gc-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(18px, 5vw, 22px); font-weight: 700; line-height: 1.4;
+  }
+  .gc-tagline { font-size: 13px; margin-top: 4px; opacity: 0.85; font-weight: 500; }
+  .gc-stems { position: absolute; top: 18px; right: 18px; display: flex; gap: 5px; }
+  .gc-stem {
+    font-family: 'Noto Serif KR', serif;
+    width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+    background: rgba(255,255,255,0.85); box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .gc-body { padding: 18px 20px 20px; }
+  .gc-formula {
+    display: block;
+    font-size: 12.5px; color: #888; background: #fafafa;
+    border: 1px dashed #e3e3e3; border-radius: 10px;
+    padding: 10px 12px; margin-bottom: 16px; text-align: center;
+    line-height: 1.6;
+  }
+  .gc-formula b { color: var(--dark); }
+  .gc-strengths { margin-bottom: 16px; }
+  .gc-str-title { font-size: 12px; font-weight: 700; color: #999; letter-spacing: 1px; margin-bottom: 9px; }
+  .gc-str-item {
+    display: flex; gap: 9px; align-items: flex-start;
+    font-size: 13.5px; line-height: 1.7; margin-bottom: 7px;
+  }
+  .gc-str-item:last-child { margin-bottom: 0; }
+  .gc-str-dot { flex-shrink: 0; font-size: 13px; margin-top: 2px; }
+  .gc-fantasy {
+    border-radius: 12px; padding: 15px 16px;
+    font-size: 13.5px; line-height: 1.8;
+  }
+  .gc-fantasy-title { display: block; font-weight: 700; margin-bottom: 4px; font-size: 13px; }
+  .gc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+  .gc-chip {
+    font-size: 11.5px; font-weight: 600; padding: 4px 11px; border-radius: 999px;
+    background: #f5f5f5; color: #777;
+  }
+
+  /* 오행별 색 */
+  .gc-wood .gc-head { background: linear-gradient(135deg, #e8f5e9, #d7ecd9); }
+  .gc-wood .gc-eyebrow, .gc-wood .gc-title, .gc-wood .gc-tagline, .gc-wood .gc-stem { color: var(--wood); }
+  .gc-wood .gc-fantasy { background: var(--wood-light); }
+  .gc-wood .gc-fantasy-title { color: var(--wood); }
+  .gc-fire .gc-head { background: linear-gradient(135deg, #fdecea, #fadcd7); }
+  .gc-fire .gc-eyebrow, .gc-fire .gc-title, .gc-fire .gc-tagline, .gc-fire .gc-stem { color: var(--fire); }
+  .gc-fire .gc-fantasy { background: var(--fire-light); }
+  .gc-fire .gc-fantasy-title { color: var(--fire); }
+  .gc-earth .gc-head { background: linear-gradient(135deg, #fffde7, #f8f0c8); }
+  .gc-earth .gc-eyebrow, .gc-earth .gc-title, .gc-earth .gc-tagline, .gc-earth .gc-stem { color: #9c7408; }
+  .gc-earth .gc-fantasy { background: var(--earth-light); }
+  .gc-earth .gc-fantasy-title { color: #9c7408; }
+  .gc-metal .gc-head { background: linear-gradient(135deg, #eceff1, #dde4e8); }
+  .gc-metal .gc-eyebrow, .gc-metal .gc-title, .gc-metal .gc-tagline, .gc-metal .gc-stem { color: var(--metal); }
+  .gc-metal .gc-fantasy { background: var(--metal-light); }
+  .gc-metal .gc-fantasy-title { color: var(--metal); }
+  .gc-water .gc-head { background: linear-gradient(135deg, #e3f2fd, #d0e7fa); }
+  .gc-water .gc-eyebrow, .gc-water .gc-title, .gc-water .gc-tagline, .gc-water .gc-stem { color: var(--water); }
+  .gc-water .gc-fantasy { background: var(--water-light); }
+  .gc-water .gc-fantasy-title { color: var(--water); }
+
+  /* ═══════════ 인스타 CTA ═══════════ */
+  .insta-cta {
+    display: flex; align-items: center; gap: 14px;
+    border-radius: 16px; padding: 16px 18px; margin: 2px 0 10px;
+    background: #fff;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: var(--shadow);
+  }
+  .insta-icon {
+    width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf);
+    display: flex; align-items: center; justify-content: center; font-size: 23px;
+  }
+  .insta-text { flex: 1; font-size: 12.5px; color: var(--text-soft); line-height: 1.6; }
+  .insta-text strong { display: block; font-size: 14px; color: var(--dark); margin-bottom: 2px; }
+  .btn-insta {
+    flex-shrink: 0; display: inline-block;
+    background: linear-gradient(45deg, #fa7e1e, #d62976, #962fbf);
+    color: #fff; font-weight: 800; font-size: 12.5px;
+    padding: 11px 18px; border-radius: 999px; text-decoration: none;
+    box-shadow: 0 4px 14px rgba(214,41,118,0.35); white-space: nowrap;
+    transition: transform .15s;
+  }
+  .btn-insta:hover { transform: translateY(-1px); }
+  @media (max-width: 480px) {
+    .insta-cta { flex-wrap: wrap; justify-content: center; text-align: center; }
+    .insta-text { flex: 1 1 100%; }
+    .btn-insta { width: 100%; text-align: center; }
+  }
+
+  /* ═══════════ 일간 선택기 ═══════════ */
+  .picker-card {
+    background: #fff; border: 1.5px solid #ececec; border-radius: 18px;
+    padding: 22px 20px; box-shadow: var(--shadow);
+  }
+  .picker-label { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .picker-wrap { position: relative; }
+  .picker-wrap::before {
+    content: '🔍'; position: absolute; left: 16px; top: 50%;
+    transform: translateY(-50%); font-size: 16px; pointer-events: none;
+  }
+  .picker-wrap::after {
+    content: '▼'; position: absolute; right: 18px; top: 50%;
+    transform: translateY(-50%); font-size: 11px; color: var(--gold); pointer-events: none;
+  }
+  select.stem-select {
+    width: 100%; appearance: none; -webkit-appearance: none;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 600;
+    color: var(--dark); padding: 15px 40px 15px 46px;
+    border-radius: 999px; border: 2px solid var(--gold-border);
+    background: #fffdf4; outline: none; cursor: pointer;
+    box-shadow: 0 3px 14px rgba(184,134,11,0.12);
+    transition: box-shadow .2s, border-color .2s;
+  }
+  select.stem-select:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(240,208,96,0.25); }
+  .picker-hint { font-size: 12px; color: #999; margin-top: 14px; line-height: 1.65; }
+  .color-legend { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+  .cl-chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px; font-weight: 700; padding: 8px 13px; border-radius: 999px;
+    border: 1.5px solid #e8e8e8; background: #fff; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .cl-chip:hover, .cl-chip:focus-visible { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+  .cl-dot { width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0; }
+  .cl-wood  { color: var(--wood);  border-color: #c4e3c7; background: #f4faf4; } .cl-wood .cl-dot  { background: #2e7d32; }
+  .cl-fire  { color: var(--fire);  border-color: #f6c9c3; background: #fdf3f1; } .cl-fire .cl-dot  { background: #c0392b; }
+  .cl-earth { color: #9c7408;      border-color: #ecdf9e; background: #fffcf0; } .cl-earth .cl-dot { background: #e0b32a; }
+  .cl-metal { color: var(--metal); border-color: #ccd7dc; background: #f4f7f8; } .cl-metal .cl-dot { background: #eceff1; border: 1.5px solid #b0bec5; }
+  .cl-water { color: var(--water); border-color: #bcd9f5; background: #f2f8fe; } .cl-water .cl-dot { background: #123a6b; }
+  .result-placeholder {
+    border: 2px dashed #e8dfae; background: #fffdf2; border-radius: 18px;
+    padding: 30px 18px; text-align: center; color: #a5893a;
+    font-size: 13.5px; line-height: 1.7; margin-top: 16px;
+  }
+  .result-placeholder .rp-emoji { font-size: 32px; display: block; margin-bottom: 7px; }
+  .gyeok-result { margin-top: 16px; }
+  .gyeok-result .gyeok-card {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .45s ease, transform .45s ease;
+    margin-bottom: 0;
+  }
+  .gyeok-result.show .gyeok-card { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .gyeok-result .gyeok-card { transition: none; }
+  }
+
+  /* ═══════════ 질문 체크리스트 ═══════════ */
+  .qa-box {
+    background: #fff; border: 1.5px solid #ececec; border-radius: 16px;
+    padding: 20px; box-shadow: var(--shadow);
+  }
+  .qa-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 13px 0;
+  }
+  .qa-item + .qa-item { border-top: 1px dashed #ececec; }
+  .qa-icon {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
+    background: var(--yang-bg); color: var(--yang-txt);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800;
+  }
+  .qa-text { font-size: 13.5px; line-height: 1.7; }
+  .qa-text strong { color: var(--dark); }
+  .qa-text .why { display: block; font-size: 12px; color: #999; margin-top: 2px; }
+
+  /* ═══════════ 라이브 CTA ═══════════ */
+  .live-cta-wrap { margin: 48px 0 24px; position: relative; }
+  .live-cta-wrap::before {
+    content: '';
+    position: absolute; inset: -12px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(234,179,8,0.18), transparent 70%);
+    border-radius: 30px; pointer-events: none;
+  }
+  .live-cta {
+    background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 40%, #0f2040 100%);
+    border: 1.5px solid rgba(240,208,96,0.35);
+    border-radius: 24px; padding: 36px 24px 32px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .live-cta::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, #f0d060, #d4a017, #f0d060, transparent);
+  }
+  .live-cta::after {
+    content: '✦ ✦ ✦';
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    color: rgba(240,208,96,0.25); font-size: 10px; letter-spacing: 10px;
+  }
+  .live-badge-row { display: flex; justify-content: center; gap: 8px; margin-bottom: 18px; position: relative; }
+  .live-dot-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
+    padding: 5px 14px; border-radius: 999px;
+    box-shadow: 0 0 14px rgba(220,38,38,0.5);
+  }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; animation: livepulse 1.2s ease-in-out infinite; }
+  @keyframes livepulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+  .free-badge-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: rgba(240,208,96,0.15); border: 1px solid rgba(240,208,96,0.4);
+    color: #f0d060; font-size: 11px; font-weight: 700;
+    padding: 5px 14px; border-radius: 999px;
+  }
+  .live-headline {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(19px, 5.5vw, 28px); font-weight: 700; color: #fff;
+    line-height: 1.4; margin-bottom: 6px; word-break: keep-all; position: relative;
+  }
+  .live-headline em { color: #f0d060; font-style: normal; }
+  .live-subcopy {
+    color: rgba(255,255,255,0.6); font-size: 13px;
+    line-height: 1.65; margin-bottom: 22px; word-break: keep-all; position: relative;
+  }
+  .live-subcopy strong { color: rgba(255,255,255,0.9); }
+  .live-benefits {
+    display: flex; flex-direction: column; gap: 9px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(240,208,96,0.2);
+    border-radius: 14px; padding: 18px 16px; margin: 0 auto 22px; max-width: 380px;
+  }
+  .live-benefit-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.85); text-align: left; word-break: keep-all; line-height: 1.5; }
+  .lbi-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+  .code-box {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: rgba(240,208,96,0.12); border: 1.5px dashed rgba(240,208,96,0.45);
+    border-radius: 12px; padding: 11px 20px; margin-bottom: 20px;
+  }
+  .code-label { font-size: 11px; color: rgba(255,255,255,0.5); font-weight: 600; }
+  .code-number { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 700; color: #f0d060; letter-spacing: 5px; }
+  .btn-live {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: linear-gradient(135deg, #b8860b 0%, #d4a017 50%, #f0d060 100%);
+    color: #1a1a2e; font-size: 15px; font-weight: 800;
+    padding: 16px 36px; border-radius: 999px; text-decoration: none;
+    width: 100%; max-width: 340px;
+    box-shadow: 0 6px 28px rgba(184,134,11,0.45), 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.03em;
+  }
+  .btn-live:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(184,134,11,0.55), 0 4px 12px rgba(0,0,0,0.3); }
+  .live-notice { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; line-height: 1.6; word-break: keep-all; }
+
+  /* ═══════════ 전자책 CTA ═══════════ */
+  .ebook-section {
+    background: linear-gradient(135deg, #1c1008 0%, #2d1f0a 50%, #1c1008 100%);
+    border-radius: var(--radius); padding: 36px 24px; margin: 16px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+    border: 1px solid rgba(240,208,96,0.2);
+  }
+  .ebook-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 15%, rgba(220,38,38,0.12), transparent 50%),
+                radial-gradient(ellipse at 20% 85%, rgba(184,134,11,0.1), transparent 50%);
+  }
+  .ebook-section::after {
+    content: '✦ ✦ ✦';
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    color: rgba(240,208,96,0.2); font-size: 10px; letter-spacing: 8px;
+  }
+  .ebook-info { position: relative; }
+  .ebook-hook-banner {
+    background: rgba(220,38,38,0.12);
+    border: 1px solid rgba(220,38,38,0.3);
+    border-radius: 10px; padding: 14px 16px; margin-bottom: 22px;
+    display: flex; align-items: flex-start; gap: 10px; text-align: left;
+  }
+  .ehb-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .ehb-text { font-size: 12px; color: rgba(255,255,255,0.72); line-height: 1.7; word-break: keep-all; }
+  .ehb-text strong { color: #ff8a80; display: block; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .ebook-mockup { display: flex; justify-content: center; margin-bottom: 20px; }
+  .ebook-book {
+    width: 130px; height: 180px;
+    border-radius: 4px 12px 12px 4px;
+    background: linear-gradient(160deg, #2d1a05 0%, #1a0f03 100%);
+    border: 1px solid rgba(240,208,96,0.4);
+    box-shadow: 6px 8px 32px rgba(0,0,0,0.7), inset 3px 0 8px rgba(0,0,0,0.5);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding: 18px 14px; position: relative;
+  }
+  .ebook-book::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 8px;
+    background: linear-gradient(180deg, rgba(240,208,96,0.7), rgba(184,134,11,0.5));
+    border-radius: 4px 0 0 4px;
+  }
+  .ebook-book::after {
+    content: '';
+    position: absolute; top: 16px; left: 16px; right: 16px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(240,208,96,0.5), transparent);
+  }
+  .eb-icon { font-size: 26px; }
+  .eb-title { font-family: 'Noto Serif KR', serif; color: #f0d060; font-size: 10px; font-weight: 700; text-align: center; line-height: 1.85; word-break: keep-all; }
+  .eb-author { font-size: 9px; color: rgba(240,208,96,0.5); text-align: center; border-top: 1px solid rgba(240,208,96,0.2); padding-top: 6px; width: 100%; }
+  .ebook-free-sticker {
+    position: absolute; top: -10px; right: calc(50% - 74px);
+    background: linear-gradient(135deg, #b8860b, #f0d060);
+    color: #1a1a2e; font-size: 10px; font-weight: 800;
+    padding: 4px 12px; border-radius: 999px;
+    box-shadow: 0 3px 10px rgba(184,134,11,0.4);
+  }
+  .ebook-info h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(16px, 4vw, 20px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 6px; word-break: keep-all;
+  }
+  .eb-desc { color: rgba(255,255,255,0.48); font-size: 12px; margin-bottom: 18px; line-height: 1.65; word-break: keep-all; }
+  .ebook-fail-list {
+    background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 16px 16px 14px; margin-bottom: 18px; text-align: left;
+  }
+  .efl-title { font-size: 11px; color: rgba(240,208,96,0.65); font-weight: 700; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .efl-item {
+    display: flex; align-items: flex-start; gap: 9px;
+    font-size: 12px; color: rgba(255,255,255,0.68);
+    line-height: 1.65; word-break: keep-all; margin-bottom: 9px;
+  }
+  .efl-item:last-child { margin-bottom: 0; }
+  .efl-num {
+    background: rgba(220,38,38,0.28); color: #ff8a80;
+    font-size: 10px; font-weight: 800;
+    min-width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .ebook-learn-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 20px; }
+  .elc-chip {
+    background: rgba(240,208,96,0.08); border: 1px solid rgba(240,208,96,0.22);
+    color: rgba(255,255,255,0.65); font-size: 11px; font-weight: 600;
+    padding: 5px 12px; border-radius: 999px; word-break: keep-all;
+  }
+  .btn-ebook {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #b8860b, #d4a017, #f0d060);
+    color: #1a0f03; font-size: 14px; font-weight: 800;
+    padding: 14px 30px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(184,134,11,0.45);
+    transition: transform 0.2s; letter-spacing: 0.02em;
+  }
+  .btn-ebook:hover { transform: translateY(-2px); }
+  .ebook-notice { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 10px; line-height: 1.6; }
+
+  /* ═══════════ FOOTER ═══════════ */
+  .footer { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 32px 20px; margin-top: 40px; }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title { font-family: 'Noto Serif KR', serif; color: #f0d060; font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 18px; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+  .footer-links a:hover { color: #f0d060; }
+  .footer-credit { font-size: 11px; color: rgba(255,255,255,0.35); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; line-height: 1.7; word-break: keep-all; }
+
+  /* ═══════════ MOBILE ═══════════ */
+  @media (max-width: 480px) {
+    .container { padding: 30px 14px 8px; }
+    .stem-map { grid-template-columns: repeat(5, 1fr); gap: 5px; }
+    .sm-stems { font-size: 13px; }
+    .sm-el { font-size: 10.5px; }
+    .gc-stems { position: static; margin-top: 10px; }
+    .gc-head { padding: 18px 16px 14px; }
+    .gc-body { padding: 16px 16px 18px; }
+    .ms-grid { grid-template-columns: 44px repeat(4, 1fr); gap: 4px; }
+    .ms-cell { font-size: 16px; padding: 10px 0; }
+    .mv-char { font-size: 30px; }
+  }
+  @media (max-width: 360px) {
+    .analogy { grid-template-columns: 1fr; }
+    .sm-stems { font-size: 12px; }
+    .hero-chip { font-size: 11px; padding: 5px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <div class="hero-badge">💬 댓글 키워드 「잠재력」 신청자 전용 자료</div>
+  <h1>10월생은<br><em>시작점</em>이 다릅니다</h1>
+  <div class="hero-sub">
+    2026년 10월, 무술월(戊戌月)에 태어나는 아이들의<br>
+    타고난 잠재력 해설지 — by 현승리
+  </div>
+  <div class="hero-chips">
+    <div class="hero-chip">📅 대상: <strong>2026.10.8 ~ 11.6</strong> 출생</div>
+    <div class="hero-chip">⏱ 읽는 시간 <strong>5분</strong></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="callout callout-blue" style="margin-top:0;">
+    <div class="callout-icon">🙌</div>
+    <div class="callout-text">
+      <span class="callout-title">한자를 몰라도, 태어난 시간을 몰라도 괜찮습니다</span>
+      모든 한자는 한글 음을 함께 적었고, 이 자료는 <strong>아이의 생일만 알면</strong> 잠재력을 확인할 수 있게 만들었습니다. 제왕절개 날짜가 확정되었거나 예정일이 확고하다면 지금 바로 확인해보세요. 아직이라면? <strong>현승리의 작명집</strong> 인스타그램을 팔로우하거나 이 페이지를 저장해두고, 아이가 태어난 날 확인하셔도 됩니다.
+    </div>
+  </div>
+
+  <div class="insta-cta">
+    <div class="insta-icon">📷</div>
+    <div class="insta-text">
+      <strong>현승리의 작명집 · @free_hsl</strong>
+      까먹기 전에 지금 팔로우 + 저장! 아이가 태어난 날, 30초 만에 다시 확인하세요.
+    </div>
+    <a href="https://www.instagram.com/free_hsl/" target="_blank" class="btn-insta">📌 팔로우 하기</a>
+  </div>
+
+  <!-- ═══════════ 1. 왜 10월생인가 ═══════════ -->
+  <div class="section-title">🌳 왜 10월생은 "뿌리를 갖고" 태어날까?</div>
+  <div class="section-lead">
+    영상에서 말한 <strong>"태어나는 순간부터 자기 기운에 뿌리를 갖고 나온다"</strong>는 말, 그 이유를 딱 한 장면으로 보여드릴게요.
+  </div>
+
+  <div class="card">
+    <p style="font-size:14px; margin-bottom:6px;">
+      2026년 10월 8일부터 11월 6일까지는 사주에서 <strong>무술월(戊戌月)</strong>이라고 부릅니다. 이 달에 태어나는 모든 아이의 사주에는 '월(月)의 자리'에 아래 두 글자가 새겨집니다.
+    </p>
+
+    <div class="month-visual">
+      <div class="mv-pillar mv-earth-top">
+        <div class="mv-label">🌤 월의 하늘 글자 (위)</div>
+        <div class="mv-char">戊</div>
+        <div class="mv-read">무 · 큰 산의 흙</div>
+      </div>
+      <div class="mv-connector">
+        <div class="mv-conn-line"></div>
+        <div class="mv-conn-label">🌱 뿌리가 아래로 내려가요</div>
+        <div class="mv-conn-line"></div>
+      </div>
+      <div class="mv-pillar mv-earth-top">
+        <div class="mv-label">🪨 월의 땅 글자 (아래)</div>
+        <div class="mv-char">戌</div>
+        <div class="mv-read">술 · 늦가을의 땅</div>
+        <div class="mv-hidden">
+          <div class="mv-hidden-label">戌(술) 안에 숨어 있는 기운</div>
+          <div class="mv-hidden-chips">
+            <span class="mv-hc">신(辛)</span>
+            <span class="mv-hc">정(丁)</span>
+            <span class="mv-hc hit">무(戊) ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="root-link">
+      <span class="rl-line">🔗 위 하늘의 무(戊) ↕ 아래 땅속의 무(戊) → 수직으로 뿌리 연결! (통근)</span>
+    </div>
+
+    <p style="font-size:14px; margin-top:14px;">
+      보이시나요? 위에 뜬 하늘 글자 무(戊)와 똑같은 무(戊)가, 바로 아래 땅 글자 술(戌) 속에 숨어 있습니다. 하늘의 기운이 자기 발밑 땅속에 같은 기운을 갖고 위아래로 이어진 것 — 이걸 사주에서는 <strong>통근(通根)</strong>, 말 그대로 "뿌리가 통했다"고 부릅니다.
+    </p>
+  </div>
+
+  <div class="analogy">
+    <div class="ana-box ana-normal">
+      <div class="ana-emoji">🪴</div>
+      <div class="ana-name">뿌리가 약한 사주</div>
+      <div class="ana-desc">화분에 심은 나무처럼<br>환경에 따라 흔들리기 쉬워요</div>
+    </div>
+    <div class="ana-box ana-root">
+      <div class="ana-emoji">🌳</div>
+      <div class="ana-name">10월생 = 통근한 사주</div>
+      <div class="ana-desc">땅에 뿌리내린 나무처럼<br>잠재력의 방향이 처음부터 선명해요</div>
+    </div>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">💡</div>
+    <div class="callout-text">
+      <span class="callout-title">그래서 10월은, 시간을 몰라도 생일만 알면 격이 바로 드러나는 사주가 많습니다</span>
+      사주에서는 한 사람이 타고난 잠재력의 방향을 <strong>격국(格局)</strong>이라고 부릅니다. 격국은 그 사람의 그릇이자 무대 — 어떤 분야에서, 어떤 방식으로 재능이 피어나는지를 보여주는 지도입니다. 월의 기운이 뿌리내린 10월은, 태어난 시간을 몰라도 <strong>생일(일간)만 알면 이 지도가 바로 그려지는</strong> 특별한 달입니다.
+    </div>
+  </div>
+
+  <!-- ═══════════ 2. 일간 찾기 ═══════════ -->
+  <div class="section-title">🔎 STEP 1 · 우리 아이의 "일간" 찾기</div>
+  <div class="section-lead">
+    같은 10월생이라도 잠재력의 방향은 아이마다 다릅니다. 그 방향을 정하는 열쇠가 바로 <strong>일간(日干)</strong> — 사주 여덟 글자 중 <strong>'아이 자신'을 뜻하는 단 한 글자</strong>입니다.
+  </div>
+
+  <div class="card">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          만세력 앱 <strong>천을귀인</strong>을 다운로드하고, 아이의 생년월일을 입력하세요.
+          <span class="small">태어난 시간은 몰라도 됩니다 — 일간은 날짜만으로 정해지거든요. 출산 전이라면 확정된 수술 날짜나 예정일을 넣어보세요.</span>
+          <div class="app-btns">
+            <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank" class="app-btn">🍎 앱스토어에서 받기</a>
+            <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank" class="app-btn">🤖 구글플레이에서 받기</a>
+          </div>
+          <div class="naver-alt">
+            <span class="na-badge">N</span>
+            <span>앱 다운이 귀찮으시다면? <strong>네이버에 "만세력"</strong>이라고 검색한 뒤 생년월일만 입력해도 똑같이 확인할 수 있어요.</span>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          사주표에서 <strong>'일주(태어난 날)' 기둥의 위쪽 글자</strong>를 확인하세요. 그 글자가 일간, 즉 아이 자신입니다.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          일간이 <strong>목(木)·화(火)·토(土)·금(金)·수(水)</strong> 다섯 기운 중 어디에 속하는지만 보면 끝!
+          <span class="small">글자는 10가지지만, 다섯 기운으로 묶으면 아주 간단해집니다.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-icon">🙆</div>
+    <div class="callout-text">
+      <span class="callout-title">너무 어렵게 생각하지 마세요!</span>
+      앱 화면에 뜬 <strong>글자의 색깔</strong>만 봐도 되고, <strong>글자 모양</strong>만 기억해서 아래 STEP 2에서 골라도 됩니다. 대부분의 만세력 앱은 일간 글자를 오행 색으로 칠해서 보여주거든요. 색 하나, 글자 하나 — 그거면 충분합니다.
+    </div>
+  </div>
+
+  <div class="mini-saju">
+    <div class="ms-grid">
+      <div class="ms-side">구분</div>
+      <div class="ms-head">시주</div>
+      <div class="ms-head">일주</div>
+      <div class="ms-head">월주</div>
+      <div class="ms-head">년주</div>
+      <div class="ms-side">하늘<br>글자</div>
+      <div class="ms-cell">?</div>
+      <div class="ms-cell me">?</div>
+      <div class="ms-cell month-cell">戊</div>
+      <div class="ms-cell">丙</div>
+      <div class="ms-side">땅<br>글자</div>
+      <div class="ms-cell">?</div>
+      <div class="ms-cell">?</div>
+      <div class="ms-cell month-cell">戌</div>
+      <div class="ms-cell">午</div>
+    </div>
+    <div class="ms-caption">
+      2026년 10월생의 사주 틀 — 월주 무술(戊戌)·년주 병오(丙午)는 모두 같습니다.<br>
+      복잡해 보여도 <strong>금색 칸(일간) 딱 하나만 보면 끝!</strong> 이 글자는 생일만으로 정해집니다.
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px;">
+    <div style="font-size:13px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:12px;">📖 일간 10글자 → 다섯 기운으로 묶기</div>
+    <div class="stem-map">
+      <div class="sm-item sm-wood">
+        <div class="sm-stems">갑(甲)<br>을(乙)</div>
+        <div class="sm-el">목(木)</div>
+      </div>
+      <div class="sm-item sm-fire">
+        <div class="sm-stems">병(丙)<br>정(丁)</div>
+        <div class="sm-el">화(火)</div>
+      </div>
+      <div class="sm-item sm-earth">
+        <div class="sm-stems">무(戊)<br>기(己)</div>
+        <div class="sm-el">토(土)</div>
+      </div>
+      <div class="sm-item sm-metal">
+        <div class="sm-stems">경(庚)<br>신(辛)</div>
+        <div class="sm-el">금(金)</div>
+      </div>
+      <div class="sm-item sm-water">
+        <div class="sm-stems">임(壬)<br>계(癸)</div>
+        <div class="sm-el">수(水)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 3. 오행별 격국 (인터랙티브) ═══════════ -->
+  <div class="section-title">🗺 STEP 2 · 글자를 고르면, 우리 아이의 격국이 나옵니다</div>
+  <div class="section-lead">
+    10월의 중심 기운은 월지에 뿌리내린 <strong>무(戊)토</strong>입니다. 이 무(戊)토가 아이(일간)에게 어떤 존재가 되느냐에 따라 격국 — 즉 <strong>잠재력이 피어나는 무대</strong>가 정해집니다. 아래에서 아이의 일간 글자를 골라보세요.
+  </div>
+
+  <div class="picker-card">
+    <div class="picker-label">🔮 아이의 일간 글자 고르기</div>
+    <div class="picker-wrap">
+      <select class="stem-select" id="stemSelect" aria-label="아이의 일간 글자 선택">
+        <option value="" selected>앱에서 본 일간 글자를 선택하세요</option>
+        <optgroup label="🌱 초록 계열 글자 — 목(木)">
+          <option value="gap">甲 (갑)</option>
+          <option value="eul">乙 (을)</option>
+        </optgroup>
+        <optgroup label="🔥 빨강 계열 글자 — 화(火)">
+          <option value="byeong">丙 (병)</option>
+          <option value="jeong">丁 (정)</option>
+        </optgroup>
+        <optgroup label="⛰️ 노랑 계열 글자 — 토(土)">
+          <option value="mu">戊 (무)</option>
+          <option value="gi">己 (기)</option>
+        </optgroup>
+        <optgroup label="⚔️ 하양·회색 계열 글자 — 금(金)">
+          <option value="gyeong">庚 (경)</option>
+          <option value="sin">辛 (신)</option>
+        </optgroup>
+        <optgroup label="🌊 검정·파랑 계열 글자 — 수(水)">
+          <option value="im">壬 (임)</option>
+          <option value="gye">癸 (계)</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="picker-hint">
+      🎨 글자는 기억이 안 나고 <strong>색깔만</strong> 기억나세요? 아래 색을 눌러도 결과를 볼 수 있어요. (앱마다 색은 조금씩 다를 수 있습니다)
+    </div>
+    <div class="color-legend">
+      <button type="button" class="cl-chip cl-wood" data-el="wood"><span class="cl-dot"></span>초록 = 목(木)</button>
+      <button type="button" class="cl-chip cl-fire" data-el="fire"><span class="cl-dot"></span>빨강 = 화(火)</button>
+      <button type="button" class="cl-chip cl-earth" data-el="earth"><span class="cl-dot"></span>노랑 = 토(土)</button>
+      <button type="button" class="cl-chip cl-metal" data-el="metal"><span class="cl-dot"></span>하양·회색 = 금(金)</button>
+      <button type="button" class="cl-chip cl-water" data-el="water"><span class="cl-dot"></span>검정·파랑 = 수(水)</button>
+    </div>
+  </div>
+
+  <div class="result-placeholder" id="resultPlaceholder">
+    <span class="rp-emoji">🎁</span>
+    글자나 색을 고르면, <strong>우리 아이의 격국과 타고난 잠재력</strong>이<br>이 자리에 펼쳐집니다
+  </div>
+  <div class="gyeok-result" id="gyeokResult" aria-live="polite"></div>
+
+  <!-- ═══════════ 4. 좋은 택일의 기준 ═══════════ -->
+  <div class="section-title">⚖️ 단, 여기서 가장 중요한 한 가지</div>
+  <div class="section-lead">
+    격국은 <strong>잠재력의 방향</strong>입니다. 그런데 그 잠재력이 인생에서 편안하게 피어나려면, 방향만큼 중요한 것이 하나 더 있습니다.
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-icon">🛤</div>
+    <div class="callout-text">
+      <span class="callout-title">좋은 택일의 기준 — "어떤 운이 와도 평탄한 사주"</span>
+      사주에는 해마다, 그리고 대운마다 새로운 운이 들어옵니다. 좋은 택일을 받은 아이의 사주는 특정 시기에만 반짝 좋은 사주가 아니라, <strong>어떤 운이 들어와도 크게 흔들리지 않는 평탄한 균형</strong>을 갖춘 사주입니다. 잘 잡은 날짜의 아이는 격국(잠재력)이 선명하면서도, 그 격을 평생 받쳐주는 균형까지 함께 타고납니다.
+    </div>
+  </div>
+
+  <div class="callout callout-gold">
+    <div class="callout-icon">📌</div>
+    <div class="callout-text">
+      <span class="callout-title">그래서 10월 출산택일은 "격국 + 평탄함"을 함께 봐야 합니다</span>
+      오행 개수만 세는 택일로는 부족합니다. 이 날짜의 일간이 어떤 격국이 되는지, 그리고 그 사주가 앞으로 들어올 운들을 평탄하게 받아낼 균형을 갖췄는지까지 계산해야, 10월생의 타고난 뿌리가 평생의 복으로 이어집니다.
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:17px; margin-top:36px;">✅ 택일·작명 상담 전, 전문가에게 꼭 물어보세요</div>
+  <div class="qa-box">
+    <div class="qa-item">
+      <div class="qa-icon">Q1</div>
+      <div class="qa-text">
+        <strong>"이 날짜에 태어나면 우리 아이 격국이 뭔가요?"</strong>
+        <span class="why">격국을 바로 답하지 못하는 곳이라면, 오행 개수만 세는 곳일 확률이 높습니다.</span>
+      </div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-icon">Q2</div>
+      <div class="qa-text">
+        <strong>"이 날짜의 사주는 어떤 운이 와도 평탄한가요?"</strong>
+        <span class="why">특정 시기에만 좋은 사주가 아니라, 평생 들어올 운을 받아낼 균형까지 봐야 진짜 택일입니다.</span>
+      </div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-icon">Q3</div>
+      <div class="qa-text">
+        <strong>"이름이 아이 사주의 기운을 살려주는 방향인가요?"</strong>
+        <span class="why">좋은 이름은 예쁜 글자가 아니라, 타고난 사주의 기운을 한자에 담아 살려주는 이름입니다.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 라이브 CTA ═══════════ -->
+  <div class="live-cta-wrap">
+    <div class="live-cta">
+      <div class="live-badge-row">
+        <div class="live-dot-badge"><div class="live-dot"></div>LIVE</div>
+        <div class="free-badge-pill">🎁 무료 참여</div>
+      </div>
+      <div class="live-headline">10월 택일,<br>현승리가 <em>직접</em> 봐드립니다</div>
+      <div class="live-subcopy">
+        "이 날 태어나면 왜 좋은 사주일까?"<br>
+        <strong>오픈채팅방에서 라이브로 직접 분석해드립니다.</strong><br>
+        참여비 없음 · 작명 유튜버 현승리가 매달 진행
+      </div>
+      <div class="live-benefits">
+        <div class="live-benefit-item"><div class="lbi-icon">🌳</div><div>10월 태어나는 아이 — <strong>평탄한 사주를 가지는 날짜·시간 TOP 추천</strong> 라이브 공개</div></div>
+        <div class="live-benefit-item"><div class="lbi-icon">🛤</div><div>어떤 운이 와도 평탄한 사주 — <strong>좋은 택일의 조건</strong> 실전 해설</div></div>
+        <div class="live-benefit-item"><div class="lbi-icon">✍️</div><div>작명 원칙과 좋은 이름의 조건 — 핵심만 쏙쏙</div></div>
+        <div class="live-benefit-item"><div class="lbi-icon">💬</div><div>채팅방에서 질문하면 현승리가 <strong>직접 답변</strong></div></div>
+      </div>
+      <div class="code-box">
+        <div>
+          <div class="code-label">오픈채팅방 참여코드</div>
+          <div class="code-number">4684</div>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;justify-content:center;">
+        <a href="https://open.kakao.com/o/gBSetQ6h" target="_blank" class="btn-live">
+          <span>💬 무료 출산택일</span>
+        </a>
+      </div>
+      <div class="live-notice">
+        카카오 오픈채팅 · 현승리의 사주 작명 커뮤니티<br>
+        입장 후 참여코드 <strong style="color:rgba(240,208,96,0.7)">4684</strong> 입력 → 라이브 일정 공지 확인
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 전자책 CTA ═══════════ -->
+  <div class="ebook-section">
+    <div class="ebook-info">
+
+      <div class="ebook-hook-banner">
+        <div class="ehb-icon">💸</div>
+        <div class="ehb-text">
+          <strong>100만 원 날리고 나서야 알았습니다</strong>
+          작명 전에 몰랐던 것들이 있었습니다. 현승리가 직접 겪은 실패, 그리고 수많은 고객들의 작명 실패 사례를 담았습니다.
+        </div>
+      </div>
+
+      <div class="ebook-mockup">
+        <div style="position:relative">
+          <div class="ebook-book">
+            <div class="eb-icon">📕</div>
+            <div class="eb-title">작명하기 전,<br>알았다면<br>좋았을 것들</div>
+            <div class="eb-author">현승리 저</div>
+          </div>
+          <div class="ebook-free-sticker">🎁 무료 공개</div>
+        </div>
+      </div>
+
+      <h3>작명하기 전,<br>알았다면 좋았을 것들</h3>
+      <p class="eb-desc">작명에 실패하지 않으려면 미리 알아야 할 것들을 모두 담았습니다</p>
+
+      <div class="ebook-fail-list">
+        <div class="efl-title">📋 이 책에서 다루는 실패 사례들</div>
+        <div class="efl-item">
+          <div class="efl-num">1</div>
+          <div>비싼 돈 내고 받은 이름, 알고 보니 <strong style="color:#ffb3b3">아이 사주가 아닌 부모 사주에 맞춘</strong> 이름이었다</div>
+        </div>
+        <div class="efl-item">
+          <div class="efl-num">2</div>
+          <div>오행을 색깔·겉글자로만 계산해 <strong style="color:#ffb3b3">실제 비율이 완전히 틀린</strong> 작명을 받은 사례</div>
+        </div>
+        <div class="efl-item">
+          <div class="efl-num">3</div>
+          <div>좋은 이름이라 믿었는데 <strong style="color:#ffb3b3">수리 배치가 흉(凶)했던</strong> 경우</div>
+        </div>
+        <div class="efl-item">
+          <div class="efl-num">4</div>
+          <div>AI 앱·무료 사이트를 맹신하다 생긴 <strong style="color:#ffb3b3">오행 오류와 음령 실수</strong></div>
+        </div>
+      </div>
+
+      <div class="ebook-learn-chips">
+        <span class="elc-chip">✅ 실패 없는 작명 기준</span>
+        <span class="elc-chip">✅ 지장간(地藏干) 오행 계산법</span>
+        <span class="elc-chip">✅ 피해야 할 이름 패턴</span>
+        <span class="elc-chip">✅ 실전 실패 사례 수록</span>
+      </div>
+
+      <a href="https://hslee.co.kr/ebook" target="_blank" class="btn-ebook">📖 무료로 읽어보기 →</a>
+      <div class="ebook-notice">무료 전자책 · 회원가입 없이 바로 읽기 가능</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="footer-title">📎 출처 및 채널 안내</div>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@name_house" target="_blank">▶ 유튜브 채널</a>
+      <a href="https://www.instagram.com/free_hsl/" target="_blank">📷 인스타그램</a>
+      <a href="https://www.hslee.co.kr" target="_blank">🌐 공식 홈페이지</a>
+      <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">🍎 앱스토어 (천을귀인)</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">🤖 구글플레이 (천을귀인)</a>
+    </div>
+    <div class="footer-credit">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  var GYEOK = {
+    /* ── 오행 공통 데이터 ── */
+    elements: {
+      wood: {
+        cls: 'gc-wood', eyebrow: '🌱 일간이 목(木)이라면',
+        strTitle: '재격의 최고 장점',
+        strengths: [
+          ['💰', '기회를 알아보는 눈', '남들이 지나치는 곳에서 가치를 발견하고, 그것을 결과로 만들어내는 감각을 타고납니다.'],
+          ['🧮', '현실 감각과 관리 능력', '돈·시간·물건을 다루는 손끝이 야무집니다. 계획을 세우고 지켜내는 힘이 또래보다 한 수 위입니다.'],
+          ['🤝', '사람을 움직이는 힘', '재성은 내가 다루고 이끄는 영역. 또래 사이에서도 자연스럽게 판을 짜고 역할을 나누는 아이가 됩니다.']
+        ]
+      },
+      fire: {
+        cls: 'gc-fire', eyebrow: '🔥 일간이 화(火)라면',
+        strTitle: '식상격의 최고 장점',
+        strengths: [
+          ['🎨', '타고난 창의력과 표현력', '식상은 예로부터 재능과 복(福)을 만들어내는 별. 말·글·그림·음악, 무엇으로든 자기 안의 것을 밖으로 꺼내는 힘이 강합니다.'],
+          ['🍀', '먹을 복, 즐길 복', '좋아하는 일을 오래 파고들며 그것으로 먹고사는 복을 타고난다고 봅니다. 재능이 곧 밥이 되는 구조입니다.'],
+          ['⚡', '틀을 깨는 반짝임', '기존 방식에 "왜요?"라고 물을 줄 아는 아이. 그 질문이 세상을 바꾸는 혁신의 씨앗이 됩니다.']
+        ]
+      },
+      earth: {
+        cls: 'gc-earth', eyebrow: '⛰️ 일간이 토(土)라면',
+        strTitle: '건록·양인격의 최고 장점',
+        strengths: [
+          ['🧗', '자수성가의 별', '물려받는 것보다 자기 손으로 이뤄내는 힘이 강한 격으로 유명합니다. 어디에 데려다 놓아도 스스로 일어서는 아이입니다.'],
+          ['🪨', '흔들리지 않는 주관', '말과 행동이 일치하고, 옳다고 믿는 것 앞에서 쉽게 물러서지 않는 뚝심을 타고납니다.'],
+          ['🫂', '사람을 품는 그릇', '같은 기운의 달에 태어난 만큼 몸집이 큰 산과 같아, 친구들이 기대고 모여드는 든든한 존재가 됩니다.']
+        ]
+      },
+      metal: {
+        cls: 'gc-metal', eyebrow: '⚔️ 일간이 금(金)이라면',
+        strTitle: '인수격의 최고 장점',
+        strengths: [
+          ['📚', '학문과 지혜의 별', '인성(印星)은 예로부터 공부·자격·문서의 별입니다. 배우는 속도가 빠르고, 배운 것을 자기 것으로 소화하는 힘이 남다릅니다.'],
+          ['🛡️', '든든한 뒷배를 타고난 구조', '나를 도와주는 기운이 계절을 잡은 격이라, 어릴 때부터 어른들의 사랑과 인정을 받으며 안정적으로 크는 경우가 많습니다.'],
+          ['🧘', '깊이 있는 인품', '온화하고 예의 바르며, 전통과 명예를 소중히 여기는 품격이 몸에 뱁니다.']
+        ]
+      },
+      water: {
+        cls: 'gc-water', eyebrow: '🌊 일간이 수(水)라면',
+        strTitle: '관살격의 최고 장점',
+        strengths: [
+          ['👑', '왕후장상의 격', '옛 명리서에서는 크게 귀해진 사주에 관살격이 많다고 했습니다. 큰 자리를 감당하는 그릇입니다.'],
+          ['🧭', '책임감과 질서의 힘', '규칙과 명예를 소중히 여기고, 맡은 일은 끝까지 해내는 무게감을 타고납니다.'],
+          ['🚨', '위기에 강한 침착함', '다들 우왕좌왕할 때 중심을 잡고 정리하는 힘. 그래서 자연스럽게 리더 자리가 따라옵니다.']
+        ]
+      }
+    },
+
+    /* ── 선택지별 데이터 (일간 10 + 색깔 5) ── */
+    entries: {
+      gap: {
+        el: 'wood', badges: ['甲'],
+        eyebrow: '🌱 일간이 갑(甲) — 목(木)이라면',
+        title: '편재격(偏財格)', tagline: '큰 판을 읽는, 기회의 아이',
+        formula: '큰 나무 갑(甲)에게 10월의 흙은 <b>마음껏 일굴 넓은 들판</b> → 세상을 무대로 삼는 편재격',
+        fantasy: '동네 벼룩시장에서 제일 먼저 좌판을 다 파는 아이, 세뱃돈을 받으면 "이건 불려볼래요" 하는 아이. 편재격은 예로부터 <strong>큰 부(富)는 편재에서 나온다</strong>고 했을 만큼 스케일이 큰 재물의 별입니다. 그 배포가 자라면 — 한 동네가 아니라 세상을 무대로 자기 브랜드를 세우는 사업가가 됩니다. 부모가 할 일은 그 눈썰미를 "돈 밝힌다" 대신 <strong>"경영 감각"</strong>이라 불러주는 것뿐입니다.',
+        chips: ['#큰 재물의 별', '#스케일', '#기회 포착', '#사업가 기질']
+      },
+      eul: {
+        el: 'wood', badges: ['乙'],
+        eyebrow: '🌱 일간이 을(乙) — 목(木)이라면',
+        title: '정재격(正財格)', tagline: '차곡차곡 쌓아 올리는, 믿음직한 아이',
+        formula: '들꽃 을(乙)에게 10월의 흙은 <b>알뜰히 가꾸는 내 텃밭</b> → 성실이 재산이 되는 정재격',
+        fantasy: '저금통이 꽉 차야 뿌듯한 아이, 스스로 정한 용돈 규칙을 끝까지 지키는 아이. 정재격은 <strong>성실함이 그대로 재산이 되는 별</strong>입니다. 그 야무짐이 자라면 — 주변 모두가 "저 사람에게는 믿고 맡긴다"고 말하는, 흔들림 없이 부를 쌓아가는 어른이 됩니다. 부모가 할 일은 아이의 꼼꼼함을 답답해하지 않고 <strong>"신용"이라는 이름의 재능</strong>으로 아껴주는 것입니다.',
+        chips: ['#알뜰함', '#신용', '#꾸준한 부', '#야무진 손끝']
+      },
+      byeong: {
+        el: 'fire', badges: ['丙'],
+        eyebrow: '🔥 일간이 병(丙) — 화(火)라면',
+        title: '식신격(食神格)', tagline: '재능이 곧 복이 되는 아이',
+        formula: '태양 병(丙)이 흙을 빚어내듯, 10월의 흙은 <b>내가 낳는 재능</b> → 복록의 별 식신격',
+        fantasy: '주방 옆에 붙어 "나도 해볼래" 하는 아이, 만들기에 빠지면 시간 가는 줄 모르는 아이. 식신격은 <strong>좋아하는 일이 곧 밥이 되고 복이 되는 별</strong> — 옛사람들은 식신을 타고난 복덩이의 별이라 불렀습니다. 그 몰입이 자라면 자기 재능으로 사랑받으며 먹고사는 크리에이터, 셰프, 아티스트가 됩니다. 부모가 할 일은 아이가 좋아하는 것을 <strong>실컷 해보게 두는 것</strong>뿐입니다.',
+        chips: ['#타고난 재능', '#먹을 복', '#몰입력', '#크리에이터']
+      },
+      jeong: {
+        el: 'fire', badges: ['丁'],
+        eyebrow: '🔥 일간이 정(丁) — 화(火)라면',
+        title: '상관격(傷官格)', tagline: '틀을 깨는 반짝임의 아이',
+        formula: '촛불 정(丁)이 흙을 빚어내듯, 10월의 흙은 <b>내가 낳는 표현물</b> → 혁신의 별 상관격',
+        fantasy: '"왜요? 다르게 하면 안 돼요?"라는 질문을 달고 사는 아이, 발표 시간에 반 전체를 사로잡는 아이. 상관격은 <strong>세상의 틀을 깨는 반짝임의 별</strong>입니다. 그 번뜩임이 자라면 — 무대와 화면, 아무도 없던 새로운 판을 만들어내는 기획자, 방송인, 발명가가 됩니다. 부모가 할 일은 그 당돌한 질문을 막지 않고 <strong>"세상을 바꿀 질문"</strong>으로 받아주는 것입니다.',
+        chips: ['#언변', '#순발력', '#혁신', '#무대 체질']
+      },
+      mu: {
+        el: 'earth', badges: ['戊'],
+        eyebrow: '⛰️ 일간이 무(戊) — 토(土)라면',
+        title: '건록격(建祿格) 계열', tagline: '계절의 주인공으로 태어난 아이',
+        formula: '큰 산 무(戊)가 무(戊)의 달에 태어난 <b>완벽한 홈그라운드</b> → 자수성가의 별 건록격 계열',
+        fantasy: '넘어져도 "괜찮아, 다시 하면 돼" 하며 스스로 일어나는 아이. 건록격은 <strong>자기 힘으로 이뤄내는 자수성가의 별</strong>인데, 특히 10월의 무(戊) 일간은 하늘과 땅이 모두 자기 기운인 달에 태어난 — 말 그대로 계절의 주인공입니다. 그 단단함이 자라면 누구의 그늘도 빌리지 않고 자기 이름으로 우뚝 서는, 큰 산 같은 어른이 됩니다. 부모가 할 일은 고집을 꺾는 게 아니라 <strong>"주관"으로 존중해주는 것</strong>입니다.',
+        chips: ['#계절의 주인공', '#자수성가', '#뚝심', '#큰 산']
+      },
+      gi: {
+        el: 'earth', badges: ['己'],
+        eyebrow: '⛰️ 일간이 기(己) — 토(土)라면',
+        title: '양인격(羊刃格) 계열', tagline: '타고난 승부사, 강단의 아이',
+        formula: '기름진 밭 기(己)가 흙의 계절 한가운데 <b>강한 힘을 쥐고</b> 태어난 구조 → 승부사의 별 양인격 계열',
+        fantasy: '줄다리기에서 끝까지 줄을 놓지 않는 아이, 어려운 일일수록 오히려 눈이 반짝이는 아이. 양인격은 옛 명리서에서 <strong>큰 칼을 쥔 장수의 별</strong>이라 불렀을 만큼, 남다른 힘과 승부 근성을 타고나는 격입니다. 그 강단이 자라면 — 남들이 포기하는 큰 일을 끝내 해내는 전문가, 자기 분야의 정상에 서는 어른이 됩니다. 부모가 할 일은 그 넘치는 에너지를 누르는 게 아니라, <strong>마음껏 쏟아낼 무대를 찾아주는 것</strong>입니다.',
+        chips: ['#승부 근성', '#강단', '#추진력', '#장수의 별']
+      },
+      gyeong: {
+        el: 'metal', badges: ['庚'],
+        eyebrow: '⚔️ 일간이 경(庚) — 금(金)이라면',
+        title: '편인격(偏印格)', tagline: '남다른 영감을 타고난 아이',
+        formula: '바위 속 원석 경(庚)에게 10월의 흙은 <b>나를 낳아 기르는 기운</b> → 영감의 별 편인격',
+        fantasy: '남들과 전혀 다른 각도에서 질문을 던지는 아이, 좋아하는 분야는 어른보다 깊게 파고드는 아이. 편인격은 <strong>번뜩이는 영감과 직관의 별</strong>입니다. 그 남다름이 자라면 — 아무도 보지 못한 것을 발견하는 연구자, 발명가, 자기 세계가 뚜렷한 예술가가 됩니다. 부모가 할 일은 "왜 저럴까" 걱정하는 대신 그 독특함을 <strong>"천재의 각도"</strong>로 믿어주는 것입니다.',
+        chips: ['#직관', '#영감', '#연구자 기질', '#자기 세계']
+      },
+      sin: {
+        el: 'metal', badges: ['辛'],
+        eyebrow: '⚔️ 일간이 신(辛) — 금(金)이라면',
+        title: '정인격(正印格)', tagline: '배움이 무기인 아이',
+        formula: '보석 신(辛)에게 10월의 흙은 <b>나를 품어 기르는 어머니 같은 기운</b> → 학문의 별 정인격',
+        fantasy: '책 한 권을 다 읽어야 잠드는 아이, 선생님과 어른들의 사랑을 유독 받는 아이. 정인격은 <strong>학문과 명예의 별</strong> — 예로부터 귀하게 크는 아이의 대표 격으로 꼽혔습니다. 그 깊이가 자라면 자기 분야의 전문가, 남을 길러내는 스승으로 존경받는 어른이 됩니다. 부모가 할 일은 조기교육이 아니라, 아이의 <strong>질문이 마를 일 없게 해주는 것</strong>입니다.',
+        chips: ['#학문운', '#흡수력', '#어른들의 사랑', '#전문가형']
+      },
+      im: {
+        el: 'water', badges: ['壬'],
+        eyebrow: '🌊 일간이 임(壬) — 수(水)라면',
+        title: '편관격(偏官格)', tagline: '왕후장상의 그릇, 카리스마의 아이',
+        formula: '큰 강물 임(壬)에게 10월의 흙은 <b>물길을 잡아 단련시키는 스승</b> → 큰 그릇의 별 편관격',
+        fantasy: '다들 우왕좌왕할 때 혼자 침착하게 "이렇게 하자" 하고 정리하는 아이. 편관격은 옛 명리서가 <strong>왕후장상의 격</strong>이라 부른 큰 그릇의 별 — 세상을 놀라게 할 공을 세우는 장수와 재상의 격이라 했습니다. 그 담대함이 자라면 큰 조직과 큰 일을 감당하는 장(長)의 자리에 서게 됩니다. 부모가 할 일은 "너무 어른스럽다" 걱정하는 대신 그 무게감을 <strong>"리더의 떡잎"</strong>으로 믿어주는 것입니다.',
+        chips: ['#왕후장상', '#카리스마', '#담대함', '#위기에 강함']
+      },
+      gye: {
+        el: 'water', badges: ['癸'],
+        eyebrow: '🌊 일간이 계(癸) — 수(水)라면',
+        title: '정관격(正官格)', tagline: '모범과 명예의 아이',
+        formula: '맑은 이슬비 계(癸)에게 10월의 흙은 <b>바르게 이끌어주는 스승</b> → 명예의 별 정관격',
+        fantasy: '규칙을 스스로 지키고, 친구들 사이 다툼을 공정하게 정리해주는 아이. 정관격은 <strong>명예와 신뢰의 별</strong> — 예로부터 열 가지 격 중에서도 가장 반듯하고 귀한 길신으로 꼽혔습니다. 그 반듯함이 자라면 모두가 믿고 따르는 자리, 명예로운 자리에 자연스럽게 오르는 어른이 됩니다. 부모가 할 일은 그 모범적인 모습 뒤의 노력을 <strong>알아봐 주고 칭찬해주는 것</strong>입니다.',
+        chips: ['#명예운', '#신뢰', '#반듯함', '#모범 리더']
+      },
+
+      /* 색깔(오행)만 아는 경우 */
+      wood: {
+        el: 'wood', badges: ['甲', '乙'],
+        title: '재격(財格)', tagline: '기회를 현실로 만드는 아이',
+        formula: '나무(아이)에게 10월의 흙은 <b>내가 일구는 땅</b> → 갑(甲) 일간은 편재격, 을(乙) 일간은 정재격',
+        fantasy: '용돈을 받으면 그냥 쓰지 않고 "이건 모으고, 이건 이렇게 쓸래요" 하고 계획부터 세우는 아이. 학교 바자회에서 제일 먼저 완판시키고 뿌듯해하는 아이. 그 감각이 자라면 — 자기 이름을 건 가게, 회사, 브랜드를 일구는 어른이 됩니다. 갑(甲)이면 판을 크게 보는 편재격, 을(乙)이면 알뜰히 쌓는 정재격 — 위 드롭다운에서 글자를 고르면 더 자세히 보여드려요.',
+        chips: ['#경영 감각', '#실행력', '#현실 감각', '#자기 사업']
+      },
+      fire: {
+        el: 'fire', badges: ['丙', '丁'],
+        title: '식신격 · 상관격 (식상격)', tagline: '재능이 흘러넘치는 아이',
+        formula: '불(아이)이 흙을 만들어내듯, 10월의 흙은 <b>내가 낳는 표현물</b> → 병(丙) 일간은 식신격, 정(丁) 일간은 상관격',
+        fantasy: '가족 모임에서 마이크를 놓지 않는 아이, 스케치북 한 권을 하루 만에 다 채우는 아이. 어른들이 "쟤는 끼가 있다"고 입을 모으는 그 아이가 바로 식상격입니다. 그 끼가 자라면 — 무대 위에서, 화면 속에서, 자기 작품 앞에서 빛나는 크리에이터가 됩니다. 병(丙)이면 복록의 식신격, 정(丁)이면 혁신의 상관격 — 위 드롭다운에서 글자를 고르면 더 자세히 보여드려요.',
+        chips: ['#표현력', '#창의력', '#예술 감각', '#크리에이터']
+      },
+      earth: {
+        el: 'earth', badges: ['戊', '己'],
+        title: '건록격 · 양인격', tagline: '자기 힘으로 우뚝 서는 아이',
+        formula: '흙(아이)이 흙의 달에 태어나 <b>내 편이 가득한 홈그라운드</b> → 무(戊) 일간은 건록격 계열, 기(己) 일간은 양인격 계열',
+        fantasy: '넘어져도 "괜찮아, 다시 하면 돼" 하고 스스로 일어나는 아이. 친구들 싸움에 공정하게 말할 줄 아는 아이. 그 단단함이 자라면 — 누구의 그늘도 빌리지 않고 자기 이름으로 우뚝 서는 어른이 됩니다. 무(戊)면 계절의 주인공 건록격 계열, 기(己)면 승부사의 양인격 계열 — 위 드롭다운에서 글자를 고르면 더 자세히 보여드려요.',
+        chips: ['#자수성가', '#뚝심', '#독립심', '#든든한 리더']
+      },
+      metal: {
+        el: 'metal', badges: ['庚', '辛'],
+        title: '인수격(印綬格)', tagline: '배움이 무기인 아이',
+        formula: '흙속에서 금이 나오듯, 10월의 흙은 <b>나를 낳고 길러주는 어머니 같은 기운</b> → 경(庚) 일간은 편인격, 신(辛) 일간은 정인격',
+        fantasy: '"왜?"라는 질문이 끝나지 않는 아이, 책 한 권을 다 읽어야 잠드는 아이. 선생님들이 유독 예뻐하고 믿어주는 그 아이가 인수격입니다. 그 깊이가 자라면 — 자기 분야의 전문가, 학자, 남을 가르치는 사람이 됩니다. 경(庚)이면 영감의 편인격, 신(辛)이면 학문의 정인격 — 위 드롭다운에서 글자를 고르면 더 자세히 보여드려요.',
+        chips: ['#학문운', '#흡수력', '#전문가형', '#품격']
+      },
+      water: {
+        el: 'water', badges: ['壬', '癸'],
+        title: '관살격(정관격 · 편관격)', tagline: '타고난 리더의 아이',
+        formula: '흙이 물길을 잡아주듯, 10월의 흙은 <b>나를 단련시키는 스승 같은 기운</b> → 임(壬) 일간은 편관격, 계(癸) 일간은 정관격',
+        fantasy: '학급 회장 선거에 친구들이 먼저 이름을 올려주는 아이, 동생들 다툼을 정리하고 규칙을 만들어주는 아이. 그 무게감이 자라면 — 조직의 장(長), 사람들을 이끄는 자리에 서는 어른이 됩니다. 임(壬)이면 왕후장상의 편관격, 계(癸)면 명예의 정관격 — 위 드롭다운에서 글자를 고르면 더 자세히 보여드려요.',
+        chips: ['#리더십', '#책임감', '#명예운', '#조직의 장']
+      }
+    }
+  };
+
+  var elSelect = document.getElementById('stemSelect');
+  var elResult = document.getElementById('gyeokResult');
+  var elPlaceholder = document.getElementById('resultPlaceholder');
+
+  function renderGyeok(key) {
+    var entry = GYEOK.entries[key];
+    if (!entry) return;
+    var base = GYEOK.elements[entry.el];
+    var strengths = entry.strengths || base.strengths;
+    var badgeHtml = entry.badges.map(function (b) {
+      return '<div class="gc-stem">' + b + '</div>';
+    }).join('');
+    var strHtml = strengths.map(function (s) {
+      return '<div class="gc-str-item"><span class="gc-str-dot">' + s[0] + '</span><div><strong>' + s[1] + '</strong> — ' + s[2] + '</div></div>';
+    }).join('');
+    var chipHtml = (entry.chips || []).map(function (c) {
+      return '<span class="gc-chip">' + c + '</span>';
+    }).join('');
+
+    elResult.innerHTML =
+      '<div class="gyeok-card ' + base.cls + '">' +
+        '<div class="gc-head">' +
+          '<div class="gc-eyebrow">' + (entry.eyebrow || base.eyebrow) + '</div>' +
+          '<div class="gc-title">' + entry.title + '</div>' +
+          '<div class="gc-tagline">' + entry.tagline + '</div>' +
+          '<div class="gc-stems">' + badgeHtml + '</div>' +
+        '</div>' +
+        '<div class="gc-body">' +
+          '<div class="gc-formula">' + entry.formula + '</div>' +
+          '<div class="gc-strengths">' +
+            '<div class="gc-str-title">✨ ' + base.strTitle + '</div>' + strHtml +
+          '</div>' +
+          '<div class="gc-fantasy">' +
+            '<span class="gc-fantasy-title">🌟 이렇게 자랄 수 있어요</span>' + entry.fantasy +
+          '</div>' +
+          '<div class="gc-chips">' + chipHtml + '</div>' +
+        '</div>' +
+      '</div>';
+
+    elPlaceholder.style.display = 'none';
+    elResult.classList.remove('show');
+    void elResult.offsetWidth;
+    elResult.classList.add('show');
+    elResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  elSelect.addEventListener('change', function () {
+    if (this.value) renderGyeok(this.value);
+  });
+
+  var chips = document.querySelectorAll('.cl-chip');
+  for (var i = 0; i < chips.length; i++) {
+    chips[i].addEventListener('click', function () {
+      elSelect.value = '';
+      renderGyeok(this.getAttribute('data-el'));
+    });
+  }
+})();
+</script>
+</body>
+</html>
