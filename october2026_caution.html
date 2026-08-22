@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>현승리의 작명집, 택일 해설지 — 2026년 10월 주의 날짜</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #0d1321;
+    color: #e8e6df;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* ===== Hero ===== */
+  .hero {
+    text-align: center;
+    padding: 64px 16px 44px;
+    background: radial-gradient(ellipse at 50% -20%, rgba(201,169,97,0.18), transparent 60%),
+                linear-gradient(180deg, #131a2c 0%, #0d1321 100%);
+    border-bottom: 1px solid rgba(201,169,97,0.25);
+  }
+  .hero .brand {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #c9a961;
+    border: 1px solid rgba(201,169,97,0.45);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #f4f1e8;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+  .hero h1 .gold { color: #c9a961; }
+  .hero .sub { font-size: 16px; color: #a8b0c3; }
+  .hero .sub strong { color: #e8e6df; }
+
+  /* ===== Common ===== */
+  .section { margin-top: 52px; }
+  .section-label {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #c9a961;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f4f1e8;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  h2 .gold { color: #c9a961; }
+  p.lead { font-size: 15.5px; color: #c3c9d6; margin-bottom: 14px; }
+  p.lead strong { color: #f4f1e8; }
+
+  .card {
+    background: #151d31;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 24px 22px;
+    margin-bottom: 18px;
+  }
+
+  .callout {
+    background: linear-gradient(135deg, rgba(201,169,97,0.10), rgba(201,169,97,0.04));
+    border: 1px solid rgba(201,169,97,0.35);
+    border-radius: 14px;
+    padding: 20px 20px;
+    margin: 18px 0;
+    font-size: 15px;
+    color: #d9d5c8;
+  }
+  .callout-title {
+    display: block;
+    font-weight: 800;
+    color: #c9a961;
+    margin-bottom: 8px;
+    font-size: 15.5px;
+  }
+  .callout.warn {
+    background: linear-gradient(135deg, rgba(224,90,90,0.10), rgba(224,90,90,0.03));
+    border-color: rgba(224,90,90,0.4);
+  }
+  .callout.warn .callout-title { color: #e57e7e; }
+
+  .notice-banner {
+    display: block;
+    text-decoration: none;
+    background: rgba(96,165,250,0.08);
+    border: 1px solid rgba(96,165,250,0.35);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #a9c6ee;
+  }
+  .notice-banner strong { color: #d6e5fa; }
+
+  .quote {
+    border-left: 3px solid #c9a961;
+    padding: 4px 0 4px 18px;
+    margin: 20px 0;
+    color: #cfd4df;
+    font-size: 15.5px;
+  }
+  .quote .who { color: #c9a961; font-weight: 700; font-size: 13.5px; display: block; margin-bottom: 4px; }
+
+  /* ===== Date overview chips ===== */
+  .date-chips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0 6px;
+  }
+  .date-chip {
+    text-align: center;
+    background: rgba(224,90,90,0.08);
+    border: 1px solid rgba(224,90,90,0.4);
+    border-radius: 12px;
+    padding: 14px 4px;
+  }
+  .date-chip .d { font-size: 21px; font-weight: 800; color: #e57e7e; }
+  .date-chip .g { font-size: 12px; color: #a8b0c3; margin-top: 2px; }
+
+  /* ===== Day cards ===== */
+  .day-card {
+    background: #151d31;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 26px 22px;
+    margin-bottom: 26px;
+  }
+  .day-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .day-head .date { font-size: 21px; font-weight: 800; color: #f4f1e8; }
+  .day-head .pillars { font-size: 13.5px; color: #c9a961; letter-spacing: 1px; }
+
+  /* pillar 명식 grid (시주 제외: 일주→월주→년주) */
+  .myeongsik {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 4px 0 6px;
+  }
+  .ms-col { text-align: center; }
+  .ms-label {
+    font-size: 12px;
+    color: #7f889c;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .ms-col.ilju .ms-label { color: #c9a961; font-weight: 700; }
+  .ms-cell {
+    border-radius: 12px;
+    padding: 10px 4px 8px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .ms-cell .hj { font-size: 26px; font-weight: 800; line-height: 1.2; display: block; }
+  .ms-cell .hg { font-size: 11.5px; display: block; margin-top: 2px; opacity: 0.85; }
+  .el-wood  { background: rgba(94,184,122,0.13); border-color: rgba(94,184,122,0.45) !important; color: #7fd6a0; }
+  .el-fire  { background: rgba(229,110,110,0.13); border-color: rgba(229,110,110,0.45) !important; color: #ef9a9a; }
+  .el-earth { background: rgba(216,186,130,0.13); border-color: rgba(216,186,130,0.5) !important; color: #e6c98a; }
+  .el-metal { background: rgba(214,220,232,0.10); border-color: rgba(214,220,232,0.4) !important; color: #dfe4ee; }
+  .el-water { background: rgba(96,165,250,0.13); border-color: rgba(96,165,250,0.45) !important; color: #93bffa; }
+  .ms-cell.empty {
+    background: rgba(255,255,255,0.03);
+    border: 1px dashed rgba(255,255,255,0.28);
+    color: #7f889c;
+  }
+  .ms-cell.empty .hj { font-size: 22px; opacity: 0.7; }
+  .ms-note { font-size: 12px; color: #7f889c; margin: 0 0 16px; }
+  .ms-note strong { color: #a8b0c3; }
+
+  .day-why { font-size: 14.5px; color: #b8bfce; margin: 4px 0 18px; }
+  .day-why strong { color: #e8b06a; }
+  .day-why em { font-style: normal; color: #e57e7e; font-weight: 700; }
+
+  /* time rows */
+  .t-head, .t-row {
+    display: grid;
+    grid-template-columns: 92px 1fr 56px;
+    gap: 10px;
+    align-items: center;
+  }
+  .t-head {
+    font-size: 12px;
+    color: #7f889c;
+    padding: 0 10px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .t-head .r { text-align: right; }
+  .t-row {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .t-row:last-child { border-bottom: none; }
+  .t-time { font-size: 14.5px; font-weight: 700; color: #e8e6df; }
+  .t-time .rng { display: block; font-size: 11px; font-weight: 400; color: #7f889c; margin-top: 1px; }
+  .t-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    font-size: 11.5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .tag.red    { background: rgba(224,90,90,0.14);  color: #e57e7e; border: 1px solid rgba(224,90,90,0.35); }
+  .tag.orange { background: rgba(232,176,106,0.12); color: #e8b06a; border: 1px solid rgba(232,176,106,0.3); }
+  .tag.teal   { background: rgba(94,210,190,0.12);  color: #5ed2be; border: 1px solid rgba(94,210,190,0.3); }
+  .tag.gray   { background: rgba(255,255,255,0.05); color: #9aa3b5; border: 1px solid rgba(255,255,255,0.1); }
+  .t-score { text-align: right; font-size: 17px; font-weight: 800; }
+  .t-score.low  { color: #e57e7e; }
+  .t-score.mid  { color: #d8ba82; }
+  .t-score.high { color: #5ed2be; }
+  .t-row.best { background: rgba(94,210,190,0.06); border-radius: 10px; }
+  .t-row.worst { background: rgba(224,90,90,0.05); border-radius: 10px; }
+  .tt-label {
+    font-size: 13px;
+    font-weight: 800;
+    margin: 14px 0 4px;
+    padding: 0 4px;
+  }
+  .tt-label.bad { color: #e57e7e; }
+  .tt-label.good { color: #5ed2be; }
+  .t-row.worst, .t-row.best { border-bottom: none; }
+  .day-note { font-size: 13.5px; color: #9aa3b5; margin-top: 14px; }
+  .day-note strong { color: #5ed2be; }
+  .day-note em { font-style: normal; color: #e57e7e; font-weight: 700; }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px;
+    font-size: 12px; color: #9aa3b5;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .dot.red { background: #e57e7e; } .dot.mid { background: #d8ba82; } .dot.teal { background: #5ed2be; }
+
+  /* ===== steps ===== */
+  .step {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step:last-child { border-bottom: none; }
+  .step .no {
+    flex: 0 0 32px; height: 32px; border-radius: 50%;
+    background: rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.5);
+    color: #c9a961; font-weight: 800; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step h3 { font-size: 16px; color: #f4f1e8; margin-bottom: 4px; }
+  .step p { font-size: 14.5px; color: #b8bfce; }
+  .step p strong { color: #e8e6df; }
+  .step.important {
+    background: linear-gradient(135deg, rgba(201,169,97,0.10), rgba(201,169,97,0.03));
+    border: 1px solid rgba(201,169,97,0.4);
+    border-radius: 14px;
+    padding: 18px 16px;
+    margin-top: 10px;
+  }
+  .step.important .no { background: #c9a961; color: #16110a; }
+  .badge-most {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #16110a;
+    background: linear-gradient(135deg, #d8ba82, #c9a961);
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .life-tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .life-tip {
+    text-align: center;
+    background: rgba(96,165,250,0.07);
+    border: 1px solid rgba(96,165,250,0.3);
+    border-radius: 12px;
+    padding: 12px 6px;
+    font-size: 12.5px;
+    color: #a9c6ee;
+  }
+  .life-tip .ico { font-size: 22px; display: block; margin-bottom: 4px; }
+  .life-tip strong { display: block; color: #d6e5fa; font-size: 13.5px; margin-bottom: 2px; }
+
+  /* ===== Daewoon graph ===== */
+  .graph-box {
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,169,97,0.12), transparent 60%), #151d31;
+    border: 1px solid rgba(201,169,97,0.35);
+    border-radius: 18px;
+    padding: 28px 22px 20px;
+    text-align: center;
+  }
+  .graph-box h3 { font-size: 19px; color: #f4f1e8; margin-bottom: 4px; }
+  .graph-box h3 .gold { color: #c9a961; }
+  .graph-box .gsub { font-size: 13.5px; color: #9aa3b5; margin-bottom: 16px; }
+  .graph-box svg { width: 100%; height: auto; display: block; }
+  .g-line-after {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2.6s ease-out 0.4s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .g-caption { font-size: 11.5px; color: #7f889c; margin-top: 10px; }
+  .g-legend { display: flex; justify-content: center; gap: 18px; font-size: 12.5px; color: #9aa3b5; margin-top: 8px; }
+  .g-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .g-legend .line { width: 22px; height: 3px; border-radius: 2px; display: inline-block; }
+  .g-legend .before { background: #6b7488; }
+  .g-legend .after { background: linear-gradient(90deg, #d8ba82, #c9a961); }
+
+  /* ===== Paid consultation CTA ===== */
+  .consult-box {
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,169,97,0.14), transparent 65%), #151d31;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 34px 24px;
+  }
+  .consult-box h3 { font-size: 20px; color: #f4f1e8; margin-bottom: 8px; }
+  .consult-box h3 .gold { color: #c9a961; }
+  .consult-box p { font-size: 14.5px; color: #b8bfce; margin-bottom: 6px; }
+  .btn-white {
+    display: inline-block;
+    margin-top: 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.45);
+    color: #f4f1e8;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 34px;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+  .btn-white:hover { background: rgba(255,255,255,0.16); }
+  .code-pill {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #c9a961;
+    border: 1px dashed rgba(201,169,97,0.55);
+    border-radius: 10px;
+    padding: 8px 18px;
+  }
+  .code-pill strong { font-size: 18px; letter-spacing: 4px; color: #f4f1e8; }
+
+  /* ===== Ebook CTA (fancy finale) ===== */
+  .ebook-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(201,169,97,0.22), transparent 55%),
+      radial-gradient(ellipse at 90% 100%, rgba(96,165,250,0.10), transparent 55%),
+      linear-gradient(150deg, #1c2542 0%, #131a2c 100%);
+    border: 1px solid rgba(201,169,97,0.55);
+    border-radius: 22px;
+    padding: 40px 28px;
+    box-shadow: 0 0 50px rgba(201,169,97,0.12);
+  }
+  .ebook-hero::before, .ebook-hero::after {
+    content: "✦";
+    position: absolute;
+    color: rgba(201,169,97,0.5);
+    animation: twinkle 2.4s ease-in-out infinite alternate;
+  }
+  .ebook-hero::before { top: 18px; right: 26px; font-size: 20px; }
+  .ebook-hero::after { bottom: 22px; left: 22px; font-size: 14px; animation-delay: 1.1s; }
+  @keyframes twinkle { from { opacity: 0.25; transform: scale(0.85); } to { opacity: 1; transform: scale(1.1); } }
+  .ebook-grid {
+    display: grid;
+    grid-template-columns: 132px 1fr;
+    gap: 26px;
+    align-items: center;
+  }
+  .book-cover {
+    width: 132px; height: 184px;
+    background: linear-gradient(160deg, #26345a 0%, #131a2c 100%);
+    border: 1px solid rgba(201,169,97,0.6);
+    border-radius: 6px 12px 12px 6px;
+    box-shadow: inset 6px 0 12px rgba(0,0,0,0.45), 10px 14px 30px rgba(0,0,0,0.5), 0 0 24px rgba(201,169,97,0.25);
+    position: relative;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 14px 12px 14px 20px;
+    transform: rotate(-2deg);
+  }
+  .book-cover::before {
+    content: ""; position: absolute; left: 7px; top: 0; bottom: 0; width: 2px;
+    background: rgba(201,169,97,0.4);
+  }
+  .book-cover .bc-top { font-size: 9.5px; color: #c9a961; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .book-cover .bc-title { font-size: 14.5px; font-weight: 800; color: #f4f1e8; line-height: 1.5; }
+  .book-cover .bc-author { font-size: 10px; color: #a8b0c3; margin-top: 10px; }
+  .free-ribbon {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #16110a;
+    background: linear-gradient(135deg, #d8ba82, #c9a961);
+    border-radius: 999px;
+    padding: 4px 14px;
+    margin-bottom: 10px;
+  }
+  .ebook-txt h3 { font-size: 21px; color: #f4f1e8; margin-bottom: 8px; line-height: 1.4; }
+  .ebook-txt h3 .gold { color: #c9a961; }
+  .ebook-txt p { font-size: 14.5px; color: #c3c9d6; margin-bottom: 16px; }
+  .btn-gold {
+    display: inline-block;
+    background: linear-gradient(135deg, #e6cd96, #c9a961);
+    color: #16110a;
+    font-weight: 800;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 999px;
+    box-shadow: 0 6px 22px rgba(201,169,97,0.35);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 22px rgba(201,169,97,0.35); }
+    50% { box-shadow: 0 6px 34px rgba(201,169,97,0.6); }
+  }
+
+  /* ===== Source ===== */
+  .source {
+    margin-top: 56px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 28px;
+    font-size: 13.5px;
+    color: #9aa3b5;
+  }
+  .source .desc { margin-bottom: 16px; color: #b8bfce; }
+  .source ul { list-style: none; }
+  .source li { margin-bottom: 8px; }
+  .source a { color: #c9a961; text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 23px; }
+    .date-chips { grid-template-columns: repeat(2, 1fr); }
+    .t-head, .t-row { grid-template-columns: 78px 1fr 46px; gap: 6px; }
+    .t-time { font-size: 13.5px; }
+    .t-score { font-size: 15.5px; }
+    .ms-cell .hj { font-size: 22px; }
+    .life-tips { grid-template-columns: 1fr; }
+    .ebook-grid { grid-template-columns: 1fr; text-align: center; }
+    .book-cover { margin: 0 auto 6px; }
+  }
+  @media (max-width: 360px) {
+    .t-head, .t-row { grid-template-columns: 68px 1fr 42px; }
+    .tag { font-size: 10.5px; padding: 2px 6px; }
+    .ms-cell .hj { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="brand">HYUN SEUNG RI</span>
+  <h1>현승리의 작명집, <span class="gold">택일 해설지</span></h1>
+  <p class="sub"><strong>2026년 10월</strong> · 택일 볼 때 특히 주의해야 할 4일<br>피해야 할 시간과 아이 운을 트여주는 방법까지</p>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== Story link ===== -->
+  <a class="notice-banner" style="margin-top:28px; background:rgba(201,169,97,0.08); border-color:rgba(201,169,97,0.4); color:#d9c491;" href="https://hslee.co.kr/story" target="_blank">
+    ✍️ <strong style="color:#f0dfae;">현승리가 젊은 나이에 작명가가 된 이유</strong>가 궁금하다면 →
+  </a>
+
+  <!-- ===== Intro ===== -->
+  <div class="section">
+    <span class="section-label">INTRO</span>
+    <h2>자연분만인데도 택일을 <span class="gold">알아야 하는 이유</span></h2>
+    <p class="lead">택일은 제왕절개 하는 분들만 보는 게 아니에요. 아직 자연분만과 제왕절개를 결정하지 못한 분들, 자연분만을 준비 중인 분들에게도 <strong>무조건 도움이 되는 정보</strong>입니다.</p>
+    <div class="quote">
+      <span class="who">현승리</span>
+      "최고의 날짜, 최고의 시간을 정확하게 맞추는 건 어렵더라도, <b>'적어도 이 날은 가능하면 피해야겠다'</b> 정도만 알고 있어도 충분히 도움이 되거든. 택일에서 중요한 건 무조건 제일 좋은 날을 잡는 것만이 아니라, <b>피해야 할 날을 알고 있는 것</b>이야."
+    </div>
+    <div class="callout">
+      <span class="callout-title">📌 한자를 몰라도 괜찮아요</span>
+      이 자료에 나오는 한자는 전부 한글 음을 함께 적어두었고, 결론은 <b>날짜·시간·점수</b>만 보셔도 됩니다. 사주를 전혀 몰라도 그대로 활용할 수 있게 정리했어요.
+    </div>
+    <a class="notice-banner" href="https://app.notion.com/p/2026-9-37c63d6170ce806b80fcfe1d4c659527" target="_blank">
+      👶 <strong>9월에 태어난 아이라면?</strong> 9월생 사주 특징 정리는 이 페이지에서 확인하세요 →
+    </a>
+    <a class="notice-banner" style="margin-top:10px;" href="https://app.notion.com/p/26-9-38c63d6170ce8083bcebda693fa883ab?source=copy_link" target="_blank">
+      📎 <strong>9월 출산 예정이신가요?</strong> 9월에 피해야 하는 날은 이 페이지에서 확인하세요 →
+    </a>
+  </div>
+
+  <!-- ===== October overview ===== -->
+  <div class="section">
+    <span class="section-label">2026 OCTOBER</span>
+    <h2>10월, 택일 볼 때 <span class="gold">특히 주의해야 할 날짜</span></h2>
+    <p class="lead">2026년 10월은 병오년(丙午年) 무술월(戊戌月)이에요. 이달에 특히 주의해서 봐야 하는 날짜는 아래 <strong>4일</strong>입니다.</p>
+    <div class="date-chips">
+      <div class="date-chip"><div class="d">11일</div><div class="g">무오일(戊午日)</div></div>
+      <div class="date-chip"><div class="d">19일</div><div class="g">병인일(丙寅日)</div></div>
+      <div class="date-chip"><div class="d">27일</div><div class="g">갑술일(甲戌日)</div></div>
+      <div class="date-chip"><div class="d">31일</div><div class="g">무인일(戊寅日)</div></div>
+    </div>
+    <div class="callout warn">
+      <span class="callout-title">⚠️ 왜 이 날들일까요?</span>
+      올해의 글자 오(午)와 이달의 글자 술(戌)은 서로 만나면 <b>뭉쳐서 뜨거운 기운을 크게 키우는 조합</b>이에요. 그런데 이 4일은 그날의 글자까지 여기에 가세하면서, 사주 전체가 한쪽으로 심하게 기울어지기 쉬운 날입니다. 실제 데이터에서도 대부분의 시간대가 <b>'양과다(뜨거운 기운 과다)'</b> 상태로 나와요.
+    </div>
+    <p class="lead">단, <strong>날짜가 안 좋아도 몇 시에 태어나느냐에 따라 점수가 확 바뀔 수 있습니다.</strong> 그래서 아래처럼 시간까지 함께 봐야 해요.</p>
+    <div class="legend">
+      <span><span class="dot red"></span>50점 미만 · 주의</span>
+      <span><span class="dot mid"></span>50점대 · 보통</span>
+      <span><span class="dot teal"></span>60점 이상 · 상대적 양호</span>
+    </div>
+  </div>
+
+  <!-- ===== 10/11 ===== -->
+  <div class="day-card">
+    <div class="day-head">
+      <span class="date">10월 11일 <span style="color:#e57e7e;">(일)</span></span>
+      <span class="pillars">무오일(戊午日)</span>
+    </div>
+    <div class="myeongsik">
+      <div class="ms-col">
+        <div class="ms-label">시주</div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+      </div>
+      <div class="ms-col ilju">
+        <div class="ms-label">일주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-fire"><span class="hj">午</span><span class="hg">오 · 화(火)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">월주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-earth"><span class="hj">戌</span><span class="hg">술 · 토(土)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">년주</div>
+        <div class="ms-cell el-fire"><span class="hj">丙</span><span class="hg">병 · 화(火)</span></div>
+        <div class="ms-cell el-fire"><span class="hj">午</span><span class="hg">오 · 화(火)</span></div>
+      </div>
+    </div>
+    <p class="ms-note">※ 비어 있는 <strong>시주(時柱)</strong>는 아이가 <strong>태어난 시간</strong>에 따라 채워지는 자리예요. 그래서 시간이 그만큼 중요합니다.</p>
+    <p class="day-why">연지의 오(午), 일지의 오(午)가 월지의 술(戌)과 각각 결합해 <em>뜨거운 기운이 이중으로 커지는 날</em>이에요. 전 시간대가 <strong>신강(기운이 강한 상태)</strong>으로 나오고, 대부분 양과다입니다.</p>
+    <div class="tt-label bad">😰 이 중 WORST</div>
+    <div class="t-row worst"><div class="t-time">사시<span class="rng">09:30~11:29</span></div><div class="t-tags"><span class="tag orange">신강</span><span class="tag red">양과다</span><span class="tag red">오행결핍격(2)</span></div><div class="t-score low">5점</div></div>
+    <div class="tt-label good">✨ 이 중 BEST</div>
+    <div class="t-row best"><div class="t-time">해시<span class="rng">21:30~23:29</span></div><div class="t-tags"><span class="tag orange">신강</span><span class="tag red">양과다</span><span class="tag gray">지장간구족</span></div><div class="t-score high">64점</div></div>
+    <p class="day-note">이 날은 오전~이른 오후 점수가 크게 떨어지고, 특히 <em>사시는 5점</em>까지 내려갑니다. 상대적으로는 밤 시간대인 <strong>해시(64점)</strong>가 낫습니다.</p>
+  </div>
+
+  <!-- ===== 10/19 ===== -->
+  <div class="day-card">
+    <div class="day-head">
+      <span class="date">10월 19일 <span style="color:#e57e7e;">(월)</span></span>
+      <span class="pillars">병인일(丙寅日)</span>
+    </div>
+    <div class="myeongsik">
+      <div class="ms-col">
+        <div class="ms-label">시주</div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+      </div>
+      <div class="ms-col ilju">
+        <div class="ms-label">일주</div>
+        <div class="ms-cell el-fire"><span class="hj">丙</span><span class="hg">병 · 화(火)</span></div>
+        <div class="ms-cell el-wood"><span class="hj">寅</span><span class="hg">인 · 목(木)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">월주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-earth"><span class="hj">戌</span><span class="hg">술 · 토(土)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">년주</div>
+        <div class="ms-cell el-fire"><span class="hj">丙</span><span class="hg">병 · 화(火)</span></div>
+        <div class="ms-cell el-fire"><span class="hj">午</span><span class="hg">오 · 화(火)</span></div>
+      </div>
+    </div>
+    <p class="ms-note">※ 비어 있는 <strong>시주(時柱)</strong>는 아이가 <strong>태어난 시간</strong>에 따라 채워지는 자리예요. 그래서 시간이 그만큼 중요합니다.</p>
+    <p class="day-why">그날의 글자 인(寅)이 올해의 오(午), 이달의 술(戌)과 만나 <em>세 글자가 하나로 뭉치는 강력한 조합</em>이 완성되는 날이에요. 전 시간대가 <strong>양과다</strong> 상태입니다.</p>
+    <div class="tt-label bad">😰 이 중 WORST</div>
+    <div class="t-row worst"><div class="t-time">미시<span class="rng">13:30~15:29</span></div><div class="t-tags"><span class="tag orange">신강</span><span class="tag red">양과다</span><span class="tag red">오행결핍격(2)</span><span class="tag red">백호대살</span></div><div class="t-score low">15점</div></div>
+    <div class="tt-label good">✨ 이 중 BEST</div>
+    <div class="t-row best"><div class="t-time">해시<span class="rng">21:30~23:29</span></div><div class="t-tags"><span class="tag teal">균형</span><span class="tag red">양과다</span><span class="tag gray">지장간구족</span><span class="tag teal">천을귀인</span></div><div class="t-score high">76점</div></div>
+    <p class="day-note">하루 종일 점수가 낮게 이어지다가, <strong>해시만 균형 상태에 천을귀인까지 더해져 76점</strong>으로 유일하게 크게 올라갑니다. 같은 날인데도 시간에 따라 <em>15점 → 76점</em>까지 차이가 나는 대표적인 날이에요.</p>
+  </div>
+
+  <!-- ===== 10/27 ===== -->
+  <div class="day-card">
+    <div class="day-head">
+      <span class="date">10월 27일 <span style="color:#e57e7e;">(화)</span></span>
+      <span class="pillars">갑술일(甲戌日)</span>
+    </div>
+    <div class="myeongsik">
+      <div class="ms-col">
+        <div class="ms-label">시주</div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+      </div>
+      <div class="ms-col ilju">
+        <div class="ms-label">일주</div>
+        <div class="ms-cell el-wood"><span class="hj">甲</span><span class="hg">갑 · 목(木)</span></div>
+        <div class="ms-cell el-earth"><span class="hj">戌</span><span class="hg">술 · 토(土)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">월주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-earth"><span class="hj">戌</span><span class="hg">술 · 토(土)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">년주</div>
+        <div class="ms-cell el-fire"><span class="hj">丙</span><span class="hg">병 · 화(火)</span></div>
+        <div class="ms-cell el-fire"><span class="hj">午</span><span class="hg">오 · 화(火)</span></div>
+      </div>
+    </div>
+    <p class="ms-note">※ 비어 있는 <strong>시주(時柱)</strong>는 아이가 <strong>태어난 시간</strong>에 따라 채워지는 자리예요. 그래서 시간이 그만큼 중요합니다.</p>
+    <p class="day-why">이달의 술(戌)에 그날의 술(戌)까지 겹치고, 올해의 오(午)와도 결합하면서 <em>메마르고 뜨거운 기운이 한층 강해지는 날</em>이에요. 이 날은 전 시간대가 <strong>신약(아이 기운이 눌리는 상태)</strong>으로 나옵니다.</p>
+    <div class="tt-label bad">😰 이 중 WORST</div>
+    <div class="t-row worst"><div class="t-time">진시<span class="rng">07:30~09:29</span></div><div class="t-tags"><span class="tag red">신약</span><span class="tag red">양과다</span><span class="tag gray">지장간구족</span><span class="tag red">백호대살</span></div><div class="t-score low">2점</div></div>
+    <div class="tt-label good">✨ 이 중 BEST</div>
+    <div class="t-row best"><div class="t-time">신시<span class="rng">15:30~17:29</span></div><div class="t-tags"><span class="tag red">신약</span><span class="tag red">양과다</span><span class="tag teal">오행구족격</span></div><div class="t-score mid">58점</div></div>
+    <p class="day-note">오전 시간대는 <em>2~12점</em>으로 이달 전체에서도 가장 낮은 구간이에요. 늦은 오후 <strong>신시(58점)</strong>부터 다섯 가지 기운이 모두 드러나는 구조가 되면서 점수가 회복됩니다.</p>
+  </div>
+
+  <!-- ===== 10/31 ===== -->
+  <div class="day-card">
+    <div class="day-head">
+      <span class="date">10월 31일 <span style="color:#e57e7e;">(토)</span></span>
+      <span class="pillars">무인일(戊寅日)</span>
+    </div>
+    <div class="myeongsik">
+      <div class="ms-col">
+        <div class="ms-label">시주</div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+        <div class="ms-cell empty"><span class="hj">？</span><span class="hg">시간의 자리</span></div>
+      </div>
+      <div class="ms-col ilju">
+        <div class="ms-label">일주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-wood"><span class="hj">寅</span><span class="hg">인 · 목(木)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">월주</div>
+        <div class="ms-cell el-earth"><span class="hj">戊</span><span class="hg">무 · 토(土)</span></div>
+        <div class="ms-cell el-earth"><span class="hj">戌</span><span class="hg">술 · 토(土)</span></div>
+      </div>
+      <div class="ms-col">
+        <div class="ms-label">년주</div>
+        <div class="ms-cell el-fire"><span class="hj">丙</span><span class="hg">병 · 화(火)</span></div>
+        <div class="ms-cell el-fire"><span class="hj">午</span><span class="hg">오 · 화(火)</span></div>
+      </div>
+    </div>
+    <p class="ms-note">※ 비어 있는 <strong>시주(時柱)</strong>는 아이가 <strong>태어난 시간</strong>에 따라 채워지는 자리예요. 그래서 시간이 그만큼 중요합니다.</p>
+    <p class="day-why">19일과 마찬가지로 인(寅)·오(午)·술(戌) <em>세 글자가 하나로 뭉치는 조합</em>이 완성되는 날이에요. 대부분의 시간대가 <strong>신강 + 양과다</strong>로 나옵니다.</p>
+    <div class="tt-label bad">😰 이 중 WORST</div>
+    <div class="t-row worst"><div class="t-time">미시<span class="rng">13:30~15:29</span></div><div class="t-tags"><span class="tag orange">신강</span><span class="tag red">양과다</span><span class="tag red">오행결핍격(2)</span><span class="tag teal">천을귀인</span></div><div class="t-score low">10점</div></div>
+    <div class="tt-label good">✨ 이 중 BEST</div>
+    <div class="t-row best"><div class="t-time">신시<span class="rng">15:30~17:29</span></div><div class="t-tags"><span class="tag gray">약간 균형</span><span class="tag red">양과다</span><span class="tag gray">지장간구족</span></div><div class="t-score high">64점</div></div>
+    <p class="day-note">이 날도 <strong>신시(64점)</strong>만 균형에 가까워지며 점수가 올라가고, 바로 앞뒤 시간은 <em>10~29점</em>으로 뚝 떨어집니다. 두 시간 차이로 결과가 완전히 달라지는 날이에요.</p>
+  </div>
+
+  <!-- ===== Key insight ===== -->
+  <div class="section">
+    <div class="callout">
+      <span class="callout-title">💡 이 자료에서 꼭 가져가실 것</span>
+      ① 10월 11일 · 19일 · 27일 · 31일은 택일에서 <b>특히 주의해서 봐야 하는 날</b>입니다.<br>
+      ② 그런데 같은 날에도 시간에 따라 <b>2점 → 58점, 15점 → 76점</b>까지 점수가 확 바뀝니다.<br>
+      ③ 그래서 날짜만 보지 말고, <b>반드시 시간까지 함께</b> 보셔야 해요.
+    </div>
+  </div>
+
+  <!-- ===== How to help ===== -->
+  <div class="section">
+    <span class="section-label">SOLUTION</span>
+    <h2>이 날에 태어나도 괜찮아요, <span class="gold">아이 운을 트여주는 방법</span></h2>
+    <p class="lead">자연분만은 날짜와 시간을 선택할 수 없죠. 주의 날짜에 아이가 태어났다고 해서 걱정만 하실 필요는 없습니다. <strong>보완하는 방법이 있으니까요.</strong></p>
+    <div class="card">
+      <div class="step">
+        <div class="no">1</div>
+        <div>
+          <h3>가능하다면, 시간대를 참고하세요</h3>
+          <p>위 표에서 보셨듯 같은 날에도 시간에 따라 점수가 크게 달라집니다. 일정 조율이 가능한 상황이라면 <strong>점수가 낮은 시간대는 피하는 것만으로도</strong> 충분히 의미가 있어요.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="no">2</div>
+        <div>
+          <h3>생활 속에서 부족한 기운을 채워주세요</h3>
+          <p>이번 10월처럼 양과다인 사주는 <strong>대체로 용신(사주에 가장 필요한 기운)이 수(水)인 경우가 많습니다.</strong> 그래서 일상에서 아래처럼 물의 기운을 가까이하는 습관이 도움이 돼요.</p>
+          <div class="life-tips">
+            <div class="life-tip"><span class="ico">🖤</span><strong>검정색 가까이</strong>옷·소품 등 검정색 활용</div>
+            <div class="life-tip"><span class="ico">💧</span><strong>물 가까이</strong>물놀이·수영·물가 산책</div>
+            <div class="life-tip"><span class="ico">🌙</span><strong>저녁 활동</strong>저녁 시간대 활동·운동</div>
+          </div>
+        </div>
+      </div>
+      <div class="step important">
+        <div class="no">3</div>
+        <div>
+          <h3>가장 중요한 건, 이름으로 보충하는 것 <span class="badge-most">MOST</span></h3>
+          <p><strong>사주가 타고나는 선천운이라면, 이름은 그 선천운을 돕는 후천운의 역할</strong>을 합니다. 그래서 사주에서 부족한 기운을 이름의 한자에 담아주면, 태어난 이후에도 아이의 운을 계속 보완해 줄 수 있어요. 다만 아이마다 채워야 할 기운이 다르고, 10월은 글자들이 서로 뭉치는 조합이 유독 많은 달이라 <strong>겉으로 보이는 글자 개수만 세는 방식으로는 결과가 완전히 달라질 수 있습니다.</strong> 태어난 날짜·시간을 기준으로 정확하게 판단하는 게 중요해요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Paid consultation CTA ===== -->
+  <div class="section">
+    <div class="consult-box">
+      <h3>우리 아이에게 딱 맞는 날, <span class="gold">더 자세히 알아보고 싶다면</span></h3>
+      <p>이 자료는 '피해야 할 날'을 알려드리는 자료예요.<br><b>현승리의 작명집 전문 택일</b>에서는 한 걸음 더 나아가,<br>아이의 사주에 맞춘 <b>가장 좋은 날짜와 시간</b>까지 1:1로 상세하게 짚어드립니다.<br>날짜·시간별 점수는 물론, 우리 아이에게 필요한 기운까지 정확하게 알아보실 수 있어요.</p>
+      <a class="btn-white" href="http://pf.kakao.com/_zYljG" target="_blank">🔮 현승리의 작명집, 전문 택일 받아보기</a>
+    </div>
+  </div>
+
+  <!-- ===== Daewoon graph ===== -->
+  <div class="section">
+    <div class="graph-box">
+      <h3>아이의 부족한 기운을 채우면, <span class="gold">아이의 대운이 달라집니다</span></h3>
+      <p class="gsub">타고난 선천운 위에, 채워준 기운이 후천운이 되어 흐름을 밀어 올려요</p>
+      <svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기운 보완 전후 대운 비교 그래프">
+        <defs>
+          <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#d8ba82"/>
+            <stop offset="100%" stop-color="#f0d9a8"/>
+          </linearGradient>
+          <linearGradient id="goldFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(201,169,97,0.35)"/>
+            <stop offset="100%" stop-color="rgba(201,169,97,0)"/>
+          </linearGradient>
+        </defs>
+        <!-- grid -->
+        <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
+          <line x1="60" y1="40" x2="60" y2="260"/>
+          <line x1="60" y1="260" x2="600" y2="260"/>
+          <line x1="60" y1="150" x2="600" y2="150" stroke-dasharray="4 6"/>
+          <line x1="60" y1="60"  x2="600" y2="60"  stroke-dasharray="4 6"/>
+        </g>
+        <!-- x labels -->
+        <g fill="#7f889c" font-size="13" text-anchor="middle" font-family="sans-serif">
+          <text x="90"  y="284">1세</text>
+          <text x="192" y="284">10세</text>
+          <text x="294" y="284">20세</text>
+          <text x="396" y="284">30세</text>
+          <text x="498" y="284">40세</text>
+          <text x="588" y="284">50세</text>
+        </g>
+        <text x="30" y="60" fill="#7f889c" font-size="12" text-anchor="middle" font-family="sans-serif">운세</text>
+        <!-- before line -->
+        <path d="M 90 225 C 160 232, 220 210, 294 222 C 360 232, 440 214, 588 220"
+              fill="none" stroke="#6b7488" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>
+        <!-- after area -->
+        <path d="M 90 222 C 180 210, 250 170, 320 140 C 400 106, 480 84, 588 62 L 588 260 L 90 260 Z"
+              fill="url(#goldFill)"/>
+        <!-- after line -->
+        <path class="g-line-after" d="M 90 222 C 180 210, 250 170, 320 140 C 400 106, 480 84, 588 62"
+              fill="none" stroke="url(#goldLine)" stroke-width="5" stroke-linecap="round"/>
+        <!-- end star -->
+        <circle cx="588" cy="62" r="7" fill="#f0d9a8"/>
+        <circle cx="588" cy="62" r="13" fill="none" stroke="rgba(240,217,168,0.5)" stroke-width="2"/>
+        <text x="560" y="44" fill="#f0d9a8" font-size="15" font-weight="bold" text-anchor="middle" font-family="sans-serif">✦ 운이 트인 아이</text>
+        <text x="520" y="238" fill="#8a93a6" font-size="13" text-anchor="middle" font-family="sans-serif">보완 없이 흐를 때</text>
+      </svg>
+      <div class="g-legend">
+        <span><span class="line before"></span>보완 전</span>
+        <span><span class="line after"></span>부족한 기운을 채워준 후</span>
+      </div>
+      <p class="g-caption">※ 이해를 돕기 위한 예시 그래프입니다. 실제 흐름은 아이의 사주에 따라 달라집니다.</p>
+    </div>
+  </div>
+
+  <!-- ===== Ebook CTA (finale) ===== -->
+  <div class="section">
+    <div class="ebook-hero">
+      <div class="ebook-grid">
+        <div class="book-cover">
+          <div class="bc-top">HYUN SEUNG RI</div>
+          <div class="bc-title">작명하기 전,<br>알았다면<br>좋았을 것들</div>
+          <div class="bc-author">현승리 지음</div>
+        </div>
+        <div class="ebook-txt">
+          <span class="free-ribbon">FREE E-BOOK</span>
+          <h3>아이 이름 짓기 전,<br><span class="gold">무료 전자책으로 먼저 공부해 보세요</span></h3>
+          <p>이름 때문에 후회하는 부모님들이 반복하는 실수, 작명 전에 반드시 확인해야 할 것들을 실제 사례로 정리했습니다. 10월생 아이의 이름을 고민 중이라면 꼭 한 번 읽어보세요.</p>
+          <a class="btn-gold" href="https://hslee.co.kr/ebook" target="_blank">📖 전자책 무료로 읽어보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Source ===== -->
+  <div class="source">
+    <p class="desc">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</p>
+    <ul>
+      <li>▶ 유튜브 채널 : <a href="https://www.youtube.com/@name_house" target="_blank">youtube.com/@name_house</a></li>
+      <li>📷 인스타그램 : <a href="https://www.instagram.com/free_hsl/" target="_blank">instagram.com/free_hsl</a></li>
+      <li>🏠 공식 홈페이지 : <a href="https://www.hslee.co.kr" target="_blank">hslee.co.kr</a></li>
+      <li>🍎 앱스토어 (천을귀인) : <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">App Store에서 보기</a></li>
+      <li>▶ 구글플레이 (천을귀인) : <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">Google Play에서 보기</a></li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
