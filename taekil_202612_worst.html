@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>2026년 12월 피해야 할 출산일 3일 — 현승리의 택일 사주 해설</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+  :root {
+    --gold: #b8860b;
+    --gold-light: #fef9e7;
+    --gold-border: #f0d060;
+    --dark: #1a1a2e;
+    --dark2: #16213e;
+    --text: #2d2d2d;
+    --text-soft: #555;
+    --wood: #4a7c59;
+    --wood-light: #e8f5e9;
+    --fire: #c0392b;
+    --fire-light: #fdecea;
+    --earth: #d4a017;
+    --earth-light: #fffde7;
+    --metal: #607d8b;
+    --metal-light: #ecf0f1;
+    --water: #1565c0;
+    --water-light: #e3f2fd;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f8f7f4;
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 52px 20px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,134,11,0.15), transparent 60%);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.2);
+    border: 1px solid var(--gold-border);
+    color: #f0d060;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(20px, 5.5vw, 36px);
+    color: #fff; font-weight: 700; line-height: 1.45;
+    margin-bottom: 10px; position: relative; word-break: keep-all;
+  }
+  .hero h1 span { color: #f0d060; }
+  .hero-sub { color: rgba(255,255,255,0.65); font-size: 13px; position: relative; word-break: keep-all; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px; font-weight: 700; color: var(--dark);
+    margin: 36px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold);
+    word-break: keep-all;
+  }
+
+  /* CARD */
+  .saju-card {
+    background: #fff; border-radius: var(--radius);
+    box-shadow: var(--shadow); overflow: hidden;
+    margin-bottom: 28px; border: 1px solid #ece8df;
+  }
+  .saju-card-header {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    padding: 18px; display: flex; align-items: flex-start; gap: 12px;
+  }
+  .saju-num {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px; font-weight: 700; color: #fff;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .saju-card-header-info { flex: 1; min-width: 0; }
+  .saju-card-header-info h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(14px, 3.8vw, 17px);
+    color: #fff; font-weight: 600; word-break: keep-all; line-height: 1.4;
+  }
+  .saju-card-header-info p {
+    font-size: 11px; color: rgba(255,255,255,0.6);
+    margin-top: 3px; word-break: keep-all; line-height: 1.5;
+  }
+  .header-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+  .header-badge-score {
+    background: #f0d060; color: #1a1a2e;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-badge-silver {
+    background: rgba(255,255,255,0.25); color: #fff;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .header-badge-range {
+    background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+    font-size: 10px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; word-break: keep-all;
+  }
+  .saju-card-body { padding: 18px 16px; overflow: hidden; }
+
+  /* SAJU TABLE */
+  .saju-table-wrap { margin-bottom: 20px; width: 100%; overflow: hidden; }
+  .saju-table-label { font-size: 11px; color: var(--text-soft); font-weight: 700; margin-bottom: 8px; }
+  .saju-col-labels { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 4px; }
+  .saju-col-label { text-align: center; font-size: 10px; font-weight: 700; color: var(--text-soft); letter-spacing: 0.5px; padding: 2px 0; }
+  .saju-row-header {
+    background: #2d2d2d; color: #f0d060; border-radius: 6px;
+    text-align: center; font-size: 10px; font-weight: 700;
+    padding: 5px 0; letter-spacing: 1px; margin-bottom: 5px;
+  }
+  .saju-table { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-bottom: 5px; width: 100%; min-width: 0; }
+  .saju-cell { border-radius: 8px; padding: 10px 2px 8px; text-align: center; border: 2px solid transparent; min-width: 0; overflow: hidden; }
+  .saju-cell-char {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(18px, 5vw, 26px);
+    font-weight: 700; line-height: 1; margin-bottom: 4px;
+  }
+  .saju-cell-kor { font-size: 10px; font-weight: 700; opacity: 0.85; line-height: 1.3; }
+  .cell-wood  { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
+  .cell-fire  { background: #fdecea; color: #c0392b; border-color: #ef9a9a; }
+  .cell-earth { background: #fffde7; color: #9a7600; border-color: #ffe082; }
+  .cell-metal { background: #ecf0f1; color: #455a64; border-color: #b0bec5; }
+  .cell-water { background: #e3f2fd; color: #1565c0; border-color: #90caf9; }
+
+  /* OHAENG BARS */
+  .ohaeng-section { margin-bottom: 20px; }
+  .ohaeng-title { font-size: 12px; font-weight: 600; color: var(--text-soft); margin-bottom: 10px; }
+  .ohaeng-bars { display: flex; flex-direction: column; gap: 7px; }
+  .ohaeng-row { display: flex; align-items: center; gap: 8px; }
+  .ohaeng-label { width: 60px; font-size: 11px; font-weight: 600; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+  .ohaeng-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .ohaeng-bar-wrap { flex: 1; background: #f0ede8; border-radius: 6px; height: 14px; overflow: hidden; }
+  .ohaeng-bar-fill { height: 100%; border-radius: 6px; }
+  .ohaeng-pct { width: 44px; font-size: 11px; font-weight: 600; text-align: right; flex-shrink: 0; color: var(--text-soft); }
+
+  /* YINYANG BAR */
+  .yinyang-section { margin-bottom: 20px; }
+  .yinyang-title { font-size: 12px; font-weight: 600; color: var(--text-soft); margin-bottom: 8px; }
+  .yinyang-bar-wrap { width: 100%; display: flex; border-radius: 8px; overflow: hidden; }
+  .yinyang-yang {
+    background: #c0392b;
+    padding: 5px 8px 5px 0;
+    text-align: right;
+    font-size: 10px; font-weight: 700; color: #fff;
+    white-space: nowrap;
+  }
+  .yinyang-yin {
+    background: #1565c0;
+    padding: 5px 0 5px 8px;
+    font-size: 10px; font-weight: 700; color: #fff;
+    white-space: nowrap;
+  }
+  .yinyang-labels {
+    display: flex; justify-content: space-between;
+    margin-top: 5px; font-size: 10px; font-weight: 600;
+  }
+  .yinyang-label-yang { color: #c0392b; }
+  .yinyang-label-yin  { color: #1565c0; }
+
+  .c-wood { color: var(--wood); } .c-fire { color: var(--fire); }
+  .c-earth { color: var(--earth); } .c-metal { color: var(--metal); } .c-water { color: var(--water); }
+  .bg-wood { background: var(--wood); } .bg-fire { background: var(--fire); }
+  .bg-earth { background: var(--earth); } .bg-metal { background: var(--metal); } .bg-water { background: var(--water); }
+
+  /* TAGS */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .tag { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; word-break: keep-all; }
+  .tag-gold   { background: #fef9e7; color: #92650a; border: 1px solid #f0d060; }
+  .tag-green  { background: var(--wood-light); color: var(--wood); border: 1px solid #a5d6a7; }
+  .tag-blue   { background: var(--water-light); color: var(--water); border: 1px solid #90caf9; }
+  .tag-gray   { background: #f5f5f5; color: #666; border: 1px solid #ddd; }
+  .tag-purple { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+  .tag-teal   { background: #e0f2f1; color: #00695c; border: 1px solid #80cbc4; }
+  .tag-orange { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+
+  /* CALLOUT */
+  .callout { border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .callout-text { flex: 1; line-height: 1.75; word-break: keep-all; }
+  .callout-text strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; word-break: keep-all; }
+  .callout-gold  { background: var(--gold-light); border-left: 4px solid var(--gold); }
+  .callout-blue  { background: var(--water-light); border-left: 4px solid var(--water); }
+  .callout-green { background: var(--wood-light); border-left: 4px solid var(--wood); }
+  .callout-name  { background: #fff1e5; border-left: 4px solid #dc9854; }
+  .callout-name .callout-text > strong { color: #86511f; }
+  .callout-bok   { background: #f6effa; border-left: 4px solid #8e5bb5; }
+  .callout-bok .callout-text > strong { color: #5e2f86; }
+  .callout-bok .callout-text b { color: #5e2f86; font-weight: 700; }
+
+  /* STRENGTH GRID */
+  .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .strength-item { background: var(--gold-light); border: 1px solid var(--gold-border); border-radius: 10px; padding: 12px; }
+  .strength-item .si-icon { font-size: 16px; margin-bottom: 4px; }
+  .strength-item .si-title { font-weight: 700; font-size: 12px; color: #7a5200; margin-bottom: 2px; }
+  .strength-item .si-desc { font-size: 11px; color: #8a6820; line-height: 1.5; word-break: keep-all; }
+
+  .divider { border: none; border-top: 1px solid #ece8df; margin: 16px 0; }
+
+  /* INSIGHT BOX */
+  .insight-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; }
+  .insight-box-title { color: #f0d060; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .insight-box-body { color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.8; word-break: keep-all; }
+
+  /* BALANCE NOTE */
+  .balance-note { background: #fffde7; border: 1px solid #f9e04b; border-radius: 8px; padding: 11px 13px; margin-top: 10px; font-size: 12px; color: #5a4000; line-height: 1.7; word-break: keep-all; }
+
+  .section-sub-label { font-size: 12px; font-weight: 700; color: var(--text-soft); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+
+  /* WEEK TABS */
+  .week-tabs { display: flex; gap: 6px; margin: 24px 0 20px; width: 100%; }
+  .week-tab {
+    flex: 1; min-width: 0;
+    padding: 10px 2px; border-radius: 10px;
+    border: 2px solid #e0d8cc; background: #f9f8f5; color: var(--text-soft);
+    font-size: 11px; font-weight: 700; text-align: center; cursor: pointer;
+    transition: all 0.2s ease; line-height: 1.4;
+    box-sizing: border-box;
+  }
+  .week-tab:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-light); }
+  .week-tab.active {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    border-color: var(--gold); color: #f0d060;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .week-tab .tab-range { font-size: 9px; font-weight: 500; opacity: 0.8; display: block; margin-top: 2px; }
+  .week-section { display: none; width: 100%; overflow: hidden; }
+  .week-section.active { display: block; }
+
+  /* EBOOK CTA */
+  .ebook-section {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    border-radius: var(--radius); padding: 36px 24px; margin: 40px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .ebook-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(184,134,11,0.18), transparent 55%);
+  }
+  .ebook-section::after {
+    content: '✦ ✦ ✦';
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    color: rgba(240,208,96,0.3); font-size: 11px; letter-spacing: 8px;
+  }
+  .ebook-info { position: relative; }
+  .ebook-cover-wrap { display: flex; justify-content: center; margin-bottom: 20px; position: relative; }
+  .ebook-cover-box {
+    width: 130px; height: 180px; border-radius: 10px;
+    background: linear-gradient(160deg, #1e3a5f, #0d2137);
+    border: 1px solid rgba(240,208,96,0.4);
+    box-shadow: 6px 6px 24px rgba(0,0,0,0.5), -2px -2px 8px rgba(240,208,96,0.1);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 8px; padding: 16px;
+  }
+  .ebook-cover-box .ec-icon { font-size: 32px; }
+  .ebook-cover-box .ec-title {
+    font-family: 'Noto Serif KR', serif;
+    color: #f0d060; font-size: 11px; font-weight: 700;
+    text-align: center; line-height: 1.7; word-break: keep-all;
+  }
+  .ebook-free-badge {
+    position: absolute; top: -8px; right: calc(50% - 72px);
+    background: #f0d060; color: #1a1a2e;
+    font-size: 10px; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .ebook-info .eb-badge {
+    display: inline-block;
+    background: rgba(184,134,11,0.25); border: 1px solid rgba(240,208,96,0.4);
+    color: #f0d060; font-size: 11px; letter-spacing: 1px; font-weight: 700;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .ebook-info h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(17px, 4.5vw, 22px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .ebook-info p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 18px; line-height: 1.6; word-break: keep-all; }
+  .ebook-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 14px; font-weight: 700;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(184,134,11,0.4);
+  }
+
+  /* FREE NAME CTA */
+  .free-name-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid rgba(240,208,96,0.35);
+    border-radius: var(--radius); padding: 28px 24px; margin: 16px 0 0;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .free-name-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(240,208,96,0.08), transparent 60%);
+  }
+  .free-name-inner { position: relative; }
+  .free-name-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b8860b, #d4a017);
+    color: #fff; font-size: 11px; font-weight: 800;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .free-name-section h3 {
+    font-family: 'Noto Serif KR', serif; color: #fff;
+    font-size: clamp(16px, 4vw, 20px); font-weight: 700;
+    line-height: 1.5; margin-bottom: 8px; word-break: keep-all;
+  }
+  .free-name-section p { color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 16px; line-height: 1.6; word-break: keep-all; }
+  .free-name-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: #1a1a2e;
+    font-size: 14px; font-weight: 800;
+    padding: 13px 28px; border-radius: 30px; text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  /* FOOTER */
+  .footer { background: var(--dark2); padding: 32px 20px; color: rgba(255,255,255,0.6); font-size: 13px; }
+  .footer-inner { max-width: 720px; margin: 0 auto; }
+  .footer-title { font-family: 'Noto Serif KR', serif; color: #f0d060; font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-bottom: 18px; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 12px; display: flex; align-items: center; gap: 4px; }
+  .footer-links a:hover { color: #f0d060; }
+  .footer-credit { font-size: 11px; color: rgba(255,255,255,0.35); border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; line-height: 1.7; word-break: keep-all; }
+
+  /* WEEK OVERVIEW (평균 점수 요약) */
+  .week-overview { margin-bottom: 28px; }
+  .wo-kicker { display: inline-block; margin: 2px 0 9px; padding-left: 9px; border-left: 3px solid var(--gold); color: #80600d; font-size: 13px; font-weight: 700; line-height: 1.4; }
+  .wo-head { font-size: 16px; font-weight: 800; color: var(--dark); margin-bottom: 8px; line-height: 1.55; word-break: keep-all; }
+  .wo-sub { font-size: 12px; color: var(--text-soft); margin-bottom: 17px; line-height: 1.8; word-break: keep-all; }
+  .wo-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+  @media (min-width: 560px) { .wo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .wo-col { min-width: 0; border-radius: 12px; padding: 17px 16px 3px; border: 1px solid; }
+  .wo-col-high { background: #edf6ef; border-color: #bcd6c4; }
+  .wo-col-low { background: #f2f3f5; border-color: #d5d9df; }
+  .wo-col-title { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-size: 14px; font-weight: 800; line-height: 1.6; padding-bottom: 13px; border-bottom: 1px solid; }
+  .wo-col-high .wo-col-title { color: #285d3b; border-color: #c5ddcc; }
+  .wo-col-low .wo-col-title { color: #4b5563; border-color: #d8dde3; }
+  .wo-count { font-size: 12px; font-weight: 600; white-space: nowrap; opacity: 0.8; }
+  .wo-row { padding: 16px 0; }
+  .wo-row + .wo-row { border-top: 1px solid; }
+  .wo-col-high .wo-row + .wo-row { border-color: #d1e3d6; }
+  .wo-col-low .wo-row + .wo-row { border-color: #dee2e7; }
+  .wo-row-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 7px 10px; margin-bottom: 8px; }
+  .wo-date { font-size: 15px; font-weight: 800; color: var(--dark); line-height: 1.5; word-break: keep-all; }
+  .wo-date small { display: block; font-size: 12px; font-weight: 400; color: var(--text-soft); margin-top: 2px; }
+  .wo-avg { font-size: 13px; font-weight: 800; white-space: nowrap; padding: 3px 9px; border-radius: 7px; line-height: 1.65; }
+  .wo-col-high .wo-avg { background: #d6e9dc; color: #225434; }
+  .wo-col-low .wo-avg { background: #e0e4e9; color: #414b58; }
+  .wo-note { font-size: 13px; color: #41464b; line-height: 1.8; word-break: keep-all; }
+
+  /* 피해야 할 날 자료 전용 */
+  .score-strip { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin: 4px 0 10px; }
+  .sc { border-radius: 8px; padding: 7px 2px 6px; text-align: center; border: 1px solid transparent; }
+  .sc-n { font-size: 11px; font-weight: 700; color: #333; line-height: 1.3; }
+  .sc-n small { font-size: 10px; font-weight: 400; color: #777; margin-left: 2px; }
+  .sc-v { font-size: 17px; font-weight: 800; line-height: 1.3; }
+  .sc-t { font-size: 9px; color: #777; }
+  .s-good { background: #e3f1e7; } .s-good .sc-v { color: #2e6b41; }
+  .s-ok   { background: #f2f6ea; } .s-ok .sc-v { color: #5d7a2a; }
+  .s-mid  { background: #fdf3df; } .s-mid .sc-v { color: #a0660b; }
+  .s-bad  { background: #fbe4e2; } .s-bad .sc-v { color: #b3261e; }
+  .sc-rep { border: 2px solid #1a1a2e; }
+  .strip-legend { font-size: 11px; color: #666; line-height: 1.9; margin-bottom: 4px; word-break: keep-all; }
+  .strip-legend .lg { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin: 0 3px 0 8px; vertical-align: -1px; }
+  .strip-legend .lg:first-child { margin-left: 0; }
+  @media (max-width: 480px) { .score-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .worst-num { background: linear-gradient(135deg, #8b2c2c, #c0392b); }
+  .header-badge-worst { display: inline-block; background: #fbe4e2; color: #9b1c1c; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
+  .callout-warn { background: #fdecea; border-left: 4px solid #c0392b; }
+  .callout-warn .callout-text > strong { color: #9b1c1c; }
+  .note-soft { font-size: 12px; color: #7a6a86; }
+  .rank-list { display: grid; gap: 8px; margin: 10px 0 2px; }
+  .rank-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #fff; border: 1px solid #f2c9c4; border-radius: 10px; padding: 10px 14px; }
+  a.rank-item { text-decoration: none; cursor: pointer; transition: box-shadow .15s, border-color .15s; }
+  a.rank-item:hover { border-color: #c0392b; box-shadow: 0 3px 12px rgba(192,57,43,0.15); }
+  .ri-right { text-align: right; flex-shrink: 0; }
+  .ri-go { font-size: 11px; font-weight: 700; color: #c0392b; margin-top: 4px; white-space: nowrap; }
+  .tap-hint { margin: 26px 0 -12px; padding: 12px 14px; border-radius: 10px; background: #1a1a2e; color: rgba(255,255,255,0.85); font-size: 12.5px; line-height: 1.7; text-align: center; word-break: keep-all; scroll-margin-top: 12px; }
+  .tap-hint b { color: #f0d060; font-size: 14px; }
+  .week-tab { cursor: pointer; }
+  .next-day { display: block; margin: 4px 0 8px; padding: 14px; border-radius: 12px; background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #f0d060; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; }
+  .rank-item b { font-size: 14px; color: #1a1a2e; }
+  .rank-item small { display: block; font-size: 12px; color: #666; font-weight: 400; }
+  .rank-item .ri-avg { font-size: 13px; font-weight: 800; color: #9b1c1c; background: #fbe4e2; padding: 3px 9px; border-radius: 7px; white-space: nowrap; }
+  .ebook-cover-img { width: 220px; max-width: 70%; height: auto; display: block; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.45)); }
+  .chat-section { background: linear-gradient(135deg, #fff7c2 0%, #fee500 100%); border-radius: var(--radius); padding: 28px 22px; margin: 16px 0 0; text-align: center; border: 2px solid #f1d600; }
+  .chat-badge { display: inline-block; background: #3c1e1e; color: #fee500; font-size: 11px; font-weight: 800; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
+  .chat-section h3 { font-family: 'Noto Serif KR', serif; color: #3c1e1e; font-size: clamp(16px, 4vw, 20px); font-weight: 700; line-height: 1.5; margin-bottom: 8px; word-break: keep-all; }
+  .chat-section p { color: #4a3a2a; font-size: 13px; line-height: 1.7; margin-bottom: 14px; word-break: keep-all; }
+  .chat-code { display: inline-block; background: #fff; border: 2px dashed #3c1e1e; border-radius: 10px; padding: 8px 18px; margin-bottom: 16px; font-size: 13px; color: #3c1e1e; }
+  .chat-code b { font-size: 22px; letter-spacing: 4px; margin-left: 6px; }
+  .chat-btn { display: inline-flex; align-items: center; gap: 8px; background: #3c1e1e; color: #fee500; font-size: 15px; font-weight: 800; padding: 14px 30px; border-radius: 30px; text-decoration: none; box-shadow: 0 6px 20px rgba(60,30,30,0.3); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">✦ 2026년 12월 출산 택일</div>
+  <h1>12월, 피해야 할 날 3일<br><span>25일 · 28일 · 29일은 왜 불리할까</span></h1>
+  <p class="hero-sub">사주명리학 기반 · 오행 균형 분석 · 이 날 태어난다면 보완하는 법</p>
+</div>
+
+<div class="container">
+
+  <div class="callout callout-gold" style="margin-top: 8px;">
+    <div class="callout-icon">📌</div>
+    <div class="callout-text">
+      <strong>먼저 꼭 알아 두세요</strong>
+      "이 날 태어나면 무조건 큰일 난다"는 날은 없습니다. 다만 사주의 균형이 크게 기울어 <b>보완할 점이 많은 날</b>은 있습니다. 이 자료는 그런 날을 미리 알려 드리고, 그 날 태어나더라도 이름으로 어떻게 채워 주면 되는지까지 알려 드립니다. 한자나 전문 용어를 몰라도 괜찮아요. 차근차근 읽으시면 됩니다.
+    </div>
+  </div>
+
+  <div class="callout callout-warn">
+    <div class="callout-icon">📉</div>
+    <div class="callout-text">
+      <strong>12월에서 하루 평균 점수가 가장 낮은 3일</strong>
+      하루 열두 시간대(자시~해시) 점수를 평균한 값입니다. 12월 전체 날짜의 평균은 약 73.2점입니다.
+      <div class="rank-list">
+      <a class="rank-item" href="#day-tabs" onclick="goDay(1); return false;"><div><b>1. 12월 25일 계유(癸酉)일</b><small>물과 금이 넘치는 차가운 사주</small></div><div class="ri-right"><div class="ri-avg">평균 54.5점</div><div class="ri-go">눌러서 자세히 보기 ›</div></div></a>
+      <a class="rank-item" href="#day-tabs" onclick="goDay(2); return false;"><div><b>2. 12월 28일 병자(丙子)일</b><small>차가운 물에 둘러싸여 아이의 기운이 약한 날</small></div><div class="ri-right"><div class="ri-avg">평균 59.8점</div><div class="ri-go">눌러서 자세히 보기 ›</div></div></a>
+      <a class="rank-item" href="#day-tabs" onclick="goDay(3); return false;"><div><b>3. 12월 29일 정축(丁丑)일</b><small>불을 돕는 나무가 없어 불이 너무 약한 날</small></div><div class="ri-right"><div class="ri-avg">평균 59.9점</div><div class="ri-go">눌러서 자세히 보기 ›</div></div></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-bok">
+    <div class="callout-icon">🎁</div>
+    <div class="callout-text">
+      <strong>세 날의 공통 보완법 — 불(화)과 나무(목)</strong>
+      세 날 모두 대부분의 시간대에서 이름에 <b>화(火)와 목(木)</b>을 담아 주면 좋습니다. 25일은 차가운 사주를 데우고 넘치는 힘을 흘려보내기 위해, 28일·29일은 약한 불인 아이의 기운을 키워, 차가운 물에 불이 꺼지지 않게 하기 위해서입니다. 다만 태어난 시간에 따라 필요한 기운이 달라지는 경우가 있어 날짜별 카드에 함께 적었습니다.
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="background:#e3f2fd; border-left:4px solid #1565c0;">
+    <div class="callout-icon">⏰</div>
+    <div class="callout-text">
+      <strong>같은 날이어도 시간에 따라 점수가 크게 다릅니다</strong>
+      예를 들어 25일은 새벽 묘시(卯時)가 80점이지만 저녁 유시(酉時)는 31점입니다. 아래 탭에서 날짜별 열두 시간대 점수와, 그 날 낮 시간대 중 가장 낮은 시간의 사주를 자세히 확인해 보세요.
+    </div>
+  </div>
+
+  <script>
+    function goDay(n) {
+      var t = document.querySelectorAll('.week-tab')[n - 1];
+      showWeek(n, t);
+      document.getElementById('day-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
+
+  <!-- 날짜 탭 -->
+  <div class="tap-hint" id="day-tabs">👇 <b>아래 날짜를 눌러 보세요</b><br>날짜마다 불리한 이유와 보완하는 법이 따로 정리되어 있습니다</div>
+  <div class="week-tabs">
+    <button class="week-tab active" onclick="showWeek(1, this)">
+      👆 12월 25일<span class="tab-range">계유일 · 평균 54.5점</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(2, this)">
+      👆 12월 28일<span class="tab-range">병자일 · 평균 59.8점</span>
+    </button>
+    <button class="week-tab" onclick="showWeek(3, this)">
+      👆 12월 29일<span class="tab-range">정축일 · 평균 59.9점</span>
+    </button>
+  </div>
+
+  <!-- ===================================================== -->
+  <div class="week-section active" data-week="1">
+    <div class="section-title">12월 25일 계유(癸酉)일 — 12월에서 하루 평균 점수가 가장 낮은 날</div>
+
+    <div class="week-overview">
+      <div class="wo-kicker">하루 열두 시간대 점수</div>
+      <div class="wo-head">📊 12월 25일, 시간대별로 보면</div>
+      <div class="wo-sub">하루 평균 54.5점으로 12월 31일 가운데 가장 낮습니다. 오전 진시(辰時) 75점에서 시작해 오후로 갈수록 점수가 떨어지고, 신시(申時) 34점, 유시(酉時) 31점이 이 날 낮 시간대에서 가장 낮습니다. 밤 자시(子時) 31점, 축시(丑時) 38점도 낮습니다.</div>
+      <div class="score-strip"><div class="sc s-bad"><div class="sc-n">자시<small>子</small></div><div class="sc-v">31</div><div class="sc-t">밤 11:30~</div></div><div class="sc s-bad"><div class="sc-n">축시<small>丑</small></div><div class="sc-v">38</div><div class="sc-t">새벽 1:30~</div></div><div class="sc s-ok"><div class="sc-n">인시<small>寅</small></div><div class="sc-v">75</div><div class="sc-t">새벽 3:30~</div></div><div class="sc s-good"><div class="sc-n">묘시<small>卯</small></div><div class="sc-v">80</div><div class="sc-t">새벽 5:30~</div></div><div class="sc s-ok"><div class="sc-n">진시<small>辰</small></div><div class="sc-v">75</div><div class="sc-t">오전 7:30~</div></div><div class="sc s-mid"><div class="sc-n">사시<small>巳</small></div><div class="sc-v">68</div><div class="sc-t">오전 9:30~</div></div><div class="sc s-mid"><div class="sc-n">오시<small>午</small></div><div class="sc-v">69</div><div class="sc-t">오전 11:30~</div></div><div class="sc s-mid"><div class="sc-n">미시<small>未</small></div><div class="sc-v">65</div><div class="sc-t">오후 1:30~</div></div><div class="sc s-bad"><div class="sc-n">신시<small>申</small></div><div class="sc-v">34</div><div class="sc-t">오후 3:30~</div></div><div class="sc s-bad sc-rep"><div class="sc-n">유시<small>酉</small></div><div class="sc-v">31</div><div class="sc-t">오후 5:30~</div></div><div class="sc s-bad"><div class="sc-n">술시<small>戌</small></div><div class="sc-v">44</div><div class="sc-t">저녁 7:30~</div></div><div class="sc s-bad"><div class="sc-n">해시<small>亥</small></div><div class="sc-v">44</div><div class="sc-t">밤 9:30~</div></div></div>
+      <div class="strip-legend"><span class="lg s-good"></span>80점 이상 <span class="lg s-ok"></span>70점대 <span class="lg s-mid"></span>60점대 <span class="lg s-bad"></span>60점 미만 · 굵은 테두리 = 아래 카드에서 자세히 본 시간</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-box-title">🔑 이 날이 불리한 이유 — 한눈에</div>
+      <div class="insight-box-body">
+        계유일에 태어나는 아이는 <strong style="color:#f0d060;">계수(癸水)</strong>, 즉 맑은 물의 기운을 타고납니다. 그런데 12월은 한겨울 물의 달인 자월(子月)이고, 태어난 날의 땅 글자 유금(酉金)과 달의 하늘 글자 경금(庚金)이 모두 물을 돕는 금(金)의 기운입니다.<br><br>
+그래서 아이의 기운(수+금)이 낮 내내 <strong style="color:#f0d060;">60~80%</strong>로 넘칩니다. 가장 좋은 기준은 50%입니다. 오후로 갈수록 금이 45~50%까지 몰리고, 따뜻한 기운(양기)은 20%대로 떨어집니다. 넘치는 물의 힘을 밖으로 흘려보낼 나무(목)는 0~3%로 거의 없습니다. <strong style="color:#f0d060;">물과 금이 겹겹이 쌓인 차갑고 무거운 사주</strong>라서 이 날의 점수가 가장 낮습니다.
+      </div>
+    </div>
+
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num worst-num">1</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 12월 25일 유시(酉時)</h2>
+          <p>오후 5시 30분 ~ 7시 29분 · 수(水) 계(癸) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-worst">⚠️ 31점 · 이 날 낮 시간대 가장 낮음</span>
+            <span class="header-badge-range">📅 12월 하루 평균 54.5점</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">辛</div><div class="saju-cell-kor">신 · 금(金)</div></div><div class="saju-cell cell-water"><div class="saju-cell-char">癸</div><div class="saju-cell-kor">계 · 수(水)</div></div><div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div><div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div><div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 금과 물이 80%를 차지하는 한겨울 저녁</div>
+          <div class="insight-box-body">
+            유시(酉時)는 태어난 시간의 글자까지 신금(辛金)·유금(酉金)으로 금(金)의 기운입니다. 그래서 금 50%, 수 30%로 <strong style="color:#f0d060;">사주의 80%가 금과 물</strong>입니다.<br><br>
+차가운 사주를 데울 불(화)은 17%, 넘치는 힘을 흘려보낼 나무(목)는 0%입니다. 힘은 넘치는데 쓸 곳이 없고, 온도까지 차가운 사주입니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-blue">💧 수(水) 일간 · 계(癸)</span><span class="tag tag-blue">🧊 신강 · 차가운 사주</span><span class="tag tag-gray">⚪ 금 50%</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:0%"></div></div><div class="ohaeng-pct c-wood">0점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:17%"></div></div><div class="ohaeng-pct c-fire">17점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:3%"></div></div><div class="ohaeng-pct c-earth">3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:50%"></div></div><div class="ohaeng-pct c-metal">50점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:30%"></div></div><div class="ohaeng-pct c-water">30점</div></div>
+
+          </div>
+          <div class="balance-note">
+            계수(癸水)로 태어나 물을 돕는 금(金)까지 더하면 사주 전체에서 약 <b>80%</b>입니다. 가장 좋은 50%를 크게 넘어선 <b>신강</b>입니다.
+          </div>
+        </div>
+
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:20.4%">양기 20.4%</div>
+            <div class="yinyang-yin" style="width:79.6%">음기 79.6%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 피해야 하는 날인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-text">
+            <strong>억부 — 힘이 지나치게 넘칩니다</strong>
+            아이의 기운(수+금)이 80%로, 가장 좋은 50%보다 30%나 많습니다. 힘이 한쪽으로 지나치게 쏠리면 넘치는 기운을 쓸 곳이 필요합니다. 이 사주에는 그 힘을 밖으로 쓰게 해 줄 나무(목)가 0%라 막혀 있는 모양입니다.
+          </div>
+        </div>
+
+        <div class="callout callout-blue" style="background:#e3f2fd; border-left:4px solid #1565c0;">
+          <div class="callout-icon">☯️</div>
+          <div class="callout-text">
+            <strong>조후 — 차가운 쪽으로 크게 기울었습니다</strong>
+            양기 20.4%, 음기 79.6%로 차가운 쪽이 크게 많습니다. 한겨울 저녁에 물과 금이 겹쳐, 사주의 온도를 올려 줄 불(화)의 역할이 꼭 필요합니다.
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-text">
+            <strong>이 날이 불리한 이유</strong>
+            ① 아이의 기운이 낮 내내 60~80%로 넘칩니다 (가장 좋은 기준 50%).<br>② 오후로 갈수록 양기가 20%대로 떨어져 차갑습니다.<br>③ 넘치는 힘을 흘려보낼 나무(목)가 0~3%로 거의 없습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🩹 이 날 태어난다면, 이렇게 보완하세요</div>
+
+        <div class="callout callout-bok">
+          <div class="callout-icon">🎁</div>
+          <div class="callout-text">
+            <strong>이 날 태어난다면 — 이름으로 보완하기</strong>
+            이름에는 화(火)와 목(木)을 담아주면 좋고, 금(金)과 토(土)는 피해주세요. 이름에 화(火)와 목(木)을 넣으면, 화는 재물을 뜻하는 재성이고 목은 건강과 생활력을 뜻하는 식상이라, 재물복과 건강과 생활력까지 함께 잘 쓸 수 있게 해줍니다.<br><br>같은 날이라도 오전 진시(辰時)·사시(巳時)에 태어나면 흙(토)과 불(화)이 필요한 사주로 바뀝니다. 실제로 태어난 시간으로 꼭 다시 확인해 주세요.<br><br><span class="note-soft">※ 이름 한자의 뜻이 가진 오행(자원오행)을 기준으로 합니다.</span>
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">⏰</div>
+          <div class="callout-text">
+            <strong>같은 날 안에서도 시간에 따라 다릅니다</strong>
+            시간을 고를 수 있다면 같은 날 안에서는 새벽 묘시(卯時) 80점, 인시(寅時)와 오전 진시(辰時) 75점이 그나마 낫습니다.
+          </div>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🔥</div><div class="si-title">불(화)로 데우기</div><div class="si-desc">차가운 사주의 온도를 올려 줍니다</div></div>
+          <div class="strength-item"><div class="si-icon">🌳</div><div class="si-title">나무(목)로 흘려보내기</div><div class="si-desc">넘치는 물의 힘을 밖으로 쓰게 합니다</div></div>
+          <div class="strength-item"><div class="si-icon">🚫</div><div class="si-title">금·토는 피하기</div><div class="si-desc">이미 넘치는 힘을 더 키웁니다</div></div>
+          <div class="strength-item"><div class="si-icon">⏰</div><div class="si-title">시간을 고른다면</div><div class="si-desc">묘시 80점, 인시·진시 75점</div></div>
+        </div>
+      </div>
+    </div>
+    <a class="next-day" href="#day-tabs" onclick="goDay(2); return false;">다음 날짜 보기 · 12월 28일 병자(丙子)일 ›</a>
+  </div><!-- /25일 -->
+
+  <!-- ===================================================== -->
+  <div class="week-section" data-week="2">
+    <div class="section-title">12월 28일 병자(丙子)일 — 12월에서 하루 평균 점수가 두 번째로 낮은 날</div>
+
+    <div class="week-overview">
+      <div class="wo-kicker">하루 열두 시간대 점수</div>
+      <div class="wo-head">📊 12월 28일, 시간대별로 보면</div>
+      <div class="wo-sub">하루 평균 59.8점으로 12월에서 두 번째로 낮습니다. 특히 오전이 낮아 진시(辰時) 45점, 사시(巳時) 50점이고, 밤 자시(子時)·축시(丑時)도 50점입니다. 하루 중 가장 높은 시간대도 새벽 묘시(卯時) 73점에 그칩니다.</div>
+      <div class="score-strip"><div class="sc s-bad"><div class="sc-n">자시<small>子</small></div><div class="sc-v">50</div><div class="sc-t">밤 11:30~</div></div><div class="sc s-bad"><div class="sc-n">축시<small>丑</small></div><div class="sc-v">50</div><div class="sc-t">새벽 1:30~</div></div><div class="sc s-ok"><div class="sc-n">인시<small>寅</small></div><div class="sc-v">71</div><div class="sc-t">새벽 3:30~</div></div><div class="sc s-ok"><div class="sc-n">묘시<small>卯</small></div><div class="sc-v">73</div><div class="sc-t">새벽 5:30~</div></div><div class="sc s-bad sc-rep"><div class="sc-n">진시<small>辰</small></div><div class="sc-v">45</div><div class="sc-t">오전 7:30~</div></div><div class="sc s-bad"><div class="sc-n">사시<small>巳</small></div><div class="sc-v">50</div><div class="sc-t">오전 9:30~</div></div><div class="sc s-mid"><div class="sc-n">오시<small>午</small></div><div class="sc-v">68</div><div class="sc-t">오전 11:30~</div></div><div class="sc s-mid"><div class="sc-n">미시<small>未</small></div><div class="sc-v">68</div><div class="sc-t">오후 1:30~</div></div><div class="sc s-bad"><div class="sc-n">신시<small>申</small></div><div class="sc-v">56</div><div class="sc-t">오후 3:30~</div></div><div class="sc s-ok"><div class="sc-n">유시<small>酉</small></div><div class="sc-v">70</div><div class="sc-t">오후 5:30~</div></div><div class="sc s-bad"><div class="sc-n">술시<small>戌</small></div><div class="sc-v">57</div><div class="sc-t">저녁 7:30~</div></div><div class="sc s-mid"><div class="sc-n">해시<small>亥</small></div><div class="sc-v">60</div><div class="sc-t">밤 9:30~</div></div></div>
+      <div class="strip-legend"><span class="lg s-good"></span>80점 이상 <span class="lg s-ok"></span>70점대 <span class="lg s-mid"></span>60점대 <span class="lg s-bad"></span>60점 미만 · 굵은 테두리 = 아래 카드에서 자세히 본 시간</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-box-title">🔑 이 날이 불리한 이유 — 한눈에</div>
+      <div class="insight-box-body">
+        병자일에 태어나는 아이는 <strong style="color:#f0d060;">병화(丙火)</strong>, 한낮의 태양 같은 불의 기운을 타고납니다. 그런데 태어난 날의 땅 글자도 자수(子水), 달의 땅 글자도 자수(子水)라, 한겨울 차가운 물이 아이를 둘러싸고 있습니다.<br><br>
+그래서 <strong style="color:#f0d060;">아이의 기운이 약합니다.</strong> 아이의 기운(화+목)이 낮 내내 27~44%입니다. 원래 50% 정도여야 균형 잡힌 중화 명식인데, 그에 못 미칩니다. 게다가 불을 돕는 나무(목)가 낮 여섯 시간대 중 네 시간대에서 0%입니다. <strong style="color:#f0d060;">불을 도와줄 나무 없이 불이 차가운 물을 만나, 꺼질까 걱정되는 사주</strong>입니다.
+      </div>
+    </div>
+
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num worst-num">2</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 12월 28일 진시(辰時)</h2>
+          <p>오전 7시 30분 ~ 9시 29분 · 화(火) 병(丙) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-worst">⚠️ 45점 · 이 날 낮 시간대 가장 낮음</span>
+            <span class="header-badge-range">📅 12월 하루 평균 59.8점</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-water"><div class="saju-cell-char">壬</div><div class="saju-cell-kor">임 · 수(水)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div><div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">辰</div><div class="saju-cell-kor">진 · 토(土)</div></div><div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div><div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 흙인 줄 알았던 진토가 물로 변하는 아침</div>
+          <div class="insight-box-body">
+            겉보기에는 태어난 시간의 진토(辰土)가 흙이라 물을 막아 줄 것처럼 보입니다. 그런데 진토는 자수(子水)를 만나면 물의 기운으로 변합니다(자진합, 子辰合). 그래서 <strong style="color:#f0d060;">차가운 물(수)이 60%</strong>까지 늘어납니다.<br><br>
+반면 아이의 기운(화+목)은 27%뿐이고, 불을 도와줄 나무(목)는 0%입니다. 나무의 도움 없이 작은 불이 많은 물을 만나 <strong style="color:#f0d060;">꺼질까 걱정되는 모양</strong>이라, 이 날 낮 시간대 중 가장 낮은 45점입니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">🔥 화(火) 일간 · 병(丙)</span><span class="tag tag-blue">💧 수 60%</span><span class="tag tag-gray">🌑 아이의 기운 약함</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:0%"></div></div><div class="ohaeng-pct c-wood">0점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:27%"></div></div><div class="ohaeng-pct c-fire">27점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:3%"></div></div><div class="ohaeng-pct c-earth">3점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:10%"></div></div><div class="ohaeng-pct c-metal">10점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:60%"></div></div><div class="ohaeng-pct c-water">60점</div></div>
+
+          </div>
+          <div class="balance-note">
+            병화(丙火)로 태어나 불을 돕는 목(木)까지 더하면 사주 전체에서 약 <b>27%</b>입니다. 원래 50% 정도여야 균형 잡힌 <b>중화 명식</b>인데, 그에 한참 못 미치는 <b>신약</b>입니다.
+          </div>
+        </div>
+
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:28.3%">양기 28.3%</div>
+            <div class="yinyang-yin" style="width:71.7%">음기 71.7%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 피해야 하는 날인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-text">
+            <strong>억부 — 아이의 기운이 약합니다</strong>
+            아이의 기운(화+목)이 27%입니다. 원래 50% 정도여야 균형 잡힌 중화 명식인데, 그 절반 정도입니다. 반대로 불을 끄는 물(수)이 60%라 아이를 누르는 기운이 훨씬 큽니다.
+          </div>
+        </div>
+
+        <div class="callout callout-blue" style="background:#e3f2fd; border-left:4px solid #1565c0;">
+          <div class="callout-icon">☯️</div>
+          <div class="callout-text">
+            <strong>조후 — 차가운 쪽으로 기울었습니다</strong>
+            양기 28.3%, 음기 71.7%로 차가운 쪽이 많습니다. 태양으로 태어났지만 한겨울 물에 둘러싸여 따뜻한 기운이 아쉽습니다.
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-text">
+            <strong>이 날이 불리한 이유</strong>
+            ① 아이의 기운이 약합니다. 낮 내내 27~44%로, 균형 잡힌 중화 명식의 기준인 50%에 못 미칩니다.<br>② 차가운 물(수)이 낮 내내 40~60%로 몰려 불인 아이를 누릅니다.<br>③ 불을 돕는 나무(목)가 없어, 불이 차가운 물을 만나 꺼질까 걱정됩니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🩹 이 날 태어난다면, 이렇게 보완하세요</div>
+
+        <div class="callout callout-bok">
+          <div class="callout-icon">🎁</div>
+          <div class="callout-text">
+            <strong>이 날 태어난다면 — 이름으로 보완하기</strong>
+            이름에는 화(火)와 목(木)을 담아주면 좋고, 수(水)와 금(金)은 피해주세요. 이름에 목(木)까지 넣으면, 목이 인복을 뜻하는 인성이라 인복까지 함께 잘 쓸 수 있게 해줍니다.<br><br>같은 날이라도 낮 오시(午時)에 태어나면 금(金)과 토(土)가 필요한 사주로 바뀝니다. 실제로 태어난 시간으로 꼭 다시 확인해 주세요.<br><br><span class="note-soft">※ 이름 한자의 뜻이 가진 오행(자원오행)을 기준으로 합니다.</span>
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">⏰</div>
+          <div class="callout-text">
+            <strong>같은 날 안에서도 시간에 따라 다릅니다</strong>
+            시간을 고를 수 있다면 같은 날 안에서는 새벽 묘시(卯時) 73점, 인시(寅時) 71점, 저녁 유시(酉時) 70점이 그나마 낫습니다.
+          </div>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🔥</div><div class="si-title">불(화)로 힘 보태기</div><div class="si-desc">약한 아이의 기운을 키웁니다</div></div>
+          <div class="strength-item"><div class="si-icon">🌳</div><div class="si-title">나무(목)로 받쳐 주기</div><div class="si-desc">물의 힘을 빼면서 불을 돕습니다</div></div>
+          <div class="strength-item"><div class="si-icon">🚫</div><div class="si-title">수·금은 피하기</div><div class="si-desc">이미 많은 물을 더 키웁니다</div></div>
+          <div class="strength-item"><div class="si-icon">⏰</div><div class="si-title">시간을 고른다면</div><div class="si-desc">묘시 73점, 인시 71점, 유시 70점</div></div>
+        </div>
+      </div>
+    </div>
+    <a class="next-day" href="#day-tabs" onclick="goDay(3); return false;">다음 날짜 보기 · 12월 29일 정축(丁丑)일 ›</a>
+  </div><!-- /28일 -->
+
+  <!-- ===================================================== -->
+  <div class="week-section" data-week="3">
+    <div class="section-title">12월 29일 정축(丁丑)일 — 12월에서 하루 평균 점수가 세 번째로 낮은 날</div>
+
+    <div class="week-overview">
+      <div class="wo-kicker">하루 열두 시간대 점수</div>
+      <div class="wo-head">📊 12월 29일, 시간대별로 보면</div>
+      <div class="wo-sub">하루 평균 59.9점으로 12월에서 세 번째로 낮습니다. 하루 열두 시간대 중 72점을 넘는 시간이 하나도 없습니다. 가장 높은 시간대가 오전 진시(辰時) 72점이고, 오후 신시(申時) 56점, 유시(酉時) 55점으로 갈수록 낮아집니다.</div>
+      <div class="score-strip"><div class="sc s-bad"><div class="sc-n">자시<small>子</small></div><div class="sc-v">50</div><div class="sc-t">밤 11:30~</div></div><div class="sc s-bad"><div class="sc-n">축시<small>丑</small></div><div class="sc-v">50</div><div class="sc-t">새벽 1:30~</div></div><div class="sc s-mid"><div class="sc-n">인시<small>寅</small></div><div class="sc-v">62</div><div class="sc-t">새벽 3:30~</div></div><div class="sc s-mid"><div class="sc-n">묘시<small>卯</small></div><div class="sc-v">64</div><div class="sc-t">새벽 5:30~</div></div><div class="sc s-ok"><div class="sc-n">진시<small>辰</small></div><div class="sc-v">72</div><div class="sc-t">오전 7:30~</div></div><div class="sc s-mid"><div class="sc-n">사시<small>巳</small></div><div class="sc-v">67</div><div class="sc-t">오전 9:30~</div></div><div class="sc s-bad"><div class="sc-n">오시<small>午</small></div><div class="sc-v">59</div><div class="sc-t">오전 11:30~</div></div><div class="sc s-mid"><div class="sc-n">미시<small>未</small></div><div class="sc-v">63</div><div class="sc-t">오후 1:30~</div></div><div class="sc s-bad"><div class="sc-n">신시<small>申</small></div><div class="sc-v">56</div><div class="sc-t">오후 3:30~</div></div><div class="sc s-bad sc-rep"><div class="sc-n">유시<small>酉</small></div><div class="sc-v">55</div><div class="sc-t">오후 5:30~</div></div><div class="sc s-bad"><div class="sc-n">술시<small>戌</small></div><div class="sc-v">57</div><div class="sc-t">저녁 7:30~</div></div><div class="sc s-mid"><div class="sc-n">해시<small>亥</small></div><div class="sc-v">64</div><div class="sc-t">밤 9:30~</div></div></div>
+      <div class="strip-legend"><span class="lg s-good"></span>80점 이상 <span class="lg s-ok"></span>70점대 <span class="lg s-mid"></span>60점대 <span class="lg s-bad"></span>60점 미만 · 굵은 테두리 = 아래 카드에서 자세히 본 시간</div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-box-title">🔑 이 날이 불리한 이유 — 한눈에</div>
+      <div class="insight-box-body">
+        정축일에 태어나는 아이는 <strong style="color:#f0d060;">정화(丁火)</strong>, 촛불 같은 작은 불의 기운을 타고납니다. 아이가 태어난 오행은 불인데, <strong style="color:#f0d060;">이 불이 너무 약합니다.</strong> 아이의 기운(화+목)이 하루 내내 27~44%입니다. 원래 50% 정도여야 균형 잡힌 중화 명식인데, 그에 못 미칩니다.<br><br>
+불을 도와줄 나무(목)는 오후로 갈수록 0%가 되고, 차가운 물(수)은 하루 내내 26~28%로 자리를 지킵니다. <strong style="color:#f0d060;">불을 돕는 나무 없이 작은 불이 차가운 물을 만나, 꺼질까 걱정되는 사주</strong>입니다. 그래서 하루 열두 시간대 중 72점을 넘는 시간이 하나도 없습니다.
+      </div>
+    </div>
+
+    <div class="saju-card">
+      <div class="saju-card-header">
+        <div class="saju-num worst-num">3</div>
+        <div class="saju-card-header-info">
+          <h2>2026년 12월 29일 유시(酉時)</h2>
+          <p>오후 5시 30분 ~ 7시 29분 · 화(火) 정(丁) 일간</p>
+          <div class="header-badges">
+            <span class="header-badge-worst">⚠️ 55점 · 이 날 낮 시간대 가장 낮음</span>
+            <span class="header-badge-range">📅 12월 하루 평균 59.9점</span>
+          </div>
+        </div>
+      </div>
+      <div class="saju-card-body">
+        <div class="saju-table-wrap">
+          <div class="saju-table-label">📋 사주팔자 (시주 → 일주 → 월주 → 년주)</div>
+          <div class="saju-col-labels">
+            <div class="saju-col-label">시주 時</div><div class="saju-col-label">일주 日</div>
+            <div class="saju-col-label">월주 月</div><div class="saju-col-label">년주 年</div>
+          </div>
+          <div class="saju-row-header">천간(天干) — 하늘의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-earth"><div class="saju-cell-char">己</div><div class="saju-cell-kor">기 · 토(土)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">丁</div><div class="saju-cell-kor">정 · 화(火)</div></div><div class="saju-cell cell-metal"><div class="saju-cell-char">庚</div><div class="saju-cell-kor">경 · 금(金)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">丙</div><div class="saju-cell-kor">병 · 화(火)</div></div>
+          </div>
+          <div class="saju-row-header">지지(地支) — 땅의 기운</div>
+          <div class="saju-table">
+            <div class="saju-cell cell-metal"><div class="saju-cell-char">酉</div><div class="saju-cell-kor">유 · 금(金)</div></div><div class="saju-cell cell-earth"><div class="saju-cell-char">丑</div><div class="saju-cell-kor">축 · 토(土)</div></div><div class="saju-cell cell-water"><div class="saju-cell-char">子</div><div class="saju-cell-kor">자 · 수(水)</div></div><div class="saju-cell cell-fire"><div class="saju-cell-char">午</div><div class="saju-cell-kor">오 · 화(火)</div></div>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <div class="insight-box-title">🔑 핵심 포인트 — 나무 없이 차가운 물을 만난 촛불</div>
+          <div class="insight-box-body">
+            유시(酉時)에 태어나면 아이의 불은 27%입니다. 그런데 불을 키워 줄 <strong style="color:#f0d060;">나무(목)가 0%</strong>입니다. 반대로 불을 끄는 차가운 물(수)이 26%, 불의 힘을 빼 가는 흙(토)이 25%, 불이 힘을 써서 다뤄야 하는 금(金)이 22%입니다.<br><br>
+도와줄 나무 없이 작은 불 하나가 차가운 물을 만난 모양이라, <strong style="color:#f0d060;">불이 꺼질까 걱정되는 사주</strong>입니다.
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag tag-gray">🔥 화(火) 일간 · 정(丁)</span><span class="tag tag-gray">🕯️ 불이 약함</span><span class="tag tag-green">🌳 목 0%</span>
+        </div>
+
+        <div class="ohaeng-section">
+          <div class="ohaeng-title">🔢 오행 분포</div>
+          <div class="ohaeng-bars">
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-wood"></span><span class="c-wood">목(木)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-wood" style="width:0%"></div></div><div class="ohaeng-pct c-wood">0점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-fire"></span><span class="c-fire">화(火)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-fire" style="width:27%"></div></div><div class="ohaeng-pct c-fire">27점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-earth"></span><span class="c-earth">토(土)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-earth" style="width:25%"></div></div><div class="ohaeng-pct c-earth">25점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-metal"></span><span class="c-metal">금(金)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-metal" style="width:22%"></div></div><div class="ohaeng-pct c-metal">22점</div></div>
+            <div class="ohaeng-row"><div class="ohaeng-label"><span class="ohaeng-dot bg-water"></span><span class="c-water">수(水)</span></div><div class="ohaeng-bar-wrap"><div class="ohaeng-bar-fill bg-water" style="width:26%"></div></div><div class="ohaeng-pct c-water">26점</div></div>
+
+          </div>
+          <div class="balance-note">
+            정화(丁火)로 태어나 불을 돕는 목(木)까지 더하면 사주 전체에서 약 <b>27%</b>입니다. 원래 50% 정도여야 균형 잡힌 <b>중화 명식</b>인데, 그에 한참 못 미치는 <b>신약</b>입니다.
+          </div>
+        </div>
+
+        <div class="yinyang-section">
+          <div class="yinyang-title">☯️ 음양 조후 시각화</div>
+          <div class="yinyang-bar-wrap">
+            <div class="yinyang-yang" style="width:33.4%">양기 33.4%</div>
+            <div class="yinyang-yin" style="width:66.6%">음기 66.6%</div>
+          </div>
+          <div class="yinyang-labels">
+            <span class="yinyang-label-yang">🔥 따뜻한 기운 (화·목·무토)</span>
+            <span class="yinyang-label-yin">❄️ 서늘한 기운 (수·금·기토)</span>
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">💡 왜 피해야 하는 날인가?</div>
+
+        <div class="callout callout-gold">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-text">
+            <strong>억부 — 불이 너무 약합니다</strong>
+            아이의 기운(화+목)이 27%입니다. 원래 50% 정도여야 균형 잡힌 중화 명식인데, 한참 못 미칩니다. 불을 돕는 나무(목)가 0%라 불이 스스로 힘을 키우기 어렵습니다.
+          </div>
+        </div>
+
+        <div class="callout callout-blue" style="background:#e3f2fd; border-left:4px solid #1565c0;">
+          <div class="callout-icon">☯️</div>
+          <div class="callout-text">
+            <strong>조후 — 조금 차가운 쪽입니다</strong>
+            양기 33.4%, 음기 66.6%로 차가운 쪽이 많습니다. 오전에는 47~50%로 고른 편이었지만, 저녁이 되면서 차가운 쪽으로 기울었습니다.
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-text">
+            <strong>이 날이 불리한 이유</strong>
+            ① 아이가 태어난 오행은 불인데, 불이 너무 약합니다. 아이의 기운이 하루 내내 27~44%로, 균형 잡힌 중화 명식의 기준인 50%에 못 미칩니다.<br>② 불을 돕는 나무(목)가 오후로 갈수록 0%가 되어, 불이 차가운 물을 만나 꺼질까 걱정됩니다.<br>③ 하루 열두 시간대 중 72점을 넘는 시간이 없습니다.
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="section-sub-label">🩹 이 날 태어난다면, 이렇게 보완하세요</div>
+
+        <div class="callout callout-bok">
+          <div class="callout-icon">🎁</div>
+          <div class="callout-text">
+            <strong>이 날 태어난다면 — 이름으로 보완하기</strong>
+            이름에는 화(火)와 목(木)을 담아주면 좋고, 수(水)와 금(金)은 피해주세요. 이름에 목(木)까지 넣으면, 목이 인복을 뜻하는 인성이라 인복까지 함께 잘 쓸 수 있게 해줍니다.<br><br>같은 날이라도 낮 오시(午時)에 태어나면 금(金)과 토(土)가 필요한 사주로 바뀝니다. 실제로 태어난 시간으로 꼭 다시 확인해 주세요.<br><br><span class="note-soft">※ 이름 한자의 뜻이 가진 오행(자원오행)을 기준으로 합니다.</span>
+          </div>
+        </div>
+
+        <div class="callout callout-green">
+          <div class="callout-icon">⏰</div>
+          <div class="callout-text">
+            <strong>같은 날 안에서도 시간에 따라 다릅니다</strong>
+            시간을 고를 수 있다면 같은 날 안에서는 오전 진시(辰時) 72점이 가장 낫고, 그다음은 사시(巳時) 67점입니다.
+          </div>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-item"><div class="si-icon">🔥</div><div class="si-title">불(화)로 힘 보태기</div><div class="si-desc">작은 촛불의 힘을 키웁니다</div></div>
+          <div class="strength-item"><div class="si-icon">🌳</div><div class="si-title">나무(목)로 받쳐 주기</div><div class="si-desc">비어 있는 돕는 기운을 채웁니다</div></div>
+          <div class="strength-item"><div class="si-icon">🚫</div><div class="si-title">수·금은 피하기</div><div class="si-desc">약한 불을 더 누릅니다</div></div>
+          <div class="strength-item"><div class="si-icon">⏰</div><div class="si-title">시간을 고른다면</div><div class="si-desc">진시 72점, 사시 67점</div></div>
+        </div>
+      </div>
+    </div>
+    <a class="next-day" href="#day-tabs" onclick="goDay(1); return false;">다음 날짜 보기 · 12월 25일 계유(癸酉)일 ›</a>
+  </div><!-- /29일 -->
+
+  <!-- ===================================================== -->
+  <!-- 전자책 CTA                                              -->
+  <!-- ===================================================== -->
+  <div class="ebook-section">
+    <div class="ebook-info">
+      <div class="ebook-cover-wrap">
+        <img class="ebook-cover-img" src="ebook_cover.webp" alt="작명하기 전, 알았다면 좋았을 것들 표지">
+        
+      </div>
+      <span class="eb-badge">현승리 전자책</span>
+      <h3>작명하기 전,<br>알았다면 좋았을 것들</h3>
+      <p>꼭 저에게 작명을 맡기지 않으셔도 됩니다.<br>이 책만 읽어도 아이 이름에서 실패할 확률은 0%입니다.</p>
+      <a href="https://hslee.co.kr/ebook" target="_blank" rel="noopener" class="ebook-btn">📥 무료 전자책 받기</a>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- 오픈채팅 CTA -->
+  <!-- ===================================================== -->
+  <div class="chat-section">
+    <span class="chat-badge">현승리의 사주 작명 커뮤니티</span>
+    <h3>12월, 평균적으로 좋은 날은 언제일까요?</h3>
+    <p>피해야 할 날만큼 중요한 것이 좋은 날입니다.<br>오픈채팅방에서 12월 무료 출산택일 링크와 날짜 자료를 받아 보세요.</p>
+    <div class="chat-code">입장 참여코드<b>4684</b></div><br>
+    <a href="https://open.kakao.com/o/gBSetQ6h" target="_blank" rel="noopener" class="chat-btn">💬 무료 출산택일</a>
+  </div>
+
+  </div><!-- /container -->
+
+  <!-- ===================================================== -->
+  <!-- 푸터                                                   -->
+  <!-- ===================================================== -->
+  <div class="footer">
+    <div class="footer-inner">
+      <div class="footer-title">현승리 · 사주 작명 연구소</div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/@name_house" target="_blank" rel="noopener">▶️ 유튜브 채널</a>
+        <a href="https://www.instagram.com/free_hsl/" target="_blank" rel="noopener">📷 인스타그램</a>
+        <a href="https://www.hslee.co.kr" target="_blank" rel="noopener">🏠 공식 홈페이지</a>
+        <a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank" rel="noopener">🍎 앱스토어 (천을귀인)</a>
+        <a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank" rel="noopener">▶ 구글플레이 (천을귀인)</a>
+        <a href="https://hslee.co.kr/ebook" target="_blank" rel="noopener">📖 무료 전자책</a>
+        <a href="https://hslee.co.kr/service" target="_blank" rel="noopener">✨ 무료 이름 분석</a>
+      </div>
+      <div class="footer-credit">
+        구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.<br>본 자료는 사주명리학에 기반한 참고용 정보이며, 길흉을 단정하는 것이 아닙니다. 무엇보다 산모와 아기의 건강이 가장 우선이며, 출산은 반드시 의료진의 판단을 따라야 합니다. 택일은 그다음에 고려할 참고 자료로 활용해주세요.<br>
+        © 2026 현승리. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showWeek(weekNum, btn) {
+      // 모든 주차 섹션 숨기기
+      var sections = document.querySelectorAll('.week-section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+      }
+      // 선택한 주차 섹션 보이기
+      var target = document.querySelector('.week-section[data-week="' + weekNum + '"]');
+      if (target) {
+        target.classList.add('active');
+      }
+      // 탭 버튼 활성화 상태 변경
+      var tabs = document.querySelectorAll('.week-tab');
+      for (var j = 0; j < tabs.length; j++) {
+        tabs[j].classList.remove('active');
+      }
+      if (btn) {
+        btn.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
