@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>2026년 12월 출산 예정일 가이드 — 현승리의 작명집, 택일 해설지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fire-light:#fee2e2; --fire-mid:#fca5a5; --fire-dark:#b91c1c;
+    --water-light:#e0f2fe; --water-mid:#7dd3fc; --water-dark:#075985;
+    --metal-light:#f1f5f9; --metal-dark:#334155;
+    --earth-light:#fef3c7; --earth-dark:#92400e;
+    --yang-light:#dbeafe; --yang-dark:#1e40af;
+    --yin-light:#fce7f3; --yin-dark:#9d174d;
+    --green-light:#dcfce7; --green-dark:#166534;
+    --purple-light:#ede9fe; --purple-dark:#5b21b6;
+    --gold:#d4a437; --gold-light:#fdf3d7;
+    --line:#e5e7eb; --bg-soft:#f8fafc;
+    --text:#1e293b; --sub:#64748b;
+    --radius:18px;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+  html, body { overflow-x:hidden; }
+  body {
+    font-family:'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background:#ffffff; color:var(--text);
+    line-height:1.8; word-break:keep-all; overflow-wrap:break-word;
+    padding-bottom:60px;
+  }
+  .serif { font-family:'Noto Serif KR', 'AppleMyungjo', 'Batang', serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:0 16px; }
+  b, strong { font-weight:700; }
+
+  /* ───── Hero ───── */
+  .hero {
+    position:relative; overflow:hidden; text-align:center; color:#fff;
+    padding:60px 22px 54px;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(251,191,36,.35) 0%, rgba(251,191,36,0) 38%),
+      linear-gradient(170deg, #0a1a33 0%, #10325c 55%, #1b4b7a 100%);
+  }
+  .hero .sun {
+    width:92px; height:92px; margin:0 auto 22px; border-radius:50%;
+    background:radial-gradient(circle at 40% 38%, #fff7cc 0%, #fcd34d 35%, #f59e0b 70%, #dc2626 100%);
+    box-shadow:0 0 40px 12px rgba(251,191,36,.55), 0 0 90px 30px rgba(245,158,11,.25);
+    animation:glow 3.2s ease-in-out infinite;
+  }
+  @keyframes glow { 50% { box-shadow:0 0 54px 18px rgba(251,191,36,.7), 0 0 120px 40px rgba(245,158,11,.3); } }
+  .hero::after {
+    content:'子'; position:absolute; right:-14px; bottom:-40px;
+    font-family:'Noto Serif KR', serif; font-size:210px; font-weight:900;
+    color:rgba(255,255,255,.05); line-height:1; pointer-events:none;
+  }
+  .snow { position:absolute; inset:0; pointer-events:none; }
+  .snow i {
+    position:absolute; top:-10px; width:6px; height:6px; border-radius:50%;
+    background:rgba(255,255,255,.85); animation:fall linear infinite;
+  }
+  @keyframes fall { to { transform:translateY(420px); opacity:0; } }
+  .hero > *:not(.snow) { position:relative; z-index:1; }
+  .hero-eyebrow {
+    display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
+    padding:6px 14px; border-radius:999px;
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+  }
+  .hero h1 { font-family:'Noto Serif KR', serif; font-size:30px; font-weight:900; margin:16px 0 10px; line-height:1.35; }
+  .hero p { font-size:15px; color:rgba(255,255,255,.82); }
+  .hero .range {
+    display:inline-flex; gap:8px; align-items:center; margin-top:20px;
+    background:#fff; color:#10325c; font-weight:800; font-size:14px;
+    padding:9px 18px; border-radius:999px;
+  }
+
+  /* ───── Notice ───── */
+  .notice {
+    margin:-22px 0 0; position:relative; z-index:2;
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 18px 16px; box-shadow:0 10px 30px rgba(15,23,42,.08);
+  }
+  .notice-top { font-size:14.5px; font-weight:700; }
+  .notice-btn {
+    display:inline-block; margin:10px 0 8px; padding:9px 16px; border-radius:10px;
+    background:var(--earth-light); color:var(--earth-dark); font-weight:700; font-size:14px; text-decoration:none;
+  }
+  .notice-live { display:block; font-size:13.5px; font-weight:600; background:#fff9db; border:1px solid #fde68a; color:#7c4a03; border-radius:10px; padding:9px 12px; margin:2px 0 8px; }
+  .fine { display:block; font-size:12.5px; color:var(--sub); line-height:1.65; }
+
+  /* ───── Hook ───── */
+  .hook {
+    margin-top:28px; border-radius:22px; padding:30px 22px 24px;
+    background:linear-gradient(160deg, #fff7ed 0%, #fff 45%, #eff6ff 100%);
+    border:1px solid #fde4c4;
+  }
+  .eyebrow { font-size:12.5px; font-weight:800; color:#c2410c; letter-spacing:.05em; margin-bottom:10px; }
+  .hook h2 { font-family:'Noto Serif KR', serif; font-size:24px; line-height:1.5; font-weight:900; margin-bottom:16px; }
+  .hook h2 .strike { text-decoration:line-through; text-decoration-color:#ef4444; text-decoration-thickness:3px; color:#94a3b8; }
+  .hook h2 em {
+    font-style:normal; color:#b45309;
+    background:linear-gradient(transparent 58%, #fde68a 58%);
+  }
+  .hook p { font-size:15.5px; margin-bottom:10px; }
+  .three { display:grid; gap:8px; margin-top:18px; }
+  .three div {
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:11px 14px; font-size:14.5px; font-weight:500;
+  }
+  .three b { color:#c2410c; margin-right:6px; }
+
+  /* ───── Section ───── */
+  .section { margin-top:46px; }
+  .sec-head { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .sec-num {
+    flex:0 0 auto; width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+    font-weight:900; font-size:15px; color:#fff;
+  }
+  .sec-title { font-size:20px; font-weight:900; line-height:1.4; }
+  .card {
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 20px; margin-bottom:14px; box-shadow:0 2px 10px rgba(15,23,42,.04);
+  }
+  .card p { font-size:15px; margin-bottom:10px; }
+  .card p:last-child { margin-bottom:0; }
+  .tag {
+    display:inline-block; font-size:12px; font-weight:700; padding:4px 11px; border-radius:999px; margin:0 6px 12px 0;
+  }
+  .tag-fire { background:var(--fire-light); color:var(--fire-dark); }
+  .tag-water { background:var(--water-light); color:var(--water-dark); }
+  .tag-yang { background:var(--yang-light); color:var(--yang-dark); }
+  .tag-yin { background:var(--yin-light); color:var(--yin-dark); }
+  .tag-purple { background:var(--purple-light); color:var(--purple-dark); }
+  .tag-green { background:var(--green-light); color:var(--green-dark); }
+  .tag-gold { background:var(--gold-light); color:#8a6510; }
+
+  .callout {
+    border-radius:14px; padding:15px 16px; font-size:14.5px; margin-top:14px; line-height:1.75;
+  }
+  .callout-title { display:block; font-weight:800; margin-bottom:4px; }
+  .callout-gold { background:var(--gold-light); border-left:4px solid var(--gold); }
+  .callout-blue { background:var(--yang-light); border-left:4px solid var(--yang-dark); }
+  .callout-pink { background:var(--yin-light); border-left:4px solid var(--yin-dark); }
+  .callout-green { background:var(--green-light); border-left:4px solid var(--green-dark); }
+  .hanja-safe {
+    display:flex; gap:10px; align-items:flex-start; background:var(--bg-soft);
+    border:1px dashed #cbd5e1; border-radius:12px; padding:12px 14px; font-size:13.5px; color:var(--sub); margin-bottom:16px;
+  }
+
+  /* ───── Saju grid ───── */
+  .saju-grid {
+    display:grid; grid-template-columns:44px repeat(4, minmax(0,1fr)); gap:7px;
+  }
+  .saju-head { text-align:center; font-size:13px; font-weight:800; color:var(--sub); }
+  .saju-rowlabel { display:grid; place-items:center; font-size:12px; font-weight:700; color:var(--sub); }
+  .saju-cell {
+    border-radius:14px; text-align:center; padding:12px 4px 10px; border:1.5px solid transparent;
+    min-width:0;
+  }
+  .saju-cell .c { display:block; font-family:'Noto Serif KR', serif; font-size:30px; font-weight:900; line-height:1.2; }
+  .saju-cell .k { display:block; font-size:11.5px; font-weight:600; margin-top:3px; }
+  .cell-empty { background:var(--bg-soft); border:1.5px dashed #cbd5e1; color:#94a3b8; }
+  .cell-fire { background:var(--fire-light); color:var(--fire-dark); border-color:var(--fire-mid); }
+  .cell-water { background:var(--water-light); color:var(--water-dark); border-color:var(--water-mid); }
+  .cell-metal { background:var(--metal-light); color:var(--metal-dark); border-color:#cbd5e1; }
+  .legend { display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .legend span { font-size:12px; padding:3px 10px; border-radius:999px; font-weight:600; }
+
+  /* ───── Season compare ───── */
+  .vs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px; }
+  .vs-box { border-radius:16px; padding:18px 15px; }
+  .vs-box h4 { font-size:15px; font-weight:900; margin-bottom:8px; line-height:1.45; }
+  .vs-box .icon { font-size:30px; display:block; margin-bottom:6px; }
+  .vs-box ul { list-style:none; font-size:13.5px; }
+  .vs-box li { padding:4px 0 4px 18px; position:relative; }
+  .vs-box li::before { position:absolute; left:0; }
+  .vs-cold { background:#f1f5f9; color:#334155; }
+  .vs-cold li::before { content:'·'; font-weight:900; }
+  .vs-warm { background:linear-gradient(160deg,#fff7ed,#fef3c7); color:#7c2d12; border:1.5px solid #fbbf24; }
+  .vs-warm li::before { content:'✓'; color:#d97706; font-weight:900; }
+
+  .thermo { margin:18px 0 6px; }
+  .thermo-bar {
+    position:relative; height:16px; border-radius:999px;
+    background:linear-gradient(90deg, #1d4ed8 0%, #7dd3fc 30%, #fef3c7 50%, #fca5a5 70%, #dc2626 100%);
+  }
+  .thermo-mark {
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:30px; height:30px; border-radius:50%; background:#fff; border:3px solid #f59e0b;
+    display:grid; place-items:center; font-size:15px; box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .thermo-labels { display:flex; justify-content:space-between; font-size:12px; font-weight:700; margin-top:10px; gap:6px; }
+  .thermo-labels span:nth-child(2) { color:#b45309; text-align:center; }
+  .thermo-labels span:first-child { color:var(--water-dark); }
+  .thermo-labels span:last-child { color:var(--fire-dark); text-align:right; }
+
+  /* ───── Clash ───── */
+  .clash { display:flex; align-items:center; justify-content:center; gap:14px; margin:8px 0 18px; }
+  .clash-char {
+    width:86px; border-radius:18px; text-align:center; padding:14px 6px 10px;
+  }
+  .clash-char .c { font-family:'Noto Serif KR', serif; font-size:38px; font-weight:900; display:block; line-height:1.15; }
+  .clash-char .k { font-size:12px; font-weight:700; display:block; }
+  .clash-char .d { font-size:11px; display:block; margin-top:2px; opacity:.85; }
+  .bolt { font-size:30px; animation:shake .9s ease-in-out infinite; }
+  @keyframes shake { 25% { transform:rotate(-12deg) scale(1.1); } 75% { transform:rotate(12deg) scale(1.1); } }
+
+  .myth {
+    display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start;
+    border-radius:14px; padding:14px 16px; margin-bottom:10px; font-size:14.5px;
+  }
+  .myth .m-badge { font-size:12px; font-weight:900; padding:3px 9px; border-radius:8px; white-space:nowrap; }
+  .myth-x { background:#fef2f2; }
+  .myth-x .m-badge { background:#fecaca; color:#991b1b; }
+  .myth-o { background:#f0fdf4; }
+  .myth-o .m-badge { background:#bbf7d0; color:#14532d; }
+
+  /* ───── Pillar map (adjacency) ───── */
+  .map { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; margin:6px 0 4px; }
+  .map-col { text-align:center; }
+  .map-label { font-size:12px; font-weight:800; color:var(--sub); margin-bottom:6px; }
+  .map-cell {
+    border-radius:14px; padding:12px 2px; min-height:78px; display:flex; flex-direction:column; justify-content:center;
+  }
+  .map-cell .c { font-family:'Noto Serif KR', serif; font-size:28px; font-weight:900; line-height:1.15; }
+  .map-cell .k { font-size:11px; font-weight:700; }
+  .map-far { background:var(--bg-soft); border:1.5px dashed #cbd5e1; color:#94a3b8; }
+  .map-key { background:linear-gradient(160deg,#f5f3ff,#ede9fe); border:2px solid #8b5cf6; color:var(--purple-dark); animation:pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 50% { box-shadow:0 0 0 6px rgba(139,92,246,.18); } }
+  .map-links { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; margin-top:8px; }
+  .map-links div { font-size:11.5px; font-weight:700; text-align:center; line-height:1.4; border-radius:10px; padding:7px 2px; }
+  .ml-none { color:#94a3b8; }
+  .ml-hand { grid-column:2 / span 2; background:var(--purple-light); color:var(--purple-dark); }
+  .ml-bolt { grid-column:3 / span 2; background:#fef2f2; color:#b91c1c; }
+  .map-links .row2 { grid-row:2; }
+
+  .ba { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px; }
+  .ba-box { border-radius:16px; padding:16px 14px; font-size:13.5px; }
+  .ba-box h4 { font-size:14.5px; font-weight:900; margin-bottom:6px; }
+  .ba-before { background:#fef2f2; border:1px solid #fecaca; color:#7f1d1d; }
+  .ba-after { background:#f0fdf4; border:1.5px solid #4ade80; color:#14532d; }
+
+  /* ───── Calendar ───── */
+  .cal-wrap { position:relative; }
+  .cal-title { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px; gap:8px; flex-wrap:wrap; }
+  .cal-title b { font-size:16px; }
+  .cal-title span { font-size:12px; color:var(--sub); }
+  .cal { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:5px; }
+  .cal .wd { text-align:center; font-size:11.5px; font-weight:800; color:var(--sub); padding-bottom:2px; }
+  .cal .wd.sun { color:#dc2626; } .cal .wd.sat { color:#2563eb; }
+  .day {
+    border-radius:10px; text-align:center; padding:6px 0 5px; min-width:0;
+    background:linear-gradient(160deg,#eff6ff,#fdf2f8); border:1px solid #e0e7ff;
+  }
+  .day .n { display:block; font-size:13px; font-weight:800; line-height:1.3; }
+  .day .q { display:block; font-size:11px; font-weight:900; color:#a78bfa; line-height:1.2; }
+  .day.off { background:#f8fafc; border:1px solid #f1f5f9; color:#cbd5e1; }
+  .day.off .q { color:transparent; }
+  .day.blank { background:transparent; border:none; }
+  .day.jan { background:linear-gradient(160deg,#f5f3ff,#fdf2f8); }
+  .day.jan .n { font-size:11.5px; }
+  .day.mark { border:1.5px solid #f59e0b; }
+  .lock {
+    margin-top:14px; border-radius:16px; padding:18px 16px; text-align:center;
+    background:linear-gradient(160deg,#1e1b4b,#312e81); color:#fff;
+  }
+  .lock .ic { font-size:26px; }
+  .lock h4 { font-size:16px; font-weight:900; margin:4px 0 6px; }
+  .lock p { font-size:13.5px; color:rgba(255,255,255,.85); }
+
+  /* ───── App limit table ───── */
+  .cmp { width:100%; border-collapse:separate; border-spacing:0; font-size:13.5px; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .cmp th, .cmp td { padding:11px 10px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+  .cmp tr:last-child td { border-bottom:none; }
+  .cmp th { background:var(--bg-soft); font-size:12.5px; color:var(--sub); }
+  .cmp td:first-child { font-weight:700; width:28%; background:#fcfcfd; }
+  .cmp .good { color:var(--green-dark); font-weight:700; }
+
+  .checks4 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .c4 { background:var(--bg); border-radius:16px; padding:16px 15px; border-top:4px solid var(--c); }
+  .c4-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .c4-ic { font-size:24px; }
+  .c4-no { font-size:11px; font-weight:900; color:var(--c); letter-spacing:.06em; }
+  .c4 h4 { font-size:15.5px; font-weight:900; color:var(--c); margin-bottom:4px; }
+  .c4 p { font-size:13.5px; color:#334155; line-height:1.7; }
+
+  /* ───── Steps ───── */
+  .steps { display:grid; gap:10px; }
+  .step {
+    display:grid; grid-template-columns:40px 1fr; gap:12px; align-items:start;
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px 16px;
+  }
+  .step .no {
+    width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
+    font-weight:900; color:#fff; font-size:16px;
+  }
+  .step h4 { font-size:15.5px; font-weight:900; margin-bottom:3px; }
+  .step p { font-size:13.5px; color:#475569; }
+
+  /* ───── Checklist ───── */
+  .check { list-style:none; }
+  .check li {
+    display:flex; gap:10px; align-items:flex-start; padding:11px 2px; border-bottom:1px dashed var(--line); font-size:14.5px;
+  }
+  .check li:last-child { border-bottom:none; }
+  .check .box {
+    flex:0 0 auto; width:20px; height:20px; margin-top:3px; border-radius:6px; border:2px solid #93c5fd; background:#eff6ff;
+  }
+
+  .quote {
+    margin-top:46px; text-align:center; padding:34px 22px; border-radius:22px;
+    background:linear-gradient(160deg,#0f2747,#1e3a8a); color:#fff;
+  }
+  .quote .q1 { font-family:'Noto Serif KR', serif; font-size:21px; font-weight:900; line-height:1.6; }
+  .quote .q2 { font-size:14px; color:rgba(255,255,255,.75); margin-top:10px; }
+
+  /* ───── Ebook ───── */
+  .ebook {
+    margin-top:46px; display:flex; gap:20px; align-items:center;
+    background:linear-gradient(160deg,#fffbeb,#fff); border:1px solid #fde68a; border-radius:22px; padding:24px 20px;
+  }
+  .book {
+    flex:0 0 118px; width:118px; height:164px; border-radius:4px 12px 12px 4px; position:relative;
+    background:linear-gradient(150deg,#1e3a8a 0%,#1e40af 55%,#0f2747 100%);
+    box-shadow:6px 8px 18px rgba(15,23,42,.28), inset 6px 0 0 rgba(255,255,255,.12);
+    color:#fff; padding:16px 12px 12px 16px; display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .book .bt { font-family:'Noto Serif KR', serif; font-size:13px; font-weight:900; line-height:1.45; }
+  .book .ba2 { font-size:10px; opacity:.8; }
+  .book .line { width:26px; height:2px; background:var(--gold); margin:6px 0; }
+  .ebook-body .eyebrow { color:#b45309; }
+  .ebook-body h3 { font-size:18px; font-weight:900; line-height:1.45; margin-bottom:8px; }
+  .ebook-body p { font-size:14px; color:#475569; margin-bottom:14px; }
+  .btn {
+    display:inline-block; text-decoration:none; font-weight:800; font-size:15px;
+    padding:13px 22px; border-radius:12px;
+  }
+  .btn-ebook { background:#1e40af; color:#fff; }
+
+  /* ───── Live CTA ───── */
+  .live {
+    margin-top:22px; border-radius:24px; overflow:hidden; color:#3b1d00;
+    background:linear-gradient(165deg,#fee500 0%,#ffd400 100%);
+    box-shadow:0 14px 34px rgba(250,204,21,.35);
+  }
+  .live-top { padding:28px 22px 6px; text-align:center; }
+  .live-badge {
+    display:inline-block; background:#3b1d00; color:#fee500; font-size:12px; font-weight:800;
+    padding:5px 12px; border-radius:999px; letter-spacing:.04em;
+  }
+  .live h3 { font-size:25px; font-weight:900; line-height:1.4; margin:14px 0 8px; }
+  .live-top p { font-size:14.5px; }
+  .live-info { background:#fff; margin:16px 16px 0; border-radius:16px; padding:6px 16px; }
+  .live-row { display:grid; grid-template-columns:30px 76px 1fr; gap:6px; align-items:start; padding:11px 0; border-bottom:1px dashed #e5e7eb; font-size:14px; }
+  .live-row:last-child { border-bottom:none; }
+  .live-row .lk { font-weight:800; color:#3b1d00; }
+  .live-row .lv { color:#334155; }
+  .live-learn { margin:12px 16px 0; background:rgba(255,255,255,.55); border-radius:16px; padding:14px 16px; font-size:14px; }
+  .live-learn b { display:block; margin-bottom:6px; }
+  .live-learn ul { list-style:none; }
+  .live-learn li { padding:3px 0 3px 22px; position:relative; }
+  .live-learn li::before { content:'🎯'; position:absolute; left:0; font-size:13px; }
+  .code-box { margin:16px 16px 0; background:#3b1d00; color:#fff; border-radius:16px; padding:16px; text-align:center; font-size:13.5px; }
+  .code-box .code { display:block; font-size:34px; font-weight:900; letter-spacing:.3em; color:#fee500; margin-top:4px; padding-left:.3em; }
+  .live-bottom { padding:18px 16px 24px; text-align:center; }
+  .btn-live {
+    display:block; background:#3b1d00; color:#fee500; font-size:18px; font-weight:900;
+    padding:17px 20px; border-radius:14px; text-decoration:none; box-shadow:0 6px 0 #1f0f00;
+  }
+  .btn-live:active { transform:translateY(3px); box-shadow:0 3px 0 #1f0f00; }
+  .live-bottom .fine { color:#5b3a00; margin-top:12px; }
+
+  /* ───── Footer ───── */
+  .footer { margin-top:46px; border-top:1px solid var(--line); padding-top:24px; }
+  .footer-note { font-size:13.5px; color:var(--sub); background:var(--bg-soft); border-radius:12px; padding:13px 15px; margin-bottom:16px; }
+  .footer-title { font-size:14px; font-weight:900; margin-bottom:8px; }
+  .footer ul { list-style:none; }
+  .footer li { display:flex; gap:10px; align-items:center; padding:8px 0; font-size:14px; border-bottom:1px solid #f1f5f9; }
+  .footer a { color:#1e40af; text-decoration:none; word-break:break-all; }
+
+  /* ───── Reveal ───── */
+  .js .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .js .reveal.on { opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation:none !important; transition:none !important; }
+  }
+
+  /* ───── Mobile ───── */
+  @media (max-width:720px) {
+    .hero h1 { font-size:26px; }
+    .hook h2 { font-size:21.5px; }
+  }
+  @media (max-width:520px) {
+    .vs, .ba, .checks4 { grid-template-columns:1fr; }
+    .ebook { flex-direction:column; text-align:center; }
+    .book { flex:0 0 auto; }
+    .live h3 { font-size:22px; }
+    .saju-cell .c { font-size:25px; }
+    .map-cell .c { font-size:23px; }
+  }
+  @media (max-width:360px) {
+    .wrap { padding:0 12px; }
+    .saju-grid { grid-template-columns:34px repeat(4, minmax(0,1fr)); gap:5px; }
+    .saju-cell .k { font-size:10px; }
+    .clash-char { width:72px; }
+    .live-row { grid-template-columns:26px 1fr; }
+    .live-row .lv { grid-column:2; }
+    .cal { gap:3px; }
+    .day .n { font-size:11.5px; }
+    .thermo-labels { font-size:11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═════════ HERO ═════════ -->
+<div class="hero">
+  <div class="snow" aria-hidden="true">
+    <i style="left:6%;animation-duration:7s;animation-delay:0s"></i>
+    <i style="left:15%;animation-duration:9s;animation-delay:2s;width:4px;height:4px"></i>
+    <i style="left:27%;animation-duration:8s;animation-delay:1s"></i>
+    <i style="left:38%;animation-duration:10s;animation-delay:3s;width:4px;height:4px"></i>
+    <i style="left:62%;animation-duration:8.5s;animation-delay:.5s"></i>
+    <i style="left:73%;animation-duration:9.5s;animation-delay:2.5s;width:5px;height:5px"></i>
+    <i style="left:84%;animation-duration:7.5s;animation-delay:1.5s"></i>
+    <i style="left:93%;animation-duration:10s;animation-delay:4s;width:4px;height:4px"></i>
+  </div>
+  <div class="sun" aria-hidden="true"></div>
+  <span class="hero-eyebrow">2026 병오년(丙午年) · 12월 경자월(庚子月)</span>
+  <h1>현승리의 작명집,<br>택일 해설지</h1>
+  <p>한겨울에 태양을 품고 태어나는 아이</p>
+  <div class="range">❄️ 12월 7일 ~ 1월 4일 출산 예정</div>
+</div>
+
+<div class="wrap">
+
+  <!-- ═════════ NOTICE ═════════ -->
+  <div class="notice">
+    <div class="notice-top">📌 12월 1일 ~ 6일 출산 예정이라면 11월(기해월) 자료를 확인해 주세요.</div>
+    <a class="notice-btn" href="https://hsl4684.github.io/saju_note/2026_november_saju.html" target="_blank">2026년 11월 예정일 자료 보기 →</a>
+    <span class="notice-live">🎥 무료 출산택일 라이브는 <b>12월 1일생부터</b> 함께 봐 드립니다. 12월 초 예정이어도 라이브는 그대로 참여하시면 됩니다.</span>
+    <span class="fine">12월 7일 대설(大雪) 이후 ~ 2027년 1월 4일 출생 → 경자월(庚子月) 해당 · 이 자료는 이 기간에 출산 예정인 분들을 위한 자료입니다. 12월 7일 당일은 대설이 들어오는 시각 전후로 월주가 바뀌니 정확한 시각 확인이 필요합니다.</span>
+  </div>
+
+  <!-- ═════════ HOOK ═════════ -->
+  <div class="hook reveal">
+    <div class="eyebrow">12월 출산 예정 부모님 필독 · 저장해 두세요</div>
+    <h2><span class="strike">"12월생은 충이 있어서 안 좋다"</span><br>사실이 아닙니다.<br>오히려 <em>한겨울에 태양을 품고</em><br>태어나는 아이입니다.</h2>
+    <p>2026년 12월 7일 이후에 태어나는 아이는, 1년 중 가장 차가운 달에 뜨거운 해의 기운을 함께 가지고 태어납니다. 명리에서는 이런 사주를 <b>"환경이 좋다"</b>고 봅니다.</p>
+    <p>다만 이 달에는 <b>자오충(子午沖)</b>이 함께 있습니다. 이 충을 그대로 두느냐, 풀어주느냐는 <b>태어나는 날짜 하나</b>로 갈립니다.</p>
+    <div class="three">
+      <div><b>①</b> 한겨울의 태양이 왜 좋은지</div>
+      <div><b>②</b> 자오충, 정말 나쁜 걸까?</div>
+      <div><b>③</b> 충을 푸는 건 왜 '날짜'만 할 수 있는지</div>
+    </div>
+  </div>
+
+  <!-- ═════════ 1. 사주 명식 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#1e40af">1</div>
+      <div class="sec-title">2026년 12월, 이미 정해진 사주 두 칸</div>
+    </div>
+    <div class="card">
+      <div class="hanja-safe">
+        <span>💡</span>
+        <span>한자를 몰라도 전혀 괜찮습니다. 아래 표는 "아이가 태어나기 전에 이미 정해져 있는 두 칸"을 보여주는 것뿐이에요. 읽는 법은 한글로 같이 적어 두었습니다.</span>
+      </div>
+
+      <div class="saju-grid">
+        <div></div>
+        <div class="saju-head">시주</div>
+        <div class="saju-head">일주</div>
+        <div class="saju-head">월주</div>
+        <div class="saju-head">년주</div>
+
+        <div class="saju-rowlabel">위</div>
+        <div class="saju-cell cell-empty"><span class="c">?</span><span class="k">시간에 따라</span></div>
+        <div class="saju-cell cell-empty"><span class="c">?</span><span class="k">날짜에 따라</span></div>
+        <div class="saju-cell cell-metal"><span class="c">庚</span><span class="k">경(庚)</span></div>
+        <div class="saju-cell cell-fire"><span class="c">丙</span><span class="k">병(丙)</span></div>
+
+        <div class="saju-rowlabel">아래</div>
+        <div class="saju-cell cell-empty"><span class="c">?</span><span class="k">시간에 따라</span></div>
+        <div class="saju-cell cell-empty"><span class="c">?</span><span class="k">날짜에 따라</span></div>
+        <div class="saju-cell cell-water"><span class="c">子</span><span class="k">자(子)</span></div>
+        <div class="saju-cell cell-fire"><span class="c">午</span><span class="k">오(午)</span></div>
+      </div>
+
+      <div class="legend">
+        <span style="background:var(--fire-light);color:var(--fire-dark)">🔥 화(火) · 불</span>
+        <span style="background:var(--water-light);color:var(--water-dark)">💧 수(水) · 물</span>
+        <span style="background:var(--metal-light);color:var(--metal-dark)">⚪ 금(金) · 쇠</span>
+      </div>
+
+      <div class="callout callout-gold">
+        <span class="callout-title">쉽게 말하면 이렇습니다</span>
+        사주는 네 칸으로 되어 있는데, 12월 7일 이후에 태어나면 오른쪽 두 칸(월주·년주)은 이미 정해져 있습니다.
+        부모가 고를 수 있는 건 왼쪽 두 칸, 즉 <b>어느 날 몇 시에 태어나느냐</b>입니다. 그리고 12월은 이 중에서도 <b>날짜</b>가 특히 중요합니다. 이유는 아래에서 설명드릴게요.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════ 2. 한겨울의 태양 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#d97706">2</div>
+      <div class="sec-title">☀️ 한겨울에 태양이 있다는 것</div>
+    </div>
+    <div class="card">
+      <span class="tag tag-fire">병오년 = 뜨거운 해</span><span class="tag tag-water">자월 = 가장 차가운 달</span>
+      <p>2026년은 <b>병오(丙午)년</b>입니다. 병(丙)은 하늘의 태양, 오(午)는 한여름 한낮을 뜻합니다. 그래서 2026년은 뜨거운 기운이 아주 강한 해입니다.</p>
+      <p>그런데 12월 7일부터 들어오는 <b>자(子)</b>는 한겨울 한밤중의 물입니다. 동지가 들어 있는 달이라 <b>1년 중 가장 차가운 기운</b>을 가지고 있어요.</p>
+      <p>두 가지를 합치면, 2026년 12월에 태어나는 아이는 <b>한겨울에 태양을 갖춘 사주</b>가 됩니다.</p>
+
+      <div class="thermo" aria-hidden="true">
+        <div class="thermo-bar"><div class="thermo-mark">☀️</div></div>
+        <div class="thermo-labels">
+          <span>❄️ 12월의 추위 · 자(子)</span>
+          <span>균형</span>
+          <span>병오년의 열기 · 오(午) 🔥</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vs">
+      <div class="vs-box vs-cold">
+        <span class="icon">🌨️</span>
+        <h4>겨울에 햇볕이 없는 사주</h4>
+        <ul>
+          <li>추위를 녹일 불을 바깥에서 찾아야 합니다</li>
+          <li>때를 기다리는 시간이 길어집니다</li>
+          <li>그래서 늦게 풀리는 경우가 많습니다</li>
+        </ul>
+      </div>
+      <div class="vs-box vs-warm">
+        <span class="icon">☀️</span>
+        <h4>겨울에 햇볕이 있는 사주<br>(2026년 12월생)</h4>
+        <ul>
+          <li>추위를 녹여 줄 불을 이미 가지고 있습니다</li>
+          <li>건강을 지키는 힘이 좋습니다</li>
+          <li>돈과 기회를 빨리 잡습니다</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout-blue">
+      <span class="callout-title">명리에서는 이걸 '조후(調候)'라고 합니다</span>
+      계절의 온도를 맞춰 보는 방법입니다. 겨울에 햇볕이 있는 것과 없는 것이 완전히 다르듯, 사주도 차가움과 따뜻함이 맞아야 아이가 가진 장점을 제때 씁니다.
+    </div>
+  </div>
+
+  <!-- ═════════ 3. 자오충 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#dc2626">3</div>
+      <div class="sec-title">⚡ 자오충, 정말 나쁜 걸까요?</div>
+    </div>
+    <div class="card">
+      <span class="tag tag-purple">12월에 꼭 하나 더 봐야 할 것</span>
+      <div class="clash">
+        <div class="clash-char" style="background:var(--water-light);color:var(--water-dark)">
+          <span class="c">子</span><span class="k">자(子)</span><span class="d">한밤중 · 물</span>
+        </div>
+        <div class="bolt" aria-hidden="true">⚡</div>
+        <div class="clash-char" style="background:var(--fire-light);color:var(--fire-dark)">
+          <span class="c">午</span><span class="k">오(午)</span><span class="d">한낮 · 불</span>
+        </div>
+      </div>
+      <p>자(子)는 한밤중, 오(午)는 한낮입니다. 시계로 치면 12시와 6시처럼 <b>정반대 위치</b>에 있어서 서로 마주 보고 부딪힙니다. 이걸 <b>자오충(子午沖)</b>이라고 합니다.</p>
+      <p>2026년 12월생은 년(午)과 월(子)에 이 두 글자가 나란히 있어서, 태어나는 순간 이 충을 함께 가지고 태어납니다.</p>
+    </div>
+
+    <div class="myth myth-x">
+      <span class="m-badge">흔한 말</span>
+      <div>"자오충이 있으니까 12월생은 안 좋다. 12월은 피하는 게 낫다."</div>
+    </div>
+    <div class="myth myth-o">
+      <span class="m-badge">사실</span>
+      <div><b>충을 푸는 글자가 들어오면, 충이 가진 부정적인 면을 없앨 수 있습니다.</b> 충이 있다는 것만 보고 판단하면 반쪽짜리 해석이 됩니다.</div>
+    </div>
+
+    <div class="callout callout-pink">
+      <span class="callout-title">이렇게 생각하면 쉽습니다</span>
+      서로 등 돌린 두 사람이 있어도, 한 사람의 손을 꼭 잡아 주는 친구가 옆에 오면 싸울 일이 없어집니다. 사주에서는 그 친구 역할을 하는 글자를 <b>"충을 푸는 글자"</b>라고 보시면 됩니다.
+    </div>
+  </div>
+
+  <!-- ═════════ 4. 왜 일지인가 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#7c3aed">4</div>
+      <div class="sec-title">🧩 충을 풀 수 있는 칸은 딱 하나입니다</div>
+    </div>
+    <div class="card">
+      <p>사주 네 칸의 글자는 <b>바로 옆 칸끼리</b> 가장 강하게 영향을 주고받습니다. 지금 충이 생긴 곳은 <b>월지(子)와 년지(午)</b>입니다.</p>
+
+      <div class="map">
+        <div class="map-col"><div class="map-label">시지</div><div class="map-cell map-far"><span class="c">?</span><span class="k">태어난 시간</span></div></div>
+        <div class="map-col"><div class="map-label">일지</div><div class="map-cell map-key"><span class="c">?</span><span class="k">태어난 날짜</span></div></div>
+        <div class="map-col"><div class="map-label">월지</div><div class="map-cell" style="background:var(--water-light);color:var(--water-dark)"><span class="c">子</span><span class="k">자(子)</span></div></div>
+        <div class="map-col"><div class="map-label">년지</div><div class="map-cell" style="background:var(--fire-light);color:var(--fire-dark)"><span class="c">午</span><span class="k">오(午)</span></div></div>
+      </div>
+      <div class="map-links">
+        <div class="ml-hand">🤝 여기서 손을 잡아 충을 풉니다</div>
+        <div class="ml-none row2" style="grid-column:1">멀어서<br>닿지 않음</div>
+        <div class="ml-bolt row2" style="grid-column:3 / span 2">⚡ 자오충 발생</div>
+      </div>
+
+      <div class="callout callout-gold">
+        <span class="callout-title">그래서 12월은 '날짜'가 먼저입니다</span>
+        월지와 년지 사이 싸움에 끼어들 수 있는 칸은 <b>월지 바로 옆, 일지 하나뿐</b>입니다. 시지는 거리가 멀어서 이 충에 손이 닿지 않습니다.
+        그리고 일지는 <b>태어난 날짜</b>가 정합니다. 같은 12월이어도 어느 날 태어나느냐에 따라 충이 풀린 사주가 되기도 하고, 충이 그대로 남은 사주가 되기도 합니다.
+      </div>
+
+      <div class="ba">
+        <div class="ba-box ba-before">
+          <h4>😣 충이 그대로 남은 날</h4>
+          한겨울의 태양이라는 좋은 환경을 가지고 있어도, 충 때문에 그 힘을 온전히 쓰지 못합니다.
+        </div>
+        <div class="ba-box ba-after">
+          <h4>😊 충이 풀린 날</h4>
+          충의 부정적인 면은 사라지고, 한겨울의 태양이라는 장점을 그대로 가져갑니다.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════ 5. 달력 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#db2777">5</div>
+      <div class="sec-title">🗓️ 우리 아이 예정일은 충이 풀리는 날일까?</div>
+    </div>
+    <div class="card cal-wrap">
+      <div class="cal-title">
+        <b>2026년 12월 ~ 2027년 1월 초</b>
+        <span>회색 = 11월(기해월) 자료 해당 · 라이브에서는 12월 1일부터 봐 드립니다</span>
+      </div>
+      <div class="cal" id="cal">
+        <div class="wd sun">일</div><div class="wd">월</div><div class="wd">화</div><div class="wd">수</div><div class="wd">목</div><div class="wd">금</div><div class="wd sat">토</div>
+      </div>
+
+      <div class="lock">
+        <div class="ic">🔒</div>
+        <h4>"?"에 들어갈 답은 라이브에서 공개합니다</h4>
+        <p>일지에 어떤 글자가 와야 자오충이 풀리는지, 그 글자가 들어오는 날이 12월 7일 ~ 1월 4일 중 언제인지 무료 택일 라이브에서 날짜별로 짚어 드립니다. 12월 1일 ~ 6일 예정인 분들도 라이브에서 함께 봐 드립니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════ 6. 단식풀이 vs 택일 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#0f766e">6</div>
+      <div class="sec-title">🔍 충만 보는 건 '단식풀이'입니다</div>
+    </div>
+    <div class="card">
+      <span class="tag tag-green">택일은 사주 전체를 보는 일</span>
+      <p>"충이 있다, 없다"만 보고 날짜를 고르는 걸 명리에서는 <b>단식풀이</b>라고 합니다. 글자 하나, 관계 하나만 떼어서 보고 결론을 내리는 방식이에요.</p>
+      <p>만세력 앱이나 AI에 날짜를 넣으면 보통 <b>"자오충 있음"</b>이라고 표시됩니다. 여기까지는 맞습니다. 하지만 택일은 그 표시 하나로 끝나지 않습니다. <b>충을 풀 수 있는지</b>, 그리고 <b>충 말고도 사주 전체가 균형을 이루는지</b>까지 함께 봐야 합니다.</p>
+      <table class="cmp">
+        <tr><th>보는 방법</th><th>판단</th></tr>
+        <tr><td>단식풀이<br>(충만 볼 때)</td><td>"12월생은 다 충이 있다" → 12월 전체를 같은 사주로 봄</td></tr>
+        <tr><td>제대로 된 택일</td><td class="good">충 해소 + 억부 + 조후 + 오행 구족을 함께 확인 → 같은 12월 안에서도 좋은 날을 고름</td></tr>
+      </table>
+    </div>
+
+    <div class="checks4">
+      <div class="c4" style="--c:#dc2626;--bg:#fef2f2">
+        <div class="c4-top"><span class="c4-ic">🤝</span><span class="c4-no">CHECK 1</span></div>
+        <h4>충 해소</h4>
+        <p>일지에 충을 풀어 주는 글자가 들어오는지 봅니다. 12월 택일의 출발점입니다.</p>
+      </div>
+      <div class="c4" style="--c:#1e40af;--bg:#dbeafe">
+        <div class="c4-top"><span class="c4-ic">⚖️</span><span class="c4-no">CHECK 2</span></div>
+        <h4>억부(抑扶)의 균형</h4>
+        <p>아이 자신의 기운이 너무 강하지도, 너무 약하지도 않은지 봅니다. 강하면 눌러 주고 약하면 도와줘야 제 힘을 씁니다.</p>
+      </div>
+      <div class="c4" style="--c:#d97706;--bg:#fef3c7">
+        <div class="c4-top"><span class="c4-ic">🌡️</span><span class="c4-no">CHECK 3</span></div>
+        <h4>조후(調候)의 균형</h4>
+        <p>차가움과 따뜻함이 맞는지 봅니다. 한겨울의 태양이 있어도 날짜에 따라 다시 너무 차가워지거나 너무 뜨거워질 수 있습니다.</p>
+      </div>
+      <div class="c4" style="--c:#9d174d;--bg:#fce7f3">
+        <div class="c4-top"><span class="c4-ic">🖐️</span><span class="c4-no">CHECK 4</span></div>
+        <h4>오행 구족(具足)</h4>
+        <p>목·화·토·금·수 다섯 가지 기운이 사주 안에 고루 갖춰져 있는지 봅니다. 빠진 기운이 적을수록 막히는 곳이 줄어듭니다.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-green">
+      <span class="callout-title">충이 풀려도, 이 네 가지가 같이 맞아야 좋은 날입니다</span>
+      충은 풀렸는데 아이 기운이 한쪽으로 크게 치우친 날도 있고, 충은 남아 있어도 다른 균형이 잘 맞는 날도 있습니다. 그래서 택일은 날짜 하나하나를 네 가지 기준으로 함께 놓고 비교해야 합니다.
+    </div>
+  </div>
+
+  <!-- ═════════ 7. 3단계 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#1e40af">7</div>
+      <div class="sec-title">✍️ 12월 출산택일, 이 순서로 보세요</div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="no" style="background:#2563eb">1</div>
+        <div><h4>예정일이 12월 7일 이후인지</h4><p>대설 전이면 기해월, 대설 이후면 경자월입니다. 월주가 바뀌면 사주 전체 해석이 달라집니다.</p></div>
+      </div>
+      <div class="step">
+        <div class="no" style="background:#7c3aed">2</div>
+        <div><h4>충을 푸는지, 그리고 전체 균형이 맞는지</h4><p>일지가 충을 푸는지 먼저 보고, 억부·조후·오행 구족까지 함께 맞는 날을 고릅니다. 12월은 시간보다 날짜를 먼저 보세요.</p></div>
+      </div>
+      <div class="step">
+        <div class="no" style="background:#db2777">3</div>
+        <div><h4>날짜로 못 채운 부분은 이름으로</h4><p>날짜를 고른 뒤에도 남는 부분은 이름에 그 기운을 담아 채워 줍니다. 우리 아이 이름에 어떤 오행이 필요한지는 라이브에서 같이 알려드립니다.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════ 8. 체크리스트 ═════════ -->
+  <div class="section reveal">
+    <div class="sec-head">
+      <div class="sec-num" style="background:#16a34a">8</div>
+      <div class="sec-title">✅ 12월 출산 예정 부모님 체크리스트</div>
+    </div>
+    <div class="card">
+      <ul class="check">
+        <li><span class="box"></span><span>예정일이 <b>12월 7일 대설 이후</b>인가요? (12월 1~6일이면 11월 자료 확인, 라이브는 12월 1일부터 함께 봐 드립니다)</span></li>
+        <li><span class="box"></span><span>12월 7일 당일이라면 <b>대설이 들어오는 시각</b>을 확인했나요?</span></li>
+        <li><span class="box"></span><span>제왕절개 예정이라면 병원에서 <b>가능한 날짜 후보</b>를 받아 두었나요?</span></li>
+        <li><span class="box"></span><span>후보 날짜 중 <b>일지가 충을 푸는 날</b>이 있는지 확인했나요?</span></li>
+        <li><span class="box"></span><span>충만 보지 않고 <b>억부·조후·오행 구족</b>까지 함께 확인했나요?</span></li>
+        <li><span class="box"></span><span>날짜를 정한 뒤 <b>이름으로 채울 기운</b>을 알아두었나요?</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═════════ QUOTE ═════════ -->
+  <div class="quote reveal">
+    <div class="q1">이름은 나중에 바꿀 수 있지만,<br>태어난 날짜는 다시 고를 수 없습니다.</div>
+    <div class="q2">그래서 12월은 날짜부터 꼼꼼히 보셔야 합니다.</div>
+  </div>
+
+  <!-- ═════════ EBOOK ═════════ -->
+  <div class="ebook reveal">
+    <div class="book" aria-hidden="true">
+      <div>
+        <div class="ba2">현승리 지음</div>
+        <div class="line"></div>
+        <div class="bt">작명하기 전,<br>알았다면<br>좋았을 것들</div>
+      </div>
+      <div class="ba2">무료 전자책</div>
+    </div>
+    <div class="ebook-body">
+      <div class="eyebrow">무료 전자책</div>
+      <h3>작명하기 전,<br>알았다면 좋았을 것들</h3>
+      <p>이름을 짓고 나서 후회한 부모님들이 실제로 어디서 실수했는지, 실패 사례를 중심으로 정리했습니다. 이름 짓기 전에 한 번만 읽어 보셔도 같은 실수를 피할 수 있습니다.</p>
+      <a class="btn btn-ebook" href="https://hslee.co.kr/ebook" target="_blank">무료 전자책 읽어보기 →</a>
+    </div>
+  </div>
+
+  <!-- ═════════ KAKAO LIVE CTA ═════════ -->
+  <div class="live reveal">
+    <div class="live-top">
+      <span class="live-badge">현승리의 사주 작명 커뮤니티</span>
+      <h3>🙋‍♂️ 12월 출산택일<br>무료 라이브</h3>
+      <p><b>12월 1일생부터</b> 예정일 구간별로 회차를 나눠 진행합니다.<br>다음 회차 일정은 오픈채팅방 공지로 가장 먼저 안내됩니다.</p>
+    </div>
+    <div class="live-info">
+      <div class="live-row"><span>📅</span><span class="lk">일시</span><span class="lv">회차별 진행 · 일정은 오픈채팅방 공지</span></div>
+      <div class="live-row"><span>👶</span><span class="lk">대상</span><span class="lv"><b>12월 1일</b> ~ 1월 초 출산 예정 예비부모</span></div>
+      <div class="live-row"><span>✅</span><span class="lk">링크</span><span class="lv">라이브 시작 20분 전, 오픈채팅방에서만 제공</span></div>
+      <div class="live-row"><span>💰</span><span class="lk">참가비</span><span class="lv"><b>무료</b></span></div>
+    </div>
+    <div class="live-learn">
+      <b>라이브에서 다루는 내용</b>
+      <ul>
+        <li>자오충을 푸는 글자, 그 글자가 들어오는 날짜</li>
+        <li>충 해소 + 억부·조후·오행 구족까지 함께 본 날짜 비교</li>
+        <li>우리 아이 이름에 어떤 오행이 필요한지</li>
+      </ul>
+    </div>
+    <div class="code-box">
+      🔑 오픈채팅방은 참여코드가 있어야 입장할 수 있습니다
+      <span class="code">4684</span>
+    </div>
+    <div class="live-bottom">
+      <a class="btn-live" href="https://open.kakao.com/o/gBSetQ6h" target="_blank">무료 출산택일 →</a>
+      <span class="fine">버튼을 누르고 참여코드 <b>4684</b>를 입력하면 입장됩니다.<br>공지 전용 방이라 라이브 일정과 링크만 깔끔하게 받아보실 수 있습니다.</span>
+    </div>
+  </div>
+
+  <!-- ═════════ FOOTER ═════════ -->
+  <div class="footer">
+    <div class="footer-note">구독자 1.4만 작명 유튜버 현승리의 사주·작명 콘텐츠를 기반으로 정리한 자료입니다.</div>
+    <div class="footer-title">출처 및 채널</div>
+    <ul>
+      <li><span>▶️</span><a href="https://www.youtube.com/@name_house" target="_blank">유튜브 채널 — youtube.com/@name_house</a></li>
+      <li><span>📷</span><a href="https://www.instagram.com/free_hsl/" target="_blank">인스타그램 — instagram.com/free_hsl</a></li>
+      <li><span>🌐</span><a href="https://www.hslee.co.kr" target="_blank">공식 홈페이지 — hslee.co.kr</a></li>
+      <li><span>🍎</span><a href="https://apps.apple.com/kr/app/%EB%A7%8C%EC%84%B8%EB%A0%A5-%EC%B2%9C%EC%9D%84%EA%B7%80%EC%9D%B8/id1506536946" target="_blank">앱스토어 — 만세력 천을귀인</a></li>
+      <li><span>🤖</span><a href="https://play.google.com/store/apps/details?id=com.gooddaytoday.mynobleman&hl=ko&pli=1" target="_blank">구글플레이 — 만세력 천을귀인</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  // 달력: 2026년 12월 1일(화) ~ 2027년 1월 4일(월)
+  var cal = document.getElementById('cal');
+  if (cal) {
+    var html = '';
+    for (var b = 0; b < 2; b++) html += '<div class="day blank"></div>'; // 일·월 빈칸
+    for (var d = 1; d <= 31; d++) {
+      if (d < 7) html += '<div class="day off"><span class="n">' + d + '</span><span class="q">·</span></div>';
+      else html += '<div class="day' + (d === 7 ? ' mark' : '') + '"><span class="n">' + d + '</span><span class="q">?</span></div>';
+    }
+    for (var j = 1; j <= 4; j++) html += '<div class="day jan"><span class="n">1/' + j + '</span><span class="q">?</span></div>';
+    cal.insertAdjacentHTML('beforeend', html);
+  }
+  // 스크롤 등장 효과 (지원 안 되면 그냥 보임)
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
